@@ -2521,10 +2521,11 @@ body {
 .list_dot {
   li {
     position: relative;
+    margin-top:4px;  /* 202107 재택 수정 */
     padding-left: 8px;
     font-size: 14px;
     color: #444;
-    line-height: 28px;
+    line-height: 22px; /* 202107 재택 수정 */
     &:before{
       display: inline-block;
       position: absolute;
@@ -2629,6 +2630,9 @@ body {
       background:#fbfbfb;
       color:#bbb;
       pointer-events: none;
+    }
+    &.not_opt{ /* 202107 재택 수정 */
+      color:#888;
     }
   }
   &.btm_line{
@@ -2868,7 +2872,7 @@ body {
   }
   .dot_line{
     > li{
-      margin-top:40px;
+      margin-top:30px;  /* 202107 재택 수정 */
       padding-top:28px;
       border-top:2px dotted #ddd;
       &:first-child{
@@ -3007,7 +3011,7 @@ body {
   .pop_cont{
     padding:40px;
     &.scrollH{
-      padding:40px 12px 40px 40px;
+      padding-right:0; /* 202107 재택 수정 */ 
       .pop_cont_scroll{
         padding-right:10px;
       }
@@ -3506,5 +3510,165 @@ body {
     }
   }
 }
+/* 202107 재택 수정 - th 
+  임시로 아래 추가하였습니다. 
+  출근하는날 합쳐놓겠습니다 
+*/
 
-  
+/* common.scss */
+.cont_inner{
+  position:relative;
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+}
+.guide_list{
+  .tit{
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:-0.35px;
+    color:#444;
+    &+.list_dot {
+      margin-top:6px;
+    }
+  }
+  .list_dot{
+    li{
+      color:#888;
+    }
+  }
+}
+@include only-mo {
+  .popup_wrap{
+    width:312px !important;
+  }
+  .pop_inner{
+    .pop_cont{
+      padding:24px;
+      &.scrollH{
+        padding-right:0;
+        .pop_cont_scroll{
+          padding-right:6px;
+        }
+      }
+    }
+    .pop_tit{
+      font-size:20px;
+      line-height:30px;
+    }
+    .pop_txt.txt_l{
+      font-size:14px;
+      line-height:22px;
+    }
+    .ico_x{
+      top:24px;
+      right:24px;
+    }
+  }
+  .chk_select_item{
+    padding:24px 0;
+    &.table {
+     .radio_box{
+       top:24px;
+       transform:translateY(0);
+     } 
+     .chk_select_info{
+      display:block;
+      }
+      .info_cell{
+        display:block;
+      }
+      .prd_info{
+       width:calc(100% - 96px); 
+      }
+      .prd_thumb{
+        float:right;
+        width:80px;
+        padding-right:0;
+      }
+      .prd_price{
+        display:flex;
+        width:calc(100% - 96px);
+        margin-top:14px;
+        text-align:left;
+        .prd_tit{
+          font-size:12px;
+          font-weight:400;
+          line-height:22px;
+          color:#444;
+        }
+        .price{
+          font-size:14px;
+        }
+        .prd_desc{
+          position:relative;
+          margin-top:0;
+          font-size:12px;
+          line-height:22px;
+          color:#444;
+          .count{
+            font-size:14px;
+            margin-right:2px;
+          }
+          &:before{
+            display:inline-block;
+            margin:0 4px;
+            content:"/";
+          }
+        }
+      }
+    }
+  }
+  .chk_select_info{
+    position:relative;
+    padding:0 0 0 40px;
+  }
+
+  .select_ui_zone{
+    &.tit_btm_line{
+      .selected_btn{
+        padding:12px 10px 13px 0;
+        font-size:16px;
+        &:before{
+          width:8px;
+          right:3px;
+        }
+        &:after{
+          width:8px;
+          right:0;
+        }
+      }
+      .select_opt {
+        .opt_list{
+          font-size:14px;
+        }
+        
+      }
+    }
+  }
+  .related_laws{
+    padding:20px 24px 24px;
+    border-top:1px solid #ddd;
+    .tit+.desc {
+      margin-top:6px;
+    }
+    .desc{
+      line-height:22px;
+    }
+    .dot_line{
+      > li{
+        margin-top:22px;
+        padding-top:18px;
+      }
+      .dot_depth_list{
+        >li{
+          margin-top:20px;
+          &:first-child{
+            margin-top:0;
+          }
+        }
+      }
+    }
+  }
+
+}
