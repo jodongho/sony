@@ -1128,7 +1128,7 @@
     .prd {      
       position: relative;
       display: block;
-      margin-top: 0;
+      margin-top: 38px;
       .check {
         position: absolute;
         top: -38px;
@@ -1243,7 +1243,10 @@
 }
 
 .order_box__cont {
-  @media (max-width: 767px) {    
+  @media (max-width: 767px) { 
+    .prd {
+      margin-top: 0;
+    }   
     .col_table_cell {
       &.prd_price,
       &.prd_count {
