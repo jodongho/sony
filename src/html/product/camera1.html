@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
+<title>{{ia.product.submenu.camera.title}}</title>
+<link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
+<link rel="stylesheet" href="/dist/css/category.css">
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/lib/js/swiper.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  {{>header}}
+
+  <div class="container">
+    <div class="content">
+
+      <div class="category__header category__header__sub">
+        <a href="{{ia.product.submenu.camera.url}}" class="category__header__back">{{ia.product.submenu.camera.title}}</a>
+        <h1 class="category__header__name">{{ia.product.submenu.camera.submenu.camera1.title}}</h1>
+        <div class="category__header__links">
+          <a href="https://www.sony.co.kr/electronics/interchangeable-lens-camera-products/t/interchangeable-lens-cameras" class="category__header__link" target="_blank" title="사이트 이동">제품 비교</a>
+          <a href="#" class="category__header__link">연장서비스플랜 ESP 보기</a>
+        </div>
+        <div class="category__header__menu swiper-container">
+          <button type="button" class="swiper-button-prev"><img src="/dist/images/category/btn_category_left.svg" alt="이전"></button>
+          <ul class="swiper-wrapper centered">
+            <li class="swiper-slide all category__header__menu--active"><a href="#"><span>전체보기</span></a></li>
+            {{#each ia.product.submenu.accessory.submenu.accessory1.submenu}}
+            <li class="swiper-slide">
+              <a href="#"><span>{{this.title}}</span></a>
+            </li>
+            {{/each}}
+          </ul>
+          <button type="button" class="swiper-button-next"><img src="/dist/images/category/btn_category_right.svg" alt="다음"></button>
+        </div>
+      </div>
+
+      <script>
+        const category = ".category__header__menu";
+        const submenu = $(category).find(".swiper-slide");
+        const activeClass = "category__header__menu--active";
+
+        submenu.on("click", e => {
+          e.preventDefault();
+
+          let slide = $(e.currentTarget);
+
+          if (!slide.hasClass(activeClass)) {
+            submenu.filter("."+activeClass).removeClass(activeClass);
+            slide.addClass(activeClass);
+            // [dev] do filter!!
+          }
+        });
+
+        if (submenu.length >= 4) {
+          $(category).find(".swiper-wrapper").removeClass("centered");
+
+          // 여기는 nav button 이 들어 갑니다.
+          const categorySwiper = new Swiper(category, {
+            slidesPerView: "auto",
+            breakpoints: {
+              320: {
+                allowTouchMove: true,
+              },
+              1281: {
+                allowTouchMove: false,
+              },
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          });
+        }
+      </script>
+
+      <!-- item-list-wrapper -->
+      <div class="product__list__wrapper">
+        <h2 class="list__info">
+          <span class="list__info__name">제품</span>
+          <span class="list__info__num">(60)</span>
+        </h2>
+        {{>itemsort}}
+        <!-- item-list -->
+        <div class="product__list">
+          <!-- item -->
+          <div class="product">
+            <span class="badge__text badge__text__best">BEST</span>
+            <div class="product__pic">
+              <a href="#" class="product__pic__link">
+                <img src="/dist/images/_tmp/item640x640_01.png" alt="상품1 색상1" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_02.png" alt="상품1 색상2" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_03.png" alt="상품1 색상3" class="product__pic__img">
+              </a>
+            </div>
+            <div class="colorchip">
+              <span class="sr-only">전체 색상</span>
+              <span class="colorchip__item" data-color-code="000000">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">블랙</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="666666">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">그레이</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="ffffff">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">화이트</span>
+                </span>
+              </span>
+            </div>
+            <a href="#" class="product__title">
+              <strong class="product__title__name">DSC-RX100M7 Worldcup Special Edition</strong>
+              <span class="badge__label badge__label__reserve">예약판매</span>
+            </a>
+            <a href="#" class="product__info">
+              세계 최고의 APS-C 카메라
+            </a>
+            <div class="product__price">
+              <span class="product__price__num">1,890,900</span>
+              <span class="product__price__unit">원</span>
+            </div>
+          </div>
+          <div class="product">
+            <span class="badge__text badge__text__event">EVENT</span>
+            <div class="product__pic">
+              <a href="#" class="product__pic__link">
+                <img src="/dist/images/_tmp/item640x640_02.png" alt="상품2 색상1" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_03.png" alt="상품2 색상2" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_04.png" alt="상품2 색상3" class="product__pic__img">
+              </a>
+            </div>
+            <div class="colorchip">
+              <span class="sr-only">전체 색상</span>
+              <span class="colorchip__item" data-color-code="000000">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">블랙</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="666666">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">그레이</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="ffffff">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">화이트</span>
+                </span>
+              </span>
+            </div>
+            <a href="#" class="product__title">
+              <strong class="product__title__name">DSC-RX100M8</strong>
+              <span class="badge__label badge__label__release">출시예정</span>
+            </a>
+            <a href="#" class="product__info">
+              세계 최고의 AF 속도(0.02초)의 리얼 타임 Eye-AF 지원 APS-C 카메라  Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            </a>
+            <div class="product__price">
+              <span class="product__price__num">2,890,900</span>
+              <span class="product__price__unit">원</span>
+            </div>
+          </div>          
+          <div class="product">
+            <span class="badge__text badge__text__hot">HOT</span>
+            <div class="product__pic">
+              <a href="#" class="product__pic__link">
+                <img src="/dist/images/_tmp/item640x640_03.png" alt="상품3 색상1" class="product__pic__img">
+              </a>
+            </div>
+            <div class="colorchip"></div>
+            <a href="#" class="product__title">
+              <strong class="product__title__name">DSC-RX100M9</strong>
+              <span class="badge__label badge__label__outofstock">일시품절</span>
+            </a>
+            <a href="#" class="product__info">
+              세계 최고의 AF 속도(0.02초)의 리얼 타임 Eye-AF 지원 APS-C 카메라
+            </a>
+            <div class="product__price">
+              <span class="product__price__num">1,890,900</span>
+              <span class="product__price__unit">원</span>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__pic">
+              <a href="#" class="product__pic__link">
+                <img src="/dist/images/_tmp/item640x640_04.png" alt="상품4 색상1" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_05.png" alt="상품4 색상2" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_06.png" alt="상품4 색상3" class="product__pic__img">
+              </a>
+            </div>
+            <div class="colorchip">
+              <span class="sr-only">전체 색상</span>
+              <span class="colorchip__item" data-color-code="000000">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">블랙</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="666666">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">그레이</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="ffffff">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">화이트</span>
+                </span>
+              </span>
+            </div>
+            <a href="#" class="product__title">
+              <strong class="product__title__name">DSC-RX100M10</strong>
+              <span class="badge__label badge__label__soldout">품절</span>
+            </a>
+            <a href="#" class="product__info">
+              세계 최고의 AF 속도(0.02초)의 리얼 타임 Eye-AF 지원 APS-C 카메라
+            </a>
+            <div class="product__price">
+              <span class="product__price__num">1,890,900</span>
+              <span class="product__price__unit">원</span>
+            </div>
+          </div>
+          <div class="product">
+            <span class="badge__text badge__text__best">BEST</span>
+            <div class="product__pic">
+              <a href="#" class="product__pic__link">
+                <img src="/dist/images/_tmp/item640x640_05.png" alt="상품5 색상1" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_06.png" alt="상품5 색상2" class="product__pic__img">
+              </a>
+            </div>
+            <div class="colorchip">
+              <span class="sr-only">전체 색상</span>
+              <span class="colorchip__item" data-color-code="000000">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">블랙</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="666666">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">그레이</span>
+                </span>
+              </span>
+            </div>
+            <a href="#" class="product__title">
+              <strong class="product__title__name">DSC-RX100M11</strong>
+              <span class="badge__label badge__label__outofstock">일시품절</span>
+            </a>
+            <a href="#" class="product__info">
+              세계 최고의 AF 속도(0.02초)의 리얼 타임 Eye-AF 지원 APS-C 카메라
+            </a>
+            <div class="product__price">
+              <span class="product__price__num">1,890,900</span>
+              <span class="product__price__unit">원</span>
+            </div>
+          </div>
+          <div class="product">
+            <span class="badge__text badge__text__hot">HOT</span>
+            <div class="product__pic">
+              <a href="#" class="product__pic__link">
+                <img src="/dist/images/_tmp/item640x640_06.png" alt="상품6 색상1" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_01.png" alt="상품6 색상2" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_02.png" alt="상품6 색상3" class="product__pic__img">
+              </a>
+            </div>
+            <div class="colorchip">
+              <span class="sr-only">전체 색상</span>
+              <span class="colorchip__item" data-color-code="000000">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">블랙</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="666666">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">그레이</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="ffffff">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">화이트</span>
+                </span>
+              </span>
+            </div>
+            <a href="#" class="product__title">
+              <strong class="product__title__name">DSC-RX100M12</strong>
+              <span class="badge__label badge__label__soldout">품절</span>
+            </a>
+            <a href="#" class="product__info">
+              세계 최고의 AF 속도(0.02초)의 리얼 타임 Eye-AF 지원 APS-C 카메라
+            </a>
+            <div class="product__price">
+              <span class="product__price__num">1,890,900</span>
+              <span class="product__price__unit">원</span>
+            </div>
+          </div>
+          <div class="product">
+            <span class="badge__text badge__text__best">BEST</span>
+            <div class="product__pic">
+              <a href="#" class="product__pic__link">
+                <img src="/dist/images/_tmp/item640x640_01.png" alt="상품1 색상1" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_02.png" alt="상품1 색상2" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_03.png" alt="상품1 색상3" class="product__pic__img">
+              </a>
+            </div>
+            <div class="colorchip">
+              <span class="sr-only">전체 색상</span>
+              <span class="colorchip__item" data-color-code="000000">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">블랙</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="666666">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">그레이</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="ffffff">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">화이트</span>
+                </span>
+              </span>
+            </div>
+            <a href="#" class="product__title">
+              <strong class="product__title__name">DSC-RX100M7 Worldcup Special Edition</strong>
+              <span class="badge__label badge__label__reserve">예약판매</span>
+            </a>
+            <a href="#" class="product__info">
+              세계 최고의 APS-C 카메라
+            </a>
+            <div class="product__price">
+              <span class="product__price__num">1,890,900</span>
+              <span class="product__price__unit">원</span>
+            </div>
+          </div>
+          <div class="product">
+            <span class="badge__text badge__text__event">EVENT</span>
+            <div class="product__pic">
+              <a href="#" class="product__pic__link">
+                <img src="/dist/images/_tmp/item640x640_02.png" alt="상품2 색상1" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_03.png" alt="상품2 색상2" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_04.png" alt="상품2 색상3" class="product__pic__img">
+              </a>
+            </div>
+            <div class="colorchip">
+              <span class="sr-only">전체 색상</span>
+              <span class="colorchip__item" data-color-code="000000">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">블랙</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="666666">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">그레이</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="ffffff">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">화이트</span>
+                </span>
+              </span>
+            </div>
+            <a href="#" class="product__title">
+              <strong class="product__title__name">DSC-RX100M8</strong>
+              <span class="badge__label badge__label__release">출시예정</span>
+            </a>
+            <a href="#" class="product__info">
+              세계 최고의 AF 속도(0.02초)의 리얼 타임 Eye-AF 지원 APS-C 카메라  Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            </a>
+            <div class="product__price">
+              <span class="product__price__num">2,890,900</span>
+              <span class="product__price__unit">원</span>
+            </div>
+          </div>          
+          <div class="product">
+            <span class="badge__text badge__text__hot">HOT</span>
+            <div class="product__pic">
+              <a href="#" class="product__pic__link">
+                <img src="/dist/images/_tmp/item640x640_03.png" alt="상품3 색상1" class="product__pic__img">
+              </a>
+            </div>
+            <div class="colorchip"></div>
+            <a href="#" class="product__title">
+              <strong class="product__title__name">DSC-RX100M9</strong>
+              <span class="badge__label badge__label__outofstock">일시품절</span>
+            </a>
+            <a href="#" class="product__info">
+              세계 최고의 AF 속도(0.02초)의 리얼 타임 Eye-AF 지원 APS-C 카메라
+            </a>
+            <div class="product__price">
+              <span class="product__price__num">1,890,900</span>
+              <span class="product__price__unit">원</span>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__pic">
+              <a href="#" class="product__pic__link">
+                <img src="/dist/images/_tmp/item640x640_04.png" alt="상품4 색상1" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_05.png" alt="상품4 색상2" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_06.png" alt="상품4 색상3" class="product__pic__img">
+              </a>
+            </div>
+            <div class="colorchip">
+              <span class="sr-only">전체 색상</span>
+              <span class="colorchip__item" data-color-code="000000">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">블랙</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="666666">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">그레이</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="ffffff">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">화이트</span>
+                </span>
+              </span>
+            </div>
+            <a href="#" class="product__title">
+              <strong class="product__title__name">DSC-RX100M10</strong>
+              <span class="badge__label badge__label__soldout">품절</span>
+            </a>
+            <a href="#" class="product__info">
+              세계 최고의 AF 속도(0.02초)의 리얼 타임 Eye-AF 지원 APS-C 카메라
+            </a>
+            <div class="product__price">
+              <span class="product__price__num">1,890,900</span>
+              <span class="product__price__unit">원</span>
+            </div>
+          </div>
+          <div class="product">
+            <span class="badge__text badge__text__best">BEST</span>
+            <div class="product__pic">
+              <a href="#" class="product__pic__link">
+                <img src="/dist/images/_tmp/item640x640_05.png" alt="상품5 색상1" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_06.png" alt="상품5 색상2" class="product__pic__img">
+              </a>
+            </div>
+            <div class="colorchip">
+              <span class="sr-only">전체 색상</span>
+              <span class="colorchip__item" data-color-code="000000">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">블랙</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="666666">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">그레이</span>
+                </span>
+              </span>
+            </div>
+            <a href="#" class="product__title">
+              <strong class="product__title__name">DSC-RX100M11</strong>
+              <span class="badge__label badge__label__outofstock">일시품절</span>
+            </a>
+            <a href="#" class="product__info">
+              세계 최고의 AF 속도(0.02초)의 리얼 타임 Eye-AF 지원 APS-C 카메라
+            </a>
+            <div class="product__price">
+              <span class="product__price__num">1,890,900</span>
+              <span class="product__price__unit">원</span>
+            </div>
+          </div>
+          <div class="product">
+            <span class="badge__text badge__text__hot">HOT</span>
+            <div class="product__pic">
+              <a href="#" class="product__pic__link">
+                <img src="/dist/images/_tmp/item640x640_06.png" alt="상품6 색상1" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_01.png" alt="상품6 색상2" class="product__pic__img">
+                <img src="/dist/images/_tmp/item640x640_02.png" alt="상품6 색상3" class="product__pic__img">
+              </a>
+            </div>
+            <div class="colorchip">
+              <span class="sr-only">전체 색상</span>
+              <span class="colorchip__item" data-color-code="000000">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">블랙</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="666666">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">그레이</span>
+                </span>
+              </span>
+              <span class="colorchip__item" data-color-code="ffffff">
+                <span class="colorchip__item__label">
+                  <span class="sr-only">화이트</span>
+                </span>
+              </span>
+            </div>
+            <a href="#" class="product__title">
+              <strong class="product__title__name">DSC-RX100M12</strong>
+              <span class="badge__label badge__label__soldout">품절</span>
+            </a>
+            <a href="#" class="product__info">
+              세계 최고의 AF 속도(0.02초)의 리얼 타임 Eye-AF 지원 APS-C 카메라
+            </a>
+            <div class="product__price">
+              <span class="product__price__num">1,890,900</span>
+              <span class="product__price__unit">원</span>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          let product = $(".product__list .product").not(".product__banner, .blank");
+
+          product.each(function() {
+            const _product = $(this);
+            const img = _product.find(".product__pic__img");
+            const visibleClass = "product__pic__img--visible";
+
+            img.filter(":first-child").addClass(visibleClass);
+            _product.find(".colorchip").each(function() {
+              const colorchip = $(this);
+              const item = colorchip.find(".colorchip__item");
+              const activeClass = "colorchip__item--active";
+
+              item.each(function(index) {
+                const item = $(this);
+                const colorcode = item.attr("data-color-code");
+                const label = item.find(".colorchip__item__label");
+
+                label.attr("style", "background-color: #" + colorcode + ";");
+                if (index === 0) {
+                  item.addClass(activeClass);
+                };
+              }).on("click mouseenter", function(index) {
+                const _item = $(this);
+
+                if (!_item.hasClass(activeClass)) {
+                  // .sr-only 요소 때문에 - 1;
+                  const currentNum = _item.index() - 1;
+                  const prevNum = _item.siblings("." + activeClass).index() - 1;
+
+                  item.eq(prevNum).removeClass(activeClass);
+                  item.eq(currentNum).addClass(activeClass);
+                  img.eq(prevNum).removeClass(visibleClass);
+                  img.eq(currentNum).addClass(visibleClass);
+                };
+              });
+            });
+          })
+        </script>
+
+      </div>
+    </div>
+  </div>
+
+  {{>footer}}
+</div>
+
+</body>
+</html>

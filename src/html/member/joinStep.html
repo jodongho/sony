@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ia.member.submenu.joinStep.title}}</title>
+<link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
+<link rel="stylesheet" href="/dist/css/contents.css">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/lib/js/swiper.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+<script src="/dist/js/ux-sub.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  {{>header}}
+  <div class="container" id="container">
+    <div class="login join_step">
+      <h2 class="login__title">회원가입</h2>
+      <p class="login__desc">소니코리아 통합 웹회원 정책 상 공식적으로 <strong>만 14세 미만의 경우 회원가입이 불가합니다.</strong></p>
+      <div class="join_inp_box">
+        <div class="group not-ready">
+          <div class="inp_box">
+            <label class="inp_desc" for="loginName">
+              <input type="text" id="loginName" class="inp" placeholder="&nbsp;" autocomplete="off" tabindex="1">
+              <span class="label">이메일 아이디<span>(예 : sony@sony.co.kr)</span></span>
+              <span class="focus_bg"></span>
+            </label>
+          </div>
+          <div class="error_txt"><span class="ico"></span>이메일 아이디를 입력해 주세요.</div>
+        </div>
+        <div class="rowgroup">
+          <div class="group not-ready">
+            <div class="inp_box password_box">
+              <label class="inp_desc" for="loginPw1">
+                <input type="password" id="loginPw1" class="inp" placeholder="&nbsp;" autocomplete="off" tabindex="2">
+                <span class="label">비밀번호<span>(영문&#47;숫자 조합 10~15자리 미만)</span></span>
+                <span class="focus_bg"></span>
+                <div class="eyes"><button type="button" title="비밀번호 숨김"><i class="ico ico_eyes"></i></button></div>
+              </label>
+            </div>
+            <div class="error_txt"><span class="ico"></span>비밀번호를 입력해 주세요.</div>
+          </div>
+          <div class="group not-ready">
+            <div class="inp_box password_box">
+              <label class="inp_desc" for="loginPw2">
+                <input type="password" id="loginPw2" class="inp" placeholder="&nbsp;" autocomplete="off" tabindex="3">
+                <span class="label">비밀번호 확인</span>
+                <span class="focus_bg"></span>
+                <div class="eyes"><button type="button" title="비밀번호 숨김"><i class="ico ico_eyes"></i></button></div>
+              </label>
+            </div>
+            <div class="error_txt"><span class="ico"></span>비밀번호를 재입력 해주세요.</div>        
+          </div>
+        </div>
+        <div class="rowgroup">
+          <div class="group not-ready">
+            <div class="inp_box">
+              <label class="inp_desc" for="username">
+                <input type="text" id="username" class="inp" placeholder="&nbsp;" autocomplete="off" tabindex="4">
+                <span class="label">이름<span>(띄어쓰기 없이 입력하세요.)</span></span>
+                <span class="focus_bg"></span>
+              </label>
+            </div>
+            <div class="error_txt"><span class="ico"></span>이름을 입력해 주세요.</div>
+          </div>    
+          <div class="group not-ready">
+            <div class="inp_box">
+              <label class="inp_desc" for="userbirth">
+                <input type="text" id="userbirth" class="inp" placeholder="&nbsp;">
+                <span class="label">생년월일<span>(예 : 20210307)</span></span>
+                <span class="focus_bg"></span>
+              </label>
+            </div>
+            <div class="error_txt"><span class="ico"></span>생년월일을 주세요.</div>
+          </div>
+        </div>
+        <div class="group not-ready btn_type">
+          <div class="inp_box">
+            <label class="inp_desc" for="phonenumber">
+              <input type="text" id="phonenumber" class="inp" placeholder="&nbsp;" autocomplete="off" tabindex="5">
+              <span class="label">휴대폰 번호<span>(-없이 입력하세요.)</span></span>
+              <span class="focus_bg"></span>
+            </label>
+            <div class="btn_box">
+              <button type="button" class="btn btn_disable">인증번호</button>
+              <!--<button type="button" class="btn btn_primary">인증번호</button> 휴대폰 번호 입력시 활성화 버튼-->
+              <!--<button type="button" class="btn btn_default">재전송</button> 재전송시 버튼 -->
+            </div>
+          </div>
+          <div class="error_txt"><span class="ico"></span>휴대폰 번호를 입력해주세요.</div>
+        </div>
+        <div class="group not-ready btn_type">
+          <div class="inp_box">
+            <label class="inp_desc" for="certifynumber">
+              <input type="text" id="certifynumber" class="inp" placeholder="&nbsp;" autocomplete="off" tabindex="6">
+              <span class="label">인증번호</span>
+              <span class="timer" id="timer">03:00</span>
+              <span class="focus_bg"></span>
+            </label>
+            <div class="btn_box">
+              <button type="button" class="btn btn_primary">인증</button>
+            </div>
+          </div>
+          <div class="certify_txt">※ 입력하신 번호로 인증번호가 전송되었습니다.</div>
+        </div>          
+        <div class="btn_box full">
+          <button type="button" class="btn btn_dark">가입 완료</button>
+        </div>          
+      </div>
+    </div>
+  </div>
+  <script>
+    /* 타이머 */
+    var initMinute;  // 최초 설정할 시간(min)
+    var remainSecond;  // 남은시간(sec)
+    
+    $(document).ready(function(){
+      clearTime(3); // 세션 만료 적용 시간 
+      setTimer();    // 문서 로드시 타이머 시작
+    });
+    
+    function clearTime(min){ // 타이머 초기화 함수
+      initMinute = min; 
+      remainSecond = min*60; 
+    }
+    
+    function setTimer(){ // 1초 간격으로 호출할 타이머 함수 
+    
+      // hh : mm 으로 남은시간 표기하기 위한 변수
+      remainMinute_ = parseInt(remainSecond/60);
+      remainSecond_ = remainSecond%60;
+    
+      if(remainSecond > 0){
+          $("#timer").empty();
+          $("#timer").append(Lpad(remainMinute_,2) + ":" + Lpad(remainSecond_,2));    // hh:mm 표기
+          remainSecond--;
+          setTimeout("setTimer()",1000); //1초간격으로 재귀호출!
+      }else{
+          //alert('시간이 초과되었습니다.');
+          /*세션 종료시 작동할 이벤트*/ 
+      }
+    }
+    function Lpad(str,len){  // hh mm형식으로 표기하기 위한 함수
+      str = str+"";
+      while(str.length<len){
+          str = "0"+str;
+      }
+      return str;
+    }
+    //비밀번호 숨김, 표시 tab
+    $(function(){
+      // 눈표시 클릭 시 패스워드 보이기 
+      $('.eyes').on('click',function(){
+        $('.inp_box.password_box').toggleClass('active'); 
+        if( $('.inp_box.password_box').hasClass('active') == true ){
+          $(this).find('.ico_eyes').attr('class',"ico_eyes_open").parents('.password_box').find('.inp').attr('type',"text");
+          $(this).find('>button').attr('title',"비밀번호 표시");
+          // i 클래스 // 텍스트 보이기 i 클래스 
+        } 
+        else{ 
+          $(this).find('.ico_eyes_open').attr('class',"ico_eyes").parents('.password_box').find('.inp').attr('type','password');
+          $(this).find('>button').attr('title',"비밀번호 숨김");      
+        }
+      });
+
+      // input autofill style matching
+      const g = document.querySelectorAll(".group");
+
+      g.forEach((elem) => {
+        elem.classList.add("not-ready");
+      })
+      setTimeout(() => {
+        $("#contents").focus();
+        g.forEach((elem) => {
+          elem.classList.remove("not-ready");
+        })
+      }, 10);
+    });
+  </script>
+
+  {{>footer}}
+</div>
+
+</body>
+</html>

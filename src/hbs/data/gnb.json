@@ -1,0 +1,264 @@
+{
+  "recommend": {
+    "title": "스토어 추천 제품",
+    "url": "#",
+    "submenu": {
+      "list": {
+        "title": "추천 제품",
+        "url": "#"
+      },
+      "Propose": {
+        "title": "선물 제안",
+        "url": "#"
+      }
+    }
+  },
+  "product": {
+    "title": "제품",
+    "url": "/dist/html/product/List.html",
+    "submenu": {
+      "camera": {
+        "title": "카메라",
+        "url": "/dist/html/product/camera.html",
+        "submenu": {
+          "camera1": {
+            "title": "렌즈교환식 카메라",
+            "url": "/dist/html/product/camera1.html",
+            "submenu": {
+              "camera1-1": {
+                "title": "카메라"
+              },
+              "camera1-2": {
+                "title": "렌즈"
+              }
+            }
+          },
+          "camera2": {
+            "title": "컴팩트 카메라",
+            "url": "/dist/html/product/camera2.html"
+          }
+        }
+      },
+      "videocamera": {
+        "title": "비디오카메라",
+        "url": "/dist/html/product/videocamera.html",
+        "submenu": {
+          "videocamera1": {
+            "title": "시네마 라인 카메라",
+            "url": "/dist/html/product/videocamera1.html"
+          },
+          "videocamera2": {
+            "title": "캠코더",
+            "url": "/dist/html/product/videocamera2.html",
+            "submenu": {
+              "videocamera2-1": {
+                "title": "4K 핸디캠",
+                "url": "/dist/html/product/videocamera2-1.html"
+              },
+              "videocamera2-2": {
+                "title": "HD 핸디캠",
+                "url": "/dist/html/product/videocamera2-2.html"
+              }
+            }
+          },
+          "videocamera3": {
+            "title": "액션캠",
+            "url": "/dist/html/product/videocamera3.html"
+          }
+        }
+      },
+      "audio": {
+        "title": "오디오",
+        "url": "/dist/html/product/audio.html",
+        "submenu": {
+          "audio1": {
+            "title": "헤드폰/이어폰",
+            "url": "/dist/html/product/audio1.html",
+            "submenu": {
+              "audio1-1": {
+                "title": "헤드폰 앰프",
+                "url": "/dist/html/product/audio1-1.html"
+              },
+              "audio1-2": {
+                "title": "무선 이어폰",
+                "url": "/dist/html/product/audio1-2.html"
+              },
+              "audio1-3": {
+                "title": "유선 이어폰",
+                "url": "/dist/html/product/audio1-3.html"
+              }
+            }
+          },
+          "audio2": {
+            "title": "스피커",
+            "url": "/dist/html/product/audio2.html",
+            "submenu": {
+              "audio2-1": {
+                "title": "무선 스피커",
+                "url": "/dist/html/product/audio2-1.html"
+              },
+              "audio2-2": {
+                "title": "카오디오",
+                "url": "/dist/html/product/audio2-2.html"
+              }
+            }
+          },
+          "audio3": {
+            "title": "홈 오디오",
+            "url": "/dist/html/product/audio3.html"
+          },
+          "audio4": {
+            "title": "워크맨/녹음기",
+            "url": "/dist/html/product/audio4.html",
+            "submenu": {
+              "audio4-1": {
+                "title": "MP3 플레이어",
+                "url": "/dist/html/product/audio4-1.html"
+              },
+              "audio4-2": {
+                "title": "녹음기",
+                "url": "/dist/html/product/audio4-2.html"
+              }
+            }
+          }
+        }
+      },
+      "accessory": {
+        "title": "액세서리",
+        "url": "/dist/html/product/accessory.html",
+        "submenu": {
+          "accessory1": {
+            "title": "카메라 액세서리",
+            "url": "/dist/html/product/accessory1.html",
+            "submenu": {
+              "accessory1-1": {
+                "title": "메모리카드/SSD",
+                "url": "/dist/html/product/accessory1-1.html"
+              },
+              "accessory1-2": {
+                "title": "배터리/충전기/어댑터",
+                "url": "/dist/html/product/accessory1-2.html"
+              },
+              "accessory1-3": {
+                "title": "세로그립",
+                "url": "/dist/html/product/accessory1-3.html"
+              },
+              "accessory1-4": {
+                "title": "플래시/조명",
+                "url": "/dist/html/product/accessory1-4.html"
+              },
+              "accessory1-5": {
+                "title": "마이크",
+                "url": "/dist/html/product/accessory1-5.html"
+              },
+              "accessory1-6": {
+                "title": "뷰파인더/모니터",
+                "url": "/dist/html/product/accessory1-6.html"
+              },
+              "accessory1-7": {
+                "title": "세로그립",
+                "url": "/dist/html/product/accessory1-7.html"
+              },
+              "accessory1-8": {
+                "title": "케이스/커버/스트랩",
+                "url": "/dist/html/product/accessory1-8.html"
+              },
+              "accessory1-9": {
+                "title": "액세서리 키트",
+                "url": "/dist/html/product/accessory1-9.html"
+              },
+              "accessory1-10": {
+                "title": "기타",
+                "url": "/dist/html/product/accessory1-10.html"
+              }
+            }
+          },
+          "accessory2": {
+            "title": "오디오 액세서리",
+            "url": "/dist/html/product/accessory2.html"
+          }
+        }
+      },
+      "playstation": {
+        "title": "PlayStation®",
+        "url": "/dist/html/product/playstation.html",
+        "submenu": {
+          "playstation1": {
+            "title": "PlayStation®",
+            "url": "/dist/html/product/playstation1.html"
+          },
+          "playstation2": {
+            "title": "게임타이틀 및 주변기기",
+            "url": "/dist/html/product/playstation2.html"
+          }
+        }
+      }
+    }
+  },
+  "event": {
+    "title": "기획전",
+    "url": "#",
+    "submenu": {
+      "exclusive": {
+        "title": "소니스토어 단독",
+        "url": "#"
+      },
+      "benefit": {
+        "title": "혜택존",
+        "url": "#"
+      },
+      "preorder": {
+        "title": "예약판매",
+        "url": "#"
+      },
+      "activate_event": {
+        "title": "정품 등록 이벤트",
+        "url": "#"
+      },
+      "liveon": {
+        "title": "LIVE ON",
+        "url": "#"
+      }      
+    }
+  },
+  "membership": {
+    "title": "멤버십",
+    "url": "#",
+    "submenu": {
+      "benefit": {
+        "title": "등급&혜택 안내",
+        "url": "#"
+      }
+    }
+  },
+  "service": {
+    "title": "고객 서비스",
+    "url": "#",
+    "submenu": {
+      "notice": {
+        "title": "FAQ&공지사항",
+        "url": "#"
+      },
+      "activate_info": {
+        "title": "정품등록 안내",
+        "url": "#"
+      },
+      "support": {
+        "title": "제품 지원",
+        "url": "#"
+      },
+      "consultation": {
+        "title": "구매 상담",
+        "url": "#"
+      },
+      "offline": {
+        "title": "직영점 안내",
+        "url": "#"
+      },
+      "lesson": {
+        "title": "동영상 강좌",
+        "url": "#"
+      }
+    }
+  }
+}

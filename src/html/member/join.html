@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ia.member.title}}</title>
+<link rel="stylesheet" href="/dist/css/contents.css">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+<script src="/dist/js/ux-sub.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  {{>header}}
+  <div class="container" id="container">
+      <div class="login">
+        <div class="join_area">
+          <h2 class="login__title">회원가입</h2>
+          <p class="login__desc">소니스토어와 소니 고객지원 사이트는 하나의 아이디와 비밀번호로 운영됩니다. <span class="block">회원가입을 통해 다양한 서비스를 이용하실 수 있습니다.</span></p>
+          <div class="btn_box full">
+            <button type="button" class="btn btn_dark">소니스토어 간편 회원 가입</button>
+          </div>
+        </div>
+        <div class="txt_or">
+          <span class="txt">또는</span>
+          <span class="bar"></span>
+        </div>
+        <div class="sns_login_box">
+          <strong class="sns_title">SNS 계정으로<span>간편하게 로그인하세요.</span></strong>
+          <ul class="sns_list">
+            <li class="naver"><a href="#">네이버</a></li>
+            <li class="kakao"><a href="#">카카오톡</a></li>
+            <li class="facebook"><a href="#">페이스북</a></li>
+          </ul>
+        </div>
+        <div class="caution_txt">
+          <p>· 소니코리아 통합 웹회원 정책 상 공식적으로 <strong>만 14세 미만의 경우 회원가입이 불가합니다.</strong></p>
+        </div>        
+    </div>
+  </div>
+  {{>footer}}
+</div>
+
+</body>
+</html>

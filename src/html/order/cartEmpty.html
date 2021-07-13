@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ia.order.submenu.cartEmpty.title}}</title>
+<link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
+<link rel="stylesheet" href="/dist/css/common.css">
+<link rel="stylesheet" href="/dist/css/contents.css">
+<link rel="stylesheet" href="/dist/css/order.css">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/lib/js/swiper.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+<script src="/dist/js/ux-sub.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  {{>header}}
+  <div class="container" id="container">
+    <div class="content order_page">
+      <div class="order_box">
+        <h2 class="order_box__tit">{{ia.order.submenu.cartEmpty.title}}</h2>
+        <ol class="order_box__list">
+          <li class="on">
+            <i class="step_ico cart"></i>
+            <p>{{ia.order.submenu.cart1.title}}</p>
+          </li>
+          <li>
+            <i class="step_ico order"></i>
+            <p>{{ia.order.submenu.order1.title}}</p>
+          </li>
+          <li>
+            <i class="step_ico confirm"></i>
+            <p>{{ia.order.submenu.orderComplete1.title}}</p>
+          </li>
+        </ol>
+        <div class="empty_cart_box">
+          <i class="empty_ico"></i>
+          <p class="emptyinfo_tit">장바구니에 담긴 상품이 없습니다.</p>
+          <div class="btn_box">
+            <button type="button" class="button button_negative">쇼핑 계속 하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{>footer}}
+</div>
+
+</body>
+</html>

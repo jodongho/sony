@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
+<title>{{ia.product.title}}</title>
+<link rel="stylesheet" href="/dist/css/category.css">
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  {{>header}}
+
+  <div class="content">
+    <h1 class="page__title">{{ia.product.title}}</h1>
+    {{>itemsort}}
+    <ul class="product__list">
+      {{#each ia.product.submenu}}
+      <li>
+        <a href="{{this.url}}">{{this.title}}</a>
+        {{#if this.submenu}}
+        <ul>
+          {{#each this.submenu}}
+          <li>
+            <a href="{{this.url}}">{{this.title}}</a>
+            {{#if this.submenu}}
+            <ul>
+              {{#each this.submenu}}
+              <li>
+                <a href="{{this.url}}">{{this.title}}</a>
+              </li>
+              {{/each}}
+            </ul>  
+            {{/if}}
+          </li>
+          {{/each}}
+        </ul>
+        {{/if}}
+      </li>
+    {{/each}}
+    </ul>
+
+    <!-- ~ heading tag 순서는 문서 작성 흐름대로 지정 (tag/classname 상호 의존 없음) ~ -->
+    <h2 class="common__title h1">WF-SP800N</h2>
+    <h2 class="common__title h2">제품 상세</h2>
+    <h3 class="common__title h3">렌즈</h3>
+    <div class="common__table__wrap">
+      <table class="common__table" role="presentation">
+        <caption>렌즈 호환성 등의 정보</caption>
+        <colgroup>
+          <col width="23.5%">
+          <col width="76.5%">
+        </colgroup>
+        <tbody>
+          <tr>
+            <th scope="row">렌즈 호환성</th>
+            <td>소니 EF-S마운트 렌즈</td>
+          </tr>
+          <tr>
+            <th scope="row">이미지 크기(픽셀), [3:2]</th>
+            <td>35mm 풀프레임 L : 9504 x 6336(60M), M : 6240 x 4160(26M), S : 4752 x 3168(15M) APS-C L : 6240 x 4160(26M), M : 4752 x 3168(15M), S : 3120 x 2080(6.5M)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="common__title h3">이미지 센서</h3>
+    <div class="common__table__wrap">
+      <table class="common__table" role="presentation">
+        <caption>이미지 센서의 상세 정보</caption>
+        <colgroup>
+          <col width="23.5%">
+          <col width="76.5%">
+        </colgroup>
+        <tbody>
+          <tr>
+            <th scope="row">화면비</th>
+            <td>3:2</td>
+          </tr>
+          <tr>
+            <th scope="row">픽셀 수</th>
+            <td>약 61.0 메가픽셀(유효) / 약 62.5 메가픽셀(전체)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2 class="common__title h2">배송 / 환불 규정</h2>
+    <h3 class="common__title h3">교환 / 반품 안내 및 보증 조건과 절차</h3>
+    <div class="common__table__wrap">
+      <table class="common__table" role="presentation">
+        <caption>교환/반품 간 기준과 불가사유 등의 안내</caption>
+        <colgroup>
+          <col>
+          <col>
+        </colgroup>
+        <tbody>
+          <tr>
+            <th scope="row">교환 / 반품 기준</th>
+            <td>
+              <ul class="common__table__lists">
+                <li class="common__table__list">고객 변심으로 인한 교환/반품은 상품을 수령하신 날로부터 7일 이내에 신청 가능합니다.</li>
+                <li class="common__table__list">반품 시 제공된 사은품은 모두 회수하며 회수가 되지 않을 경우 교환/반품이 불가능합니다.</li>
+                <li class="common__table__list">교환/환불 시 제품 특성에 따라 처리 소요시간이 상이할 수 있습니다.</li>
+                <li class="common__table__list">교환은 동일한 상품만 가능하며, 다른 상품으로 교환을 원하실 경우 해당 상품을 주문취소 후 재주문하여 주시기 바랍니다.<br>(색상변경 포함)</li>
+                <li class="common__table__list">전자상거래 등에서의 소비자 보호에 관한 법률로 규정되어 있는 소비자 청약철회 가능 범위에 해당하는 경우 신청 가능합니다.</li>
+                <li class="common__table__list">퀵배송 등으로 주문하신 상품과 설치상품의 교환/반품 접수는 고객지원센터(1588-0911)로 연락주시기 바랍니다.</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <style>
+    .product__list li {
+      padding: 5px 0 5px 20px;
+    }
+    .carts {
+      padding: 24px;
+      background-color: #000;
+    }
+    .carts img {
+      width: 10vw;
+      height: 10vw;
+    }
+    .carttest {
+      position: fixed;
+      z-index: 5000;
+      top: 200px;
+      right: 20px;
+      padding: 20px;
+      border: 1px solid #333;
+      background-color: rgba(255, 255, 255, .8);
+    }
+    .carttest button {
+      padding: .25em .5em;
+      font-size: 16px;
+      border: 1px solid #666;
+      border-radius: 1em;
+      background-color: #fff;
+    }
+    .carttest button.active {
+      color: #fff;
+      background-color: #666;
+    }
+  </style>
+  <!-- 
+  <div class="carts">
+    <img src="/dist/images/common/ic_cart.svg" alt="">
+    <img src="/dist/images/common/ic_mo_cart.svg" alt="">
+    <img src="/dist/images/_tmp/ic_cart_pc.svg" alt="">
+    <img src="/dist/images/_tmp/ic_cart_pc2.svg" alt="">
+    <img src="/dist/images/_tmp/ic_cart_tb.svg" alt="">
+    <img src="/dist/images/_tmp/ic_cart_mo.svg" alt="">
+  </div>
+  <div class="carttest">
+    size:
+    <button value="reset">reset</button>
+    <button value="auto">origin</button>
+    <button value="32">32px</button>
+    <button value="28">28px</button>
+    <button value="24">24px</button>
+  </div>
+  <script>
+    let carts = $(".carts");
+    let cart = carts.find("img");
+
+    $(".carttest button").on("click", function() {
+      let val = $(this).val();
+      let siblingsActive = $(this).siblings(".active");
+
+      if (val === "reset") {
+        cart.removeAttr("style");
+      } else {
+        cart.width(val).height(val);
+      };
+
+      if (siblingsActive.length) {
+        siblingsActive.removeClass("active");
+      }
+      $(this).addClass("active");
+    });
+  </script> -->
+
+  {{>footer}}
+</div>
+
+</body>
+</html>

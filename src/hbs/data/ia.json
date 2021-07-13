@@ -1,0 +1,387 @@
+{
+  "main": {
+    "title": "메인",
+    "url": "#"
+  },
+  "recommend": {
+    "title": "스토어 추천 제품",
+    "url": "#",
+    "submenu": {
+      "list": {
+        "title": "추천 제품",
+        "url": "#"
+      },
+      "Propose": {
+        "title": "선물 제안",
+        "url": "#"
+      }
+    }
+  },
+  "product": {
+    "title": "제품",
+    "url": "/dist/html/product/List.html",
+    "submenu": {
+      "camera": {
+        "title": "카메라",
+        "url": "/dist/html/product/camera.html",
+        "submenu": {
+          "camera1": {
+            "title": "렌즈교환식 카메라",
+            "url": "/dist/html/product/camera1.html",
+            "esp": true,
+            "submenu": {
+              "camera1-1": {
+                "title": "카메라"
+              },
+              "camera1-2": {
+                "title": "렌즈"
+              }
+            }
+          },
+          "camera2": {
+            "title": "컴팩트 카메라",
+            "url": "/dist/html/product/camera2.html"
+          }
+        }
+      },
+      "videocamera": {
+        "title": "비디오카메라",
+        "url": "/dist/html/product/videocamera.html",
+        "submenu": {
+          "videocamera1": {
+            "title": "시네마 라인 카메라",
+            "url": "/dist/html/product/videocamera1.html"
+          },
+          "videocamera2": {
+            "title": "캠코더",
+            "url": "/dist/html/product/videocamera2.html",
+            "submenu": {
+              "videocamera2-1": {
+                "title": "4K 핸디캠",
+                "url": "/dist/html/product/videocamera2-1.html"
+              },
+              "videocamera2-2": {
+                "title": "HD 핸디캠",
+                "url": "/dist/html/product/videocamera2-2.html"
+              }
+            }
+          },
+          "videocamera3": {
+            "title": "액션캠",
+            "url": "/dist/html/product/videocamera3.html"
+          }
+        }
+      },
+      "audio": {
+        "title": "오디오",
+        "url": "/dist/html/product/audio.html",
+        "submenu": {
+          "audio1": {
+            "title": "헤드폰/이어폰",
+            "url": "/dist/html/product/audio1.html",
+            "submenu": {
+              "audio1-1": {
+                "title": "헤드폰 앰프",
+                "url": "/dist/html/product/audio1-1.html"
+              },
+              "audio1-2": {
+                "title": "무선 이어폰",
+                "url": "/dist/html/product/audio1-2.html"
+              },
+              "audio1-3": {
+                "title": "유선 이어폰",
+                "url": "/dist/html/product/audio1-3.html"
+              }
+            }
+          },
+          "audio2": {
+            "title": "스피커",
+            "url": "/dist/html/product/audio2.html",
+            "submenu": {
+              "audio2-1": {
+                "title": "무선 스피커",
+                "url": "/dist/html/product/audio2-1.html"
+              },
+              "audio2-2": {
+                "title": "카오디오",
+                "url": "/dist/html/product/audio2-2.html"
+              }
+            }
+          },
+          "audio3": {
+            "title": "홈 오디오",
+            "url": "/dist/html/product/audio3.html"
+          },
+          "audio4": {
+            "title": "워크맨/녹음기",
+            "url": "/dist/html/product/audio4.html",
+            "submenu": {
+              "audio4-1": {
+                "title": "MP3 플레이어",
+                "url": "/dist/html/product/audio4-1.html"
+              },
+              "audio4-2": {
+                "title": "녹음기",
+                "url": "/dist/html/product/audio4-2.html"
+              }
+            }
+          }
+        }
+      },
+      "accessory": {
+        "title": "액세서리",
+        "url": "/dist/html/product/accessory.html",
+        "submenu": {
+          "accessory1": {
+            "title": "카메라 액세서리",
+            "url": "/dist/html/product/accessory1.html",
+            "submenu": {
+              "accessory1-1": {
+                "title": "메모리카드/SSD",
+                "url": "/dist/html/product/accessory1-1.html"
+              },
+              "accessory1-2": {
+                "title": "배터리/충전기/어댑터",
+                "url": "/dist/html/product/accessory1-2.html"
+              },
+              "accessory1-3": {
+                "title": "세로그립",
+                "url": "/dist/html/product/accessory1-3.html"
+              },
+              "accessory1-4": {
+                "title": "플래시/조명",
+                "url": "/dist/html/product/accessory1-4.html"
+              },
+              "accessory1-5": {
+                "title": "마이크",
+                "url": "/dist/html/product/accessory1-5.html"
+              },
+              "accessory1-6": {
+                "title": "뷰파인더/모니터",
+                "url": "/dist/html/product/accessory1-6.html"
+              },
+              "accessory1-7": {
+                "title": "세로그립",
+                "url": "/dist/html/product/accessory1-7.html"
+              },
+              "accessory1-8": {
+                "title": "케이스/커버/스트랩",
+                "url": "/dist/html/product/accessory1-8.html"
+              },
+              "accessory1-9": {
+                "title": "액세서리 키트",
+                "url": "/dist/html/product/accessory1-9.html"
+              },
+              "accessory1-10": {
+                "title": "기타",
+                "url": "/dist/html/product/accessory1-10.html"
+              }
+            }
+          },
+          "accessory2": {
+            "title": "오디오 액세서리",
+            "url": "/dist/html/product/accessory2.html"
+          }
+        }
+      },
+      "playstation": {
+        "title": "PlayStation®",
+        "url": "/dist/html/product/playstation.html",
+        "submenu": {
+          "playstation1": {
+            "title": "PlayStation®",
+            "url": "/dist/html/product/playstation1.html"
+          },
+          "playstation2": {
+            "title": "게임타이틀 및 주변기기",
+            "url": "/dist/html/product/playstation2.html"
+          }
+        }
+      }
+    },
+    "etc": {
+      "esp": {
+        "title": "연장서비스플랜 ESP",
+        "url": "dist/html/product/esp.html"
+      }
+    }
+  },
+  "footer": {
+    "title": "푸터",
+    "url": "#",
+    "submenu": {
+      "terms": {
+        "title": "소니스토어 이용약관",
+        "url": "/dist/html/footer/terms.html"
+      },
+      "policy": {
+        "title": "소니코리아 개인정보처리방침",
+        "url": "/dist/html/footer/policy.html"
+      },
+      "sitemap": {
+        "title": "사이트맵",
+        "url": "/dist/html/footer/sitemap.html"
+      },
+      "searchResult": {
+        "title": "검색결과",
+        "url": "/dist/html/footer/searchResult.html"
+      }      
+    }
+  },
+  "member": {
+    "title": "회원",
+    "url": "#",
+    "submenu": {
+      "login": {
+        "title": "로그인",
+        "url": "/dist/html/member/login.html"
+      },
+      "join": {
+        "title": "간편회원가입",
+        "url": "/dist/html/member/join.html"
+      },    
+      "joinAgree": {
+        "title": "회원가입 약관동의",
+        "url": "/dist/html/member/joinAgree.html"
+      },     
+      "joinStep": {
+        "title": "회원가입",
+        "url": "/dist/html/member/joinStep.html"
+      },          
+      "idSearch": {
+        "title": "아이디 찾기",
+        "url": "/dist/html/member/idSearch.html"
+      },
+      "pwSearch": {
+        "title": "비밀번호 찾기",
+        "url": "/dist/html/member/pwSearch.html"
+      },
+      "inactiveAccounts": {
+        "title": "휴면계정 전환 안내",
+        "subtitle": "휴면계정을 활성화 하시면 소니스토어의 더 많은 혜택을 누리실 수 있습니다.",
+        "desc": "xxxxx",
+        "url": "/dist/html/member/inactiveAccounts.html"
+      },
+      "activeAccounts": {
+        "title": "휴먼계정 해제 안내",
+        "subtitle": "휴먼계정 해제 요청이 정상적으로 처리 되었습니다.",
+        "desc": "xxxxx",
+        "url": "/dist/html/member/activeAccounts.html"
+      },
+      "lockedAccounts": {
+        "title": "계정 정보 잠금 안내",
+        "subtitle": "회원님의 계정 정보가 잠금 처리 되었습니다.",
+        "desc": "xxxxx",
+        "url": "/dist/html/member/lockedAccounts.html"
+      }
+    }
+  },
+  "order": {
+    "title": "주문",
+    "url": "#",
+    "classname": "order",
+    "length": "10",
+    "submenu": {
+      "cart1": {
+        "title": "장바구니",
+        "url": "/dist/html/order/cart1.html",
+        "desc": "장바구니",
+        "date": {
+          "done": "07-01",
+          "modify": ""
+        }
+      },
+      "cartEmpty": {
+        "title": "장바구니",
+        "url": "/dist/html/order/cartEmpty.html",
+        "desc": "비어있는 장바구니",
+        "date": {
+          "done": "07-01",
+          "modify": ""
+        }
+      },
+      "estimate": {
+        "title": "견적서",
+        "url": "/dist/html/order/estimate.html",
+        "desc": "견적서 레이어팝업"
+      },
+      "orderAgree": {
+        "title": "장바구니",
+        "url": "/dist/html/order/orderAgree.html",
+        "desc": "비회원 구매 동의"
+      },
+      "order1": {
+        "title": "주문·결제",
+        "url": "/dist/html/order/order1.html",
+        "desc": "회원 주문서 작성/결제"
+      },
+      "order2": {
+        "title": "주문·결제",
+        "url": "/dist/html/order/order2.html",
+        "desc": "비회원 주문서 작성/결제"
+      },
+      "order3": {
+        "title": "주문·결제",
+        "url": "/dist/html/order/order3.html",
+        "desc": "선물하기 주문서 작성/결제",
+        "date": {
+          "done": "07-06",
+          "modify": ""
+        }
+      },
+      "orderComplete1": {
+        "title": "주문 완료",
+        "url": "/dist/html/order/orderComplete1.html",
+        "desc": "회원/비회원 주문 완료",
+        "date": {
+          "done": "07-02",
+          "modify": ""
+        }
+      },
+      "orderComplete2": {
+        "title": "주문 완료",
+        "url": "/dist/html/order/orderComplete2.html",
+        "desc": "선물하기 주문 완료",
+        "date": {
+          "done": "07-02",
+          "modify": ""
+        }
+      }
+    }
+  },
+  "mypage": {
+    "title": "마이페이지",
+    "url": "/dist/html/mypage/mypage.html",
+    "classname": "mypage",
+    "length": "5",
+    "submenu": {
+      "mypage": {
+        "title": "마이페이지",
+        "url": "/dist/html/mypage/mypage.html",
+        "desc": "마이페이지 초기 화면"
+      },
+      "orderList": {
+        "title": "주문/배송내역",
+        "url": "/dist/html/mypage/orderList.html",
+        "desc": "주문/배송내역 목록",
+        "submenu": {
+          "orderDetail": {
+            "title": "주문/배송조회",
+            "url": "/dist/html/mypage/orderDetail.html",
+            "desc": "주문 상세 조회"
+          }
+        }
+      },
+      "memberInfo": {
+        "title": "회원정보",
+        "url": "/dist/html/mypage/memberInfo.html",
+        "desc": "회원정보"
+      },
+      "rename": {
+        "title": "개명 회원 본인 확인",
+        "url": "/dist/html/mypage/certRename.html",
+        "desc": "개명 회원 본인 확인"
+      }
+    }
+  }
+}

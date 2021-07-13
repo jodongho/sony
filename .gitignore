@@ -1,0 +1,5 @@
+# ignore people
+
+node_modules/
+dist/css
+dist/html

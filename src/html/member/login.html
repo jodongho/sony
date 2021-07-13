@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ia.member.submenu.login.title}}</title>
+<link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
+<link rel="stylesheet" href="/dist/css/contents.css">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/lib/js/swiper.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+<script src="/dist/js/ux-sub.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  {{>header}}
+  <div class="container" id="container">
+      <div class="login">
+        <ul class="login__tab">
+          <li class="current" data-tab="tab1"><a href="#">회원 로그인</a></li>
+          <li data-tab="tab2"><a href="#">비회원 로그인</a></li>
+        </ul>
+        <div id="tab1" class="login__tabcont current">
+          <div class="group not-ready">
+            <div class="inp_box">
+              <label class="inp_desc" for="loginName">
+                <input type="text" id="loginName" class="inp" placeholder="&nbsp;">
+                <span class="label">이메일 아이디<span>(예 : sony@sony.co.kr)</span></span>
+                <span class="focus_bg"></span>
+              </label>
+            </div>
+            <div class="error_txt"><span class="ico"></span>이메일 아이디를 입력해 주세요.</div>
+          </div>
+          <div class="group not-ready">
+            <div class="inp_box password_box">
+              <label class="inp_desc" for="loginPw">
+              <input type="password" id="loginPw" class="inp" placeholder="&nbsp;">
+              <span class="label">비밀번호</span>
+              <span class="focus_bg"></span>              
+              <div class="eyes"><button type="button" title="비밀번호 숨김"><i class="ico ico_eyes"></i></button></div>
+            </label>
+            </div>
+            <div class="error_txt"><span class="ico"></span>비밀번호를 입력해 주세요.</div>
+          </div>
+          <div class="btn_box full">
+            <button type="submit" class="btn btn_dark" title="로그인">로그인</button>
+          </div>
+          <div class="find_box">
+            <div class="check">
+              <input type="checkbox" class="inp_check" id="chk01">
+              <label for="chk01">이메일 아이디 저장</label>
+            </div> 
+            <ul class="user_menu">
+              <li><a href="#">아이디 &middot; 비밀번호 찾기</a></li>
+              <li><a href="#">회원가입</a></li>
+            </ul>
+          </div>
+          <div class="txt_or">
+            <span class="txt">또는</span>
+            <span class="bar"></span>
+          </div>
+          <div class="sns_login_box">
+            <strong class="sns_title">SNS 계정으로 <span>간편하게 로그인하세요.</span></strong>
+            <ul class="sns_list">
+              <li class="naver"><a href="#">네이버</a></li>
+              <li class="kakao"><a href="#">카카오톡</a></li>
+              <li class="facebook"><a href="#">페이스북</a></li>
+            </ul>
+          </div>          
+        </div>
+        <div id="tab2" class="login__tabcont">
+          <div class="group not-ready">
+            <div class="inp_box">
+              <label class="inp_desc" for="loginumber">
+                <input type="text" id="loginumber" class="inp" placeholder="&nbsp;">
+                <span class="label">주문번호</span>          
+                <span class="focus_bg"></span>
+              </label>
+            </div>
+            <div class="error_txt"><span class="ico"></span>주문번호를 입력해 주세요.</div>
+          </div>
+          <div class="group not-ready">
+            <div class="inp_box password_box">
+              <label class="inp_desc" for="loginumber">
+                <input type="password" id="loginPw_nonmember" class="inp" placeholder="&nbsp;">
+                <span class="label">비밀번호</span>
+                <div class="eyes"><button type="button" title="비밀번호 숨김"><i class="ico ico_eyes"></i></button></div>
+                <span class="focus_bg"></span>
+              </label>
+            </div>
+            <div class="error_txt"><span class="ico"></span>비밀번호를 입력해 주세요.</div>
+          </div>
+          <div class="btn_box full">
+            <button type="submit" class="btn btn_dark" title="로그인">로그인</button>
+          </div>
+          <p class="txt_nonmember">비회원께서는 주문 시 주문번호와 비밀번호(주문 시 배송 조회 비밀번호로 입력)를 입력하시면,<span class="block">해당 주문 상품의 배송 상태를 조회하실 수 있습니다.</span></p>          
+          <div class="join_box">
+            <strong class="join_title">아직 소니코리아 회원이 아니세요?</strong>
+            <p class="join_desc">회원가입을 통해 소니스토어에서 <span class="block">다양한 서비스를 이용하실 수 있습니다.</span></p>
+            <div class="btn_box"> 
+              <a href="#" class="btn btn_default">회원가입</a>
+          </div>
+          </div>          
+        </div>
+    </div>
+  </div>
+  <script>
+    //로그인 tab
+    $(function(){
+      $('.login__tab li').click(function() {
+        var activeTab = $(this).attr('data-tab');
+        $('.login__tab li').removeClass('current');
+        $('.login__tabcont').removeClass('current');
+        $(this).addClass('current');
+        $('#' + activeTab).addClass('current');
+      })    
+      // 눈표시 클릭 시 패스워드 보이기 
+      $('.eyes').on('click',function(){
+        $('.inp_box.password_box').toggleClass('active'); 
+        if( $('.inp_box.password_box').hasClass('active') == true ){
+          $(this).find('.ico_eyes').attr('class',"ico_eyes_open").parents('.password_box').find('.inp').attr('type',"text");
+          $(this).find('>button').attr('title',"비밀번호 표시");
+          // i 클래스 // 텍스트 보이기 i 클래스 
+        } 
+        else{ 
+          $(this).find('.ico_eyes_open').attr('class',"ico_eyes").parents('.password_box').find('.inp').attr('type','password');
+          $(this).find('>button').attr('title',"비밀번호 숨김");      
+        }
+      });
+
+      // input autofill style matching
+      const g = document.querySelectorAll(".group");
+
+      g.forEach((elem) => {
+        elem.classList.add("not-ready");
+      })
+      setTimeout(() => {
+        $("#contents").focus();
+        g.forEach((elem) => {
+          elem.classList.remove("not-ready");
+        })
+      }, 10);
+    });
+  </script>
+  {{>footer}}
+</div>
+
+</body>
+</html>

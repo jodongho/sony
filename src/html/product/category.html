@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
+<title>{{ia.product.submenu.camera.title}}</title>
+<link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
+<link rel="stylesheet" href="/dist/css/category.css">
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/lib/js/swiper.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  {{>header}}
+
+  <div class="container">
+    <div class="content">
+
+      <h1 style="font-size: 20px;">메뉴명/이미지만 확인 가능합니다. (지원 예정)</h1>
+
+      <!-- ↓ 1depth -->
+      {{#each ia.product.submenu}}
+      <div class="category__header {{@key}}">
+        <h1 class="category__header__name">{{this.title}}</h1>
+        <div class="category__header__menu swiper-container">
+          <ul class="swiper-wrapper centered">
+            <li class="swiper-slide all category__header__menu--active"><a href="#"><span>전체보기</span></a></li>
+            {{#each this.submenu}}
+            <li class="swiper-slide category__header__menu__{{@../key}}{{@index}}">
+              <a href="#"><span>{{this.title}}</span></a>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+
+      <!-- ↓ 2depth -->
+      {{#each this.submenu}}
+      <div class="category__header category__header__sub {{@key}}">
+        <a href="{{../url}}" class="category__header__back">{{../title}}</a>
+        <h1 class="category__header__name">{{this.title}}</h1>
+        {{#if esp}}
+        <div class="category__header__links">
+          <a href="#" class="category__header__link">제품 비교</a>
+          <a href="#" class="category__header__link">연장서비스플랜 ESP 보기</a>
+        </div>
+        {{/if}}
+        <div class="category__header__menu swiper-container">
+          {{#if submenu}}
+          <button type="button" class="swiper-button-prev"><img src="/dist/images/category/btn_category_left.svg" alt="이전"></button>
+          <ul class="swiper-wrapper centered">
+            <li class="swiper-slide all category__header__menu--active"><a href="#"><span>전체보기</span></a></li>
+            {{#each this.submenu}}
+            <li class="swiper-slide">
+              <a href="#"><span>{{this.title}}</span></a>
+            </li>
+            {{/each}}
+          </ul>
+          <button type="button" class="swiper-button-next"><img src="/dist/images/category/btn_category_right.svg" alt="다음"></button>
+          {{/if}}
+        </div>
+      </div>
+      {{/each}}
+      <!-- ↑ 2depth -->
+
+      {{/each}}
+      <!-- ↑ 1depth -->
+
+      <script>
+        const category = $(".category__header__menu").get();
+
+        for (let i = 0; i < category.length; i++) {
+          const _category = $(category[i]);
+          // const _category = $(this);
+          const submenu = _category.find(".swiper-slide");
+          const activeClass = "category__header__menu--active";
+
+          submenu.on("click", e => {
+            e.preventDefault();
+
+            let slide = $(e.currentTarget);
+
+            if (!slide.hasClass(activeClass)) {
+              submenu.filter("."+activeClass).removeClass(activeClass);
+              slide.addClass(activeClass);
+              // [dev] do filter!!
+            }
+          });
+
+          // console.log(submenu.length)
+          if (submenu.length >= 4) {
+
+            _category.find(".swiper-wrapper").removeClass("centered");
+
+            if (!_category.hasClass("category__header__sub")) {
+              const categorySwiper = new Swiper(_category, {
+                slidesPerView: "auto",
+                breakpoints: {
+                  320: {
+                    allowTouchMove: true,
+                  },
+                  1281: {
+                    allowTouchMove: false,
+                  },
+                },
+              });
+            } else {
+              const categorySwiper = new Swiper(_category, {
+                slidesPerView: "auto",
+                breakpoints: {
+                  320: {
+                    allowTouchMove: true,
+                  },
+                  1281: {
+                    allowTouchMove: false,
+                  },
+                },
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+              });
+            }
+          } else {
+            _category.find(".swiper-button-prev, .swiper-button-next").hide();
+          } 
+        }
+
+        // category.each(function(index) {
+        //   console.log(index)
+        //   const _category = $(this);
+        //   console.log(_category.eq())
+        //   const submenu = _category.find(".swiper-slide");
+        //   const activeClass = "category__header__menu--active";
+
+        //   submenu.on("click", e => {
+        //     e.preventDefault();
+
+        //     let slide = $(e.currentTarget);
+
+        //     if (!slide.hasClass(activeClass)) {
+        //       submenu.filter("."+activeClass).removeClass(activeClass);
+        //       slide.addClass(activeClass);
+        //       // [dev] do filter!!
+        //     }
+        //   });
+
+        //   // console.log(submenu.length)
+        //   if (submenu.length >= 4) {
+
+        //     _category.find(".swiper-wrapper").removeClass("centered");
+
+        //     if (!_category.hasClass("category__header__sub")) {
+        //       const categorySwiper = new Swiper(_category, {
+        //         slidesPerView: "auto",
+        //         breakpoints: {
+        //           320: {
+        //             allowTouchMove: true,
+        //           },
+        //           1281: {
+        //             allowTouchMove: false,
+        //           },
+        //         },
+        //       });
+        //     } else {
+        //       const categorySwiper = new Swiper(_category, {
+        //         slidesPerView: "auto",
+        //         breakpoints: {
+        //           320: {
+        //             allowTouchMove: true,
+        //           },
+        //           1281: {
+        //             allowTouchMove: false,
+        //           },
+        //         },
+        //         navigation: {
+        //           nextEl: '.swiper-button-next',
+        //           prevEl: '.swiper-button-prev',
+        //         },
+        //       });
+        //     }
+        //   } else {
+        //     _category.find(".swiper-button-prev, .swiper-button-next").hide();
+        //   }
+        // });
+      </script>
+    </div>
+  </div>
+
+  {{>footer}}
+</div>
+
+</body>
+</html>

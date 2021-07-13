@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ia.member.submenu.idSearch.title}}</title>
+<link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
+<link rel="stylesheet" href="/dist/css/contents.css">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/lib/js/swiper.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+<script src="/dist/js/ux-sub.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  {{>header}}
+  <div class="container" id="container">
+    <div class="login">
+      <h2 class="login__title">아이디 &middot; 비밀번호 찾기</h2>
+      <p class="login__desc">아이디·비밀번호가 기억나지 않으신가요? <span>아래의 인증 방법 중 선택하여 인증해주세요.</span></p>
+      <div class="login__search_box">
+        <ul class="login__tab search_type">
+          <li class="current"><a href="#">아이디 찾기</a></li><!-- 활성화 클래스 li 에 current -->
+          <li><a href="#">비밀번호 찾기</a></li>
+        </ul>
+        <div class="tabResult">
+          <div class="result_cont tab1">
+            <ul class="certify_box">
+              <li>
+                <a href="#">
+                  <span class="ico_phone_certify"></span>
+                  <p>휴대폰 번호 인증하기<span>(본인인증으로 찾기)</span></p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="ico_ipn_certify"></span>
+                  <p>아이핀 인증하기<span>(간편 회원 가입정보로 찾기)</span></p>
+                </a>
+              </li>
+            </ul>
+          </div>     
+          <div class="result_cont tab2 on">
+            <div class="id_result">
+              <span class="ico_id_result"></span>
+              <p class="info">회원님의 이메일 아이디 검색 결과입니다.</p>
+              <p class="mailaddress">SONYdfjhkahfkjheakjhfakje@**************</p>
+              <div class="btn_box full">
+                <a href="#" class="btn btn_dark">로그인</a>
+              </div>               
+            </div>                      
+          </div>               
+        </div>
+      </div>
+    </div>
+  </div>
+  {{>footer}}
+</div>
+<script>
+    /* 타이머 */
+    var initMinute;  // 최초 설정할 시간(min)
+    var remainSecond;  // 남은시간(sec)
+    
+    $(document).ready(function(){
+      clearTime(3); // 세션 만료 적용 시간 
+      setTimer();    // 문서 로드시 타이머 시작
+    });
+    
+    function clearTime(min){ // 타이머 초기화 함수
+      initMinute = min; 
+      remainSecond = min*60; 
+    }
+    
+    function setTimer(){ // 1초 간격으로 호출할 타이머 함수 
+    
+      // hh : mm 으로 남은시간 표기하기 위한 변수
+      remainMinute_ = parseInt(remainSecond/60);
+      remainSecond_ = remainSecond%60;
+    
+      if(remainSecond > 0){
+          $("#timer").empty();
+          $("#timer").append(Lpad(remainMinute_,2) + ":" + Lpad(remainSecond_,2));    // hh:mm 표기
+          remainSecond--;
+          setTimeout("setTimer()",1000); //1초간격으로 재귀호출!
+      }else{
+          //alert('시간이 초과되었습니다.');
+          /*세션 종료시 작동할 이벤트*/ 
+      }
+    }
+    function Lpad(str,len){  // hh mm형식으로 표기하기 위한 함수
+      str = str+"";
+      while(str.length<len){
+          str = "0"+str;
+      }
+      return str;
+    } 
+  
+</script>
+</body>
+</html>

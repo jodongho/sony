@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ia.member.submenu.inactiveAccounts.title}}</title>
+<link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
+<link rel="stylesheet" href="/dist/css/contents.css">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/lib/js/jquery-ui.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+<script src="/dist/js/ux-sub.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  {{>header}}
+  <div class="container" id="container">
+
+    <div class="accounts inactive">
+      <h1 class="accounts_title">{{ia.member.submenu.inactiveAccounts.title}}</h1>
+      <h2 class="accounts_desc">{{ia.member.submenu.inactiveAccounts.subtitle}}</h2>
+      <ul class="accounts_text">
+        <li class="accounts_text_list">개인정보 보호를 위한 관련 법령 개정에 따라 1년 이상 서비스 이용 내역이 없는 회원님의 개인정보를 휴면계정으로 별도 저장 ∙ 관리하고 있습니다.</li>
+        <li class="accounts_text_list">휴면계정 대상 회원님은 시행 일자인 <strong>2021.00.00(월) 이후부터</strong> 보유 쿠폰 및 기타 혜택이 소멸되며, 소니스토어 (http://store.sony.co.kr) 사이트 이용이 불가능합니다.</li>
+        <li class="accounts_text_list">휴면계정을 활성화하고자 하는 경우에는 하단의 휴면계정 활성화 하기 버튼을 이용하시기 바랍니다.</li>
+      </ul>
+      <div class="button_wrap">
+        <button type="button" class="alertLayerBtn button button_positive" data-open-layer="alert_pop2" data-alert-text="휴대폰 인증 서비스를 사용하여 휴면계정을 <br>활성화 합니다. 계속하시겠습니까?">휴면계정 활성화</button>
+      </div>
+    </div>
+
+  </div>
+  {{>footer}}
+</div>
+
+<div class="alert_layer layer alert_pop2">
+  <div class="layer_wrap">
+    <div class="layer_container">
+      <div class="layer_content">
+        <p class="alert_text"></p>
+        <div class="btn_box">
+          <button type="button" class="close btn btn_default">취소</button>
+          <button type="button" class="btn btn_dark">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

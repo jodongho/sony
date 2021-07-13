@@ -1,0 +1,155 @@
+<div id="skipnav" class="skipnav">
+	<a href="#container"><span>본문 바로가기</span></a>
+</div>
+<header id="header" class="header">
+  <div class="header__wrapper">
+    <h1 class="header__logo"><a href="/dist/html/main.html"><img src="/dist/images/common/logo.svg" alt="SONY"></a></h1>
+    <div class="header__menu">
+      <button class="btn btn__mo__hidden btn__search"><img src="/dist/images/common/ic_search.svg" alt="검색창 열기"></button>
+      <a href="/dist/html/member/mypage.html" class="btn btn__desktop btn__mypage"><img src="/dist/images/common/ic_mypage.svg" alt="마이페이지"></a>
+      <a href="/dist/html/order/cart.html" class="btn btn__cart"><img src="/dist/images/common/ic_cart.svg" alt="장바구니"></a></li>
+      <button type="button" class="btn btn__mo btn__menu__open"><img src="/dist/images/common/ic_menu.svg" alt="메뉴 열기"></button>
+      <button type="button" class="btn btn__mo btn__mo__hidden btn__menu__close"><img src="/dist/images/common/ic_close.svg" alt="메뉴 닫기"></button>
+    </div>
+    <div class="header__inner">
+
+      <!-- 비회원/로그인 전 -->
+      <!--
+      <div class="member">
+        <div class="member__inner">
+          <a href="#" class="member__msg member__msg__login">로그인이<br>필요합니다</a>
+          <button type="button" class="btn btn__login">로그인</button>
+          <div class="member__menu">
+            <ul>
+              <li class="member__menu__mypage"><a href="/dist/html/member/join.html">회원가입</a></li>
+              <li class="member__menu__order"><a href="/dist/html/order/orderList.html">주문/배송 조회</a></li>
+              <li class="member__menu__cart"><a href="/dist/html/order/cart.html">장바구니<span class="badge">99</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      -->
+
+      <!-- 회원/로그인 -->
+      <div class="member">
+        <div class="member__inner">
+          <p class="member__msg">박소니님<br>안녕하세요!</p>
+          <div class="member__menu">
+            <ul>
+              <li class="member__menu__mypage"><a href="/dist/html/member/mypage.html">마이페이지</a></li>
+              <li class="member__menu__order"><a href="/dist/html/order/orderList.html">주문/배송 조회</a></li>
+              <li class="member__menu__cart"><a href="/dist/html/order/cart.html">장바구니<span class="badge">99</span></a></li>
+            </ul>
+          </div>
+          <button type="button" class="btn btn__logout">로그아웃</button>
+        </div>
+      </div>
+      <nav class="gnb">
+        <ul class="gnb__menu">
+        {{#each gnb}}
+          <li>
+            <a href="{{this.url}}">{{this.title}}</a>
+            {{#if this.submenu}}
+            <ul class="gnb__menu__secondary">
+              {{#each this.submenu}}
+              <li>
+                <a href="{{this.url}}">{{this.title}}</a>
+              </li>
+              {{/each}}
+            </ul>
+            {{/if}}
+          </li>
+        {{/each}}
+        </ul>
+      </nav>
+      <!-- ↓ 앱 전용 메뉴 -->
+      <div class="appmenu">
+        <ul>
+          <li class="appmenu__qr"><a href="#">QR스캔</a></li>
+          <li class="appmenu__setting"><a href="#">설정</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- ↓ 검색 -->
+    <div class="search">
+      <h2 class="sr-only">통합검색</h2>
+      <div class="search__inner">
+        <div class="search__field">
+          <!-- <form action="get" role="search"> -->
+          <fieldset>
+            <legend>검색</legend>
+            {{!-- <label for="search__input">검색어를 입력해 주세요.</label> --}}
+            <input type="text" id="search__input" class="search__field__input" placeholder="검색어를 입력해 주세요." title="검색어 입력" maxlength="40">
+            <button class="btn search__btn__submit"><img src="/dist/images/common/ic_search.svg" alt="검색"></button>
+          </fieldset>
+          <!-- </form> -->
+        </div>
+        <div class="search__keyword">
+          <h3 class="search__title">인기 검색어</h3>
+          <div class="search__keyword__list">
+            <a href="#" class="search__keyword__item"># SEL40F25G</a>
+            <a href="#" class="search__keyword__item"># SRS-RA5000/MKR2</a>
+            <a href="#" class="search__keyword__item"># 카메라의 초격차</a>
+            <a href="#" class="search__keyword__item"># 알파 야카데미 8월 강좌</a>
+            <a href="#" class="search__keyword__item"># 노이즈캔슬링</a>
+            <a href="#" class="search__keyword__item"># 벗지않는 헤드폰</a>
+            <a href="#" class="search__keyword__item"># WF-1000XM3SME</a>
+            <a href="#" class="search__keyword__item"># 무선 스피커</a>
+            <a href="#" class="search__keyword__item"># 하이 레졸루션 오디오</a>
+            <a href="#" class="search__keyword__item"># 프리미엄 SD카드</a>
+          </div>
+        </div>
+        <div class="search__recomm">
+          <h3 class="search__title">추천 제품</h3>
+          <div class="search__recomm__wrapper">
+            <ul class="search__recomm__list">
+              <li class="search__recomm__item">
+                <a href="#">
+                  <div class="search__recomm__pic">
+                    <img src="/dist/images/_tmp/item640x640_01.png" alt="상품명1">
+                    <span class="badge__text badge__text__new">NEW</span>
+                    <!--
+                    <span class="badge__text badge__text__best">BEST</span>
+                    <span class="badge__text badge__text__event">EVENT</span>
+                    <span class="badge__text badge__text__hot">HOT</span>
+                    -->
+                  </div>
+                  <div class="search__recomm__wrapper">
+                    <span class="search__recomm__name ellipsis">WH-1000XM4</span>
+                    <p class="search__recomm__desc ellipsis2">끄지마세요, 벗지마세요, 편하게 대화를 시작하세요!</p>
+                  </div>
+                </a>
+              </li>
+              <li class="search__recomm__item">
+                <a href="#">
+                  <div class="search__recomm__pic">
+                    <img src="/dist/images/_tmp/item640x640_02.png" alt="상품명2">
+                    <span class="badge__text badge__text__best">BEST</span>
+                  </div>
+                  <div class="search__recomm__wrapper">
+                    <span class="search__recomm__name ellipsis">microSDXC SR-64HXA Class 10 High Sound Quality Model with SD Card Adapter</span>
+                    <p class="search__recomm__desc ellipsis2">일렉트로닉 노이즈 억제, 맑고 깨끗한 사운드를 실현</p>
+                  </div>
+                </a>
+              </li>
+              <li class="search__recomm__item">
+                <a href="#">
+                  <div class="search__recomm__pic">
+                    <img src="/dist/images/_tmp/item640x640_03.png" alt="상품명3">
+                    <span class="badge__text badge__text__event">EVENT</span>
+                  </div>
+                  <div class="search__recomm__wrapper">
+                    <span class="search__recomm__name ellipsis">WH-1000XM4</span>
+                    <p class="search__recomm__desc ellipsis2">모든 위대함은, 아주 작은 것들로부터. 원핸드 컴팩트 풀프레임 카메라, 독보적인 존재감, 예뻐지는 데일리 카메라</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button class="btn search__btn__close"><img src="/dist/images/common/ic_close.svg" alt="검색창 닫기"></button>
+    </div>
+    <!-- ↑ 검색 -->
+  </div>
+</header>

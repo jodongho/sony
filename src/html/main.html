@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
+<title>{{ia.main.title}}</title>
+<link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
+<link rel="stylesheet" href="/dist/css/main.css">
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/lib/js/swiper.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+<script src="/dist/js/ux-main.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  {{>header}}
+  <div id="container" class="container">
+    <div class="content main">
+      <!-- key visual -->
+      <div class="kv swiper-container">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide video-slide" data-swiper-autoplay="10000">
+            <!-- 
+              .video-slide
+                data-swiper-autoplay: (필수) swiper autoplay duration 을 슬라이드 별로 지정 할 수 있다. video.duration(영상의 총 재생 시간) 을 기본 값으로 하고자 한다.
+              .video-slide .video-slide-player
+                poster: 해당 영상 썸네일 이미지를 지정한다.
+                영상이 pc와 mobile 비율에 해당 하는 영상이 있는 경우, 각 data-video-pc/data-video-mo 로 입력, 그 외에는 src로 입력한다.
+            -->
+            <video class="video-slide-player" preload autoplay muted playsinline data-video-pc="/dist/images/_tmp/demo_1920x1080-1.mp4" data-video-mo="/dist/images/_tmp/demo_1920x1080-1.mp4" poster="/dist/images/_tmp/demo_1920x1080-1.jpg"></video>
+            <div class="kv__slide">
+              <div class="kv__head">
+                <div class="kv__head__copy">Silent White</div>
+                <div class="kv__head__copy">WH-1000 XM4</div>
+              </div>
+              <span class="kv__product"><span>무선 노이즈 캔슬링 헤드폰</span></span>
+              <a href="#" class="kv__link"><span>자세히 보기</span></a>
+            </div>
+          </li>
+          <li class="swiper-slide" data-bg-pc="/dist/images/_tmp/pc_kv_img1.jpg" data-bg-mo="/dist/images/_tmp/mo_kv_img1.jpg">
+            <div class="kv__slide">
+              <div class="kv__head">
+                <div class="kv__head__copy">One hand</div>
+                <div class="kv__head__copy">Full-Frame</div>
+                <div class="kv__head__copy">α7c</div>
+              </div>
+              <span class="kv__product"><span>원핸드 컴팩트 풀프레임 카메라</span></span>
+              <a href="#" class="kv__link"><span>자세히 보기</span></a>
+            </div>
+          </li>
+          <li class="swiper-slide video-slide" data-swiper-autoplay>
+            <video class="video-slide-player" preload autoplay muted playsinline data-video-pc="/dist/images/_tmp/demo_608x1080-1.mp4" data-video-mo="/dist/images/_tmp/demo_608x1080-1.mp4" poster="/dist/images/_tmp/demo_608x1080-1.jpg"></video>
+            <div class="kv__slide">
+              <div class="kv__head">
+                <div class="kv__head__copy">Vlog camera</div>
+                <div class="kv__head__copy">ZV-1</div>
+              </div>
+              <span class="kv__product"><span>예뻐지는 데일리 카메라</span></span>
+              <a href="#" class="kv__link"><span>자세히 보기</span></a>
+            </div>
+          </li>
+          <li class="swiper-slide" data-bg-pc="/dist/images/_tmp/pc_kv_img2.jpg" data-bg-mo="/dist/images/_tmp/mo_kv_img2.jpg">
+            <div class="kv__slide">
+              <div class="kv__head">
+                <div class="kv__head__copy">WH-</div>
+                <div class="kv__head__copy">1000XM4</div>
+              </div>
+              <span class="kv__product"><span>무선 노이즈 캔슬링 헤드폰</span></span>
+              <a href="#" class="kv__link"><span>자세히 보기</span></a>
+            </div>
+          </li>
+          <li class="swiper-slide" data-bg-pc="/dist/images/_tmp/pc_kv_img3.jpg" data-bg-mo="/dist/images/_tmp/mo_kv_img3.jpg">
+            <div class="kv__slide">
+              <div class="kv__head">
+                <div class="kv__head__copy">Vlog Camera</div>
+                <div class="kv__head__copy">ZV-1</div>
+              </div>
+              <span class="kv__product"><span>예뻐지는 데일리 카메라</span></span>
+              <a href="#" class="kv__link"><span>자세히 보기</span></a>
+            </div>
+          </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- // key visual -->
+
+      <!-- recommended -->
+      <div class="recommend">
+        <div class="recommend__bg__swiper swiper-container">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide" data-bg-pc="/dist/images/_tmp/main_recomm_pc1.jpg" data-bg-mo="/dist/images/_tmp/main_recomm_mo1.jpg"></li>
+            <li class="swiper-slide" data-bg-pc="/dist/images/_tmp/main_recomm_pc2.jpg" data-bg-mo="/dist/images/_tmp/main_recomm_mo2.jpg"></li>
+            <li class="swiper-slide" data-bg-pc="/dist/images/_tmp/main_recomm_pc3.jpg" data-bg-mo="/dist/images/_tmp/main_recomm_mo3.jpg"></li>
+            <li class="swiper-slide" data-bg-pc="/dist/images/_tmp/main_recomm_pc4.jpg" data-bg-mo="/dist/images/_tmp/main_recomm_mo4.jpg"></li>
+          </ul>
+        </div>
+        <div class="recommend__swiper swiper-container">
+          <ul class="swiper-wrapper">
+            <li class="recommend__item swiper-slide">
+              <a href="#">
+                <span class="recommend__item__copy">몰입을 넘어 소통까지<br>벗지않는 헤드폰</span>
+                <div class="recommend__item__pic">
+                  <img src="/dist/images/_tmp/main_recomm_item1.png" alt="모델명1">
+                </div>
+                <span class="recommend__item__desc">무선 노이즈 캔슬링 헤드폰</span>
+                <span class="recommend__item__name">WH-1000XM1</span>
+              </a>
+            </li>
+            <li class="recommend__item swiper-slide">
+              <a href="#">
+                <span class="recommend__item__copy">소리로 공간을 디자인하다</span>
+                <div class="recommend__item__pic">
+                  <img src="/dist/images/_tmp/main_recomm_item2.png" alt="모델명2">
+                </div>
+                <span class="recommend__item__desc">디퓨저 사운드 스피커</span>
+                <span class="recommend__item__name">SRS-RA5000</span>
+              </a>
+            </li>
+            <li class="recommend__item swiper-slide">
+              <a href="#">
+                <span class="recommend__item__copy">모든 영상가를 자유롭게 하다</span>
+                <div class="recommend__item__pic">
+                  <img src="/dist/images/_tmp/main_recomm_item3.png" alt="모델명3">
+                </div>
+                <span class="recommend__item__desc">FX3 풀프레임 시네마 라인 카메라</span>
+                <span class="recommend__item__name">Alpha-FX3</span>
+              </a>
+            </li>
+            <li class="recommend__item swiper-slide">
+              <a href="#">
+                <span class="recommend__item__copy">F1.2 렌즈의 초격차 한계를 뛰어넘다</span>
+                <div class="recommend__item__pic">
+                  <img src="/dist/images/_tmp/main_recomm_item4.png" alt="모델명4">
+                </div>
+                <span class="recommend__item__desc">FE 50mm F1.2 GM</span>
+                <span class="recommend__item__name">SEL50F12GM</span>
+              </a>
+            </li>
+          </ul>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+      <!-- // recommended -->
+
+      <!-- event -->
+      <div class="event">
+        <h2 class="event__title">EVENT</h2>
+        <div class="event__list">
+          <div class="event__wrapper" data-bg-pc="/dist/images/_tmp/main_event_bg_pc1.png" data-bg-mo="/dist/images/_tmp/main_event_bg_mo1.png">
+            <div class="event__main__info">
+              <div class="event__copy">
+                <p class="event__copy__head">
+                  <span>디퓨저 사운드 스피커</span>
+                  <span>청음 이벤트</span>
+                </p>
+                <p class="event__copy__desc">소니스토어 압구정에서 청음 시 최대 20% 할인!</p>
+              </div>
+            </div>
+            <div class="event__main swiper-container">
+              <button type="button" class="swiper-button-prev"></button>
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <a href="#"><img src="/dist/images/_tmp/item640x640_01.png" alt="상품명"></a>
+                  <div class="event__main__inner">
+                    <div class="event__product">
+                      <span class="event__product__name">SRS-RA3000BMKR2</span>
+                      <span class="event__product__price">399,000</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#"><img src="/dist/images/_tmp/item640x640_02.png" alt="상품명"></a>
+                  <div class="event__main__inner">
+                    <div class="event__product">
+                      <span class="event__product__name">WWE-RA3000BMKR2</span>
+                      <span class="event__product__price">299,000</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#"><img src="/dist/images/_tmp/item640x640_03.png" alt="상품명"></a>
+                  <div class="event__main__inner">
+                    <div class="event__product">
+                      <span class="event__product__name">WOW-RA3000BMKR2</span>
+                      <span class="event__product__price">199,000</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <button type="button" class="swiper-button-next"></button>
+            </div>
+          </div>
+          <div class="event__sub swiper-container">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide" style="background-image: url(/dist/images/_tmp/main_event2-1.jpg);">
+                <a href="#">
+                  <div class="event__sub__inner">
+                    <p class="event__copy__head">
+                      <span>성공적인 재택생활</span>
+                      <span>꿀-팁</span>
+                    </p>
+                    <p class="event__copy__desc">1000X 노이즈 캔슬링으로 더하는 성공적인 재택생활! </p>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide" style="background-image: url(/dist/images/_tmp/main_event2-2.jpg);">
+                <a href="#">
+                  <div class="event__sub__inner">
+                    <p class="event__copy__head">
+                      <span>이번주는 오리지널</span>
+                      <span>시리즈 정주행</span>
+                    </p>
+                    <p class="event__copy__desc">WH-1000XM4 구매 시 특별 혜택 증정</p>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide" style="background-image: url(/dist/images/_tmp/main_event2-3.jpg);">
+                <a href="#">
+                  <div class="event__sub__inner">
+                    <p class="event__copy__head">
+                      <span>카메라 무상 수리 서비스</span>
+                      <span>1+1년 연장 프로모션</span>
+                    </p>
+                    <p class="event__copy__desc">카메라 구매 시 무상 수리 서비스 1년 추가 연장</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+        <a href="#" class="btn__event__more">더 보러 가기</a>
+      </div>
+      <!-- // event -->
+
+      <!-- product -->
+      <div class="main__product">
+        <h2 class="main__product__title">PRODUCT</h2>
+        <div class="main__product__inner">
+          <ul class="main__product__lists">
+            <li class="main__product__list camera"><a href="#">Camera</a></li>
+            <li class="main__product__list vcamera"><a href="#">Video Camera</a></li>
+            <li class="main__product__list audio"><a href="#">Audio</a></li>
+            <li class="main__product__list ps"><a href="#">PlayStation®</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- // product -->
+
+      <!-- academy banner -->
+      <div class="main__banner" data-bg-mo="/dist/images/_tmp/main_banner_mo.png" data-bg-tab="/dist/images/_tmp/main_banner_tab.png" data-bg-pc="/dist/images/_tmp/main_banner_pc.png">
+        <div class="main__banner__inner">
+          <h2 class="main__banner__title">알파 아카데미<br>4월 강좌 수강신청</h2>
+          <a href="#" class="main__banner__link">자세히 보기</a>
+        </div>
+      </div>
+      <!-- // academy banner -->
+
+      <!-- customer service -->
+      <div class="main__help">
+        <h2 class="main__help__title">무엇을<br>도와드릴까요?</h2>
+        <ul class="main__help__lists">
+          <li class="main__help__list notice">
+            <a href="#">공지사항 & FAQ</a>
+          </li>
+          <li class="main__help__list location">
+            <a href="#">매장안내</a>
+          </li>
+          <li class="main__help__list customer">
+            <a href="#">고객센터</a>
+          </li>
+          <li class="main__help__list service">
+            <a href="#">제품지원</a>
+          </li>
+        </ul>
+      </div>
+      <!-- // customer service -->
+
+    </div>
+  </div>
+  {{>footer}}
+</div>
+</body>
+</html>

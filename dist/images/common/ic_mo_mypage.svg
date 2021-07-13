@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#fff;stroke-width:1.25px}
+        </style>
+    </defs>
+    <g id="ic_gnb_mypage" transform="translate(-1776.861 -32.051)">
+        <g id="그룹_3137" transform="translate(1782.861 38.051)">
+            <g id="타원_22" class="cls-2" transform="translate(4.773)">
+                <circle cx="5.727" cy="5.727" r="5.727"/>
+                <circle cx="5.727" cy="5.727" r="5.102" fill="none"/>
+            </g>
+            <path id="패스_66" d="M770 361.62a12.857 12.857 0 0 0-1.792-2.894 11.05 11.05 0 0 0-17.029-.448A12.82 12.82 0 0 0 749 361.62" class="cls-2" transform="translate(-749 -340.621)"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
+<title>{{ia.mypage.submenu.orderList.title}}</title>
+<link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
+<link rel="stylesheet" href="/dist/css/common.css">
+<link rel="stylesheet" href="/dist/css/contents.css">
+<link rel="stylesheet" href="/dist/css/mypage.css">
+<link rel="stylesheet" href="/dist/css/mypage2.css">
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/lib/js/jquery-ui.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  {{>header}}
+
+  <div class="container">
+    <div class="content">
+
+      <div class="common_head">
+        <a href="{{ia.mypage.url}}" class="common_head_back">{{ia.mypage.title}}</a>
+        <h1 class="common_head_name">{{ia.mypage.submenu.orderList.title}}</h1>
+      </div>
+
+      <div>
+        입금대기 0건
+        결제완료 0건
+        배송준비 0건
+        배송중 0건
+        배송완료 0건
+
+        주문 취소 0건
+        교환/반품 0건
+      </div>
+
+      <div>
+        주문날짜 : 2021-05-12
+        주문번호 : 20210512-663W24
+
+        처리상태 : 배송준비
+        <button>배송조회</button>
+      </div>
+
+
+
+      <div class="filter">
+        3개월
+        6개월
+        1년
+        <div class="calendar_box"></div>
+        <button type="button" class="button button_positive button-s">조회</button>
+      </div>
+
+      <!-- 제품 정보 -->
+      <div class="col_table_wrap order_list">
+        <div class="col_table">
+          <div class="col_table_head">
+            <div class="col_table_row">
+              <div class="col_table_cell">주문날짜/번호</div>
+              <div class="col_table_cell">제품</div>
+              <div class="col_table_cell">수량</div>
+              <div class="col_table_cell">처리상태</div>
+            </div>
+          </div>
+          <div class="col_table_body">
+            <div class="col_table_row">
+              <div class="col_table_cell prd_price">
+                <span class="prd_date">21.05.12</span>
+                <span class="prd_number">20210512-663W24</span>
+              </div>
+              <div class="col_table_cell">
+                <div class="prd">
+                  <div class="prd_thumb">
+                    <img class="prd_thumb_pic" src="/dist/images/_tmp/item640x640_01.png" alt="상품명입력">
+                  </div>
+                  <div class="prd_info">
+                    <div class="prd_info_name">AK-47 Hi-Res 헤드폰 앰프</div>
+                    <p class="prd_info_option">128Bit/피아노블랙</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col_table_cell prd_count">
+                2
+              </div>
+              <div class="col_table_cell prd_status">
+                결제완료
+                <button type="button" class="button button_negative button-s">주문취소</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 제품 정보 -->
+
+      <!-- 주문 정보 -->
+      <h2>주문 정보</h2>
+      <!-- // 주문 정보 -->
+
+      <!-- 결제 정보 -->
+      <h2>결제 정보</h2>
+      <!-- // 결제 정보 -->
+
+
+    </div>
+  </div>
+
+  {{>footer}}
+</div>
+</body>
+</html>
