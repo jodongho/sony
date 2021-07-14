@@ -11,7 +11,6 @@
     }
   }
 }
-
 // 장바구니
 .content.order_page {
   padding: 0;
@@ -225,9 +224,6 @@
         }    
         .pc_none {
           display: none;
-        }
-        .acc_item.on {
-    
         }
       }      
       .acc_item:first-of-type {
@@ -897,7 +893,6 @@
     }
   }
 }
-
 .order_confirm_box {
   padding: 240px 0;
   text-align: center;
@@ -1016,7 +1011,6 @@
     }
   }
 }
-
 .order_list {
   .prd {
     display: flex;
@@ -1241,7 +1235,6 @@
     left: 0;
   }
 }
-
 .order_box__cont {
   @media (max-width: 767px) { 
     .prd {
@@ -1296,7 +1289,6 @@
     margin-top: 64px;
   }
 }
-
 //col_table_cell
 .col_table_cell {
   &.prd_total {
@@ -1396,7 +1388,6 @@
           background: url(/dist/images/common/arr_calendar.svg) no-repeat 50% 50%;
         }
       }
-
       &.ui-datepicker-next {
         right: 16px;
         &::after {
@@ -1416,7 +1407,6 @@
       letter-spacing: 0;
     } 
   }
-
   &-calendar {
     width: 100%;
     text-align: center;
@@ -1444,12 +1434,10 @@
         color: $primary-color;
       }
     }
-
     .ui-state-highlight {
       border: 1px solid $primary-color;
       color: $primary-color;
     }
-
     .ui-state-active {
       background: $primary-color;
       color: #fff;
