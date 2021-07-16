@@ -280,7 +280,7 @@
     "title": "주문",
     "url": "#",
     "classname": "order",
-    "length": "10",
+    "length": "11",
     "submenu": {
       "cart1": {
         "title": "장바구니",
@@ -344,6 +344,15 @@
         "desc": "선물하기 주문 완료",
         "date": {
           "done": "07-02",
+          "modify": ""
+        }
+      },
+      "orderPresent": {
+        "title": "소니스토어 선물하기",
+        "url": "/dist/html/order/orderPresent.html",
+        "desc": "소니스토어 선물하기 배송지입력",
+        "date": {
+          "done": "07-13",
           "modify": ""
         }
       }
