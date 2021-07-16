@@ -2984,7 +2984,21 @@ body {
   }
   &.size_l{
     width:900px;
+    /* s: 202107 재택 수정 */ 
+    .pop_cont{
+      padding:64px;
+      &.scrollH{
+        padding-right:0; 
+        .pop_tit{
+          padding-right:64px;
+        }
+        .pop_cont_scroll{
+          padding-right:46px;
+        }
+      }
+    }
   }
+  /* e: 202107 재택 수정 */ 
   .btn_article{
     margin-top:40px;
     text-align:center;
@@ -3013,7 +3027,7 @@ body {
     &.scrollH{
       padding-right:0; /* 202107 재택 수정 */ 
       .pop_cont_scroll{
-        padding-right:10px;
+        padding-right:22px;/* 202107 재택 수정 */ 
       }
     }
   }
