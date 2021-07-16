@@ -1,8 +1,124 @@
 @import "./import/variables";
 
-// 공통 헤더
+// from order.css 차후 contents.css 로 옮길 예정
+.order_list {
+  .prd {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    &_thumb {
+      width: 120px;
+      height: 120px;
+      margin-right: 40px;
+      background-color: #f4f7fa;
+      &_pic {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &_info {
+      max-width: 320px;
+      &_name {
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+      &_option {
+        margin-top: 6px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.571;
+        color: #666;
+        letter-spacing: -.025em;
+      }
+    }
+    &_summary {
+      font-weight: 700;
+      span {
+        display: inline-block;
+        vertical-align: baseline;
+      }
+      &_length {
+        font-size: 16px;
+        letter-spacing: -.025em;
+        color: #222;
+      }
+      &_price {
+        margin-left: 12px;
+        font-size: 24px;
+        color: $primary-color;
+        letter-spacing: 0;
+        .won {
+          font-size: 16px;
+        }
+      }
+      &_warning {
+        margin-top: .5em;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: -.025em;
+        color: #888;
+      }
+    }
+    .check_only {
+      margin-right: 12px;
+      margin-left: -4px;
+      transform: translateY(-52px);
+    }
+  }
+  .order {
+    font-size: 16px;
+    letter-spacing: -.025em;
+    &_date {
+      display: block;
+      margin-bottom: 4px;
+      color: #222;
+    }
+    &_number {
+      color: #888;
+      text-decoration: underline;
+    }
+    &_status {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: -.025em;
+      color: $primary-color;
+    }
+  }
+  .won {
+    font-size: 14px;
+  }
+  .button-s {
+    min-width: 0;
+  }
+  .btn_del_prd {
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    img {
+      filter: invert(15%);
+    }
+  }
+  .no-data {
+    padding: 110px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: -0.025em;
+    color: #444;
+    border-bottom: 1px solid #ddd;
+  }
+}
+.only-pc {
+  @media screen and (max-width: 1280px) {
+    display: none;
+  }
+}
 
+// * 공통 헤더
 .common_head {
+  margin-bottom: 80px;
   text-align: center;
   &_back,
   &_name {
@@ -28,87 +144,473 @@
   &_name {
     font-size: 48px;
   }
+  @media screen and (max-width: 640px) {  
+    margin-bottom: 14px;
+    &_back {
+      font-size: 12px;
+      &::before {
+        border-top: 1px solid #222;
+        border-right: 1px solid #222
+      }
+    }
+    &_name {
+      font-size: 24px;
+    }
+  }
 }
 
-// from order.css 차후 contents.css 로 옮길 예정
-.order_list {
+// * 주문/배송내역
+.recent_order {
+  margin-top: 80px;
+  .tit_head {
+    @include clearfix;
+    padding-bottom: 24px;
+  }
   @include only-pc {
-    .prd {
-      display: flex;
-      align-items: center;
-      text-align: left;
-      &_thumb {
-        width: 120px;
-        height: 120px;
-        margin-right: 40px;
-        background-color: #f4f7fa;
-        &_pic {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-      &_info {
-        max-width: 320px;
-        &_name {
-          font-weight: 700;
-          letter-spacing: 0;
-        }
-        &_option {
-          margin-top: 6px;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 1.571;
-          color: #666;
-          letter-spacing: -.025em;
-        }
-      }
-      &_summary {
-        font-weight: 700;
-        span {
-          display: inline-block;
-          vertical-align: baseline;
-        }
-        &_length {
-          font-size: 16px;
-          letter-spacing: -.025em;
-          color: #222;
-        }
-        &_price {
-          margin-left: 12px;
-          font-size: 24px;
-          color: $primary-color;
-          letter-spacing: 0;
-          .won {
-            font-size: 16px;
-          }
-        }
-        &_warning {
-          margin-top: .5em;
-          font-weight: 400;
-          font-size: 12px;
-          letter-spacing: -.025em;
-          color: #888;
-        }
-      }
-      &_status {
-        
-      }
-      .check_only {
-        margin-right: 12px;
-        margin-left: -4px;
-        transform: translateY(-52px);
+    .mileage_inquiry {
+      .cont_tit {
+        float: left;
+        margin-top: 0;
       }
     }
-    .won {
+    .date {
+      &_box {
+        float: right;
+      }
+      &3_tab {
+        float: left;
+        margin-right: 32px;
+      }
+      &_rang {
+        float: left;
+      }
+    }
+  }
+  @include only-tab {
+    .cont_tit {
+      margin-bottom: 20px;
+    }
+  }
+}
+.order_notice {
+  margin-top: 25px;
+  &_title {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -.025em;
+    color: #444;
+    &::before {
+      content: "!";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+      padding: 2px 0;
+      text-align: center;
+      vertical-align: 1px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1;
+      color: #fff;
+      border-radius: 50%;
+      box-sizing: border-box;
+      background-color: #bbb;
+    }
+  }
+}
+
+// * 주문 상세 조회
+.o_summary {
+  overflow: hidden;
+  margin: 76px 0 40px;
+  padding: 16px 24px;
+  background-color: #f4f7fa;
+  &_status {
+    float: right;
+    strong {
+      display: inline-block;
+      margin-right: .75em;
+      color: $primary-color;
+    }
+    .button-s {
+      height: 2.286em;
+      padding: .5em 1.143em;
+      vertical-align: top;
       font-size: 14px;
     }
-    .btn_del_prd {
-      width: 24px;
-      height: 24px;
-      padding: 4px;
-      img {
-        filter: invert(15%);
+  }
+  &_date {
+    float: left;
+    margin-right: 3em;
+  }
+  &_number {
+    float: left;
+  }
+  &_term,
+  &_desc {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: -.025em;
+    color: #222;
+  }
+  &_term {
+    float: left;
+    color: #444;
+    &::after {
+      content: ":";
+      margin: 0 .5em;
+    }
+  }
+  &_desc {
+    padding-left: 5em;
+    font-weight: 700;
+  }
+  @media screen and (max-width: 1280px) {
+    &_term,
+    &_desc {
+      font-size: 14px;
+    }
+    &_status {
+      .button-s {
+        height: 2em;
+        padding: .25em 1.143em;
+        vertical-align: top;
+      }
+    }
+  }
+  @media screen and (max-width: 740px) {
+    margin: 24px 0;
+    padding: 0;
+    background: none;
+    &_status,
+    &_date,
+    &_number {
+      float: none;
+    }
+    &_status {
+      margin-bottom: 24px;
+      padding: 16px 24px;
+      background-color: #f4f7fa;
+      .button-s {
+        float: right;
+      }
+    }
+    &_date {
+      margin-right: 0;
+    }
+  }
+}
+.order_info {
+  margin-bottom: 80px;
+  .order {
+    overflow: hidden;
+    margin-top: 19px;
+    padding-top: 13px;
+    border-top: 2px solid #222;
+    &_term,
+    &_desc {
+      float: left;
+      margin: 1.5em 0;
+      font-size: 14px;
+      line-height: 1.5;
+      letter-spacing: -.025em;
+    }
+    &_term {
+      width: 160px;
+      font-weight: 700;
+      color: #222;
+    }
+    &_desc {
+      width: calc(100% - 160px);
+      color: #444;
+    }
+    @media screen and (max-width: 640px) {
+      &_term {
+        float: none;
+        margin-bottom: 1em;
+      }
+    }
+  }
+  @include only-pc {
+    float: left;
+    width: 714px;
+  }
+}
+.purchase_info {
+  margin-bottom: 80px;
+  .purchase {
+    margin-top: 19px;
+    padding-top: 13px;
+    line-height: 1.5;
+    border-top: 2px solid #222;
+    &_term {
+      float: left;
+      font-size: 14px;
+      letter-spacing: -.025em;
+      color: #222;
+      &.purchase_price {
+        padding: 26px 0 24px;
+        font-size: 16px;
+      }
+      &.purchase_discount {
+        padding-top: 23px;
+        &_sub {
+          padding-top: 4px;
+          color: #888;
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            margin-left: 5px;
+            margin-right: 8px;
+            vertical-align: 1px;
+            border-left: 2px solid #ddd;
+            border-bottom: 2px solid #ddd;
+          }
+        }
+      }
+      &.purchase_detail {
+        margin-top: 20px;
+        padding-top: 28px;
+        text-align: right;
+        font-weight: 700;
+        font-size: 16px;
+        border-top: 1px solid #222;
+      }
+    }
+    &_desc {
+      text-align: right;
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: -.025em;
+      color: #222;
+      &.purchase_price {
+        padding: 22px 0;
+        font-size: 20px;
+        border-bottom: 1px solid #e1e1e1;
+      }
+      &.purchase_discount {
+        color: #e70000;
+      }
+      &.purchase_discount_sub {
+        color: #888;
+      }
+      &.purchase_detail {
+        padding-top: 8px;
+        padding-bottom: 32px;
+      }
+      .won {
+        font-size: .8em;
+      }
+    }
+    &_discount {
+      padding-top: 20px;
+      padding-bottom: 2px;
+      &_sub {
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
+    }
+    &_detail {
+      display: block;
+      float: none;
+      padding: 0 32px;
+      background-color: #fbfbfb;
+      &_price {
+        margin-bottom: 12px;
+        font-size: 28px;
+        letter-spacing: -.025em;
+        color: $primary-color;
+        .won {
+          font-size: 0.572em;
+        }
+      }
+      &_method {
+        margin: 12px 0;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: -.025em;
+        color: #666;
+      }
+      .button-s {
+        min-width: 0;
+      }
+    }
+  }
+  @include only-pc {
+    float: right;
+    width: 384px;
+  }
+  @media screen and (max-width: 640px) {
+    &_term {
+      float: none;
+      margin-bottom: 1em;
+    }
+    &_desc {
+      float: none;
+    }
+  }
+  &~ .button_wrap {
+    clear: both;
+  }
+}
+
+// mypage.css .my_order 에 추가
+.my_order {
+  &.order_process {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    $box-width: 80px;
+    $ico-width: 48px;
+    // @media screen and (min-width: 641px) {
+      [class*="step"] {
+        position: relative;
+        .ship_box {
+          min-width: $box-width;
+          padding: $box-width 0 0;
+          &::before {
+            width: $box-width;
+            height: $box-width;
+            border: 2px solid $primary-color;
+            box-sizing: border-box;
+          }
+          &::after {
+            top: 16px;
+            width: $ico-width;
+            height: $ico-width;
+            background-size: cover;
+          }
+          .ico_txt{
+            color: $primary-color;
+          }
+        }
+        &:not(:first-of-type) {
+          &::before {
+            content: "";
+            position: absolute;
+            top: 39px;
+            height: 2px;
+            width: calc(100% - #{$box-width});
+            transform: translateX(calc(-100% - #{$box-width} / 2));
+            background-color: $primary-color;
+          }
+        }
+      }
+      .on {
+        .ship_box {
+          &::before {
+            background:#5865f5;
+          }
+          .ico_txt{
+            font-weight: 700;
+          }
+        }
+        & ~ [class*="step"] {
+          &::before {
+            background-color: #ddd;
+          }
+          .ship_box {
+            &::before {
+              padding: 2px;
+              border: none;
+              background:#ddd;
+            }
+            &::after {
+              filter: brightness(10000%);
+            }
+            .ico_txt{
+              color: #888;
+            }
+          }
+        }
+      }
+    // }
+    @include only-tab {
+      [class*="step"] {
+        .ship_box {
+          margin: 0 20px;
+        }
+        &:first-of-type {
+          .ship_box {
+            margin-left: 0;
+          }
+        }
+        &:last-of-type {
+          &::before {
+            width: calc(100% - #{$box-width} + 20px);  // 120 - 80
+            transform: translateX(calc(-100% - #{$box-width} / 2 + 10px));
+          }
+          .ship_box {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 640px) {
+      $box-width: 24px;
+      margin-bottom: $box-width;
+      [class*="step"] {
+        .ship_box {
+          min-width: $box-width;
+          padding: $box-width 0 0;
+          margin: 0 calc(#{$box-width} / 2);
+          &::before {
+            width: $box-width;
+            height: $box-width;
+            color: $primary-color;
+          }
+          &::after {
+            display: none;
+          }
+          .ico_txt {
+            @include ir;
+            margin: 0;
+          }
+        }
+        &.on {
+          .ship_box::before {
+            color: #fff;
+          }
+          & ~ [class*="step"] {
+            &::before {
+              background-color: #ddd;
+            }
+            .ship_box::before {
+            color: #bbb;
+            }
+          }
+        }
+        &:not(:first-of-type) {
+          &::before {
+            top: 10px;
+            width: calc(100% - #{$box-width});
+            transform: translateX(calc(-100% - #{$box-width} / 2));
+            background-color: $primary-color;
+          }
+        }
+      }
+      .step_1 .ship_box::before {
+        content: "1";
+      }
+      .step_2 .ship_box::before {
+        content: "2";
+      }
+      .step_3 .ship_box::before {
+        content: "3";
+      }
+      .step_4 .ship_box::before {
+        content: "4";
+      }
+      .step_5 .ship_box::before {
+        content: "5";
+      }
+      .step_6 .ship_box::before {
+        content: "6";
       }
     }
   }
