@@ -23,10 +23,6 @@
       <div class="order_box">
         <h2 class="order_box__tit">{{ia.order.submenu.order2.title}}</h2>
         <ol class="order_box__list">
-          <li class="d_type"><!-- 주문결제 상태일때 장바구니 d_type 클래스 추가 -->
-            <i class="step_ico cart"></i>
-            <p>{{ia.order.submenu.cart1.title}}</p>
-          </li>
           <li class="on">
             <i class="step_ico order"></i>
             <p>{{ia.order.submenu.order2.title}}</p>
@@ -142,7 +138,7 @@
                         <div class="acc_cell">
                           <div class="acc_group parent error"><!-- error 문구 제어 -->
                             <div class="acc_inp type3">
-                              <input type="text" class="inp" id="user_name" placeholder="이름을 입력하세요.">
+                              <input type="text" class="inp" id="user_name" placeholder="이름을 입력하세요." maxlength="8">
                               <span class="focus_bg"></span>
                             </div>
                             <p class="error_txt"><span class="ico"></span>이름을 입력해 주세요.</p>
@@ -170,7 +166,7 @@
                         <div class="acc_cell">
                           <div class="acc_group parent error"><!-- error 문구 제어 -->
                             <div class="acc_inp type3">
-                              <input type="text" class="inp" id="user_number">
+                              <input type="text" class="inp" id="user_number" maxlength="13">
                               <span class="focus_bg"></span>
                             </div>
                             <p class="error_txt"><span class="ico"></span>휴대폰 번호를 입력해 주세요.</p>
@@ -199,7 +195,7 @@
                         <div class="acc_cell">
                           <div class="acc_group parent error"><!-- error 문구 제어 -->
                             <div class="acc_inp type2">
-                              <input type="text" id="user_name3" class="inp">
+                              <input type="text" id="user_name3" class="inp" maxlength="8">
                               <span class="focus_bg"></span>
                             </div>
                             <p class="error_txt"><span class="ico"></span>선물 받으실 분의 이름을 입력해 주세요.</p>
@@ -213,7 +209,7 @@
                         <div class="acc_cell">
                           <div class="acc_group parent error"><!-- error 문구 제어 -->
                             <div class="acc_inp type2">
-                              <input type="text" id="user_number3" class="inp">
+                              <input type="text" id="user_number3" class="inp" maxlength="13">
                               <span class="focus_bg"></span>
                             </div>
                             <p class="error_txt"><span class="ico"></span>휴대폰 번호를 입력해 주세요.</p>

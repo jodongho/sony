@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/dist/css/contents.css">
 <link rel="stylesheet" href="/dist/css/order.css">
 <script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
-<script src="/dist/js/ux-common.js"></script>
+<script src="/dist/lib/js/jquery-ui.min.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -26,7 +26,7 @@
         <p class="orderPresent_dsc">선물 받으실 상품의 배송지 정보를 입력해 주세요!</p>
       </div>
       <div class="order_box__cont">
-        <div class="acc">
+        <div class="acc acc_ui_zone">
           <!-- acc_item -->
           <div class="acc_item">
             <div class="acc_head">
@@ -49,7 +49,7 @@
                       </div>
                       <p class="error_txt"><span class="ico"></span>이름을 입력해 주세요.</p>
                     </div>
-                  </div>
+                  </div> 
                 </div>
                 <div class="acc_form">
                   <div class="acc_cell">
@@ -168,5 +168,63 @@
     </div>
   </div>
 </div>
+<script>
+  
+  let $selectBox = $('.select_ui_zone');
+    for(let _selectNum = 0; _selectNum < $selectBox.length ; _selectNum++){ // select 개별 제어
+      selectFunc($selectBox[_selectNum]);
+    }
+    function selectFunc(select){
+      $(select).find('.selected_btn').on("click",function(){
+        let $thisSelect = $(this).closest('.select_ui_zone'),
+            $selectList = $thisSelect.find('.select_inner');
+        if($thisSelect.hasClass("disabled")) { // 클릭 막기
+          _thisEvent.preventDefault
+          return false;
+        }
+        if($thisSelect.find(".select_inner:animated").length < 1){ // 열고 닫고 여러번 중독 안되게 하기 위함.
+          if($thisSelect.hasClass("open")){
+            $thisSelect.removeClass("open");
+            $selectList.slideUp(200);
+            $(this).html($(this).data("default-text"));
+          }else{
+            $thisSelect.addClass("open").siblings().removeClass("open");
+            $thisSelect.siblings().find('.select_inner').hide();
+            $selectList.slideDown(200);
+          }
+          optSelect($thisSelect);     
+          selectClosed($thisSelect); // 다른 영역 클릭 시 닫기
+        }
+        return false;
+      });
+      function optSelect(_list){ // option 클릭
+        let $openBtn = $(_list).find('.selected_btn');
+            $thisOpt = $(_list).find('.opt_list');
+        $thisOpt.off().on("click", function(_thisEvent){
+          let _optClone = $(this).html();
+          if($(this).hasClass("disabled")){ // 품절 제품 막기
+            _thisEvent.preventDefault
+            return false;
+          }
+          $openBtn.html(_optClone);
+          $(_list).removeClass("open");
+          $(_list).find('.select_inner').slideUp(200);
+          return false;
+        });
+      }
+
+      // 해당 select 외에 다른 영역 클릭 시 닫기
+      function selectClosed($zone){
+        $(document).off().on('click', function(event) {
+          let $selectChk = $(event.target).closest('.select_ui_zone');
+          if($selectChk.length == 0){
+            $zone.removeClass("open");
+            $zone.find('.select_inner').slideUp(200);
+          }
+        });
+      }
+    }
+
+</script>
 </body>
 </html>
