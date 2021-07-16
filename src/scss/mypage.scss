@@ -664,6 +664,9 @@
     &.ico_type2:before{
       background:url('/dist/images/mypage/ico_mypage_link_2.svg') no-repeat 0 0;
     }
+    &.ico_type3:before {
+      background: url("/dist/images/mypage/ico_mypage_link_3.svg") no-repeat 0 0;
+    }
     &:after{
       display:block;
       position:absolute;

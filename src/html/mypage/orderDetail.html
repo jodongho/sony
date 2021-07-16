@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
+<title>{{ia.mypage.submenu.orderList.submenu.orderDetail.title}}</title>
+<link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
+<link rel="stylesheet" href="/dist/css/common.css">
+<link rel="stylesheet" href="/dist/css/contents.css">
+<link rel="stylesheet" href="/dist/css/mypage.css">
+<link rel="stylesheet" href="/dist/css/mypage2.css">
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/lib/js/jquery-ui.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+</head>
+<body>
+<div class="wrapper my">
+  {{>header}}
+
+  <div class="container">
+    <div class="content">
+
+      <div class="common_head">
+        <a href="{{ia.mypage.submenu.orderList.url}}" class="common_head_back">{{ia.mypage.submenu.orderList.title}}</a>
+        <h1 class="common_head_name">{{ia.mypage.submenu.orderList.submenu.orderDetail.title}}</h1>
+      </div>
+
+      <div class="my_order order_process">
+        <ul class="order_list">
+          <!-- 현상태만 class: on 추가, .ico_txt 내부에 <strong> 추가 -->
+          <li class="step_1">
+            <div class="ship_box">
+              <span class="ico_txt">입금대기</span>
+            </div>
+          </li>
+          <li class="step_2">
+            <div class="ship_box">
+              <span class="ico_txt">결제완료</span>
+            </div>
+          </li>
+          <li class="step_3 on">
+            <div class="ship_box">
+              <span class="ico_txt"><strong>배송준비</strong></span>
+            </div>
+          </li>
+          <li class="step_4">
+            <div class="ship_box">
+              <span class="ico_txt">배송중</span>
+            </div>
+          </li>
+          <li class="step_5">
+            <div class="ship_box">
+              <span class="ico_txt">배송완료</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="o_summary">
+        <dl class="o_summary_status">
+          <dt class="o_summary_term">처리상태</dt>
+          <dd class="o_summary_desc">
+            <strong>배송준비</strong>
+            <button type="button" class="button button_positive button-s">배송조회</button>
+          </dd>
+        </dl>
+        <dl class="o_summary_date">
+          <dt class="o_summary_term">주문날짜</dt>
+          <dd class="o_summary_desc">2021-05-12</dd>
+        </dl>
+        <dl class="o_summary_number">
+          <dt class="o_summary_term">주문번호</dt>
+          <dd class="o_summary_desc">20210512-663W24</dd>
+        </dl>
+      </div>
+
+      <!-- 제품 정보 -->
+      <div class="col_table_wrap order_list">
+        <div class="col_table">
+          <div class="col_table_head">
+            <div class="col_table_row">
+              <div class="col_table_cell">제품</div>
+              <div class="col_table_cell">가격</div>
+              <div class="col_table_cell">수량</div>
+              <div class="col_table_cell">합계</div>
+            </div>
+          </div>
+          <div class="col_table_body">
+            <div class="col_table_row">
+              <div class="col_table_cell">
+                <div class="prd">
+                  <div class="prd_thumb">
+                    <img class="prd_thumb_pic" src="/dist/images/_tmp/item640x640_01.png" alt="상품명입력">
+                  </div>
+                  <div class="prd_info">
+                    <div class="prd_info_name">AK-47 Hi-Res 헤드폰 앰프</div>
+                    <p class="prd_info_option">128Bit/피아노블랙</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col_table_cell prd_price">
+                4,299,000 <span class="won">원</span>
+              </div>
+              <div class="col_table_cell prd_count">
+                2
+              </div>
+              <div class="col_table_cell prd_total">
+                8,598,000 <span class="won">원</span>
+              </div>
+            </div>
+            <div class="col_table_row">
+              <div class="col_table_cell">
+                <div class="prd">
+                  <div class="prd_thumb">
+                    <img class="prd_thumb_pic" src="/dist/images/_tmp/item640x640_02.png" alt="상품명입력">
+                  </div>
+                  <div class="prd_info">
+                    <div class="prd_info_name">AK-74 Hi-Res Aux 3.5mm 케이블 (16.5m)</div>
+                    <p class="prd_info_option">AK-47 전용 고해상도 Aux 케이블</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col_table_cell prd_price">
+                9,000 <span class="won">원</span>
+              </div>
+              <div class="col_table_cell prd_count">
+                2
+              </div>
+              <div class="col_table_cell prd_total">
+                18,000 <span class="won">원</span>
+              </div>
+            </div>
+            <div class="col_table_row">
+              <div class="col_table_cell">
+                <div class="prd">
+                  <div class="prd_thumb">
+                    <img class="prd_thumb_pic" src="/dist/images/_tmp/item640x640_03.png" alt="상품명입력">
+                  </div>
+                  <div class="prd_info">
+                    <div class="prd_info_name">PLAYSTATION 5 DIGITAL (CFI-1018B01)</div>
+                    <p class="prd_info_option">4K HDR(HLG), Fast Hybrid AF가 탑재된 전문가급 1인치 핸디캠/ LIMITED EDITION(사일런트 화이트)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col_table_cell prd_price">
+                4,299,000 <span class="won">원</span>
+              </div>
+              <div class="col_table_cell prd_count">
+                2
+              </div>
+              <div class="col_table_cell prd_total">
+                8,598,000 <span class="won">원</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 제품 정보 -->
+
+      <!-- 주문 정보 -->
+      <div class="cont order_info">
+        <h3 class="cont_tit">주문 정보</h3>
+        <div class="order_info_inner">
+          <dl class="order">
+            <dt class="order_term">주문자 정보</dt>
+            <dd class="order_desc">김소니(010-5678-1234)</dd>
+            <dt class="order_term">수령인</dt>
+            <dd class="order_desc">김소니(010-5678-1234)</dd>
+            <dt class="order_term">배송지</dt>
+            <dd class="order_desc">서울특별시 영등포구 여의도동 국제금융로 10 One IFC 24층 ㈜ 소니코리아 서울특별시 영등포구 여의도동 국제금융로 10 One IFC 24층 ㈜ 소니코리아</dd>
+            <dt class="order_term">배송 요청사항</dt>
+            <dd class="order_desc">파손의 위험이 있는 상품이니 조심히 다뤄주세요.</dd>
+            <dt class="order_term">배송일 선택</dt>
+            <dd class="order_desc">정상 배송 </dd>
+          </dl>
+        </div>
+      </div>
+      <!-- // 주문 정보 -->
+
+      <!-- 결제 정보 -->
+      <div class="cont purchase_info">
+        <h3 class="cont_tit">결제 정보</h3>
+        <div class="purchase_info_inner">
+          <dl class="purchase">
+            <dt class="purchase_term purchase_price">총 주문금액</dt>
+            <dd class="purchase_desc purchase_price">4,299,000<span class="won">원</span></dd>
+            <dt class="purchase_term purchase_discount">할인 금액</dt>
+            <dd class="purchase_desc purchase_discount">- 2,300  <span class="won">원</span></dd>
+            <dt class="purchase_term purchase_discount_sub">프로모션 할인</dt>
+            <dd class="purchase_desc purchase_discount_sub">- 2,000 <span class="won">원</span></dd>
+            <dt class="purchase_term purchase_discount_sub">쿠폰 사용</dt>
+            <dd class="purchase_desc purchase_discount_sub">- 0 <span class="won">원</span></dd>
+            <dt class="purchase_term purchase_discount_sub">마일리지 사용</dt>
+            <dd class="purchase_desc purchase_discount_sub">- 300 <span class="won">원</span></dd>
+            <dt class="purchase_term purchase_detail">결제 내역</dt>
+            <dd class="purchase_desc purchase_detail">
+              <div class="purchase_detail_price">4,299,000 <span class="won">원</span></div>
+              <div class="purchase_detail_method">가상 계좌 : KB국민은행(1234-2345-32456)</div>
+              <button type="button" class="button button_negative button-s">현금영수증 신청</button>
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <!-- // 결제 정보 -->
+
+      <!-- buttons -->
+      <div class="cont button_wrap">
+        <button type="button" class="button button_negative">주문 취소</button>
+        <button type="button" class="button button_negative only-pc">주문 정보 프린트</button>
+        <a href="#" class="button button_positive">목록</a>
+      </div>
+      <!-- // buttons -->
+
+    </div>
+  </div>
+
+  {{>footer}}
+</div>
+</body>
+</html>
