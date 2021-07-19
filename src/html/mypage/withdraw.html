@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ia.mypage.submenu.withdraw.title}}</title>
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
+<link rel="stylesheet" href="/dist/css/contents.css">
+<link rel="stylesheet" href="/dist/css/mypage2.css">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+<script src="/dist/js/ux-sub.js"></script>
+<script src="/dist/lib/js/jquery-ui.min.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  {{>header}}
+  <div class="container" id="container">
+    <div class="content">
+      <div class="common_head">
+        <a href="/dist/html/mypage/myPageMain.html" class="common_head_back">마이페이지</a>
+        <div class="common_head_name">회원탈퇴</div>
+      </div>      
+      <div class="withdraw_wrap">
+        <div class="member_idbox">
+          iLoveSonydkfjalfj@sony.co.kr
+        </div>
+        <p class="txt_primary">개인정보, 쿠폰 정보, 보유하신 마일리지, 정품등록 정보 등 회원 탈퇴 시 삭제됩니다.</p>
+        <form>
+          <div class="">            
+            <div class="group">
+              <div class="inp_box">
+                <label class="inp_desc" for="popPw">
+                  <input type="password" id="popPw" class="inp center" placeholder="&nbsp;">
+                  <span class="label">비밀번호</span>
+                  <span class="focus_bg"></span>              
+                 <div class="eyes"><a href="#" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
+                </label>
+              </div>
+              <div class="error_txt"><span class="ico"></span>현재 비밀번호가 올바르지 않습니다.</div>
+            </div>
+            <div class="select_ui_zone btm_line">
+              <a href="#" class="selected_btn" data-default-text="탈퇴사유를 선택해주세요."><!-- disabled : 선택불가 품절 -->
+                탈퇴사유를 선택해주세요.
+              </a>
+              <div class="select_inner">
+                <p class="prd_tag">탈퇴사유</p>
+                <ul class="select_opt">
+                  <li>
+                    <a href="#" class="opt_list"><!-- disabled : 선택 불가 품절 -->
+                      <div class="item">다른 아이디 변경을 위해 탈퇴</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="opt_list">
+                      <div class="item">유용한 컨텐츠 부족</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="opt_list">
+                      <div class="item">장기간 부재(해외 이민, 유학, 군입대 등)로 인한 탈퇴</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="opt_list">
+                      <div class="item">개인정보 노출 우려로 인한 탈퇴</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="opt_list">
+                      <div class="item">기타</div>
+                    </a>
+                  </li>                                                  
+                </ul>
+              </div>
+              <div class="btn_article">
+                <button class="button button_positive button-full" type="button">회원탈퇴</button>
+              </div>
+            </div>
+          </form>
+          <div class="info_withdraw">
+            <strong>[안내]</strong>
+            <ul>
+              <li>소니코리아 고객지원 사이트와 소니스토어는 하나의 이메일 ID와 비밀번호</li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <div class="sns_certify">
+            <div class="sns_login_box">
+              <div class="txt_lft">
+                <strong class="sns_title">SNS 계정으로 회원 인증</strong>
+                <p>SNS 계정으로 가입하신 회원님은 비밀번호 입력 대신 SNS 계정을 인증해 주셔야 탈퇴가 가능합니다.</p>
+              </div>
+              <ul class="sns_list">
+                <li class="naver"><a href="#">네이버</a></li>
+                <li class="kakao"><a href="#">카카오톡</a></li>
+                <li class="facebook"><a href="#">페이스북</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{>footer}}
+</div>
+</body>
+</html>

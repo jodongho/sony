@@ -365,7 +365,7 @@
         .necessary {
           &:after {
           position: absolute;
-          top: 5px;
+          top: 3px;
           right: 0;
           display: inline-block;
           width: 4px;
@@ -652,7 +652,7 @@
   font-size: 14px;
 }
 .check +.info_tit {
-  margin-top: 48px;
+  margin-top: 40px;
 }
 .info_tit + .list_dot {
   margin-top: 5px;
@@ -771,6 +771,9 @@
   .view_detail .acc_tit {
     position: relative;
     padding-left: 18px;   
+  }
+  .view_tit {
+    color: #222;
   }
   .view_detail {
     margin-top: 6px;
@@ -1036,6 +1039,38 @@
     &_price,
     &_count {
       color: #444;
+      .count_ui_box>button, 
+      .count_ui_box>input {
+        width: 31px;
+        height: 30px;
+      }
+      .count_ui_box .count {
+        line-height: 30px;
+      }
+    }
+    &_summary {
+      font-weight: 700;
+      &_length {
+        font-size: 16px;
+        letter-spacing: -.025em;
+        color: #222;
+      }
+      &_price {
+        margin-left: 12px;
+        font-size: 24px;
+        color: $primary-color;
+        letter-spacing: 0;
+        .won {
+          font-size: 16px;
+        }
+      }
+      &_warning {
+        margin-top: .5em;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: -.025em;
+        color: #888;
+      }
     }
     @include only-pc {
       &_info {
@@ -1054,33 +1089,11 @@
         }
       }
       &_summary {
-        font-weight: 700;
         span {
           display: inline-block;
           vertical-align: baseline;
         }
-        &_length {
-          font-size: 16px;
-          letter-spacing: -.025em;
-          color: #222;
-        }
-        &_price {
-          margin-left: 12px;
-          font-size: 24px;
-          color: $primary-color;
-          letter-spacing: 0;
-          .won {
-            font-size: 16px;
-          }
-        }
-        &_warning {
-          margin-top: .5em;
-          font-weight: 400;
-          font-size: 12px;
-          letter-spacing: -.025em;
-          color: #888;
-        }
-      }
+      }      
     }
     @include under-pc {
       &_thumb {
@@ -1159,6 +1172,15 @@
       }
       &_count {
         margin-top: 16px;
+        .count_ui_box>button, 
+        .count_ui_box>input {
+          width: 29px;
+          height: 30px;
+          font-size: 12px;
+        }
+        .count_ui_box .count {
+          line-height: 30px;
+        }
       }
       &_total {
         margin-top: 10px;
@@ -1176,8 +1198,6 @@
           display: block;
           margin-top: 4px;
           font-size: 24px;
-          color: $primary-color;
-          font-weight: 700;
           .won {
             font-size: 14px;
           }
@@ -1444,6 +1464,8 @@
     }
   }
 }
+
+
 // 선물하기 배송지입력
 .orderPresent {
   &_container {
