@@ -21,11 +21,13 @@ $(() => {
 
   window.addEventListener("load", init);
   window.addEventListener("resize", checkWidth);
-  gnb.addEventListener("mouseleave", hideGnb);
-  btnOpenGnb.addEventListener("click", showGnbMo);
-  btnHideGnb.addEventListener("click", hideGnbMo);
-  btnShowSearch.addEventListener("click", showSearch);
-  btnHideSearch.addEventListener("click", hideSearch);
+  if (gnb) {
+    gnb.addEventListener("mouseleave", hideGnb);
+    btnOpenGnb.addEventListener("click", showGnbMo);
+    btnHideGnb.addEventListener("click", hideGnbMo);
+    btnShowSearch.addEventListener("click", showSearch);
+    btnHideSearch.addEventListener("click", hideSearch);
+  }
 
   for (let i = 0; i < gnbLink1.length; i++) {
     gnbLink1[i].addEventListener("mouseover", showGnb);
@@ -120,46 +122,52 @@ $(() => {
   }
 
   // pc login tooltip
-  memberPcLink.addEventListener("click", e => {
-    e.preventDefault();
+  if (memberPcLink) {
+    memberPcLink.addEventListener("click", e => {
+      e.preventDefault();
 
-    const elem = document.querySelector(".header .member");
-    const active = "member--visible";
-    const outsideClick = e => {
-      if (!elem.contains(e.target) && !memberPcLink.contains(e.target)) {
-        $(elem).removeClass(active);
-        body.removeEventListener("click", outsideClick);
+      const elem = document.querySelector(".header .member");
+      const active = "member--visible";
+      const outsideClick = e => {
+        if (!elem.contains(e.target) && !memberPcLink.contains(e.target)) {
+          $(elem).removeClass(active);
+          body.removeEventListener("click", outsideClick);
+        };
       };
-    };
 
-    if (elem.classList.contains(active)) {
-      elem.classList.remove(active);
-      body.removeEventListener("click", outsideClick);
-    } else {
-      elem.classList.add(active);
-      body.addEventListener("click", outsideClick);
-    }
-  });
+      if (elem.classList.contains(active)) {
+        elem.classList.remove(active);
+        body.removeEventListener("click", outsideClick);
+      } else {
+        elem.classList.add(active);
+        body.addEventListener("click", outsideClick);
+      }
+    });
+  };
 
   // footer - family site on desktop
-  document.querySelector(".footer__family__link__trigger").addEventListener("click", e => {
-    const link = e.target.closest(".footer__family__link");
-    const active = "footer__family__link--active";
-    const outsideClick = e => {
-      console.log(!link.contains(e.target))
-      if (!link.contains(e.target)) {
-        $(link).removeClass(active);
-        body.removeEventListener("click", outsideClick);
-      };
-    };
+  const familyLinkTrigger = document.querySelector(".footer__family__link__trigger");
 
-    if (link.classList.contains(active)) {
-      link.classList.remove(active);
-    } else {
-      link.classList.add(active);
-      body.addEventListener("click", outsideClick);
-    };
-  });
+  if (familyLinkTrigger) {
+    familyLinkTrigger.addEventListener("click", e => {
+      const link = e.target.closest(".footer__family__link");
+      const active = "footer__family__link--active";
+      const outsideClick = e => {
+        console.log(!link.contains(e.target))
+        if (!link.contains(e.target)) {
+          $(link).removeClass(active);
+          body.removeEventListener("click", outsideClick);
+        };
+      };
+
+      if (link.classList.contains(active)) {
+        link.classList.remove(active);
+      } else {
+        link.classList.add(active);
+        body.addEventListener("click", outsideClick);
+      };
+    });
+  };
 
   // sort
   const itemsort = $(".itemsort");
@@ -205,55 +213,59 @@ $(() => {
   }  
   
   // floating menu
-  let prevScrollY = window.scrollY;
+  if (gnb && footer && sidebar) {
+    let prevScrollY = window.scrollY;
 
-  const scrollAction = () => {
-    let winHeight = window.innerHeight;
-    let start = 300;
-    let end = footer.offsetTop - winHeight + sidebar.offsetHeight + parseInt(getComputedStyle(sidebar).right) * 2;
+    const scrollAction = () => {
+      let winHeight = window.innerHeight;
+      let start = 300;
+      let end = footer.offsetTop - winHeight + sidebar.offsetHeight + parseInt(getComputedStyle(sidebar).right) * 2;
 
-    if (prevScrollY !== window.scrollY) {
-      if (prevScrollY > window.scrollY) {
-        // scroll up
-        if (prevScrollY !== 0) {
-          header.classList.add("header--fixed");
+      if (prevScrollY !== window.scrollY) {
+        if (prevScrollY > window.scrollY) {
+          // scroll up
+          if (prevScrollY !== 0) {
+            header.classList.add("header--fixed");
+          } else {
+            header.classList.remove("header--fixed");
+          };
         } else {
+          // scroll down
           header.classList.remove("header--fixed");
+        }
+        
+        prevScrollY = window.scrollY;
+        // sidebar
+        prevScrollY >= start ? sidebar.classList.add("sidebar--visible") : sidebar.classList.remove("sidebar--visible");
+        prevScrollY >= end ? sidebar.classList.add("sidebar--reachend") : sidebar.classList.remove("sidebar--reachend");
+      };
+
+    };
+
+    if (sidebarToggle) {
+      sidebarToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("sidebar--active");
+      });
+      sidebarTop.addEventListener("click", () => {
+        let speed = 200;
+        let maxSpeed = 700;
+        let scrollY = window.scrollY;
+
+        if (scrollY > 1000) {
+          scrollY > 5000 ? speed = maxSpeed : speed + scrollY * 0.1;
         };
-      } else {
-        // scroll down
-        header.classList.remove("header--fixed");
-      }
-      
-      prevScrollY = window.scrollY;
-      // sidebar
-      prevScrollY >= start ? sidebar.classList.add("sidebar--visible") : sidebar.classList.remove("sidebar--visible");
-      prevScrollY >= end ? sidebar.classList.add("sidebar--reachend") : sidebar.classList.remove("sidebar--reachend");
+        $("html, body").stop().animate({scrollTop: 0}, speed, "swing", () => {
+          sidebar.classList.remove("sidebar--active");
+        });
+      });
     };
 
-  };
-
-  sidebarToggle.addEventListener("click", () => {
-    sidebar.classList.toggle("sidebar--active");
-  });
-  sidebarTop.addEventListener("click", () => {
-    let speed = 200;
-    let maxSpeed = 700;
-    let scrollY = window.scrollY;
-
-    if (scrollY > 1000) {
-      scrollY > 5000 ? speed = maxSpeed : speed + scrollY * 0.1;
+    if (window.innerHeight >= document.body.offsetHeight) {
+      sidebar.classList.add("sidebar--visible");
+      observer.observe(body, observerConfig);
+    } else {
+      window.addEventListener('scroll', toFit(scrollAction, {}), {passive: true});
     };
-    $("html, body").stop().animate({scrollTop: 0}, speed, "swing", () => {
-      sidebar.classList.remove("sidebar--active");
-    });
-  });
-
-  if (window.innerHeight >= document.body.offsetHeight) {
-    sidebar.classList.add("sidebar--visible");
-    observer.observe(body, observerConfig);
-  } else {
-    window.addEventListener('scroll', toFit(scrollAction, {}), {passive: true});
   };
 
   // tab on/off
