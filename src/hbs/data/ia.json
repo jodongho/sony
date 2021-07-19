@@ -377,14 +377,14 @@
       "orderList": {
         "title": "주문/배송내역",
         "url": "/dist/html/mypage/orderList.html",
-        "desc": "주문/배송내역 목록",
+        "desc": "주문/배송내역 목록"
       },
       "orderDetail": {
         "title": "주문/배송조회",
         "url": "/dist/html/mypage/orderDetail.html",
         "desc": "주문 상세 조회"
       },
-      "rename": {
+      "certRename": {
         "title": "개명 회원 본인 확인",
         "url": "/dist/html/mypage/certRename.html",
         "desc": "개명 회원 본인 확인"
