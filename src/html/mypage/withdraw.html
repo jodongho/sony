@@ -130,15 +130,7 @@
   </div>
   <!-- // e: 정말 탈퇴하시겠습니까 팝업 -->
   <script>
-    $(function(){ 
-      // 팝업
-      $('.popup_comm_btn').on("click",function(){
-        let _popName = $(this).data("popup-name");
-        if($('.popup_wrap:animated').length < 1){ // fadeInOut 시 중복 클릭 방지
-          popupCommon(_popName, $(this)); // 오픈할 팝업과 닫기 시 돌아갈 포커스 select
-        }
-        passwordView();
-      });      
+    $(function(){   
       // 눈표시 클릭 시 패스워드 보이기 
       $('.eyes').on('click',function(){
         $('.inp_box.password_box').toggleClass('active'); 
