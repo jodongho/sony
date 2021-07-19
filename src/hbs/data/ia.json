@@ -360,36 +360,44 @@
   },
   "mypage": {
     "title": "마이페이지",
-    "url": "/dist/html/mypage/mypage.html",
+    "url": "/dist/html/mypage/myPageMain.html",
     "classname": "mypage",
-    "length": "5",
+    "length": "8",
     "submenu": {
-      "mypage": {
+      "myPageMain": {
         "title": "마이페이지",
-        "url": "/dist/html/mypage/mypage.html",
+        "url": "/dist/html/mypage/myPageMain.html",
         "desc": "마이페이지 초기 화면"
+      },
+      "myPageMember": {
+        "title": "회원정보",
+        "url": "/dist/html/mypage/myPageMember.html",
+        "desc": "회원정보"
       },
       "orderList": {
         "title": "주문/배송내역",
         "url": "/dist/html/mypage/orderList.html",
-        "desc": "주문/배송내역 목록",
-        "submenu": {
-          "orderDetail": {
-            "title": "주문/배송조회",
-            "url": "/dist/html/mypage/orderDetail.html",
-            "desc": "주문 상세 조회"
-          }
-        }
+        "desc": "주문/배송내역 목록"
       },
-      "memberInfo": {
-        "title": "회원정보",
-        "url": "/dist/html/mypage/memberInfo.html",
-        "desc": "회원정보"
+      "orderDetail": {
+        "title": "주문/배송조회",
+        "url": "/dist/html/mypage/orderDetail.html",
+        "desc": "주문 상세 조회"
       },
-      "rename": {
+      "certRename": {
         "title": "개명 회원 본인 확인",
         "url": "/dist/html/mypage/certRename.html",
         "desc": "개명 회원 본인 확인"
+      },
+      "withdraw": {
+        "title": "회원 탈퇴",
+        "url": "/dist/html/mypage/withdraw.html",
+        "desc": "회원탈퇴 폼"
+      },
+      "withdrawComplete": {
+        "title": "회원 탈퇴 신청 완료",
+        "url": "/dist/html/mypage/withdrawComplete.html",
+        "desc": "회원탈퇴 신청 완료"
       }
     }
   }
