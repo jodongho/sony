@@ -1894,7 +1894,10 @@ body {
     &:first-of-type {
       margin-top: 0;
     }
-  } 
+  }
+  .Fh4_tit + .list_agree {
+    margin-top: 14px;
+  }
   .layer_tbl {
     border-top: 1px solid #222;
     table {

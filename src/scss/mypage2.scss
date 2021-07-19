@@ -615,3 +615,60 @@
     }
   }
 }
+//회원탈퇴
+.withdrawComplete {
+  background-image: url(/dist/images/mypage/ic_withdraw_comp.svg);
+  .accounts_text {
+    margin-top: 19px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #666;
+  }
+  @include only-mo {
+    .accounts_text {
+      margin-top: 16px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+    .button_wrap {
+      margin-top: 24px;
+    }
+  }
+}
+.withdraw_wrap {
+  margin: 0 auto;
+  width: 588px;
+}
+.member_idbox {
+  padding: 13px 15px 18px;
+  background-color: #fbfbfb;
+  word-break: break-all;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #222;
+  font-weight: 700;
+}
+.txt_primary {
+  margin: 24px 0 64px;
+  font-size: 14px;
+  line-height: 24px;
+  color: $primary-color;
+  text-align: center;
+}
+.sns_certify {
+  margin-top: 80px;
+  border-top: 1px solid #ddd;
+  .txt_lft {
+    float: left;
+    width: 50%;
+    p {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #666;
+    }
+  }
+  .sns_title {
+    float: none;
+  }
+}
