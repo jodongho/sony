@@ -638,6 +638,61 @@
 .withdraw_wrap {
   margin: 0 auto;
   width: 588px;
+  @include under-pc {
+    width: 100%;
+    max-width: 768px;
+  }
+  @include only-mo {
+    width: 100%;
+  }
+}
+.withdraw_box {
+  .btn_article {
+    margin-top: 40px;
+  }
+  .select_ui_zone {
+    margin-top: 26px;
+    .selected_btn {
+      padding: 16px 10px 17px 0;
+      font-size: 18px;
+      color: #222;
+      font-weight: 700;
+    }
+    .select_inner {
+      background: #fff;
+    }
+    .select_opt {
+      li {
+        &:first-child {
+          .opt_list {
+            padding-top: 24px;
+          }
+        }
+        &:last-child {
+          .opt_list {
+            padding-bottom: 24px;
+          }
+        }
+      }
+    }
+    .opt_list {
+      padding: 8px 24px;
+      background: #fff;
+      font-size: 14px;
+      color: #888;
+      &:hover {
+        color: #222;
+      }
+    }
+  }
+  @include only-mo {
+    .select_ui_zone {
+      margin-top: 26px;
+      .selected_btn {
+        font-size: 16px;
+      }
+    }
+  }
 }
 .member_idbox {
   padding: 13px 15px 18px;
@@ -670,5 +725,105 @@
   }
   .sns_title {
     float: none;
+    text-align: left;
+  }
+  @include under-pc {
+    .sns_list {
+      float: right;
+      margin-top: 0;
+    }
+  }
+  @include only-mo {
+    margin-top: 60px;
+    text-align: center;
+    .sns_title {
+      text-align: center;
+    }
+    .txt_lft {
+      float: none;
+      width: 100%;
+    }
+    .sns_list {
+      float: none;
+      margin-top: 24px;
+    }
+  }  
+}
+.info_withdraw {
+  margin-top: 40px;
+  .info_title {
+    font-size: 16px;
+    color: #444;
+  }
+  .list_dot li {
+    color: #666;
+    &:first-child {
+      margin-top: 10px;
+    }
+  }
+  @include only-mo {
+    .info_title {
+      font-size: 14px;
+    }
+    .list_dot li {
+      font-size: 12px;
+    }
+  }
+}
+//정말탈퇴하시겠습니까 팝업
+.withdraw_pop {
+  text-align: center;
+  .point_box {
+    margin-bottom: 40px;
+    padding: 14px 32px;
+    background-color: #fbfbfb;
+    dl {
+      display: table;
+      width: 100%;
+    }
+    dt {
+      display: table-cell;
+      font-size: 14px;
+      color: #222;
+      text-align: left;
+      vertical-align: middle;
+      font-weight: 500;
+    }
+    dd {
+      display: table-cell;
+      position: relative;
+      text-align: right;
+      font-size: 26px;
+      color: $primary-color;
+      font-weight: bold;
+      vertical-align: middle;
+      &:after {
+        display: inline-block;
+        margin: 8px 0  0 4px;
+        width: 24px;
+        height: 24px;
+        content: '';
+        background: url(/dist/images/mypage/ic_pop_mileage.svg) no-repeat 0 50%;
+        vertical-align: top;
+      }
+    }
+  }
+  .button_negative {
+    min-width: 90px;
+  }
+  .button_positive {
+    min-width: 140px;
+  }
+  @include only-mo {
+    .point_box {
+      dt, dd {
+        display: block;
+        text-align: center;
+      }
+    }
+    .button_negative,
+    .button_positive {
+      min-width: 48%;
+    }    
   }
 }

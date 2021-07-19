@@ -28,9 +28,9 @@
         </div>
         <p class="txt_primary">개인정보, 쿠폰 정보, 보유하신 마일리지, 정품등록 정보 등 회원 탈퇴 시 삭제됩니다.</p>
         <form>
-          <div class="">            
+          <div class="withdraw_box">            
             <div class="group">
-              <div class="inp_box">
+              <div class="inp_box password_box">
                 <label class="inp_desc" for="popPw">
                   <input type="password" id="popPw" class="inp center" placeholder="&nbsp;">
                   <span class="label">비밀번호</span>
@@ -74,17 +74,17 @@
                   </li>                                                  
                 </ul>
               </div>
-              <div class="btn_article">
-                <button class="button button_positive button-full" type="button">회원탈퇴</button>
-              </div>
             </div>
+            <div class="btn_article">
+              <button class="button button_positive popup_comm_btn button-full" type="button" data-popup-name="withdraw_pop">회원탈퇴</button>
+            </div>            
           </form>
           <div class="info_withdraw">
-            <strong>[안내]</strong>
-            <ul>
-              <li>소니코리아 고객지원 사이트와 소니스토어는 하나의 이메일 ID와 비밀번호</li>
-              <li></li>
-              <li></li>
+            <strong class="info_title">[안내]</strong>
+            <ul class="list_dot">
+              <li>소니코리아 고객지원 사이트와 소니스토어는 하나의 이메일 ID와 비밀번호로 운영됩니다.</li>
+              <li><strong>회원 탈퇴 신청 시 "소니코리아 고객지원 사이트와 소니스토어" 모두 탈퇴처리됩니다.</strong></li>
+              <li>고객님의 소중한 의견을 참고하여, 보다 나은 소니코리아가 될 수 있도록 하겠습니다.</li>
             </ul>
           </div>
           <div class="sns_certify">
@@ -105,6 +105,55 @@
     </div>
   </div>
   {{>footer}}
+  <!-- s: 정말 탈퇴하시겠습니까 팝업-->
+  <div class="popup_wrap size_ms withdraw_pop">
+    <div class="pop_inner">
+      <div class="pop_cont">
+        <p class="pop_tit">정말 탈퇴하시겠습니까?</p>
+        <div class="point_box">
+          <dl>
+            <dt>사용가능한 마일리지</dt>
+            <dd>153,248</dd>
+          </dl>
+        </div>
+        <p class="pop_txt">회원 탈퇴 시 보유하신 멤버십 마일리지(소니스토어)와 정품등록 정보(소니코리아 고객지원 사이트)는 자동 삭제됩니다.</p>
+        <p class="pop_txt">탈퇴하신 이후에는 마일리지 복구가 불가능하며, SIPS회원일 경우 SIPS회원에서도 탈퇴됩니다.</p>
+        <div class="btn_article">
+          <button class="button button_negative button-m closed" type="button">취소</button>
+          <button class="button button_positive button-m" type="button">회원탈퇴</button>
+        </div>
+      </div>
+      <button href="#" class="ico_x closed" title="팝업창 닫기">
+        <span>팝업창 닫기</span>
+      </button>
+    </div>
+  </div>
+  <!-- // e: 정말 탈퇴하시겠습니까 팝업 -->
+  <script>
+    $(function(){ 
+      // 팝업
+      $('.popup_comm_btn').on("click",function(){
+        let _popName = $(this).data("popup-name");
+        if($('.popup_wrap:animated').length < 1){ // fadeInOut 시 중복 클릭 방지
+          popupCommon(_popName, $(this)); // 오픈할 팝업과 닫기 시 돌아갈 포커스 select
+        }
+        passwordView();
+      });      
+      // 눈표시 클릭 시 패스워드 보이기 
+      $('.eyes').on('click',function(){
+        $('.inp_box.password_box').toggleClass('active'); 
+        if( $('.inp_box.password_box').hasClass('active') == true ){
+          $(this).find('.ico_eyes').attr('class',"ico_eyes_open").parents('.password_box').find('.inp').attr('type',"text");
+          $(this).find('>button').attr('title',"비밀번호 표시");
+          // i 클래스 // 텍스트 보이기 i 클래스 
+        } 
+        else{ 
+          $(this).find('.ico_eyes_open').attr('class',"ico_eyes").parents('.password_box').find('.inp').attr('type','password');
+          $(this).find('>button').attr('title',"비밀번호 숨김");      
+        }
+      });
+    });
+  </script>
 </div>
 </body>
 </html>

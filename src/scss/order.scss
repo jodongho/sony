@@ -200,6 +200,7 @@
   &__cont {
     margin-top: 80px;
     .order_info {
+      position: relative;
       margin-top: 99px;
       &:after {
         display: block;
@@ -216,6 +217,8 @@
         width: 840px;
       }
       .order_right {
+        position: sticky;
+        top: 0;
         float: right;
         margin-top: 7px;
         width: 320px;
