@@ -1258,7 +1258,8 @@
     left: 0;
   }
 }
-.order_box__cont {
+.order_box__cont,
+.order_detail_cont {
   @media (max-width: 767px) { 
     .prd {
       margin-top: 0;
