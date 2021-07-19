@@ -15,7 +15,7 @@
 <script src="/dist/lib/js/jquery-ui.min.js"></script>
 </head>
 <body>
-<div class="wrapper member_information">
+<div class="wrapper my">
   {{>header}}
   <div class="member_wrap">
     <div class="head_title">
@@ -229,7 +229,7 @@
             <div class="group">
               <div class="inp_box">
                 <label class="inp_desc" for="popPw">
-                  <input type="password" id="popPw" class="inp center" placeholder="&nbsp;">
+                  <input type="password" id="popPw" class="inp center" placeholder="&nbsp;" autocomplete="off">
                   <span class="label">비밀번호 입력</span>
                   <span class="focus_bg"></span>              
                  <div class="eyes"><a href="#" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
@@ -240,7 +240,7 @@
             <div class="group">
               <div class="inp_box">
                 <label class="inp_desc" for="popPw">
-                  <input type="password" id="popPw" class="inp center" placeholder="&nbsp;">
+                  <input type="password" id="popPw" class="inp center" placeholder="&nbsp;" autocomplete="off">
                   <span class="label"> 새 비밀번호 입력</span>
                   <span class="focus_bg"></span>              
                  <div class="eyes"><a href="#" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
@@ -255,7 +255,7 @@
             <div class="group">
               <div class="inp_box">
                 <label class="inp_desc" for="popPw">
-                  <input type="password" id="popPw" class="inp center" placeholder="&nbsp;">
+                  <input type="password" id="popPw" class="inp center" placeholder="&nbsp;" autocomplete="off">
                   <span class="label">새 비밀번호 확인</span>
                   <span class="focus_bg"></span>              
                  <div class="eyes"><a href="#" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
@@ -290,8 +290,6 @@
   </div>
 </div>
 <!-- // e: 비밀번호 변경 -->
-
-
 </body>
 </html>
                            
@@ -336,7 +334,7 @@ $(function(){
           $infoBox.find('.btn_primary').addClass("on").removeAttr("disabled");
         }else{
           $infoBox.find('.btn_primary').removeClass("on").attr("disabled","disabled");
-        } 
+        }
       });
     }
   }
