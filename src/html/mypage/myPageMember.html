@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
-<title>{{ia.product.title}}</title>
+<title>{{ia.mypage.submenu.memberInfo.title}}</title>
 <link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
 <link rel="stylesheet" href="/dist/css/contents.css">
 <link rel="stylesheet" href="/dist/css/mypage.css">
@@ -15,7 +15,7 @@
 <script src="/dist/lib/js/jquery-ui.min.js"></script>
 </head>
 <body>
-<div class="wrapper member_information">
+<div class="wrapper my">
   {{>header}}
   <div class="member_wrap">
     <div class="head_title">
@@ -74,7 +74,7 @@
                 <span class="timer" id="timer">02:55</span>
               </div>
               <div class="btn_box">
-                <button class="button btn_primary" type="button">인증</button><!-- class : on  -->
+                <button class="button btn_primary" disabled="disabled" type="button">인증</button><!-- class : on  -->
               </div>
               <div class="certify_txt">※ 입력하신 번호로 인증번호가 전송되었습니다.</div>
             </div>
@@ -229,7 +229,7 @@
             <div class="group">
               <div class="inp_box">
                 <label class="inp_desc" for="popPw">
-                  <input type="password" id="popPw" class="inp center" placeholder="&nbsp;">
+                  <input type="password" id="popPw" class="inp center" placeholder="&nbsp;" autocomplete="off">
                   <span class="label">비밀번호 입력</span>
                   <span class="focus_bg"></span>              
                  <div class="eyes"><a href="#" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
@@ -240,7 +240,7 @@
             <div class="group">
               <div class="inp_box">
                 <label class="inp_desc" for="popPw">
-                  <input type="password" id="popPw" class="inp center" placeholder="&nbsp;">
+                  <input type="password" id="popPw" class="inp center" placeholder="&nbsp;" autocomplete="off">
                   <span class="label"> 새 비밀번호 입력</span>
                   <span class="focus_bg"></span>              
                  <div class="eyes"><a href="#" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
@@ -255,7 +255,7 @@
             <div class="group">
               <div class="inp_box">
                 <label class="inp_desc" for="popPw">
-                  <input type="password" id="popPw" class="inp center" placeholder="&nbsp;">
+                  <input type="password" id="popPw" class="inp center" placeholder="&nbsp;" autocomplete="off">
                   <span class="label">새 비밀번호 확인</span>
                   <span class="focus_bg"></span>              
                  <div class="eyes"><a href="#" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
@@ -290,8 +290,6 @@
   </div>
 </div>
 <!-- // e: 비밀번호 변경 -->
-
-
 </body>
 </html>
                            
@@ -333,9 +331,9 @@ $(function(){
         let $infoBox = $(this).closest('.info_box'),
             _pushTxt= $(this).val().length;
         if(_pushTxt > 0){
-          $infoBox.find('.btn_primary').addClass("on");
+          $infoBox.find('.btn_primary').addClass("on").removeAttr("disabled");
         }else{
-          $infoBox.find('.btn_primary').removeClass("on");
+          $infoBox.find('.btn_primary').removeClass("on").attr("disabled","disabled");
         }
       });
     }

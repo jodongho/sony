@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
+<title>{{ia.mypage.submenu.rename.title}}</title>
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
+<link rel="stylesheet" href="/dist/css/contents.css">
+<link rel="stylesheet" href="/dist/css/mypage.css">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+<script src="/dist/js/ux-sub.js"></script>
+<script src="/dist/lib/js/jquery-ui.min.js"></script>
+</head>
+<body>
+<div class="wrapper my">
+  {{>header}}
+  <div class="rename_wrap">
+    <div class="head_title">
+      <a href="#" class="back_link">마이페이지</a>
+      <h2 class="title">개명 회원 본인 확인</h2>
+      <div class="certify_zone">
+        <ul class="certify_box">
+          <li class="certify_list">
+            <a href="#" class="certify">
+              <span class="ico_phone_certify"></span>
+              <p class="tit">휴대폰 번호 인증하기<span class="tit_desc">(본인인증으로 찾기)</span></p>
+            </a>
+          </li>
+          <li class="certify_list">
+            <a href="#" class="certify">
+              <span class="ico_ipn_certify"></span>
+              <p class="tit">아이핀 인증하기<span class="tit_desc">(간편 회원 가입정보로 찾기)</span></p>
+            </a>
+          </li>
+        </ul>
+        <div class="btn_article">
+          <button class="button button_negative" type="button">취소</button>
+          <button class="button button_positive" type="button">개명 회원 본인 확인</button>
+        </div>
+        <div class="guide_list">
+          <p class="tit">[안내]</p>
+          <ul class="list_dot">
+            <li><strong>이름 변경(개명)</strong>을 위해서 <strong>본인 확인</strong>이 <strong>필요</strong>합니다.</li>
+            <li>신용평가기관에 개명된 이름이 먼저 등록되어 있어야 하며, <strong>개명된 이름으로 가입된 휴대폰</strong> 또는 <strong>아이핀</strong>으로 <strong>본인 확인 가능</strong>합니다.</li>
+            <li>본인 확인을 위해 입력하신 개인정보는 본인인증기관에서 수집하는 정보이며, 이때 수집된 정보는 본인 확인 외<br class="mo_none"> 어떠한 용도로도 이용되거나 별도 저장되지 않습니다. </li>
+            <li>원하시는 <strong>인증 방법</strong>을 <strong>선택</strong>하신 후 확인 버튼을 눌러주세요.</li>
+            <li><strong>아이핀이 없으시더라도 신규 발급</strong>받아 바로 <strong>이용</strong>할 수 있습니다.</li>
+            <li><strong>휴대폰 인증</strong>은 <strong>본인 명의</strong>로 <strong>가입</strong>하신 분만 <strong>인증</strong>이 <strong>가능</strong>합니다.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{>footer}}
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+  
+$(function(){
+  
+});
+
+</script>
