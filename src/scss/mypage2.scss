@@ -1,120 +1,115 @@
 @import "./import/variables";
 
 // from order.css 차후 contents.css 로 옮길 예정
-.order_list {
-  .prd {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    &_thumb {
-      width: 120px;
-      height: 120px;
-      margin-right: 40px;
-      background-color: #f4f7fa;
-      &_pic {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-    &_info {
-      max-width: 320px;
-      &_name {
-        font-weight: 700;
-        letter-spacing: 0;
-      }
-      &_option {
-        margin-top: 6px;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.571;
-        color: #666;
-        letter-spacing: -.025em;
-      }
-    }
-    &_summary {
-      font-weight: 700;
-      span {
-        display: inline-block;
-        vertical-align: baseline;
-      }
-      &_length {
-        font-size: 16px;
-        letter-spacing: -.025em;
-        color: #222;
-      }
-      &_price {
-        margin-left: 12px;
-        font-size: 24px;
-        color: $primary-color;
-        letter-spacing: 0;
-        .won {
-          font-size: 16px;
-        }
-      }
-      &_warning {
-        margin-top: .5em;
-        font-weight: 400;
-        font-size: 12px;
-        letter-spacing: -.025em;
-        color: #888;
-      }
-    }
-    .check_only {
-      margin-right: 12px;
-      margin-left: -4px;
-      transform: translateY(-52px);
-    }
-  }
-  .order {
-    font-size: 16px;
-    letter-spacing: -.025em;
-    &_date {
-      display: block;
-      margin-bottom: 4px;
-      color: #222;
-    }
-    &_number {
-      color: #888;
-      text-decoration: underline;
-    }
-    &_status {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 700;
-      font-size: 16px;
-      letter-spacing: -.025em;
-      color: $primary-color;
-    }
-  }
-  .won {
-    font-size: 14px;
-  }
-  .button-s {
-    min-width: 0;
-  }
-  .btn_del_prd {
-    width: 24px;
-    height: 24px;
-    padding: 4px;
-    img {
-      filter: invert(15%);
-    }
-  }
-  .no-data {
-    padding: 110px;
-    text-align: center;
-    font-size: 16px;
-    letter-spacing: -0.025em;
-    color: #444;
-    border-bottom: 1px solid #ddd;
-  }
-}
-.only-pc {
-  @media screen and (max-width: 1280px) {
-    display: none;
-  }
-}
+// .order_list {
+//   .prd {
+//     display: flex;
+//     align-items: center;
+//     text-align: left;
+//     &_thumb {
+//       width: 120px;
+//       height: 120px;
+//       margin-right: 40px;
+//       background-color: #f4f7fa;
+//       &_pic {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//       }
+//     }
+//     &_info {
+//       max-width: 320px;
+//       &_name {
+//         font-weight: 700;
+//         letter-spacing: 0;
+//       }
+//       &_option {
+//         margin-top: 6px;
+//         font-weight: 400;
+//         font-size: 14px;
+//         line-height: 1.571;
+//         color: #666;
+//         letter-spacing: -.025em;
+//       }
+//     }
+//     &_summary {
+//       font-weight: 700;
+//       span {
+//         display: inline-block;
+//         vertical-align: baseline;
+//       }
+//       &_length {
+//         font-size: 16px;
+//         letter-spacing: -.025em;
+//         color: #222;
+//       }
+//       &_price {
+//         margin-left: 12px;
+//         font-size: 24px;
+//         color: $primary-color;
+//         letter-spacing: 0;
+//         .won {
+//           font-size: 16px;
+//         }
+//       }
+//       &_warning {
+//         margin-top: .5em;
+//         font-weight: 400;
+//         font-size: 12px;
+//         letter-spacing: -.025em;
+//         color: #888;
+//       }
+//     }
+//     .check_only {
+//       margin-right: 12px;
+//       margin-left: -4px;
+//       transform: translateY(-52px);
+//     }
+//   }
+//   .order {
+//     font-size: 16px;
+//     letter-spacing: -.025em;
+//     &_date {
+//       display: block;
+//       margin-bottom: 4px;
+//       color: #222;
+//     }
+//     &_number {
+//       color: #888;
+//       text-decoration: underline;
+//     }
+//     &_status {
+//       display: block;
+//       margin-bottom: 8px;
+//       font-weight: 700;
+//       font-size: 16px;
+//       letter-spacing: -.025em;
+//       color: $primary-color;
+//     }
+//   }
+//   .won {
+//     font-size: 14px;
+//   }
+//   .button-s {
+//     min-width: 0;
+//   }
+//   .btn_del_prd {
+//     width: 24px;
+//     height: 24px;
+//     padding: 4px;
+//     img {
+//       filter: invert(15%);
+//     }
+//   }
+//   .no-data {
+//     padding: 110px;
+//     text-align: center;
+//     font-size: 16px;
+//     letter-spacing: -0.025em;
+//     color: #444;
+//     border-bottom: 1px solid #ddd;
+//   }
+// }
 
 // * 공통 헤더
 .common_head {
