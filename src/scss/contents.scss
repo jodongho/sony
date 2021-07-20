@@ -3487,11 +3487,13 @@
     border-bottom: 1px solid #ddd;
   }
   @include under-pc {
-    .col_table_body .col_table_cell:first-of-type {
-      width: 45%;
-      .prd {
-        .check_only {
-          transform: translateY(-39px);
+    &:not(.order_list) {
+      .col_table_body .col_table_cell:first-of-type {
+        width: 45%;
+        .prd {
+          .check_only {
+            transform: translateY(-39px);
+          }
         }
       }
     }
