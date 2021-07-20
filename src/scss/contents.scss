@@ -3487,7 +3487,7 @@
     border-bottom: 1px solid #ddd;
   }
   @include under-pc {
-    &:not(.order_list) {
+    // &:not(.order_list) {
       .col_table_body .col_table_cell:first-of-type {
         width: 45%;
         .prd {
@@ -3496,7 +3496,7 @@
           }
         }
       }
-    }
+    // }
     .won {
       font-size: 12px;
     }
