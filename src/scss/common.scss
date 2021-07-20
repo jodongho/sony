@@ -3812,5 +3812,9 @@ body {
       }
     }
   }
-
+}
+.only-pc {
+  @media screen and (max-width: 1280px) {
+    display: none;
+  }
 }
