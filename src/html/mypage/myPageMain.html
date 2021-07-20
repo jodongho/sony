@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
-<title>{{ia.product.title}}</title>
+<title>{{ia.mypage.title}}</title>
 <link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
 <link rel="stylesheet" href="/dist/css/contents.css">
 <link rel="stylesheet" href="/dist/css/mypage.css">
@@ -161,13 +161,11 @@
                 </li>
               </ul>
               <div class="date_rang">
-                <div class="calendar">
-                  <input type="text" id="datepicker1" class="datepicker">
-                  <button type="button" class="calendar_open"></button>
+                <div class="calendar_box">
+                  <input type="text" id="datepicker1" class="inp datepicker" autocomplete="off">
                 </div>
-                <div class="calendar">
-                  <input type="text" id="datepicker2" class="datepicker">
-                  <button type="button" class="calendar_open"></button>
+                <div class="calendar_box">
+                  <input type="text" id="datepicker2" class="inp datepicker" autocomplete="off">
                 </div>
                 <button class="button button_positive button-s" type="button">조회</button>
               </div>
@@ -463,7 +461,7 @@
                 <p class="tit">정품등록 관리</p>
                 <p class="txt">소니 제품 구매 후 정품등록하고 쿠폰을 받으세요!</p>
               </div>
-            </a>
+            </a>        
           </div>
         </div>
       </div>
@@ -472,8 +470,8 @@
           <h3 class="cont_tit">찜</h3>
           <div class="like_select_btn">
             <button class="button button_secondary button-s" type="button">선택 삭제</button>
-            <button class="button button_positive button-s" type="button"><span>선택 상품</span> 장바구니 담기</button>
-          </div>
+            <button class="button button_positive button-s" type="button"><span>선택 제품</span> 장바구니 담기</button>
+          </div> 
         </div>
         <div class="history_inner">
           <div class="history_list">
@@ -617,7 +615,10 @@ $(function(){
     $tabs.addClass("on").siblings().removeClass("on");
     return false;
   });
-  
+  datepickerUi($("#datepicker1"));
+  datepickerUi($("#datepicker2"));
 });
+
+
 
 </script>

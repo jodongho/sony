@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="/dist/css/common.css">
 <link rel="stylesheet" href="/dist/css/contents.css">
 <link rel="stylesheet" href="/dist/css/order.css">
+<link rel="stylesheet" href="/dist/css/demo.css">
 <script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
 <script src="/dist/lib/js/swiper.min.js"></script>
 <script src="/dist/js/ux-common.js"></script>
@@ -45,7 +46,7 @@
           </div>
           <div class="cart_func_buttons">
             <button type="button" class="button button_negative button-s button_del_checked_items">선택 삭제</button>
-            <button type="button" class="button button_positive button-s button_print_esimate">견적서 출력</button>
+            <button type="button" class="button button_positive button-s button_print_esimate popup_comm_btn" data-popup-name="estimate">견적서 출력</button>
           </div>
         </div>
 
@@ -193,6 +194,170 @@
   </div>
   {{>footer}}
 </div>
+<!-- s : 견적서 -->
+<div class="popup_wrap size_l estimate">
+  <div class="pop_inner">
+    <div class="pop_head">
+      <span class="pop_logo"><img src="/dist/images/common/logo.svg" alt="SONY"></span>
+    </div>
+    <div class="pop_cont">
+      <p class="pop_tit">견 적 서</p>
+      <div class="pop_cont_scroll">
+        <div class="simplified_info">
+          <div class="simplified_estimate">
+            <p class="date">2021.06.29</p>
+            <p class="tit"><strong>소니코리아 고객님 귀하,</strong><br> 아래와 같이 견적합니다.</p>
+            <div class="estimate_price">
+              <span class="txt">견적금액 :</span>
+              <span class="price_txt"><strong class="price">4,299,000</strong> 원</span>
+              <span class="s_txt">(부가세 포함)</span>
+            </div>
+          </div>
+          <div class="estimate_corp">
+            <ul class="corp_list">
+              <li class="name"><strong>소니코리아 주식회사</strong></li>
+              <li class="addr">서울특별시 영등포구 여의도동 국제금융로<br>10 원아이에프씨 24F (우)150-876</li>
+              <li class="txt">사업자 등록번호 : 106-81-23810</li>
+              <li class="txt"></li>대표자명 : Okura Kikuo 대표  (직인 생략)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="estimate_detail">
+          <div class="all_table_wrap">
+            <p class="s_txt_right">* 아래 견적 금액은 구매 시점에 따라 변동될 수 있습니다.</p>
+            <div class="col_table_wrap order_list">
+              <div class="col_table">
+                <div class="col_table_head">
+                  <div class="col_table_row">
+                    <div class="col_table_cell">제품명</div>
+                    <div class="col_table_cell">가격/수량</div>
+                    <div class="col_table_cell">공급가액(원)</div>
+                    <div class="col_table_cell">비고</div>
+                  </div>
+                </div>
+                <div class="col_table_body">
+                  <div class="col_table_row">
+                    <div class="col_table_cell">
+                      <div class="prd">
+                        <div class="prd_info">
+                          <div class="prd_info_name">PLAYSTATION 5 DIGITAL<br>(CFI-1018B01)</div>
+                          <p class="prd_info_option line2">4K HDR(HLG), Fast Hybrid AF가 탑재된 전문가급 1인치 핸디캠/ LIMITED EDITION(사일런트 화이트)</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col_table_cell prd_price">
+                      4,299,000 <span class="won">원</span><br>
+                      <span class="count">1개</span>
+                    </div>
+                    <div class="col_table_cell prd_price">
+                      4,299,000 <span class="won">원</span><br>
+                      <span class="s_txt">(부가세 포함)</span>
+                    </div>
+                    <div class="col_table_cell ">
+                      &nbsp;
+                    </div>
+                  </div>
+                  <div class="col_table_row">
+                    <div class="col_table_cell">
+                      <div class="prd">
+                        <div class="prd_info">
+                          <div class="prd_info_name">ILCE-7RM4</div>
+                          <p class="prd_info_option">블랙</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col_table_cell prd_price">
+                      4,299,000 <span class="won">원</span><br>
+                      <span class="count">1개</span>
+                    </div>
+                    <div class="col_table_cell prd_price">
+                      4,299,000 <span class="won">원</span><br>
+                      <span class="s_txt">(부가세 포함)</span>
+                    </div>
+                    <div class="col_table_cell ">
+                      &nbsp;
+                    </div>
+                  </div>
+                </div>
+              </div><!-- // col_table-->
+              <div class="col_table_foot">
+                <div class="prd_summary">
+                  <p class="prd_total_price">최종 합계 금액 <strong class="prd_summary_price">4,299,000 <span class="won">원</span></strong></p>
+                </div>
+              </div>
+              <p class="sign_txt"><span class="orderer">주문자:</span><span class="name"></span><span class="sign">(서명)</span></p>
+            </div><!-- // col_table_wrap -->
+          </div>
+        </div>
+      </div><!-- // pop_cont_scroll -->
+    </div><!-- // pop_cont -->
+  </div>
+  <div class="btn_article">
+    <button class="button button_negative button-m closed" type="button">취소</button>
+    <button class="button button_positive button-m print" type="button">프린트</button>
+  </div>
+</div>
+<!-- // e : 견적서 -->
+<script>
+  $(function(){
+  $('.popup_comm_btn').on("click",function(){ // 팝업 테스트
+    let _popName = $(this).data("popup-name");
+    if($('.popup_wrap:animated').length < 1){ // fadeInOut 시 중복 클릭 방지
+      popupCommon(_popName, $(this)); // 오픈할 팝업과 닫기 시 돌아갈 포커스 select
+    }
+    if(_popName == "estimate"){ // 견적서
+      printFunc($('.estimate'));
+    }
+  });
 
+  /* S: 공통 common.js 옮겨야할 */
+  function printFunc(wrap){ //프린트 버튼
+    let $printBtn = $(wrap).find('.print');
+    $printBtn.off().on("click", function(){
+      if($(wrap).find('.pop_cont_scroll').length > 0){ // scroll 컨텐츠 영역이 있을경우 높이 해제 (프린트 하기 위함.)
+        $(wrap).find('.pop_cont').removeClass("scrollH");
+        $(wrap).find('.pop_cont_scroll').removeAttr("style");
+      }
+      const html = document.querySelector('html');
+      const printContents = $(wrap)[0].querySelector('.pop_inner').innerHTML;
+      const printDiv = document.createElement("DIV");
+      printDiv.className = "pop_inner";
+      html.appendChild(printDiv);
+      printDiv.innerHTML = printContents;
+      document.body.style.display = 'none';
+      window.print();
+      document.body.style.display = 'block';
+      printDiv.style.display = 'none';
+
+      $(wrap).find('.closed').trigger("click");
+      return false;
+    }); 
+  }
+
+
+
+  
+  $('.popup_button').on("click",function(){
+    let _popupName = $(this).data("popup");
+    openModal(_popupName);
+    return false;
+  });
+
+  const alertBtn = (e) =>{ 
+    $('.alertLayerBtn').on("click",function(){ // alert 팝업 data-alert-text 값 노출 
+      let _alertTxt = $(this).data("alert-text"),
+          _alertOpen = $(this).data("open-layer");
+      alertLayer(_alertTxt, _alertOpen);
+      return false;
+    });
+  }
+  const alertLayer = (_eText, layerClass) =>{ // alert 팝업 오픈
+    $('.alert_layer').find('.alert_text').html(_eText);
+    openModal(layerClass); // 보여질 팝업 class
+  }
+  /* e: 공통 common.js 옮겨야할 */
+
+  })
+</script>
 </body>
 </html>
