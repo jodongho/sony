@@ -822,3 +822,7 @@
     }    
   }
 }
+// 주문/배송내역 table 예외처리
+.order_list .col_table_body .col_table_cell.order:first-of-type {
+  width: auto;
+}

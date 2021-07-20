@@ -3402,16 +3402,14 @@
     border-bottom: 1px solid #ddd;
   }
   @include under-pc {
-    // &:not(.order_list) {
-      .col_table_body .col_table_cell:first-of-type {
-        width: 45%;
-        .prd {
-          .check_only {
-            transform: translateY(-39px);
-          }
+    .col_table_body .col_table_cell:first-of-type {
+      width: 45%;
+      .prd {
+        .check_only {
+          transform: translateY(-39px);
         }
       }
-    // }
+    }
     .won {
       font-size: 12px;
     }
@@ -3532,7 +3530,7 @@
     }
   }
 }
-//주문배송조회 tabel, 주문결제 tabel mobile type
+//주문배송조회 table, 주문결제 table mobile type
 .order_box__cont,
 .order_detail_cont {
   @media (max-width: 767px) { 
