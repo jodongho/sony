@@ -3125,6 +3125,9 @@ body {
     line-height: 42px;
     letter-spacing: -0.6px;
     color:#222;
+    &.tit_inp{
+      margin-bottom:21px;
+    }
   }
   .pop_tit_s{
     font-size:16px;
@@ -3787,7 +3790,7 @@ body {
       &.scrollH{
         padding-right:4px;
         .pop_cont_scroll{
-          //padding-right:2px;
+          padding-right:2px;
         }
       }
     }
