@@ -241,6 +241,20 @@
       width:calc(100% - 40px);
     }
   }
+  @include only-mo {
+    .input_tit, 
+    .input_box,
+    .input_col_type {
+      float: none;
+      width: 100%;
+    }
+    .input_col_type {
+      .input_tit,
+      .input_box {
+        float: left;
+      }
+    }
+  }
 }
 
 // pop - 견적서
