@@ -258,7 +258,7 @@
                         <div class="acc_cell parent">
                           <div class="acc_group">
                             <div class="acc_inp disable_type">
-                              <input type="text" id="mileage" class="inp" value="0" disabled><span class="unit">점</span>
+                              <input type="text" id="mileage" class="inp" placeholder="0"><span class="unit">점</span>
                               <span class="focus_bg"></span>
                             </div>
                             <div class="acc_btn_box">
@@ -450,24 +450,6 @@
             <!--// 오른쪽메뉴 -->
           </div>
         </div>
-        <script>
-          //라디오 탭
-          $('.acc_cell .radio_box').on('click', function(){
-             $(":radio[name='tabradio']").change(function(){
-                 var result_cont = $('.result_cont');
-                 var tabradio = $(this).prop("checked",true).attr("id");
-                 result_cont.removeClass('on');
-                 $('.'+tabradio).addClass('on');
-             });
-          });
-          //결제 토글
-          $('.sale_btn').click(function(){
-              var $self = $(this);
-              $('.sale_inner').slideToggle('300', function(){
-                  $self.toggleClass('arrow_on');
-              });
-          });          
-        </script>
       </div>
     </div>
   </div>
@@ -694,6 +676,22 @@
         }
       }); 
   });
+    //라디오 탭
+    $('.acc_cell .radio_box').on('click', function(){
+     $(":radio[name='tabradio']").change(function(){
+         var result_cont = $('.result_cont');
+         var tabradio = $(this).prop("checked",true).attr("id");
+         result_cont.removeClass('on');
+         $('.'+tabradio).addClass('on');
+     });
+  });
+  //결제 토글
+  $('.sale_btn').click(function(){
+      var $self = $(this);
+      $('.sale_inner').slideToggle('300', function(){
+          $self.toggleClass('arrow_on');
+      });
+  }); 
 </script>
 </body>
 </html>
