@@ -32,7 +32,7 @@
                 <span class="ico_txt"><span class="txt_arrow">회원등급</span></span>
                 <span class="val_txt">
                   <span class="val vvip">VVIP</span><!-- class: 별 등급 색상 지정 vvip / vip / family -->
-              </span>
+                </span>
               </a>
             </li>
             <li class="user_item mileage">
@@ -57,7 +57,7 @@
         </div>
       </div>
     </div>
-    <!-- s: 임직원/B2B 배너 버튼-->
+    <!-- s: 임직원/B2B 배너 버튼 -->
     <div class="cont_inner">
       <div class="b2b_banner">
         <a href="#" class="b2b_link refurbish">
@@ -86,7 +86,7 @@
         </a>
       </div>
     </div>
-    <!-- // e: 임직원/B2B 배너 버튼-->
+    <!-- // e: 임직원/B2B 배너 버튼 -->
     <div class="cont_inner">
       <div class="cont history_order">
         <div class="tit_head">
@@ -381,7 +381,7 @@
         <h3 class="cont_tit">쿠폰</h3>
         <div class="history_inner">
           <div class="history_list">
-            <div class="coupon_inner on"><!-- calss : on -->
+            <div class="coupon_inner on"><!-- class : on 내역이 있을 경우 on -->
               <div class="coupon_list">
                 <div class="coupon_box">
                   <div class="coupon">
@@ -436,7 +436,7 @@
                 <a href="#" class="more_btn">더보기</a>
               </div>
             </div>
-            <div class="no_data on"><!-- class : on -->
+            <div class="no_data on"><!-- class : on 내역이 없을 경우 on -->
               <span>내역이 없습니다.</span>
             </div>
           </div>
@@ -468,14 +468,16 @@
       <div class="cont history_like">
         <div class="cont_head">
           <h3 class="cont_tit">찜</h3>
+          <!-- s : 찜 목록이 없을 경우 display:none -->
           <div class="like_select_btn">
             <button class="button button_secondary button-s" type="button">선택 삭제</button>
-            <button class="button button_positive button-s" type="button"><span>선택 제품</span> 장바구니 담기</button>
+            <button class="button button_positive button-s popup_comm_btn" type="button" data-popup-name="cart_pop"><span>선택 제품</span> 장바구니 담기</button>
           </div> 
+          <!-- e : 찜 목록이 없을 경우 display:none -->
         </div>
         <div class="history_inner">
           <div class="history_list">
-            <div class="like_inner on"><!-- class on -->
+            <div class="like_inner on"><!-- class : on 내역이 있을 경우 on -->
               <div class="all_checked check">
                 <input type="checkbox" class="inp_check check_all" id="allChk" name="likeChk">
                 <label for="allChk">전체</label>
@@ -592,7 +594,7 @@
                 <a href="#" class="more_btn">더보기</a>
               </div>
             </div>
-            <div class="no_data on"><!-- class on -->
+            <div class="no_data on"><!-- class : on 내역이 없을 경우 on -->
               <span>내역이 없습니다.</span>
             </div>
           </div>
@@ -602,13 +604,34 @@
   </div>
   {{>footer}}
 </div>
+
+<!-- s: 찜 장바구니 완료 -->
+<div class="popup_wrap size_sl cart_pop">
+  <div class="pop_inner">
+    <div class="pop_cont">
+      <p class="pop_tit ico_cart">장바구니 담기 완료</p>
+      <p class="pop_txt">해당 제품이 장바구니에 담겼습니다.<br> 장바구니로 이동하시겠습니까?</p>
+      <div class="btn_article">
+        <button class="button button_negative button-l closed" type="button">쇼핑 계속하기</button>
+        <button class="button button_positive button-l" type="button">장바구니 이동</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- // e: 찜 장바구니 완료 -->
+
 </body>
 </html>
 
 <script type="text/javascript">
-
 $(function(){
-  
+  // 팝업
+  $('.popup_comm_btn').on("click",function(){
+    let _popName = $(this).data("popup-name");
+    if($('.popup_wrap:animated').length < 1){ // fadeInOut 시 중복 클릭 방지
+      popupCommon(_popName, $(this)); // 오픈할 팝업과 닫기 시 돌아갈 포커스 select
+    }
+  });
   $('.date3_btn').on("click",function(){
     let $tabs = $(this).parents();
     console.log($tabs)
@@ -618,7 +641,4 @@ $(function(){
   datepickerUi($("#datepicker1"));
   datepickerUi($("#datepicker2"));
 });
-
-
-
 </script>

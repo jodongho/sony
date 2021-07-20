@@ -202,19 +202,17 @@
               <div class="purchase_detail_price">4,299,000 <span class="won">원</span></div>
               <!-- 결제정보 현금 -->
               <div class="purchase_detail_method">가상 계좌 : KB국민은행(1234-2345-32456)</div>
-              <button type="button" class="button button_negative button-s">현금영수증 신청</button>
+              <button type="button" class="button button_negative button-s popup_comm_btn" data-popup-name="cash_receipt">현금영수증 신청</button>
               <!--// 결제정보 현금 -->
               <!-- 결제정보 신용카드
               <div class="purchase_detail_method">삼성카드 / 일시불</div>
               <button type="button" class="button button_negative button-s">신용카드 영수증</button>
               -->
-              
             </dd>
           </dl>
         </div>
       </div>
       <!-- // 결제 정보 -->
-
       <!-- buttons -->
       <div class="cont button_wrap">
         <button type="button" class="button button_negative">주문 취소</button>
@@ -222,11 +220,116 @@
         <a href="#" class="button button_positive">목록</a>
       </div>
       <!-- // buttons -->
-
     </div>
   </div>
-
   {{>footer}}
 </div>
+
+<!-- s: 찜 장바구니 담기 -->
+<div class="popup_wrap size_ms cash_receipt">
+  <div class="pop_inner">
+    <div class="pop_cont">
+      <p class="pop_tit">현금영수증 발행요청</p>
+      <div class="pop_cont_scroll">
+        <form action=""> 
+        <div class="form_zone">
+          <div class="payment_amount">
+            <p class="txt">주문번호 : <span class="num">20210512-663W24</span></p>
+            <div class="amount_result">
+              <p class="amount_tit">결제금액</p>
+              <p class="val_txt"><strong class="val">2,400,000</strong>원</p>
+              <p class="vat_txt">(부가세 75,000원)</p>
+            </div>
+          </div>
+          <div class="input_item">
+            <div class="group">
+              <div class="inp_box">
+                <label class="inp_desc" for="receipt_phone">
+                  <input type="text" id="receipt_phone" class="inp" placeholder="&nbsp;" autocomplete="off" value="01012345678">
+                  <span class="label">휴대폰 번호<span>(-없이 입력하세요.)</span></span>
+                  <span class="focus_bg"></span>
+                </label>
+              </div>
+              <div class="error_txt"><span class="ico"></span>휴대폰 번호를 입력해주세요.</div>
+            </div>
+            <div class="group">
+              <div class="inp_box">
+                <label class="inp_desc" for="receipt_email">
+                  <input type="text" id="receipt_email" class="inp" placeholder="&nbsp;" autocomplete="off" value="sony@sony.co.kr">
+                  <span class="label">이메일<span>(예 : sony@sony.co.kr)</span></span>
+                  <span class="focus_bg"></span>
+                </label>
+              </div>
+              <div class="error_txt"><span class="ico"></span>이메일 아이디를 입력해 주세요.</div>
+            </div>
+            <div class="group radio_group">
+              <div class="radio_box">
+                <input type="radio" class="inp_radio" id="receipt_radio1" name="popradio" checked="checked">
+                <label for="receipt_radio1" class="contentType">소비자 소득공제용</label>
+              </div>
+              <div class="radio_box">
+                <input type="radio" class="inp_radio" id="receipt_radio2" name="popradio">
+                <label for="receipt_radio2" class="contentType">사업자 지출증빙용</label>
+              </div>
+            </div>
+          </div>
+          <div class="group business_registration" style="display:none;">
+            <div class="inp_box">
+              <label class="inp_desc" for="receipt_b_r">
+                <input type="text" id="receipt_b_r" class="inp" placeholder="&nbsp;" autocomplete="off">
+                <span class="label">사업자 등록 번호<span>(-포함 등록)</span></span>
+                <span class="focus_bg"></span>
+              </label>
+            </div>
+            <div class="error_txt"><span class="ico"></span>사업자 등록 번호를 입력하세요.</div>
+          </div>
+          <div class="btn_article">
+            <button class="button button_positive button-full" type="button">발행</button>
+          </div>
+          <div class="guide_list">
+            <p class="tit ico_tit">유의사항</p>
+            <ul class="list_dot">
+              <li>휴대폰 번호와 이메일 주소 변경이 가능합니다.</li>
+              <li><strong>입력하신 휴대폰 번호와 이메일 주소는 고객님의 결제내역 발송을 위함이오니 반드시 기입 하시기바랍니다.</strong></li>
+              <li>발행 버튼을 눌러서 현금영수증 발행 요청을 완료하세요.</li>
+              <li><strong>발행은 PC버전에서만 가능합니다.</strong></li>
+            </ul>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+    <button href="#" class="ico_x closed" title="닫기">
+      <span>닫기</span>
+    </button>
+  </div>
+</div>
+<!-- // e: 찜 장바구니 담기 -->
 </body>
 </html>
+<script>
+$(function(){
+  // 팝업
+  $('.popup_comm_btn').on("click",function(){
+    let _popName = $(this).data("popup-name");
+    if($('.popup_wrap:animated').length < 1){ // fadeInOut 시 중복 클릭 방지
+      popupCommon(_popName, $(this)); // 오픈할 팝업과 닫기 시 돌아갈 포커스 select
+    }
+    cashReceipt();
+  });
+  // 현금영수증 발행요청 - 소비자 소득공제용
+  function cashReceipt(){
+    let $receiptWrap = $('.cash_receipt'),
+        $radioBtn = $receiptWrap.find('.inp_radio');
+    $radioBtn.off().on("change", function(){
+      let _index = $(this).closest('.radio_box').index();
+      console.log(_index);
+      if(_index == 1){
+        $('.business_registration').show();
+      }else{
+        $('.business_registration').hide();
+      }
+    });
+  }
+});
+</script>
