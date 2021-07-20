@@ -3351,6 +3351,11 @@
       }      
     }
     @include under-pc {
+      &_count::after {
+        content: "개";
+        font-size: 12px;
+        color: #444;
+      }
       &_thumb {
         width: 96px;
         height: 96px;
@@ -3384,6 +3389,12 @@
   }
   .button-s {
     min-width: 0;
+    height: 32px;
+    padding: 8px 15px;
+    font-size: 14px;
+    &.button_negative {
+      border-color: #ddd;
+    }
   }
   .btn_del_prd {
     width: 24px;
@@ -3526,6 +3537,24 @@
             }
           }
         }
+      }
+    }
+    .order {
+      font-size: 14px;
+      &_status {
+        position: absolute;
+        right: 0;
+        top: 50px;
+        font-size: 14px;
+      }
+      + .col_table_cell .prd {
+        margin-top: 24px;
+      }
+      ~ .prd_count {
+        margin-top: 12px;
+      }
+      .button-s {
+        margin-top: 18px;
       }
     }
   }
