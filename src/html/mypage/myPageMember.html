@@ -209,7 +209,7 @@
         <!-- // 로봇이 아닙니다. -->
       </div><!-- // member_info_list -->
       <div class="btn_article">
-        <button class="button button_positive button-full" type="button">회원정보 수정</button>
+        <button class="button button_positive button-full popup_comm_btn" data-popup-name="modify_pw_chk" type="button" >회원정보 수정</button>
       </div>
     </div>
     </form>
@@ -290,6 +290,59 @@
   </div>
 </div>
 <!-- // e: 비밀번호 변경 -->
+
+ <!-- s: 비밀번호 확인-->
+ <div class="popup_wrap size_ms modify_pw_chk">
+  <div class="pop_inner">
+    <div class="pop_cont">
+      <p class="pop_tit">비밀번호 확인</p>
+      <div class="pop_cont_scroll">
+        <form action=""> 
+        <div class="form_zone">
+          <div class="input_item">
+            <div class="group">
+              <div class="inp_box">
+                <label class="inp_desc" for="popPw">
+                  <input type="password" id="popPw" class="inp center" placeholder="&nbsp;" autocomplete="off">
+                  <span class="label">비밀번호 입력</span>
+                  <span class="focus_bg"></span>              
+                 <div class="eyes"><a href="#" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
+                </label>
+              </div>
+              <div class="error_txt"><span class="ico"></span>현재 비밀번호가 올바르지 않습니다.</div>
+            </div>
+            <div class="btn_article">
+              <button class="button button_negative" type="button">취소</button>
+              <button class="button button_positive" type="button">확인</button>
+            </div>
+            <div class="sns_login_box">
+              <p class="sns_title">SNS 계정으로 회원 인증</strong></p>
+              <p class="sns_txt">가입하신 SNS 계정으로 회원 인증해 주세요.</p>
+              <ul class="sns_list">
+                <li class="naver"><a href="#">네이버</a></li>
+                <li class="kakao"><a href="#">카카오톡</a></li>
+                <li class="facebook"><a href="#">페이스북</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="guide_list">
+            <ul class="list_dot">
+              <li>영고객님의 정보를 안전하게 보호 하기 위해 비밀번호를 다시 한번 확인합니다.</li>
+              <li>비밀번호는 타인에게 노출되지 않게 주의 해 주십시오.</li>
+              <li><strong>비밀번호 입력 후 확인을 누르시면 회원정보가 변경됩니다.</strong></li>
+            </ul>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+    <button href="#" class="ico_x closed" title="닫기">
+      <span>닫기</span>
+    </button>
+  </div>
+</div>
+<!-- // e: 비밀번호 확인 -->
+
 </body>
 </html>
                            

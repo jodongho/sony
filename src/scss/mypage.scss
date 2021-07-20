@@ -31,7 +31,9 @@
       content:"+";
     }
   }
-  
+  .mo_none{
+    display:none;
+  }
 }
 .my_wrap{
   padding-bottom:160px;
@@ -518,36 +520,30 @@
  .date_rang{
   display:flex;
   float:right;
-  .calendar{
-    position:relative;
+  .calendar_box{
+    height:32px;
+    margin-top:0;
+    padding-right:32px;
     .datepicker{
-      width:100%;
-      max-width:160px;
-      height:32px;
-      padding:7px 32px 7px 16px;
-      border:1px solid #ddd;
-      font-size:14px;
-      line-height:32px;
+      height:30px;
+      min-height:auto;     
       box-sizing:border-box;
     }
-    & + .calendar{
-      &:before{
-        display:inline-block;
-        margin:0 5px 0 8px;
-        font-weight:300;
-        color:#888;
-        content:"~";
-      }
-    }
-    .calendar_open{
-      position:absolute;
-      top:0;
-      right:0;
+    .ui-datepicker-trigger{
       width:32px;
       height:32px;
-      border:none;
-      padding:0;
       background:url('/dist/images/mypage/ico_calendar.svg') no-repeat 0 0;
+    }
+    & + .calendar_box{
+      margin-left:24px;
+      &:before{
+        display:block;
+        position:absolute;
+        top:50%;
+        left:-16px;
+        transform:translateY(-50%);
+        content:"~";
+      }
     }
   }
   .button{    
@@ -1140,6 +1136,9 @@
         display:inline-block;
       }
     }
+    @include small-mo{
+      display:flex;
+    }
   }
   &.address{
     .tit_inner{
@@ -1155,7 +1154,6 @@
     margin-top:24px;
   }
 }
-
 .password_change{
   .inp_box {
     .inp{
@@ -1209,6 +1207,140 @@
     }
   }
 }
+// 개명 회원 본인 확인
+.rename_wrap{
+  width:100%;
+  max-width:792px;
+  margin:auto;
+  padding-bottom:160px;
+  .certify_zone{
+    margin-top:55px;
+  }
+  .certify_box{
+    display: flex;
+    justify-content: space-between;
+    .certify_list{
+      width: calc((100% - 8px)/2);
+      border: 1px solid #e1e1e1;
+      text-align: center;          
+      .certify{
+        display: block;        
+        padding: 62px 0;
+      } 
+      [class*="ico_"] { 
+        display: inline-block;
+        width: 64px;
+        height: 64px;
+      }
+      .ico_phone_certify {
+        background: url(/dist/images/common/ic_phone_certify.svg) no-repeat 0 0;
+      }
+      .ico_ipn_certify {
+        background: url(/dist/images/common/ic_ipn_certify.svg) no-repeat 0 0;
+      }
+    }
+    .tit{
+      margin-top: 17px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #222;
+    }
+    .tit_desc{
+      display:block;
+      margin-top: 3px;
+      color: #bbb;
+      font-size: 12px;
+    }
+  }
+  .btn_article{
+    margin-top:40px;
+  }
+  .guide_list{
+    margin-top:40px;
+    text-align:left;
+    li{
+      color:#666;
+    }
+  }
+}
+// 회원정보 수정 - 비밀번호 확인 팝업
+.modify_pw_chk{
+  .pop_tit{
+    margin-bottom:21px;
+  }
+  .inp_box {
+    .inp{
+      padding:20px 0 12px;
+      font-size:14px;
+      &:placeholder-shown {
+        + .label {
+          top: 20px;
+          transform: translate3d(0,0,0) scale(1);
+          @include only-mo {
+            top: 20px;
+          }
+        }
+      }
+      &:not(:placeholder-shown) {
+        + .label {
+          transform: translate3d(0,-12px,0) scale(.75);
+          top: 10px;
+        }
+      }
+      &:focus {
+        outline: 0;
+        + .label {
+          transform: translate3d(0,-12px,0) scale(.75);
+          top: 10px;
+          color: #bbb;
+        }
+      }
+      @include only-mo {
+        font-size:16px;
+        .label{
+          font-size:16px;
+        }
+      }
+    }
+    .label{
+      font-size:14px;
+    }
+  }
+  .btn_article{
+    .button{
+      height:auto;
+      min-width:auto;
+      padding:15px 30px;
+      font-size:16px;
+    }
+  }
+  .sns_login_box{
+    padding:22px 0 30px;
+    border-top:1px solid #ddd;
+    background:#fbfbfb;
+    text-align:center;
+    .sns_title{
+      float:none;
+      font-size:16px;
+    }
+    .sns_txt{
+      float:none;
+      display:block;
+      margin-top:2px;
+      font-size:14px;
+    }
+    .sns_list{
+      float:none;
+      display: flex;
+      margin-top:24px;
+      justify-content: center;
+    }
+  }
+  .guide_list{
+    margin-top:20px;
+  }
+}
+
 @include under-pc {
   .cont_inner{
     padding:0 24px;
@@ -1432,6 +1564,27 @@
       font-size:12px;
     }
   }  
+  .rename_wrap{
+    width:536px;
+    padding-bottom:120px;
+    .certify_zone{
+      margin-top:72px;
+    }
+    .certify_box{
+      .certify_list{   
+        .certify{
+          display: block;        
+          padding: 40px 0;
+        } 
+      }
+    }
+    .btn_article{
+      .button{
+        width: 200px;
+        height: 64px;
+      } 
+    }
+  }
 }
 
 @include only-mo { 
@@ -1596,21 +1749,17 @@
       float:none;
       width:100%;
       margin-top:15px;
-      .calendar{
+      .calendar_box{
         width:calc((100% - 74px)/2);
-        margin-left:8px;
-        &:first-child{
-          margin-left:0;
+        & + .calendar_box{
+          margin-left:8px;
+          &:before{
+            display:none;
+          }
         }
-        .datepicker{
-          width:100%;
-          max-width:100%;
-          padding:7px 16px 7px 16px;
-          text-align:center;
+        .ui-datepicker-trigger{
+          display:none;
         }
-      }
-      .calendar + .calendar:before{
-        display:none;
       }
       .button{
         height:32px;
@@ -1800,7 +1949,6 @@
     margin-top:10px;
     padding:16px 0 0;
   }
-
   .member_list{
     margin-top:22px;
     .tit_inner{
@@ -1861,9 +2009,6 @@
       }
     }
     &.opt_in{
-      .mo_none{
-        display:none;
-      }
       .info_box{
         border-bottom:none;
       }
@@ -1876,6 +2021,33 @@
         }
       }
     } 
+  }
+  .rename_wrap{
+    width:100%;
+    padding: 0 24px 80px;
+    .certify_zone{
+      margin-top:32px;
+    }
+    .certify_box{
+      .certify_list{   
+        .certify{
+          display: block;        
+          padding: 24px 0;
+        } 
+      }
+      .tit{
+        margin-top:10px;
+        font-size:12px;
+      }
+      .tit_desc{
+        font-size:10px;
+      }
+    }
+    .guide_list {
+      li{
+        font-size:12px;   
+      }
+    }
   }
 }
 

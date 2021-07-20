@@ -3677,6 +3677,9 @@ body {
   .list_dot{
     li{
       color:#888;
+      &:first-child{
+        margin-top:0;
+      }
     }
   }
 }
@@ -3812,5 +3815,9 @@ body {
       }
     }
   }
-
+}
+.only-pc {
+  @media screen and (max-width: 1280px) {
+    display: none;
+  }
 }
