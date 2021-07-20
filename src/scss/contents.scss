@@ -3499,7 +3499,7 @@
       font-size: 12px;
     }
   }
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     .prd {      
       position: relative;
       display: block;
