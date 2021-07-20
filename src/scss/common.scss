@@ -2986,17 +2986,16 @@ body {
     width:588px;
   }
   &.size_l{
-    width:900px;
-    /* s: 202107 재택 수정 */ 
+    width:900px; 
     .pop_cont{
       padding:64px;
       &.scrollH{
-        padding-right:0; 
+        padding-right:4px; 
         .pop_tit{
           padding-right:64px;
         }
         .pop_cont_scroll{
-          padding-right:46px;
+          padding-right:42px;
         }
       }
     }
@@ -3028,9 +3027,9 @@ body {
   .pop_cont{
     padding:40px;
     &.scrollH{
-      padding-right:0; /* 202107 재택 수정 */ 
+      padding-right:4px; 
       .pop_cont_scroll{
-        padding-right:22px;/* 202107 재택 수정 */ 
+        padding-right:18px;
       }
     }
   }
@@ -3673,12 +3672,22 @@ body {
     &+.list_dot {
       margin-top:6px;
     }
+    &.ico_tit{
+      padding-left: 18px;
+      background: url(/dist/images/common/ic_info_tit.svg) no-repeat 0 50%;
+      background-size: 14px 14px;
+    }
   }
   .list_dot{
     li{
       color:#888;
       &:first-child{
         margin-top:0;
+      }
+    }
+    @include only-mo {
+      li{
+        font-size:12px;
       }
     }
   }
@@ -3691,9 +3700,9 @@ body {
     .pop_cont{
       padding:24px;
       &.scrollH{
-        padding-right:0;
+        padding-right:4px;
         .pop_cont_scroll{
-          padding-right:6px;
+          padding-right:2px;
         }
       }
     }
