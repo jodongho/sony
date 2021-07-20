@@ -86,13 +86,11 @@
               </li>
             </ul>
             <div class="date_rang">
-              <div class="calendar">
-                <input type="text" id="datepicker1" class="datepicker">
-                <button type="button" class="calendar_open"></button>
+              <div class="calendar_box">
+                <input type="text" id="datepicker1" class="inp datepicker" autocomplete="off">
               </div>
-              <div class="calendar">
-                <input type="text" id="datepicker2" class="datepicker">
-                <button type="button" class="calendar_open"></button>
+              <div class="calendar_box">
+                <input type="text" id="datepicker2" class="inp datepicker" autocomplete="off">
               </div>
               <button class="button button_positive button-s" type="button">조회</button>
             </div>
@@ -200,3 +198,16 @@
 </div>
 </body>
 </html>
+
+<script type="text/javascript">
+  $(function(){
+    $('.date3_btn').on("click",function(){
+      let $tabs = $(this).parents();
+      console.log($tabs)
+      $tabs.addClass("on").siblings().removeClass("on");
+      return false;
+    });
+    datepickerUi($("#datepicker1"));
+    datepickerUi($("#datepicker2"));
+  });
+  </script>
