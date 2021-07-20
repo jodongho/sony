@@ -3677,6 +3677,9 @@ body {
   .list_dot{
     li{
       color:#888;
+      &:first-child{
+        margin-top:0;
+      }
     }
   }
 }
