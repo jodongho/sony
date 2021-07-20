@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="/dist/css/common.css">
 <link rel="stylesheet" href="/dist/css/contents.css">
 <link rel="stylesheet" href="/dist/css/order.css">
+<link rel="stylesheet" href="/dist/css/demo.css">
 <script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
 <script src="/dist/lib/js/swiper.min.js"></script>
 <script src="/dist/lib/js/jquery-ui.min.js"></script>
@@ -452,8 +453,8 @@
                                     <li>구매 후 다음달 8일 이후에 요청되는 세금계산서는 발행이 불가합니다.</li>
                                   </ul>
                                   <div class="btn_recipe_box">
-                                    <button class="button button_negative button-m" type="button">전자 세금계산서 발행 안내</button>
-                                    <button class="button button_positive button-m" type="button">전자 세금계산서 신청하기</button>
+                                    <button class="button button_negative button-m popup_comm_btn" data-popup-name="tax_invoice1" type="button">전자 세금계산서 발행 안내</button>
+                                    <button class="button button_positive button-m popup_comm_btn" data-popup-name="tax_invoice2" type="button">전자 세금계산서 신청하기</button>
                                   </div>
                                 </div>
                                 <strong class="info_tit3">[소비자 피해보상보험 서비스 안내]</strong>
@@ -618,32 +619,151 @@
             <!--// 오른쪽메뉴 -->
           </div>
         </div>
-        <script>
-          //라디오 탭
-          $('.acc_cell .radio_box').on('click', function(){
-             $(":radio[name='tabradio']").change(function(){
-                 var result_cont = $('.result_cont');
-                 var tabradio = $(this).prop("checked",true).attr("id");
-                 result_cont.removeClass('on');
-                 $('.'+tabradio).addClass('on');
-             });
-          });
-          //결제 토글
-          $('.sale_btn').click(function(){
-              var $self = $(this);
-              $('.sale_inner').slideToggle('300', function(){
-                  $self.toggleClass('arrow_on');
-              });
-          });          
-        </script>
       </div>
     </div>
   </div>
   {{>footer}}
+  <!-- s: 전자 세금 계산서 발행 안내 -->
+<div class="popup_wrap size_m tax_invoice1">
+  <div class="pop_inner">
+    <div class="pop_cont">
+      <p class="pop_tit">전자 세금계산서 발행 안내</p>
+      <div class="pop_cont_scroll">
+        <p class="pop_txt txt_l">2011년 1월부터 전자세금계산서 제도를 시행하고 있습니다.<br>
+          이에 따라 전자세금계산서 발행이 의무화되었으며, <strong class="under_line">재화를 공급한 달의 익월 8일</strong> 까지 세금계산서를 발행하도록 규정하고 있습니다. <br>
+          익월 8일 이후에 요청되는 세금계산서 발행 요청에 대해서는 불가한 점 고객님들의 양해를 구합니다.</p>
+        <div class="related_laws">
+          <ul class="dot_line">
+            <li>
+              <p class="tit">부가가치세법 제 22조 - 제2호</p>
+              <p class="desc">② 사업자가 다음 각 호의 어느 하나에 해당하는 경우에는 그 공급가액에 대하여 100분의 1(제2호의 2에 해당하는 경우에 1천분의 5)에 해당하는 금액을 납부세액에 더하거나 환급세액에서 뺀다. 다만, 제2호의2는 법인사업자에 대해서는 2010년 12월 31일까지 적용하지 아니하고 2011년 1월 1일부터 2012년 12월 31일까지는 각각 1천분의3, 1천분의 1을 적용하며, 대통령령으로 정하는 개인사업자에 대해서는 2011년 12월 31일까지 적용하지 아니하고 2012년 1월 1일부터 2013년 12월 31일까지는 각각 1천분의3, 1천분의 1을 적용한다. (개정 2010.1, 2010.12.27)</p>
+            </li>
+            <li>
+              <ol class="dot_depth_list">
+                <li class="desc">1. 제16조에 따른 세금계산서의 발급시기를 경과하여 발급하거나 세금계산서의 필요적 기재사항의 전부 또는 일부가 착오 또는 과실로 적혀 있기 아니하거나 사실과 다른 경우</li>
+                <li class="desc">2. 제16조제2항에 따라 전자세금계산서를 발급한 사업자가 재화 또는 용역의 공급시기가 속하는 과세기간 말의 다음 달 15일까지 국세청장에게 세금계산서 발급명세를 전송하지 아니한 경우, 2의2, 제16조제3항에 따른 기한이 경과한 후 재화 또는 용역의 공급시기가 속하는 과세기간 말의 다음달 15일까지 국세청장에게 세금계산서 발급명세를 전송하는 경우</li>
+                <li class="desc">3. 제32조의2제3항에 따른 신용카드매출전표등을 발급받아 제18조제1항 및 제2항 단서 또는 제19조제1항에 따라 신고하는 때에 정부에 제출하여 매입세액을 공제받지 아니하고 대톨령령으로 정하는 사유로 매입세액을 공제받는 경우</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button href="#" class="ico_x closed" title="팝업창 닫기">
+      <span>팝업창 닫기</span>
+    </button>
+  </div>
+</div>
+<!-- e: 전자 세금 계산서 발행 안내 -->
+<!-- s: 전자 세금 계산서 신청 -->
+<div class="popup_wrap size_m tax_invoice2">
+  <div class="pop_inner">
+    <div class="pop_cont">
+      <p class="pop_tit">전자 세금계산서 신청</p>
+      <div class="pop_cont_scroll">
+        <form action="">
+          <div class="form_zone">
+            <div class="input_item">
+              <span class="input_tit"><label for="corp_num" class="tit">사업자등록번호</label></span>
+              <span class="input_box">
+                <input type="text" id="corp_num" class="input" placeholder="사업자 등록 번호를 입력하세요. ( - 포함 등록)">
+                <span class="focus_bg"></span>
+              </span>
+            </div>
+            <div class="input_item">
+              <span class="input_tit"><label for="corp_group" class="tit">법인명(단체명)</label></span>
+              <span class="input_box">
+                <input type="text" id="corp_group" class="input" placeholder="법인(단체)명을 입력하세요.">
+                <span class="focus_bg"></span>
+              </span>
+            </div>
+            <div class="input_item">
+              <span class="input_tit"><label for="corp_name" class="tit">대표자명</label></span>
+              <span class="input_box">
+                <input type="text" id="corp_name" class="input" placeholder="대표자 이름을 입력하세요.">
+                <span class="focus_bg"></span>
+              </span>
+            </div>
+            <div class="input_item">
+              <span class="input_tit"><label for="corp_addr" class="tit">사업장 소재지</label></span>
+              <span class="input_box">
+                <input type="text" id="corp_addr" class="input" placeholder="사업장 소재지를 입력하세요. (ex : 서울)">
+                <span class="focus_bg"></span>
+              </span>
+            </div>
+            <div class="input_item col">
+              <span class="input_tit"><span class="tit">사업의 종류</span></span>
+              <div class="input_col_type">
+                <span class="input_col">
+                  <span class="input_tit"><label for="corp_type1" class="tit">업태</label></span>
+                  <span class="input_box">
+                    <input type="text" id="corp_type1" class="input" placeholder="(ex : 도매, 소매, 서비스)">
+                    <span class="focus_bg"></span>
+                  </span>
+                </span>
+                <span class="input_col">
+                  <span class="input_tit"><label for="corp_type2" class="tit">종목</label></span>
+                  <span class="input_box">
+                    <input type="text" id="corp_type2" class="input" placeholder="(ex : 무역, 통신판매)">
+                   <span class="focus_bg"></span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="btn_article">
+            <button class="button button_positive button-m" type="button">전자 세금계산서 신청하기</button>
+          </div>
+        </form>
+        <div class="related_laws">
+          <ul class="dot_line">
+            <li>
+              <p class="tit">부가가치세법 제 22조 - 제2호</p>
+              <p class="desc">② 사업자가 다음 각 호의 어느 하나에 해당하는 경우에는 그 공급가액에 대하여 100분의 1(제2호의 2에 해당하는 경우에 1천분의 5)에 해당하는 금액을 납부세액에 더하거나 환급세액에서 뺀다. 다만, 제2호의2는 법인사업자에 대해서는 2010년 12월 31일까지 적용하지 아니하고 2011년 1월 1일부터 2012년 12월 31일까지는 각각 1천분의3, 1천분의 1을 적용하며, 대통령령으로 정하는 개인사업자에 대해서는 2011년 12월 31일까지 적용하지 아니하고 2012년 1월 1일부터 2013년 12월 31일까지는 각각 1천분의3, 1천분의 1을 적용한다. (개정 2010.1, 2010.12.27)</p>
+            </li>
+            <li>
+              <ol>
+                <li class="desc">1. 제16조에 따른 세금계산서의 발급시기를 경과하여 발급하거나 세금계산서의 필요적 기재사항의 전부 또는 일부가 착오 또는 과실로 적혀 있기 아니하거나 사실과 다른 경우</li>
+                <li class="desc">2. 제16조제2항에 따라 전자세금계산서를 발급한 사업자가 재화 또는 용역의 공급시기가 속하는 과세기간 말의 다음 달 15일까지 국세청장에게 세금계산서 발급명세를 전송하지 아니한 경우, 2의2, 제16조제3항에 따른 기한이 경과한 후 재화 또는 용역의 공급시기가 속하는 과세기간 말의 다음달 15일까지 국세청장에게 세금계산서 발급명세를 전송하는 경우</li>
+                <li class="desc">3. 제32조의2제3항에 따른 신용카드매출전표등을 발급받아 제18조제1항 및 제2항 단서 또는 제19조제1항에 따라 신고하는 때에 정부에 제출하여 매입세액을 공제받지 아니하고 대톨령령으로 정하는 사유로 매입세액을 공제받는 경우</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button href="#" class="ico_x closed" title="팝업창 닫기">
+      <span>팝업창 닫기</span>
+    </button>
+  </div>
+</div>
+<!-- e: 전자 세금 계산서 신청 -->
 </div>
 <script>
+  //라디오 탭
+  $('.acc_cell .radio_box').on('click', function(){
+    $(":radio[name='tabradio']").change(function(){
+        var result_cont = $('.result_cont');
+        var tabradio = $(this).prop("checked",true).attr("id");
+        result_cont.removeClass('on');
+        $('.'+tabradio).addClass('on');
+    });
+  });
+  //결제 토글
+  $('.sale_btn').click(function(){
+      var $self = $(this);
+      $('.sale_inner').slideToggle('300', function(){
+          $self.toggleClass('arrow_on');
+      });
+  });   
   $(function() {
-    datepickerUi($(".datepicker")); 
+      datepickerUi($(".datepicker"));
+      $('.popup_comm_btn').on("click",function(){
+        let _popName = $(this).data("popup-name");
+        if($('.popup_wrap:animated').length < 1){ // fadeInOut 시 중복 클릭 방지
+          popupCommon(_popName, $(this)); // 오픈할 팝업과 닫기 시 돌아갈 포커스 select
+        }
+      }); 
   });
 </script>
 </body>
