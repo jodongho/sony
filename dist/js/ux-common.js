@@ -17,6 +17,9 @@ $(() => {
   const sidebarToggle = document.querySelector(".sidebar__btn__toggle");
   const sidebarTop = document.querySelector(".sidebar__btn.top");
   const footer = document.querySelector(".footer");
+  const familyLinkTrigger = document.querySelector(".footer__family__link__trigger");
+  const fkakaoLink = document.querySelector(".sidebar__btn__link.kakao");
+  const fcustomerLink = document.querySelector(".sidebar__btn__link.customer");
   const memberPcLink = document.querySelector(".btn__desktop.btn__mypage");
 
   window.addEventListener("load", init);
@@ -27,14 +30,19 @@ $(() => {
     btnHideGnb.addEventListener("click", hideGnbMo);
     btnShowSearch.addEventListener("click", showSearch);
     btnHideSearch.addEventListener("click", hideSearch);
+    memberPcLink.addEventListener("click", memberLink);
+    for (let i = 0; i < gnbLink1.length; i++) {
+      gnbLink1[i].addEventListener("mouseover", showGnb);
+      gnbLink1[i].addEventListener("mouseleave", removeGnbActive);
+    }
+    for (let i = 0; i < gnbLink2.length; i++) {
+      gnbLink2[i].addEventListener("click", showGnbSecondary);
+    }
   }
-
-  for (let i = 0; i < gnbLink1.length; i++) {
-    gnbLink1[i].addEventListener("mouseover", showGnb);
-    gnbLink1[i].addEventListener("mouseleave", removeGnbActive);
-  }
-  for (let i = 0; i < gnbLink2.length; i++) {
-    gnbLink2[i].addEventListener("click", showGnbSecondary);
+  if (footer) {
+    familyLinkTrigger.addEventListener("click", familyLink);
+    fkakaoLink.addEventListener("click", fkakao);
+    fcustomerLink.addEventListener("click", fcustomer);
   }
 
   // functions.
@@ -122,52 +130,99 @@ $(() => {
   }
 
   // pc login tooltip
-  if (memberPcLink) {
-    memberPcLink.addEventListener("click", e => {
-      e.preventDefault();
+  function memberLink(e) {
+    e.preventDefault();
 
-      const elem = document.querySelector(".header .member");
-      const active = "member--visible";
-      const outsideClick = e => {
-        if (!elem.contains(e.target) && !memberPcLink.contains(e.target)) {
-          $(elem).removeClass(active);
-          body.removeEventListener("click", outsideClick);
-        };
-      };
-
-      if (elem.classList.contains(active)) {
-        elem.classList.remove(active);
+    const elem = document.querySelector(".header .member");
+    const active = "member--visible";
+    const outsideClick = e => {
+      if (!elem.contains(e.target) && !memberPcLink.contains(e.target)) {
+        $(elem).removeClass(active);
         body.removeEventListener("click", outsideClick);
-      } else {
-        elem.classList.add(active);
-        body.addEventListener("click", outsideClick);
-      }
-    });
-  };
-
-  // footer - family site on desktop
-  const familyLinkTrigger = document.querySelector(".footer__family__link__trigger");
-
-  if (familyLinkTrigger) {
-    familyLinkTrigger.addEventListener("click", e => {
-      const link = e.target.closest(".footer__family__link");
-      const active = "footer__family__link--active";
-      const outsideClick = e => {
-        console.log(!link.contains(e.target))
-        if (!link.contains(e.target)) {
-          $(link).removeClass(active);
-          body.removeEventListener("click", outsideClick);
-        };
       };
+    };
+    if (elem.classList.contains(active)) {
+      elem.classList.remove(active);
+      body.removeEventListener("click", outsideClick);
+    } else {
+      elem.classList.add(active);
+      body.addEventListener("click", outsideClick);
+    }
+  }
 
-      if (link.classList.contains(active)) {
-        link.classList.remove(active);
-      } else {
-        link.classList.add(active);
-        body.addEventListener("click", outsideClick);
+  function familyLink(e) {
+    const link = e.target.closest(".footer__family__link");
+    const active = "footer__family__link--active";
+    const outsideClick = e => {
+      console.log(!link.contains(e.target))
+      if (!link.contains(e.target)) {
+        $(link).removeClass(active);
+        body.removeEventListener("click", outsideClick);
       };
-    });
-  };
+    };
+
+    if (link.classList.contains(active)) {
+      link.classList.remove(active);
+    } else {
+      link.classList.add(active);
+      body.addEventListener("click", outsideClick);
+    };
+  }
+
+  // floating menu
+  // kakao talk 상담
+  function fkakao(e) {
+    if (!body.classList.contains("login")) {
+      e.preventDefault();
+      makeConfirm("kakaoLogin", "카톡 상담을 위해선 로그인이 필요합니다.<br>로그인 하시겠습니까?", fkakaoCB);
+    };
+  }
+
+  function fkakaoCB() {
+    console.log("카카오")
+  }
+
+  // 고객센터
+  function fcustomer(e) {
+    e.preventDefault();
+    makeConfirm("callcs", "고객센터로 연결 하시겠습니까?<br><a href='tel:+82-1588-0911'>1588-0911</a>", fcustomerCB);
+  }
+
+  function fcustomerCB() {
+    window.open("tel:+82-1588-0911");
+  }
+
+  // confirm 스타일 팝업 생성
+  function makeConfirm(name, msg, func1) {
+    const inner = `
+      <div class='layer alert_layer alert_pop2 ${name}' style='display: block;'>
+        <div class='layer_wrap'>
+          <div class='layer_container'>
+            <div class='layer_content'>
+              <p class='alert_text'>${msg}</p>
+              <div class='btn_box'>
+                <button type='button' class='close btn btn_default btn_remove'>취소</button>
+                <button type='button' class='btn btn_dark btn_func1'>확인</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    const fragment = document.createRange().createContextualFragment(inner);
+    
+    document.body.appendChild(fragment);
+    function removeConfirm() {
+      const remove = document.querySelector("." + name ).remove();
+    }
+
+    const btnRemove = document.querySelector("." + name + " .btn_remove");
+    const btnFunc1 = document.querySelector("." + name + " .btn_func1");
+
+    btnRemove.addEventListener("click", removeConfirm);
+    btnFunc1.addEventListener("click", func1);
+  }
 
   // sort
   const itemsort = $(".itemsort");
