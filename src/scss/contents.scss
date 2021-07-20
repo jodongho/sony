@@ -3617,3 +3617,27 @@
     }
   }
 }
+//주문배송조회 tabel, 주문결제 tabel mobile type
+.order_box__cont,
+.order_detail_cont {
+  @media (max-width: 767px) { 
+    .prd {
+      margin-top: 0;
+    }   
+    .col_table_cell {
+      &.prd_price,
+      &.prd_count {
+        display: inline-block;
+        margin-top: 10px;
+      }
+      &.prd_count {
+        &:before {
+          content: '/';
+        }
+      }
+    }
+    .won {
+      font-size: 12px;
+    }
+  }
+}
