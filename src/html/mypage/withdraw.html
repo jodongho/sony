@@ -7,7 +7,7 @@
 <title>{{ia.mypage.submenu.withdraw.title}}</title>
 <link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
 <link rel="stylesheet" href="/dist/css/contents.css">
-<link rel="stylesheet" href="/dist/css/mypage2.css">
+<link rel="stylesheet" href="/dist/css/mypage.css">
 <script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
 <script src="/dist/js/ux-common.js"></script>
 <script src="/dist/js/ux-sub.js"></script>
@@ -21,20 +21,20 @@
       <div class="common_head">
         <a href="/dist/html/mypage/myPageMain.html" class="common_head_back">마이페이지</a>
         <div class="common_head_name">회원탈퇴</div>
-      </div>      
+      </div>
       <div class="withdraw_wrap">
         <div class="member_idbox">
           iLoveSonydkfjalfj@sony.co.kr
         </div>
         <p class="txt_primary">개인정보, 쿠폰 정보, 보유하신 마일리지, 정품등록 정보 등 회원 탈퇴 시 삭제됩니다.</p>
         <form>
-          <div class="withdraw_box">            
+          <div class="withdraw_box">
             <div class="group">
               <div class="inp_box password_box">
                 <label class="inp_desc" for="popPw">
                   <input type="password" id="popPw" class="inp center" placeholder="&nbsp;">
                   <span class="label">비밀번호</span>
-                  <span class="focus_bg"></span>              
+                  <span class="focus_bg"></span>
                  <div class="eyes"><a href="#" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
                 </label>
               </div>
@@ -71,13 +71,13 @@
                     <a href="#" class="opt_list">
                       <div class="item">기타</div>
                     </a>
-                  </li>                                                  
+                  </li>
                 </ul>
               </div>
             </div>
             <div class="btn_article">
               <button class="button button_positive popup_comm_btn button-full" type="button" data-popup-name="withdraw_pop">회원탈퇴</button>
-            </div>            
+            </div>
           </form>
           <div class="info_withdraw">
             <strong class="info_title">[안내]</strong>
@@ -130,25 +130,25 @@
   </div>
   <!-- // e: 정말 탈퇴하시겠습니까 팝업 -->
   <script>
-    $(function(){ 
+    $(function(){
       // 팝업
       $('.popup_comm_btn').on("click",function(){
         let _popName = $(this).data("popup-name");
         if($('.popup_wrap:animated').length < 1){ // fadeInOut 시 중복 클릭 방지
           popupCommon(_popName, $(this)); // 오픈할 팝업과 닫기 시 돌아갈 포커스 select
         }
-      });      
-      // 눈표시 클릭 시 패스워드 보이기 
+      });
+      // 눈표시 클릭 시 패스워드 보이기
       $('.eyes').on('click',function(){
-        $('.inp_box.password_box').toggleClass('active'); 
+        $('.inp_box.password_box').toggleClass('active');
         if( $('.inp_box.password_box').hasClass('active') == true ){
           $(this).find('.ico_eyes').attr('class',"ico_eyes_open").parents('.password_box').find('.inp').attr('type',"text");
           $(this).find('>button').attr('title',"비밀번호 표시");
-          // i 클래스 // 텍스트 보이기 i 클래스 
-        } 
-        else{ 
+          // i 클래스 // 텍스트 보이기 i 클래스
+        }
+        else{
           $(this).find('.ico_eyes_open').attr('class',"ico_eyes").parents('.password_box').find('.inp').attr('type','password');
-          $(this).find('>button').attr('title',"비밀번호 숨김");      
+          $(this).find('>button').attr('title',"비밀번호 숨김");
         }
       });
     });
