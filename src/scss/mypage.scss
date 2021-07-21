@@ -1195,16 +1195,6 @@
   }
   .guide_list{
     margin-top:40px;
-    .info_tit{
-      padding-left: 18px;
-      background: url(/dist/images/common/ic_info_tit.svg) no-repeat 0 50%;
-      background-size: 14px 14px;
-    }
-    @include only-mo {
-      li{
-        font-size:12px;
-      }
-    }
   }
 }
 // 개명 회원 본인 확인
@@ -1265,9 +1255,6 @@
 }
 // 회원정보 수정 - 비밀번호 확인 팝업
 .modify_pw_chk{
-  .pop_tit{
-    margin-bottom:21px;
-  }
   .inp_box {
     .inp{
       padding:20px 0 12px;
@@ -1304,7 +1291,7 @@
     }
     .label{
       font-size:14px;
-    }
+    } 
   }
   .btn_article{
     .button{
@@ -1339,6 +1326,180 @@
   .guide_list{
     margin-top:20px;
   }
+}
+// 현금영수증 발행 요청
+.cash_receipt{
+  .inp_box {
+    .inp{
+      padding:20px 0 12px;
+      font-size:14px;
+      &:placeholder-shown {
+        + .label {
+          top: 20px;
+          transform: translate3d(0,0,0) scale(1);
+          @include only-mo {
+            top: 20px;
+          }
+        }
+      }
+      &:not(:placeholder-shown) {
+        + .label {
+          transform: translate3d(0,-12px,0) scale(.75);
+          top: 10px;
+        }
+      }
+      &:focus {
+        outline: 0;
+        + .label {
+          transform: translate3d(0,-12px,0) scale(.75);
+          top: 10px;
+          color: #bbb;
+        }
+      }
+      @include only-mo {
+        font-size:16px;
+        .label{
+          font-size:16px;
+        }
+      }
+    }
+    .label{
+      font-size:14px;
+    } 
+  }
+  .radio_group{
+    display:flex;
+    margin-top:24px;
+    .radio_box{
+      margin-left:24px;
+      &:first-child{
+        margin-left:0;
+      }
+      .contentType{
+        font-size:14px;
+      }
+    }
+  }
+  .payment_amount{    
+    margin-bottom:28px;
+    .amount_result{
+      margin-top:13px;
+      padding:29px 32px 32px;
+      border-top:2px solid #222;
+      background:#fbfbfb;
+      text-align:right;
+    }
+    .amount_tit{
+      font-size:16px;
+      font-weight:700;
+      letter-spacing:-0.4px;
+      color:#222;
+    }
+    .val_txt{
+      font-size:18px;
+      font-weight:700;
+      color:#5865f5;
+      .val{
+        font-size:26px;
+      }
+    }
+    .vat_txt{
+      margin-top:4px;
+      font-size:14px;
+    }
+  }
+  .btn_article{
+    .button-full{
+      height:auto;
+      padding:16px 0;
+      font-size:16px;
+      font-weight:normal;
+    }
+  }
+  .guide_list{
+    margin-top:40px;
+  }
+  @include only-mo { 
+    .num{
+      font-weight:700;
+      color:#222;
+    }
+    .amount_tit{
+      font-size:14px;
+    }
+    .val_txt {    
+      font-size:14px;
+      .val{
+        font-size:24px;
+      }
+    }       
+    .radio_group{
+      display:block;
+      .radio_box{
+        margin-top:24px;
+        margin-left:0;
+        &:first-child{
+          margin-top:0;
+        }
+      }
+    }
+    .btn_article {
+      .button{
+        font-size:14px;
+      }
+    }
+  }
+}
+// 찜 장바구니 완료
+.cart_pop{
+  text-align:center;
+  .ico_cart{
+    position:relative;
+    padding-top:58px;
+    margin-bottom:3px;
+    &:before{
+      display:block;
+      position:absolute;
+      top:0;
+      left:50%;
+      width:56px;
+      height:56px;
+      background:url('/dist/images/mypage/ico_like_cart.svg') no-repeat 0 0;
+      transform:translateX(-50%);
+      content:"";
+    }
+  }
+  .pop_txt{
+    font-size:16px;
+    color:#444;
+  }
+  .btn_article{
+    display:flex;
+    margin-top:21px;
+    .button{
+      width:calc((100% - 8px)/2);
+      min-width:auto;
+      font-size:16px;
+      &+.button{
+        margin-left:8px;
+      }
+    }
+  }
+  @include only-mo { 
+    .ico_cart{
+      padding-top:60px;
+    }
+    .pop_txt{
+      font-size:14px;
+    }
+    .btn_article{
+      display:flex;
+      margin-top:21px;
+      .button{
+        font-size:14px;
+      }
+    }
+  }  
 }
 
 @include under-pc {

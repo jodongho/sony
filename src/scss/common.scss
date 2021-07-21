@@ -3064,6 +3064,9 @@ body {
   &.size_s{
     width:312px;
   }
+  &.size_sl{
+    width:386px;
+  }
   &.size_ms{
     width:486px;
   }
@@ -3782,7 +3785,7 @@ body {
 }
 @include only-mo {
   .popup_wrap{
-    width:312px !important;
+    width:90% !important;
   }
   .pop_inner{
     .pop_cont{
@@ -3790,7 +3793,7 @@ body {
       &.scrollH{
         padding-right:4px;
         .pop_cont_scroll{
-          padding-right:2px;
+          
         }
       }
     }
