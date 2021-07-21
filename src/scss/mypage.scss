@@ -48,11 +48,11 @@
     padding:116px 0 40px;
     font-size:48px;
     font-weight:bold;
-    letter-spacing:-1.2px; 
+    letter-spacing:-1.2px;
     text-align:center;
     color:#222;
   }
-  @include only-tab { 
+  @include only-tab {
     padding:0 24px;
   }
 }
@@ -81,7 +81,7 @@
     clear:both;
     content:"";
   }
-  
+
 }
 .user_item{
   float:left;
@@ -202,7 +202,7 @@
     padding:18px 42px 28px 128px;
     &:first-child, &:nth-child(2n+1){
       margin-left:0;
-    } 
+    }
     &:nth-child(2n) ~ .b2b_link{
       margin-top:20px;
     }
@@ -451,7 +451,7 @@
     color:#5865f5;
     &:after{
       display:block;
-      position:absolute; 
+      position:absolute;
       top:8px;
       right:0;
       width:24px;
@@ -474,7 +474,7 @@
     clear:both;
     content:"";
   }
- } 
+ }
  .date3_tab{
   display:flex;
   float:left;
@@ -526,7 +526,7 @@
     padding-right:32px;
     .datepicker{
       height:30px;
-      min-height:auto;     
+      min-height:auto;
       box-sizing:border-box;
     }
     .ui-datepicker-trigger{
@@ -546,7 +546,7 @@
       }
     }
   }
-  .button{    
+  .button{
     min-width:58px;
     height:32px;
     margin:0 0 0 8px;
@@ -684,7 +684,7 @@
     .txt{
       color:#444;
     }
-    
+
   }
 }
 .coupon_list{
@@ -784,7 +784,7 @@
     width:calc((100% - 72px)/4);
     margin-left:24px;
     transition:all .2s;
-    @include only-pc { 
+    @include only-pc {
       &:first-child, &:nth-child(4n+1){
         margin-left:0;
       }
@@ -793,7 +793,7 @@
       }
     }
   }
-  @include only-tab { 
+  @include only-tab {
     .like_list{
       width:calc((100% - 32px)/3);
       margin-left:16px;
@@ -836,7 +836,7 @@
       font-weight:700;
       color:#222;
       .price{
-       font-size:16px; 
+       font-size:16px;
       }
     }
   }
@@ -918,7 +918,7 @@
   margin-top:16px;
   padding:24px 0 0;
   border-top:2px solid #222;
-} 
+}
 .member_list{
   margin-top:26px;
   &:first-child{
@@ -1212,12 +1212,12 @@
     .certify_list{
       width: calc((100% - 8px)/2);
       border: 1px solid #e1e1e1;
-      text-align: center;          
+      text-align: center;
       .certify{
-        display: block;        
+        display: block;
         padding: 62px 0;
-      } 
-      [class*="ico_"] { 
+      }
+      [class*="ico_"] {
         display: inline-block;
         width: 64px;
         height: 64px;
@@ -1291,7 +1291,7 @@
     }
     .label{
       font-size:14px;
-    } 
+    }
   }
   .btn_article{
     .button{
@@ -1365,7 +1365,7 @@
     }
     .label{
       font-size:14px;
-    } 
+    }
   }
   .radio_group{
     display:flex;
@@ -1380,7 +1380,7 @@
       }
     }
   }
-  .payment_amount{    
+  .payment_amount{
     margin-bottom:28px;
     .amount_result{
       margin-top:13px;
@@ -1419,7 +1419,7 @@
   .guide_list{
     margin-top:40px;
   }
-  @include only-mo { 
+  @include only-mo {
     .num{
       font-weight:700;
       color:#222;
@@ -1427,12 +1427,12 @@
     .amount_tit{
       font-size:14px;
     }
-    .val_txt {    
+    .val_txt {
       font-size:14px;
       .val{
         font-size:24px;
       }
-    }       
+    }
     .radio_group{
       display:block;
       .radio_box{
@@ -1485,7 +1485,7 @@
       }
     }
   }
-  @include only-mo { 
+  @include only-mo {
     .ico_cart{
       padding-top:60px;
     }
@@ -1499,13 +1499,13 @@
         font-size:14px;
       }
     }
-  }  
+  }
 }
 
 @include under-pc {
   .cont_inner{
     padding:0 24px;
-  }   
+  }
   .user_item{
     width:50%;
     &:nth-child(2) ~ .user_item {
@@ -1537,7 +1537,7 @@
         width:32px;
         height:32px;
       }
-      &.refurbish:before, &.executives:before, 
+      &.refurbish:before, &.executives:before,
       &.refined_article:before, &.asc:before {
         background-size:32px 32px;
       }
@@ -1681,7 +1681,7 @@
     }
   }
 }
-@include only-tab{ 
+@include only-tab{
   .member_wrap{
     width:100%;
     max-width:768px;
@@ -1724,7 +1724,7 @@
     .certify_txt{
       font-size:12px;
     }
-  }  
+  }
   .rename_wrap{
     width:536px;
     padding-bottom:120px;
@@ -1732,23 +1732,23 @@
       margin-top:72px;
     }
     .certify_box{
-      .certify_list{   
+      .certify_list{
         .certify{
-          display: block;        
+          display: block;
           padding: 40px 0;
-        } 
+        }
       }
     }
     .btn_article{
       .button{
         width: 200px;
         height: 64px;
-      } 
+      }
     }
   }
 }
 
-@include only-mo { 
+@include only-mo {
   .my{
     .cont{
       .cont_tit{
@@ -1767,7 +1767,7 @@
       padding:14px;
       font-size:14px;
     }
-    
+
   }
   .my_wrap{
     padding-bottom:80px;
@@ -1948,7 +1948,7 @@
         clear:both;
         content:"";
       }
-      .col_table_cell{ 
+      .col_table_cell{
         display:block;
         width:auto;
         padding:0;
@@ -2030,7 +2030,7 @@
         margin-left:0;
       }
       &:nth-child(2) ~ .like_list{
-        
+
       }
     }
     .like_prd_inner{
@@ -2099,7 +2099,7 @@
   }
   .member_info{
     .btn_article{
-      margin-top:40px; 
+      margin-top:40px;
       .button_positive{
         min-height:48px;
         font-size:14px;
@@ -2151,13 +2151,13 @@
       }
       .ico_grade{
         .inp{
-          font-size:16px;     
+          font-size:16px;
         }
-      } 
+      }
     }
     .btn_box{
       width:88px;
-      .button{   
+      .button{
         padding:8px 0 10px;
         font-size:12px;
       }
@@ -2181,7 +2181,7 @@
           font-size:14px;
         }
       }
-    } 
+    }
   }
   .rename_wrap{
     width:100%;
@@ -2190,11 +2190,11 @@
       margin-top:32px;
     }
     .certify_box{
-      .certify_list{   
+      .certify_list{
         .certify{
-          display: block;        
+          display: block;
           padding: 24px 0;
-        } 
+        }
       }
       .tit{
         margin-top:10px;
@@ -2206,9 +2206,769 @@
     }
     .guide_list {
       li{
-        font-size:12px;   
+        font-size:12px;
       }
     }
   }
 }
 
+// from mypage2.scss
+// * 공통 헤더
+.common_head {
+  margin-bottom: 80px;
+  text-align: center;
+  &_back,
+  &_name {
+    font-weight: 700;
+    letter-spacing: -.025em;
+    color: #222;
+  }
+  &_back {
+    font-size: 20px;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: .5em;
+      height: .5em;
+      margin-right: .25em;
+      vertical-align: .05em;
+      -webkit-transform: rotate(225deg);
+      transform: rotate(225deg);
+      border-top: 3px solid #222;
+      border-right: 3px solid #222
+    }
+  }
+  &_name {
+    font-size: 48px;
+  }
+  @media screen and (max-width: 640px) {
+    margin-bottom: 14px;
+    &_back {
+      font-size: 12px;
+      &::before {
+        border-top: 1px solid #222;
+        border-right: 1px solid #222
+      }
+    }
+    &_name {
+      font-size: 24px;
+    }
+  }
+}
+
+// * 주문/배송내역
+.recent_order {
+  margin-top: 80px;
+  .tit_head {
+    @include clearfix;
+    padding-bottom: 24px;
+  }
+  @include only-pc {
+    .mileage_inquiry {
+      .cont_tit {
+        float: left;
+        margin-top: 0;
+      }
+    }
+    .date {
+      &_box {
+        float: right;
+      }
+      &3_tab {
+        float: left;
+        margin-right: 32px;
+      }
+      &_rang {
+        float: left;
+      }
+    }
+  }
+  @include only-tab {
+    .cont_tit {
+      margin-bottom: 20px;
+    }
+  }
+}
+.order_notice {
+  margin-top: 25px;
+  &_title {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -.025em;
+    color: #444;
+    &::before {
+      content: "!";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+      padding: 2px 0;
+      text-align: center;
+      vertical-align: 1px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1;
+      color: #fff;
+      border-radius: 50%;
+      box-sizing: border-box;
+      background-color: #bbb;
+    }
+  }
+}
+
+// * 주문 상세 조회
+.o_summary {
+  overflow: hidden;
+  margin: 76px 0 40px;
+  padding: 16px 24px;
+  background-color: #f4f7fa;
+  &_status {
+    float: right;
+    strong {
+      display: inline-block;
+      margin-right: .75em;
+      color: $primary-color;
+    }
+    .button-s {
+      height: 2.286em;
+      padding: .5em 1.143em;
+      vertical-align: top;
+      font-size: 14px;
+    }
+  }
+  &_date {
+    float: left;
+    margin-right: 3em;
+  }
+  &_number {
+    float: left;
+  }
+  &_term,
+  &_desc {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: -.025em;
+    color: #222;
+  }
+  &_term {
+    float: left;
+    color: #444;
+    &::after {
+      content: ":";
+      margin: 0 .5em;
+    }
+  }
+  &_desc {
+    padding-left: 5em;
+    font-weight: 700;
+  }
+  @media screen and (max-width: 1280px) {
+    &_term,
+    &_desc {
+      font-size: 14px;
+    }
+    &_status {
+      .button-s {
+        height: 2em;
+        padding: .25em 1.143em;
+        vertical-align: top;
+      }
+    }
+  }
+  @media screen and (max-width: 740px) {
+    margin: 24px 0;
+    padding: 0;
+    background: none;
+    &_status,
+    &_date,
+    &_number {
+      float: none;
+    }
+    &_status {
+      margin-bottom: 24px;
+      padding: 16px 24px;
+      background-color: #f4f7fa;
+      .button-s {
+        float: right;
+      }
+    }
+    &_date {
+      margin-right: 0;
+    }
+  }
+}
+.order_info {
+  margin-bottom: 80px;
+  .order {
+    overflow: hidden;
+    margin-top: 19px;
+    padding-top: 13px;
+    border-top: 2px solid #222;
+    &_term,
+    &_desc {
+      float: left;
+      margin: 1.5em 0;
+      font-size: 14px;
+      line-height: 1.5;
+      letter-spacing: -.025em;
+    }
+    &_term {
+      width: 160px;
+      font-weight: 700;
+      color: #222;
+    }
+    &_desc {
+      width: calc(100% - 160px);
+      color: #444;
+    }
+    @media screen and (max-width: 640px) {
+      &_term {
+        float: none;
+        margin-bottom: 1em;
+      }
+    }
+  }
+  @include only-pc {
+    float: left;
+    width: 714px;
+  }
+}
+.purchase_info {
+  margin-bottom: 80px;
+  .purchase {
+    margin-top: 19px;
+    padding-top: 13px;
+    line-height: 1.5;
+    border-top: 2px solid #222;
+    &_term {
+      float: left;
+      font-size: 14px;
+      letter-spacing: -.025em;
+      color: #222;
+      &.purchase_price {
+        padding: 26px 0 24px;
+        font-size: 16px;
+      }
+      &.purchase_discount {
+        padding-top: 23px;
+        &_sub {
+          padding-top: 4px;
+          color: #888;
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            margin-left: 5px;
+            margin-right: 8px;
+            vertical-align: 1px;
+            border-left: 2px solid #ddd;
+            border-bottom: 2px solid #ddd;
+          }
+        }
+      }
+      &.purchase_detail {
+        margin-top: 20px;
+        padding-top: 28px;
+        text-align: right;
+        font-weight: 700;
+        font-size: 16px;
+        border-top: 1px solid #222;
+      }
+    }
+    &_desc {
+      text-align: right;
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: -.025em;
+      color: #222;
+      &.purchase_price {
+        padding: 22px 0;
+        font-size: 20px;
+        border-bottom: 1px solid #e1e1e1;
+      }
+      &.purchase_discount {
+        color: #e70000;
+      }
+      &.purchase_discount_sub {
+        color: #888;
+      }
+      &.purchase_detail {
+        padding-top: 8px;
+        padding-bottom: 32px;
+      }
+      .won {
+        font-size: .8em;
+      }
+    }
+    &_discount {
+      padding-top: 20px;
+      padding-bottom: 2px;
+      &_sub {
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
+    }
+    &_detail {
+      display: block;
+      float: none;
+      padding: 0 32px;
+      background-color: #fbfbfb;
+      &_price {
+        margin-bottom: 12px;
+        font-size: 28px;
+        letter-spacing: -.025em;
+        color: $primary-color;
+        .won {
+          font-size: 0.572em;
+        }
+      }
+      &_method {
+        margin: 12px 0;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: -.025em;
+        color: #666;
+      }
+      .button-s {
+        min-width: 0;
+      }
+    }
+  }
+  @include only-pc {
+    float: right;
+    width: 384px;
+  }
+  @media screen and (max-width: 640px) {
+    &_term {
+      float: none;
+      margin-bottom: 1em;
+    }
+    &_desc {
+      float: none;
+    }
+  }
+  &~ .button_wrap {
+    clear: both;
+  }
+}
+
+// mypage.css .my_order 에 추가
+.my_order {
+  &.order_process {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    $box-width: 80px;
+    $ico-width: 48px;
+    // @media screen and (min-width: 641px) {
+      [class*="step"] {
+        position: relative;
+        .ship_box {
+          min-width: $box-width;
+          padding: $box-width 0 0;
+          &::before {
+            width: $box-width;
+            height: $box-width;
+            border: 2px solid $primary-color;
+            box-sizing: border-box;
+          }
+          &::after {
+            top: 16px;
+            width: $ico-width;
+            height: $ico-width;
+            background-size: cover;
+          }
+          .ico_txt{
+            color: $primary-color;
+          }
+        }
+        &:not(:first-of-type) {
+          &::before {
+            content: "";
+            position: absolute;
+            top: 39px;
+            height: 2px;
+            width: calc(100% - #{$box-width});
+            transform: translateX(calc(-100% - #{$box-width} / 2));
+            background-color: $primary-color;
+          }
+        }
+      }
+      .on {
+        .ship_box {
+          &::before {
+            background:#5865f5;
+          }
+          .ico_txt{
+            font-weight: 700;
+          }
+        }
+        & ~ [class*="step"] {
+          &::before {
+            background-color: #ddd;
+          }
+          .ship_box {
+            &::before {
+              padding: 2px;
+              border: none;
+              background:#ddd;
+            }
+            &::after {
+              filter: brightness(10000%);
+            }
+            .ico_txt{
+              color: #888;
+            }
+          }
+        }
+      }
+    // }
+    @include only-tab {
+      [class*="step"] {
+        .ship_box {
+          margin: 0 20px;
+        }
+        &:first-of-type {
+          .ship_box {
+            margin-left: 0;
+          }
+        }
+        &:last-of-type {
+          &::before {
+            width: calc(100% - #{$box-width} + 20px);  // 120 - 80
+            transform: translateX(calc(-100% - #{$box-width} / 2 + 10px));
+          }
+          .ship_box {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 640px) {
+      $box-width: 24px;
+      margin-bottom: $box-width;
+      [class*="step"] {
+        .ship_box {
+          min-width: $box-width;
+          padding: $box-width 0 0;
+          margin: 0 calc(#{$box-width} / 2);
+          &::before {
+            width: $box-width;
+            height: $box-width;
+            color: $primary-color;
+          }
+          &::after {
+            display: none;
+          }
+          .ico_txt {
+            @include ir;
+            margin: 0;
+          }
+        }
+        &.on {
+          .ship_box::before {
+            color: #fff;
+          }
+          & ~ [class*="step"] {
+            &::before {
+              background-color: #ddd;
+            }
+            .ship_box::before {
+            color: #bbb;
+            }
+          }
+        }
+        &:not(:first-of-type) {
+          &::before {
+            top: 10px;
+            width: calc(100% - #{$box-width});
+            transform: translateX(calc(-100% - #{$box-width} / 2));
+            background-color: $primary-color;
+          }
+        }
+      }
+      .step_1 .ship_box::before {
+        content: "1";
+      }
+      .step_2 .ship_box::before {
+        content: "2";
+      }
+      .step_3 .ship_box::before {
+        content: "3";
+      }
+      .step_4 .ship_box::before {
+        content: "4";
+      }
+      .step_5 .ship_box::before {
+        content: "5";
+      }
+      .step_6 .ship_box::before {
+        content: "6";
+      }
+    }
+  }
+}
+//회원탈퇴
+.withdrawComplete {
+  background-image: url(/dist/images/mypage/ic_withdraw_comp.svg);
+  .accounts_text {
+    margin-top: 19px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #666;
+  }
+  @include only-mo {
+    .accounts_text {
+      margin-top: 16px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+    .button_wrap {
+      margin-top: 24px;
+    }
+  }
+}
+.withdraw_wrap {
+  margin: 0 auto;
+  width: 588px;
+  @include under-pc {
+    width: 100%;
+    max-width: 768px;
+  }
+  @include only-mo {
+    width: 100%;
+  }
+}
+.withdraw_box {
+  .btn_article {
+    margin-top: 40px;
+  }
+  .select_ui_zone {
+    margin-top: 26px;
+    .selected_btn {
+      padding: 16px 10px 17px 0;
+      font-size: 18px;
+      color: #222;
+      font-weight: 700;
+    }
+    .select_inner {
+      background: #fff;
+    }
+    .select_opt {
+      li {
+        &:first-child {
+          .opt_list {
+            padding-top: 24px;
+          }
+        }
+        &:last-child {
+          .opt_list {
+            padding-bottom: 24px;
+          }
+        }
+      }
+    }
+    .opt_list {
+      padding: 8px 24px;
+      background: #fff;
+      font-size: 14px;
+      color: #888;
+      &:hover {
+        color: #222;
+      }
+    }
+  }
+  @include only-mo {
+    .select_ui_zone {
+      margin-top: 26px;
+      .selected_btn {
+        font-size: 16px;
+      }
+    }
+  }
+}
+.member_idbox {
+  padding: 13px 15px 18px;
+  background-color: #fbfbfb;
+  word-break: break-all;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #222;
+  font-weight: 700;
+}
+.txt_primary {
+  margin: 24px 0 64px;
+  font-size: 14px;
+  line-height: 24px;
+  color: $primary-color;
+  text-align: center;
+}
+.sns_certify {
+  margin-top: 80px;
+  border-top: 1px solid #ddd;
+  .txt_lft {
+    float: left;
+    width: 50%;
+    p {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #666;
+    }
+  }
+  .sns_title {
+    float: none;
+    text-align: left;
+  }
+  @include under-pc {
+    .sns_list {
+      float: right;
+      margin-top: 0;
+    }
+  }
+  @include only-mo {
+    margin-top: 60px;
+    text-align: center;
+    .sns_title {
+      text-align: center;
+    }
+    .txt_lft {
+      float: none;
+      width: 100%;
+    }
+    .sns_list {
+      float: none;
+      margin-top: 24px;
+    }
+  }
+}
+.info_withdraw {
+  margin-top: 40px;
+  .info_title {
+    font-size: 16px;
+    color: #444;
+  }
+  .list_dot li {
+    color: #666;
+    &:first-child {
+      margin-top: 10px;
+    }
+  }
+  @include only-mo {
+    .info_title {
+      font-size: 14px;
+    }
+    .list_dot li {
+      font-size: 12px;
+    }
+  }
+}
+//정말탈퇴하시겠습니까 팝업
+.withdraw_pop {
+  text-align: center;
+  .point_box {
+    margin-bottom: 40px;
+    padding: 14px 32px;
+    background-color: #fbfbfb;
+    dl {
+      display: table;
+      width: 100%;
+    }
+    dt {
+      display: table-cell;
+      font-size: 14px;
+      color: #222;
+      text-align: left;
+      vertical-align: middle;
+      font-weight: 500;
+    }
+    dd {
+      display: table-cell;
+      position: relative;
+      text-align: right;
+      font-size: 26px;
+      color: $primary-color;
+      font-weight: bold;
+      vertical-align: middle;
+      &:after {
+        display: inline-block;
+        margin: 8px 0  0 4px;
+        width: 24px;
+        height: 24px;
+        content: '';
+        background: url(/dist/images/mypage/ic_pop_mileage.svg) no-repeat 0 50%;
+        vertical-align: top;
+      }
+    }
+  }
+  .button_negative {
+    min-width: 90px;
+  }
+  .button_positive {
+    min-width: 140px;
+  }
+  @include only-mo {
+    .point_box {
+      dt, dd {
+        display: block;
+        text-align: center;
+      }
+    }
+    .button_negative,
+    .button_positive {
+      min-width: 48%;
+    }
+  }
+}
+// 주문/배송내역 table 예외처리
+.order_list .col_table_body .col_table_cell.order:first-of-type {
+  width: auto;
+}
+
+// 환불계좌 입력 팝업
+.refund_account {
+  .pop_tit {
+    margin-bottom: 14px;
+  }
+  .group + .check {
+    margin-top: 24px;
+  }
+  .inp_box {
+    .inp {
+      padding: 21px 0 9px;
+      letter-spacing: -0.025em;
+      &:placeholder-shown+.label {
+        top: 20px;
+      }
+    }
+    .select_ui_zone {
+      .opt_list {
+        color: #888;
+      }
+      .selected_btn {
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        color: #222;
+      }
+    }
+  }
+  .guide_list {
+    margin-top: 38px;
+  }
+  @media screen and (min-width: 641px) {
+    .inp_box .label,
+    .inp_box .inp,
+    .select_ui_zone .selected_btn {
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .inp_box .inp {
+      padding: 24px 0 12px;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 @import "./import/variables";
 
 /*
-  style guide  
+  style guide
 */
 .guide{
   color:#222;
@@ -39,7 +39,7 @@
   }
   &.size2{
     .guide_box{
-      width:calc((100% - 20px)/2); 
+      width:calc((100% - 20px)/2);
     }
   }
   &.full {
@@ -53,7 +53,7 @@
 .guide_box{
   display:block;
   float:left;
-  width:calc((100% - 40px)/3); 
+  width:calc((100% - 40px)/3);
   min-height:200px;
   margin:0 0 20px 20px;
   padding:10px;
@@ -80,7 +80,7 @@
   line-height:18px;
 }
 .guide_txt{
-  margin-bottom:8px; 
+  margin-bottom:8px;
   font-size:12px;
   color:#999;
 }
@@ -94,7 +94,7 @@
   margin-top:20px !important;
 }
 
-// 컬러칩 - type1 
+// 컬러칩 - type1
 .colorchip__item {
   display: inline-block;
   width: 20px;
@@ -242,7 +242,7 @@
     }
   }
   @include only-mo {
-    .input_tit, 
+    .input_tit,
     .input_box,
     .input_col_type {
       float: none;
@@ -259,7 +259,7 @@
 
 // pop - 견적서
 .estimate{
-  /* 202107 재택 수정 
+  /* 202107 재택 수정
   .pop_cont{
     padding:64px 46px 64px 64px;
   }
@@ -304,7 +304,7 @@
   max-width:340px;
   margin-top:41px;
   padding-bottom:15px;
-  border-bottom:1px solid #ddd; 
+  border-bottom:1px solid #ddd;
   color:#222;
   .txt{
     font-size:16px;
@@ -438,10 +438,60 @@
   }
 }
 @include only-mo{ // ~640
-  
+
 }
 /*
   ※※※※※※※※※※※※※※※※※※※※※※※
     end 공통 css
   ※※※※※※※※※※※※※※※※※※※※※※※
+*/
+
+/*
+  start 안 옮겨줄건데 팝업은 보여야 해서 css
+*/
+// 환불계좌 입력 팝업
+.refund_account {
+  .pop_tit {
+    margin-bottom: 14px;
+  }
+  .group + .check {
+    margin-top: 24px;
+  }
+  .inp_box {
+    .inp {
+      padding: 21px 0 9px;
+      letter-spacing: -0.025em;
+      &:placeholder-shown+.label {
+        top: 20px;
+      }
+    }
+    .select_ui_zone {
+      .opt_list {
+        color: #888;
+      }
+      .selected_btn {
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        color: #222;
+      }
+    }
+  }
+  .guide_list {
+    margin-top: 38px;
+  }
+  @media screen and (min-width: 641px) {
+    .inp_box .label,
+    .inp_box .inp,
+    .select_ui_zone .selected_btn {
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .inp_box .inp {
+      padding: 24px 0 12px;
+    }
+  }
+}
+/*
+  end 안 옮겨줄건데 팝업은 보여야 해서 css
 */
