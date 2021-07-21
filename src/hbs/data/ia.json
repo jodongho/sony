@@ -225,7 +225,7 @@
       "searchResult": {
         "title": "검색결과",
         "url": "/dist/html/footer/searchResult.html"
-      }      
+      }
     }
   },
   "member": {
@@ -239,15 +239,15 @@
       "join": {
         "title": "간편회원가입",
         "url": "/dist/html/member/join.html"
-      },    
+      },
       "joinAgree": {
         "title": "회원가입 약관동의",
         "url": "/dist/html/member/joinAgree.html"
-      },     
+      },
       "joinStep": {
         "title": "회원가입",
         "url": "/dist/html/member/joinStep.html"
-      },          
+      },
       "idSearch": {
         "title": "아이디 찾기",
         "url": "/dist/html/member/idSearch.html"
@@ -387,7 +387,7 @@
         "desc": "주문/배송내역 목록"
       },
       "orderDetail": {
-        "title": "주문/배송조회",
+        "title": "주문 상세 조회",
         "url": "/dist/html/mypage/orderDetail.html",
         "desc": "주문 상세 조회"
       },

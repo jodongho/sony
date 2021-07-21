@@ -174,7 +174,7 @@ $(() => {
   function fkakao(e) {
     if (!body.classList.contains("login")) {
       e.preventDefault();
-      makeConfirm("kakaoLogin", "카톡 상담을 위해선 로그인이 필요합니다.<br>로그인 하시겠습니까?", fkakaoCB);
+      common.makeConfirm("kakaoLogin", "카톡 상담을 위해선 로그인이 필요합니다.<br>로그인 하시겠습니까?", fkakaoCB);
     };
   }
 
@@ -185,7 +185,7 @@ $(() => {
   // 고객센터
   function fcustomer(e) {
     e.preventDefault();
-    makeConfirm("callcs", "고객센터로 연결 하시겠습니까?<br><a href='tel:+82-1588-0911'>1588-0911</a>", fcustomerCB);
+    common.makeConfirm("callcs", "고객센터로 연결 하시겠습니까?<br><a href='tel:+82-1588-0911'>1588-0911</a>", fcustomerCB);
   }
 
   function fcustomerCB() {
@@ -211,7 +211,7 @@ $(() => {
     `;
 
     const fragment = document.createRange().createContextualFragment(inner);
-    
+
     document.body.appendChild(fragment);
     function removeConfirm() {
       const remove = document.querySelector("." + name ).remove();
@@ -251,7 +251,7 @@ $(() => {
 
         const parent = $(this).parent(sortList);
         const activeClass2 = "itemsort__item--active";
-        
+
         sortList.removeClass(activeClass2);
         parent.addClass(activeClass2);
         sortSelected.text($(this).text());
@@ -265,8 +265,8 @@ $(() => {
         };
       }
     });
-  }  
-  
+  }
+
   // floating menu
   if (gnb && footer && sidebar) {
     let prevScrollY = window.scrollY;
@@ -288,7 +288,7 @@ $(() => {
           // scroll down
           header.classList.remove("header--fixed");
         }
-        
+
         prevScrollY = window.scrollY;
         // sidebar
         prevScrollY >= start ? sidebar.classList.add("sidebar--visible") : sidebar.classList.remove("sidebar--visible");
@@ -360,7 +360,7 @@ $(() => {
       });
     }
   }
-  // 아코디언 
+  // 아코디언
   const accordionUiList = (e) =>{
     let $thisAcc = $('.acc_ui_zone');
     for(let accNum = 0; accNum < $thisAcc.length ; accNum++){ // acc_ui_zone 개별 제어
@@ -406,7 +406,7 @@ $(() => {
       });
     }
   }
-  // selectbox  
+  // selectbox
   const selectUiBox = (e) => {
     let $selectBox = $('.select_ui_zone');
     for(let _selectNum = 0; _selectNum < $selectBox.length ; _selectNum++){ // select 개별 제어
@@ -430,7 +430,7 @@ $(() => {
             $thisSelect.siblings().find('.select_inner').hide();
             $selectList.slideDown(200);
           }
-          optSelect($thisSelect);     
+          optSelect($thisSelect);
           selectClosed($thisSelect); // 다른 영역 클릭 시 닫기
         }
         return false;
@@ -491,7 +491,7 @@ $(() => {
         let $thisWrap = $(this).parent(),
             $inputCount = $thisWrap.find('.count'),
             _count = $inputCount.val();
-    
+
         if($(this).hasClass("minus")){ // 감소
           _count--;
           countChk(_count);
@@ -529,7 +529,7 @@ $(() => {
   }
 
   labelClick();      // 리스트 label 클릭 관련
-  tabUiClick();      // 탭 
+  tabUiClick();      // 탭
   accordionUiList(); // 아코디언
   selectUiBox();     // select
   prdCount();        // countBox 수량
@@ -578,7 +578,7 @@ let observerConfig = {
 };
 
 // 공통 팝업 type : 딤드 클릭시 닫기, 높이 조절 : 컨텐츠 스크롤 바 생성
-function popupCommon(thisPop, thisSelect){ 
+function popupCommon(thisPop, thisSelect){
   let $popWrap = $('.'+thisPop),
       $closeBtn = $popWrap.find('.closed'),
       _windowH = $(window).outerHeight(),
@@ -591,7 +591,7 @@ function popupCommon(thisPop, thisSelect){
   $(".layer_mask, ."+thisPop).attr("tabIndex",0);
   $popWrap.focus();
   $("body,html").css({"overflow":"hidden"});
-  
+
   if(_popBaseH > _windowH-160 && $contScroll.length > 0){ // scroll이 필요한 팝업 체크
     _contScrollH = $contScroll.outerHeight(true);
     popScrollChk();
@@ -650,8 +650,74 @@ function datepickerUi($calendarObj){
     yearSuffix: '년'
   });
   $.datepicker.setDefaults({
-    showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시      
+    showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시
   });
 
   $calendarObj.datepicker();
 }
+
+var common = function(common) {
+
+  // alert 스타일 팝업 생성
+  common.makeAlert = function(name, msg) {
+    const inner = `
+      <div class='layer alert_layer alert_pop ${name}' style='display: block;'>
+        <div class='layer_wrap'>
+          <div class='layer_container'>
+            <div class='layer_content'>
+              <p class='alert_text'>${msg}</p>
+              <div class='btn_box'>
+                <button type='button' class='btn btn_dark btn_remove'>확인</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    const fragment = document.createRange().createContextualFragment(inner);
+
+    document.body.appendChild(fragment);
+    function removeAlert() {
+      document.querySelector("." + name ).remove();
+    }
+
+    const btnRemove = document.querySelector("." + name + " .btn_remove");
+
+    btnRemove.addEventListener("click", removeAlert);
+  }
+
+  // confirm 스타일 팝업 생성
+  common.makeConfirm = function(name, msg, func1) {
+    const inner = `
+      <div class='layer alert_layer alert_pop2 ${name}' style='display: block;'>
+        <div class='layer_wrap'>
+          <div class='layer_container'>
+            <div class='layer_content'>
+              <p class='alert_text'>${msg}</p>
+              <div class='btn_box'>
+                <button type='button' class='close btn btn_default btn_remove'>취소</button>
+                <button type='button' class='btn btn_dark btn_func1'>확인</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    const fragment = document.createRange().createContextualFragment(inner);
+
+    document.body.appendChild(fragment);
+    function removeConfirm() {
+      document.querySelector("." + name ).remove();
+    }
+
+    const btnRemove = document.querySelector("." + name + " .btn_remove");
+    const btnFunc1 = document.querySelector("." + name + " .btn_func1");
+
+    btnRemove.addEventListener("click", removeConfirm);
+    btnFunc1.addEventListener("click", func1);
+  }
+
+  return common;
+} (common || {});

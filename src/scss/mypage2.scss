@@ -28,7 +28,7 @@
   &_name {
     font-size: 48px;
   }
-  @media screen and (max-width: 640px) {  
+  @media screen and (max-width: 640px) {
     margin-bottom: 14px;
     &_back {
       font-size: 12px;
@@ -631,7 +631,7 @@
       float: none;
       margin-top: 24px;
     }
-  }  
+  }
 }
 .info_withdraw {
   margin-top: 40px;
@@ -708,10 +708,54 @@
     .button_negative,
     .button_positive {
       min-width: 48%;
-    }    
+    }
   }
 }
 // 주문/배송내역 table 예외처리
 .order_list .col_table_body .col_table_cell.order:first-of-type {
   width: auto;
+}
+
+// 환불계좌 입력 팝업
+.refund_account {
+  .pop_tit {
+    margin-bottom: 14px;
+  }
+  .group + .check {
+    margin-top: 24px;
+  }
+  .inp_box {
+    .inp {
+      padding: 21px 0 9px;
+      letter-spacing: -0.025em;
+      &:placeholder-shown+.label {
+        top: 20px;
+      }
+    }
+    .select_ui_zone {
+      .opt_list {
+        color: #888;
+      }
+      .selected_btn {
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        color: #222;
+      }
+    }
+  }
+  .guide_list {
+    margin-top: 38px;
+  }
+  @media screen and (min-width: 641px) {
+    .inp_box .label,
+    .inp_box .inp,
+    .select_ui_zone .selected_btn {
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .inp_box .inp {
+      padding: 24px 0 12px;
+    }
+  }
 }
