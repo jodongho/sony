@@ -1211,10 +1211,17 @@
     justify-content: space-between;
     .certify_list{
       width: calc((100% - 8px)/2);
-      border: 1px solid #e1e1e1;
+      border: none;
       text-align: center;
+      &.on, &:hover {
+        .certify{
+          padding:61px 0;
+          border:2px solid #5865f5;
+        }
+      }
       .certify{
         display: block;
+        border: 1px solid #e1e1e1;
         padding: 62px 0;
       }
       [class*="ico_"] {
@@ -1238,8 +1245,11 @@
     .tit_desc{
       display:block;
       margin-top: 3px;
-      color: #bbb;
       font-size: 12px;
+      font-weight:normal;
+      letter-spacing:-0.3px;
+      color: #bbb;
+      ;
     }
   }
   .btn_article{
@@ -1733,9 +1743,14 @@
     }
     .certify_box{
       .certify_list{
+        &.on, &:hover{
+          .certify{
+            padding:39px 44px;
+          }
+        }
         .certify{
           display: block;
-          padding: 40px 0;
+          padding: 40px 45px;
         }
       }
     }
@@ -2191,9 +2206,14 @@
     }
     .certify_box{
       .certify_list{
+        &.on, &:hover{
+          .certify{
+            padding:23px;
+          }
+        }
         .certify{
           display: block;
-          padding: 24px 0;
+          padding: 24px;
         }
       }
       .tit{
