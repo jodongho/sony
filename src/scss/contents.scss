@@ -2966,7 +2966,7 @@
     .bg_check_box {
       margin-top: 24px;
       padding: 30px 40px;
-      background-color: #f8f8f8;
+      background-color: #fbfbfb;
       border-top: 1px solid #ddd;
       box-sizing: border-box;
       .chk_cell {
@@ -3291,6 +3291,17 @@
       margin-left: -4px;
       transform: translateY(-52px);
     }
+    &_info_name {
+      font-weight: 700;
+    }
+    &_info_option {
+      margin-top: 6px;
+      font-weight: 400;
+      font-size: 14px;
+      color: #666;
+      letter-spacing: -0.025em;
+      line-height: 1.571;
+    }
     &_price,
     &_count {
       color: #444;
@@ -3301,6 +3312,7 @@
       }
       .count_ui_box .count {
         line-height: 30px;
+        color: #222;
       }
     }
     &_count {
@@ -3572,6 +3584,7 @@
       &.prd_count {
         display: inline-block;
         margin-top: 10px;
+        font-size: 14px;
       }
       &.prd_count {
         &:before {
