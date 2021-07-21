@@ -23,16 +23,16 @@
       <h2 class="title">개명 회원 본인 확인</h2>
       <div class="certify_zone">
         <ul class="certify_box">
-          <li class="certify_list">
+          <li class="certify_list on"><!-- 초기 on 상태, 클릭 시 on -->
             <a href="#" class="certify">
               <span class="ico_phone_certify"></span>
-              <p class="tit">휴대폰 번호 인증하기<span class="tit_desc">(본인인증으로 찾기)</span></p>
+              <p class="tit">휴대폰 번호 인증하기<span class="tit_desc">생년월일, 성명, 휴대폰 정보를 통한 휴대폰 인증서비스</span></p>
             </a>
           </li>
           <li class="certify_list">
             <a href="#" class="certify">
               <span class="ico_ipn_certify"></span>
-              <p class="tit">아이핀 인증하기<span class="tit_desc">(간편 회원 가입정보로 찾기)</span></p>
+              <p class="tit">아이핀 인증하기<span class="tit_desc">방송통신위원회에서 주관하는 아이핀 인증서비스</span></p>
             </a>
           </li>
         </ul>
@@ -62,7 +62,11 @@
 <script type="text/javascript">
   
 $(function(){
-  
+  $('.certify_zone .certify').on("click", function(){
+    let $certifyList = $(this).closest('li');
+    $certifyList.addClass("on").siblings().removeClass("on");
+    return false;
+  });
 });
 
 </script>
