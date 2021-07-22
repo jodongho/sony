@@ -220,6 +220,9 @@
         float: left;
         width: 840px;
       }
+      .header--fixed ~ .container .order_right {
+        top: 80px;
+      }
       .order_right {
         position: sticky;
         top: 0;
