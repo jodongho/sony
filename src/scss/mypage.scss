@@ -45,7 +45,7 @@
   margin:0 auto;
   transition:all .2s;
   .title{
-    padding:116px 0 40px;
+    padding:106px 0 40px;
     font-size:48px;
     font-weight:bold;
     letter-spacing:-1.2px;
@@ -54,9 +54,11 @@
   }
   @include only-tab {
     padding:0 24px;
+    .title{
+      padding-top:66px;
+    }
   }
 }
-
 .user_profile{
   position:relative;
   width:100%;
@@ -87,7 +89,7 @@
   float:left;
   width:25%;
   border-left:1px solid #444;
-  &:first-child:after{
+  &:first-child{
     border-left:none;
   }
 }
@@ -1568,6 +1570,13 @@
     }
   }
   .history_order {
+    .tit_head {
+      .right {
+        .button{
+          color:#888;
+        }
+      }
+    }
     .history_inner{
       display:block;
       padding:32px 40px;
@@ -1770,6 +1779,11 @@
         margin-top:36px;
         font-size:20px;
       }
+      & + .cont{
+        .cont_tit{
+          margin-top:64px;
+        }
+      }
     }
     .button_secondary {
       font-size:14px;
@@ -1790,7 +1804,7 @@
   .my_head{
     background:#000;
     .title{
-      padding:40px 0;
+      padding:33px 0 40px;
       font-size:24px;
       line-height:36px;
       color:#fff;
@@ -1886,8 +1900,12 @@
         transform:translateX(-50%);
         line-height:32px;
         color:#222;
-        .val + span{
-          display:none;
+        .val{
+          font-size:14px;
+          vertical-align: top;
+          &+span{
+            display:none;
+          }
         }
       }
     }
@@ -1918,20 +1936,30 @@
     }
   }
   .mileage_inquiry {
+    margin-top:15px;
     .date3_tab{
       float:none;
+      .date3_btn{
+        font-size:14px;
+        padding-bottom:0;
+      }
     }
     .date_rang{
       float:none;
       width:100%;
-      margin-top:15px;
+      margin-top:10px;
       .calendar_box{
         width:calc((100% - 74px)/2);
+        padding-right:0;
         & + .calendar_box{
           margin-left:8px;
           &:before{
             display:none;
           }
+        }
+        .datepicker{
+          padding:0 8px;
+          text-align:center;
         }
         .ui-datepicker-trigger{
           display:none;
@@ -2773,6 +2801,7 @@
     max-width: 768px;
   }
   @include only-mo {
+    margin-top: 40px;
     width: 100%;
   }
 }
@@ -2833,6 +2862,9 @@
   text-align: center;
   color: #222;
   font-weight: 700;
+  @include only-mo {
+    font-size: 16px;
+  }
 }
 .txt_primary {
   margin: 24px 0 64px;
@@ -2840,6 +2872,10 @@
   line-height: 24px;
   color: $primary-color;
   text-align: center;
+  @include only-mo {
+    margin: 16px 0 32px;
+    font-size: 12px;
+  }
 }
 .sns_certify {
   margin-top: 80px;
