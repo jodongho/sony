@@ -1,11 +1,49 @@
 @import "./import/variables";
-
+.container {
+  max-width: 1604px;
+}
 .reco {
   &_list {
     display: flex;
     flex-wrap: wrap;
   }
-  &_itme {
-
+  &_item {
+    margin-bottom: 96px;
+    padding: 12px;
+    &:nth-of-type(1) .reco_item_inner {
+      padding-top: 35px;
+    }
+    &:nth-of-type(4) .reco_item_inner,
+    &:nth-of-type(5) .reco_item_inner {
+      padding-top: 120px;
+    }
+  }
+  &_title {
+    margin: 40px 0 14px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: #222;
+  }
+  &_desc {
+    margin: 14px 0 38px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.025em;
+    color: #666;
+  }
+  &_hash {
+    &es {
+      margin-top: 38px;
+    }
+    display: inline-block;
+    padding: 11px 23px;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: -.025em;
+    color: #222;
+    border: 1px solid #e1e1e1;
+    border-radius: 1.357em;
   }
 }

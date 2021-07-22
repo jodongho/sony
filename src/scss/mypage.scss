@@ -662,7 +662,7 @@
       background:url('/dist/images/mypage/ico_mypage_link_2.svg') no-repeat 0 0;
     }
     &.ico_type3:before {
-      background: url("/dist/images/mypage/ico_mypage_link_3.svg") no-repeat 0 0;
+      background: url("/dist/images/mypage/ico_mypage_link_3.svg") no-repeat 50%/cover;
     }
     &:after{
       display:block;
@@ -2335,6 +2335,9 @@
     .cont_tit {
       margin-bottom: 20px;
     }
+    .tit_head {
+      padding-bottom: 16px;
+    }
   }
 }
 .order_notice {
@@ -2361,6 +2364,19 @@
       border-radius: 50%;
       box-sizing: border-box;
       background-color: #bbb;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    &_title {
+      font-size: 14px;
+      &::before {
+        width: 14px;
+        height: 14px;
+        font-size: 10px;
+      }
+    }
+    .list_dot li {
+      font-size: 12px;
     }
   }
 }
@@ -2410,6 +2426,10 @@
   &_desc {
     padding-left: 5em;
     font-weight: 700;
+    .button-s {
+      min-width: 82px;
+      min-height: 32px;
+    }
   }
   @media screen and (max-width: 1280px) {
     &_term,
@@ -2471,8 +2491,10 @@
       color: #444;
     }
     @media screen and (max-width: 640px) {
-      &_term {
+      &_term,
+      &_desc {
         float: none;
+        width: auto;
         margin-bottom: 1em;
       }
     }
@@ -2565,6 +2587,7 @@
       background-color: #fbfbfb;
       &_price {
         margin-bottom: 12px;
+        font-weight: 700;
         font-size: 28px;
         letter-spacing: -.025em;
         color: $primary-color;
@@ -2596,13 +2619,20 @@
     &_desc {
       float: none;
     }
+    .purchase_detail {
+      &_price {
+        font-size: 24px;
+      }
+      &_method {
+        font-size: 14px;
+      }
+    }
   }
   &~ .button_wrap {
     clear: both;
   }
 }
 
-// mypage.css .my_order 에 추가
 .my_order {
   &.order_process {
     display: block;
@@ -2612,69 +2642,67 @@
     margin-bottom: 80px;
     $box-width: 80px;
     $ico-width: 48px;
-    // @media screen and (min-width: 641px) {
-      [class*="step"] {
-        position: relative;
+    [class*="step"] {
+      position: relative;
+      .ship_box {
+        min-width: $box-width;
+        padding: $box-width 0 0;
+        &::before {
+          width: $box-width;
+          height: $box-width;
+          border: 2px solid $primary-color;
+          box-sizing: border-box;
+        }
+        &::after {
+          top: 16px;
+          width: $ico-width;
+          height: $ico-width;
+          background-size: cover;
+        }
+        .ico_txt{
+          color: $primary-color;
+        }
+      }
+      &:not(:first-of-type) {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 39px;
+          height: 2px;
+          width: calc(100% - #{$box-width});
+          transform: translateX(calc(-100% - #{$box-width} / 2));
+          background-color: $primary-color;
+        }
+      }
+    }
+    .on {
+      .ship_box {
+        &::before {
+          background:#5865f5;
+        }
+        .ico_txt{
+          font-weight: 700;
+        }
+      }
+      & ~ [class*="step"] {
+        &::before {
+          background-color: #ddd;
+        }
         .ship_box {
-          min-width: $box-width;
-          padding: $box-width 0 0;
           &::before {
-            width: $box-width;
-            height: $box-width;
-            border: 2px solid $primary-color;
-            box-sizing: border-box;
+            padding: 2px;
+            border: none;
+            background:#ddd;
           }
           &::after {
-            top: 16px;
-            width: $ico-width;
-            height: $ico-width;
-            background-size: cover;
+            filter: brightness(10000%);
           }
           .ico_txt{
-            color: $primary-color;
-          }
-        }
-        &:not(:first-of-type) {
-          &::before {
-            content: "";
-            position: absolute;
-            top: 39px;
-            height: 2px;
-            width: calc(100% - #{$box-width});
-            transform: translateX(calc(-100% - #{$box-width} / 2));
-            background-color: $primary-color;
+            color: #888;
           }
         }
       }
-      .on {
-        .ship_box {
-          &::before {
-            background:#5865f5;
-          }
-          .ico_txt{
-            font-weight: 700;
-          }
-        }
-        & ~ [class*="step"] {
-          &::before {
-            background-color: #ddd;
-          }
-          .ship_box {
-            &::before {
-              padding: 2px;
-              border: none;
-              background:#ddd;
-            }
-            &::after {
-              filter: brightness(10000%);
-            }
-            .ico_txt{
-              color: #888;
-            }
-          }
-        }
-      }
-    // }
+    }
     @include only-tab {
       [class*="step"] {
         .ship_box {
@@ -2707,7 +2735,9 @@
           &::before {
             width: $box-width;
             height: $box-width;
+            padding: 1px;
             color: $primary-color;
+            border-width: 1px;
           }
           &::after {
             display: none;
@@ -2732,8 +2762,9 @@
         }
         &:not(:first-of-type) {
           &::before {
-            top: 10px;
+            top: 11px;
             width: calc(100% - #{$box-width});
+            height: 1px;
             transform: translateX(calc(-100% - #{$box-width} / 2));
             background-color: $primary-color;
           }
