@@ -1935,22 +1935,22 @@
       display:block;
     }
   }
-  .mileage_inquiry {
+  .mileage_inquiry {         
     margin-top:15px;
     .date3_tab{
       float:none;
       .date3_btn{
         font-size:14px;
         padding-bottom:0;
-      }
-    }
-    .date_rang{
+      }   
+    }     
+    .date_rang{            
       float:none;
       width:100%;
       margin-top:10px;
       .calendar_box{
-        width:calc((100% - 74px)/2);
-        padding-right:0;
+        width:calc((100% - 74px)/2); 
+        padding-right:0; 
         & + .calendar_box{
           margin-left:8px;
           &:before{
