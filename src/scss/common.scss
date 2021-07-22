@@ -3194,7 +3194,7 @@ body {
   }
   .ico_x{
     position: absolute;
-    top: 49px;
+    top: 45px;
     right: 37px;
     &>span{
       position: relative;
@@ -3217,6 +3217,9 @@ body {
       &:after{
         transform: rotate(-45deg);
       }
+    }
+    @include only-mo {
+      top: 49px;
     }
   }
 }
@@ -3447,7 +3450,7 @@ body {
     border: 1px solid #222;
     background-color: #fff;
     &:hover {
-      background-color: #f2f2fe;
+      background-color: #F2F2F2;
     }
   }
   &_primary {
