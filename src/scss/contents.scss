@@ -3317,7 +3317,7 @@
     }
     &_count {
       .unit {
-        font-size: 12px;
+        font-size: 14px;
         color: #444;
       }
     }
@@ -3373,6 +3373,13 @@
         width: 96px;
         height: 96px;
         margin-right: 16px;
+      }
+    }
+    @media screen and (max-width: 640px) {
+      &_count {
+        .unit {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -3565,6 +3572,7 @@
       }
       ~ .prd_count {
         margin-top: 12px;
+        font-size: 14px;
       }
       .button-s {
         margin-top: 18px;
@@ -3584,11 +3592,14 @@
       &.prd_count {
         display: inline-block;
         margin-top: 10px;
-        font-size: 14px;
       }
       &.prd_count {
+        font-size: 14px;
         &:before {
           content: '/';
+        }
+        .unit {
+          font-size: 12px;
         }
       }
     }
