@@ -51,11 +51,14 @@
             color: $primary-color;
             font-weight: 700;
           }
+          &:before {
+            background-color: $primary-color;
+          } 
       }
       &.d_type {
          p {
           color: $primary-color;
-          font-weight: 700;
+          font-weight: 500;
         }
       }
       p {
@@ -113,6 +116,7 @@
             transform: translate(-50%,-50%);
             text-indent: 0;
             font-size: 10px;
+            color: #bbb;
           }
         }
         &:nth-child(2) {
@@ -600,9 +604,9 @@
   .email_check {
     margin-top: 13px;
   }
-  .error + .email_check {
-    margin-top: 34px;
-  }
+  // .error + .email_check {
+  //   margin-top: 34px;
+  // }
   @include only-mo {
     .button_wrap {
       overflow: hidden;
@@ -692,6 +696,14 @@
     font-size: 16px;
     color: #444;
   }
+  @include only-mo {
+    dt {
+      font-size: 16px;
+    }
+    dd {
+      font-size: 14px;
+    }
+  }
 }
 .pw_info + .acc_form {
   margin-top: 38px;
@@ -746,6 +758,9 @@
         display: table-cell;
         text-align: right;
         font-size: 24px;
+        .unit {
+          font-size: 16px;
+        }
       }
     }
     .essential {
@@ -786,6 +801,7 @@
     margin-top: 6px;
     .view_tit, .acc_tit, .view_price, .sale_tit {
       color: #888;
+      font-weight: normal;
     }
   }
   .view_price {
@@ -798,6 +814,7 @@
       margin-right: 3px;
       font-size: 18px;
       line-height: 27px;
+      font-weight: normal;
     }
     &.minus {
       color: #e70000;
@@ -892,7 +909,7 @@
       .unit {
         display: inline-block;
         margin-left: 2px;
-        font-weight: normal;
+        font-weight: 700;
       }
     }
   }
@@ -1024,9 +1041,9 @@
 .error {
   .error_txt {
     display: block;
-    position: absolute;
-    bottom: -22px;
-    left: 0;
+    // position: absolute;
+    // bottom: -22px;
+    // left: 0;
   }
 }
 
@@ -1041,13 +1058,14 @@
     margin: 40px 0 16px;
     &_buttons {
       .button {
-        padding: 10px;
+        padding: 5px;
         min-width: auto;
         height: auto;
         border: 0;
         background-color: transparent;
         color: #888;
         font-size: 14px;
+        font-weight: normal;
         &+.button {
           margin-left: 6px;
           padding-right: 0;
@@ -1130,5 +1148,17 @@
     margin-top: 12px;
     font-size: 14px;
     color: #444;
+  }
+}
+//orderAgree
+.join_agree.order .all_box {
+  margin-top: 80px;
+}
+//.login_chk_order popup
+.login_chk_order {
+  @include only-mo {
+    .btn_article .button {
+      min-width: 48%;
+    }
   }
 }

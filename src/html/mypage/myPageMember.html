@@ -412,12 +412,14 @@ $(function(){
         let $inputBox = $(this).closest('.inp_box');
         $inputBox.toggleClass('active'); 
         if($inputBox.hasClass('active') == true ){
-          $(this).find('.ico_eyes').attr('class',"ico_eyes_open").parents('.password_box').find('.inp').attr('type',"text");
+          $(this).find('.ico_eyes').attr('class',"ico_eyes_open")
+          $inputBox.find('.inp').attr('type',"text");
           $(this).find('>a').attr('title',"비밀번호 표시");
           // i 클래스 // 텍스트 보이기 i 클래스 
         } 
         else{ 
-          $(this).find('.ico_eyes_open').attr('class',"ico_eyes").parents('.password_box').find('.inp').attr('type','password');
+          $(this).find('.ico_eyes_open').attr('class',"ico_eyes")
+          $inputBox.find('.inp').attr('type','password');
           $(this).find('>a').attr('title',"비밀번호 숨김");      
         }
         return false;
