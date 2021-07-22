@@ -2760,6 +2760,7 @@
     max-width: 768px;
   }
   @include only-mo {
+    margin-top: 40px;
     width: 100%;
   }
 }
@@ -2820,6 +2821,9 @@
   text-align: center;
   color: #222;
   font-weight: 700;
+  @include only-mo {
+    font-size: 16px;
+  }
 }
 .txt_primary {
   margin: 24px 0 64px;
@@ -2827,6 +2831,10 @@
   line-height: 24px;
   color: $primary-color;
   text-align: center;
+  @include only-mo {
+    margin: 16px 0 32px;
+    font-size: 12px;
+  }
 }
 .sns_certify {
   margin-top: 80px;
