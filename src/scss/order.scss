@@ -32,7 +32,7 @@
     display: flex;
     justify-content: center;
     li {
-      position: relative;      
+      position: relative;
       padding-left: 80px;
       text-align: center;
       &.on {
@@ -46,14 +46,14 @@
           &.confirm {
             background-image: url(/dist/images/order/ic_cart_step3_on.svg);
           }
-        }  
+        }
           p {
             color: $primary-color;
             font-weight: 700;
           }
           &:before {
             background-color: $primary-color;
-          } 
+          }
       }
       &.d_type {
          p {
@@ -64,10 +64,10 @@
       p {
         padding-top: 15px;
         font-size: 14px;
-        color: #888;        
+        color: #888;
       }
       .step_ico {
-        display: block;      
+        display: block;
         width: 80px;
         height: 80px;
         &.cart {
@@ -78,7 +78,7 @@
         }
         &.confirm {
           background-image: url(/dist/images/order/ic_cart_step3_off.svg);
-        }                
+        }
       }
       &:first-child {
         padding-left: 0;
@@ -92,7 +92,7 @@
         height: 2px;
         z-index: -1;
         background-color: #f1f1f1;
-      }             
+      }
     }
     @include only-mo {
       li {
@@ -128,7 +128,7 @@
           p:before {
             content: '3';
           }
-        }   
+        }
         &:nth-child(4) {
           p:before {
             content: '4';
@@ -138,7 +138,7 @@
           p:before {
             content: '5';
           }
-        }                 
+        }
         &.on {
           p {
             background-color: $primary-color;
@@ -165,7 +165,7 @@
           height: 1px;
         }
       }
-    }  
+    }
   }
   .empty_cart_box {
     margin-top: 80px;
@@ -216,12 +216,9 @@
       font-size: 14px;
     }
     @include only-pc {
-      .order_left {        
+      .order_left {
         float: left;
         width: 840px;
-      }
-      .header--fixed ~ .container .order_right {
-        top: 80px;
       }
       .order_right {
         position: sticky;
@@ -229,15 +226,19 @@
         float: right;
         margin-top: 7px;
         width: 320px;
+        transition: top .2s $easeInCubic;
         >.acc .acc_item {
           margin-top: 0;
-        }    
+        }
         .pc_none {
           display: none;
         }
-      }      
+      }
+      @at-root .header--fixed ~ .container .order_right {
+        top: 80px;
+      }
       .acc_item:first-of-type {
-        margin-top: 0;  
+        margin-top: 0;
       }
       .mo_pay_btn {
         display: none;
@@ -246,7 +247,7 @@
     @include under-pc {
       .order_info {
         margin-top: 64px;
-      }      
+      }
       .btn_card_box {
         position: static;
         margin-top: 30px;
@@ -317,7 +318,7 @@
         top: 15px;
         width: 8px;
         right: 6px;
-      } 
+      }
       &:after {
         top: 15px;
         width: 8px;
@@ -368,7 +369,7 @@
       >label {
         position: relative;
         display: inline-block;
-        padding-right: 8px;          
+        padding-right: 8px;
         color: #222;
         font-size: 14px;
         font-weight: 700;
@@ -383,8 +384,8 @@
           content: '';
           background-color: #e70000;
           border-radius: 100%;
-          } 
-        }         
+          }
+        }
       }
       &.vat {
         padding-top: 10px;
@@ -395,7 +396,7 @@
       }
       .button {
         min-width: auto;
-      }       
+      }
     }
     .acc_group {
       &.parent {
@@ -429,7 +430,7 @@
       }
       &+.acc_group {
         margin-top: 24px;
-      }       
+      }
     }
     .acc_btn_box {
       float: left;
@@ -444,7 +445,7 @@
           font-weight: 700;
         }
       }
-    }    
+    }
     .acc_inp {
       position: relative;
       .inp {
@@ -474,11 +475,11 @@
           font-weight: 700;
         }
         &:-webkit-autofill,
-        &:-webkit-autofill:hover, 
-        &:-webkit-autofill:focus, 
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
         &:-webkit-autofill:active  {
           box-shadow: 0 0 0 74px white inset !important;
-        }        
+        }
       }
       .focus_bg {
         position: relative;
@@ -505,7 +506,7 @@
       }
       &.type4 {
         float: left;
-        padding-right: 115px;            
+        padding-right: 115px;
         width: 330px;
         .delivery_btn_box {
           position: absolute;
@@ -519,7 +520,7 @@
       }
       &.type5 {
         width: 450px;
-      }                               
+      }
       &.disable_type {
         float: left;
         padding-right: 30px;
@@ -544,9 +545,9 @@
         display: block;
         content: '';
         clear: both;
-      }                   
+      }
     }
- 
+
     @include only-mo {
       .order_list .prd {
         margin-top: 0;
@@ -562,10 +563,10 @@
           padding-top: 0;
         }
       }
-      .acc_inp.type1, 
-      .acc_inp.type2, 
-      .acc_inp.type3, 
-      .acc_inp.type4, 
+      .acc_inp.type1,
+      .acc_inp.type2,
+      .acc_inp.type3,
+      .acc_inp.type4,
       .acc_inp.type5 {
         width: 100%;
       }
@@ -722,7 +723,7 @@
     }
     .payment_list {
       padding: 40px 47px 40px;
-      box-sizing: border-box;    
+      box-sizing: border-box;
     }
     .essential {
       padding: 40px;
@@ -742,7 +743,7 @@
           font-size: 24px;
         }
       }
-    }    
+    }
   }
   @include under-pc {
     float: none;
@@ -795,7 +796,7 @@
   }
   .view_detail .acc_tit {
     position: relative;
-    padding-left: 18px;   
+    padding-left: 18px;
   }
   .view_tit {
     color: #222;
@@ -881,7 +882,7 @@
       border: 2px solid #ddd;
       border-width: 0 0 2px 2px;
       content: '';
-    } 
+    }
   }
   .acc_box {
     padding: 0;
@@ -975,7 +976,7 @@
   }
   &__txt {
     font-size: 12px;
-    color: #888;  
+    color: #888;
   }
   .btn_box {
     margin-top: 80px;
@@ -1139,7 +1140,7 @@
       .acc_inner {
         display: block;
       }
-    }    
+    }
   }
   &_tit {
     margin-top: 12px;
