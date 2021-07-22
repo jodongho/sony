@@ -1,12 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-    <g>
-        <path fill="rgba(0,0,0,0)" d="M0 0H24V24H0z" transform="translate(-6088.499 147) translate(6088.499 -147)"/>
-        <g fill="none" stroke-linejoin="round">
-            <g stroke-linecap="round">
-                <path d="M0 0h22v19H0z" transform="translate(-6088.499 147) translate(6090.499 -146) translate(-1 4)"/>
-                <path fill="#fff" d="M1.75 1.75v15.5h18.5V1.75H1.75M0 0h22v19H0V0z" transform="translate(-6088.499 147) translate(6090.499 -146) translate(-1 4)"/>
-            </g>
-            <path stroke="#fff" stroke-miterlimit="10" stroke-width="1.75px" d="M68 261v-7.15a4 4 0 0 1 8 0V261" transform="translate(-6088.499 147) translate(6090.499 -146) translate(-62 -250)"/>
-        </g>
-    </g>
+  <defs>
+    <style>
+      .cls-1 {
+        fill: red;
+        opacity: 0;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="ic_cart" transform="translate(-998 119)">
+    <rect id="사각형_1331" data-name="사각형 1331" class="cls-1" width="24" height="24" transform="translate(998 -119)"/>
+    <path id="패스_1549" data-name="패스 1549" class="cls-2" d="M1014.9-114a5.009,5.009,0,0,0-4.9-4,5.009,5.009,0,0,0-4.9,4H1000v18h20v-18Zm-4.9-2a3,3,0,0,1,2.816,2h-5.632A3,3,0,0,1,1010-116Zm8,18h-16v-14h3v3h2v-3h6v3h2v-3h3Z"/>
+  </g>
 </svg>

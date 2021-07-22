@@ -712,13 +712,14 @@ body {
             position: relative;
             font-size: 28px;
             &::after {
-              content: "\253C";
+              content: "+";
               position: absolute;
               top: 50%;
-              font-size: 15px;
+              font-weight: 100;
+              font-size: 1.5em;
               line-height: 1;
               color: #666;
-              transform: translate(1em, -50%);
+              transform: translate(.5em, -55%);
             }
           }
           &:not(:first-child) {
