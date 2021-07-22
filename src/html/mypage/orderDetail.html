@@ -91,7 +91,7 @@
             </div>
             <div class="col_table_body">
               <div class="col_table_row">
-                <div class="col_table_cell">
+                <div class="col_table_cell prd_wrap">
                   <div class="prd">
                     <div class="prd_thumb">
                       <img class="prd_thumb_pic" src="/dist/images/_tmp/item640x640_01.png" alt="상품명입력">
@@ -113,14 +113,14 @@
                 </div>
               </div>
               <div class="col_table_row">
-                <div class="col_table_cell">
+                <div class="col_table_cell prd_wrap">
                   <div class="prd">
                     <div class="prd_thumb">
                       <img class="prd_thumb_pic" src="/dist/images/_tmp/item640x640_02.png" alt="상품명입력">
                     </div>
                     <div class="prd_info">
                       <div class="prd_info_name">AK-74 Hi-Res Aux 3.5mm 케이블 (16.5m)</div>
-                      <p class="prd_info_option">AK-47 전용 고해상도 Aux 케이블</p>
+                      <p class="prd_info_option">AK-47 전용 고해상도 Aux 케이블 AK-47 전용 고해상도 Aux 케이블 AK-47 전용 고해상도 Aux 케이블 AK-47 전용 고해상도 Aux 케이블 AK-47 전용 고해상도 Aux 케이블 벗지않는 선글라스</p>
                     </div>
                   </div>
                 </div>
@@ -135,7 +135,7 @@
                 </div>
               </div>
               <div class="col_table_row">
-                <div class="col_table_cell">
+                <div class="col_table_cell prd_wrap">
                   <div class="prd">
                     <div class="prd_thumb">
                       <img class="prd_thumb_pic" src="/dist/images/_tmp/item640x640_03.png" alt="상품명입력">
@@ -213,10 +213,26 @@
         </div>
       </div>
       <!-- // 결제 정보 -->
+      <script>
+        // 화면 출력하기
+        function onPrint() {
+          const html = document.querySelector('html');
+          const printContents = document.querySelector('.content').innerHTML;
+          const printDiv = document.createElement("div");
+          printDiv.className = "print-div";
+
+          html.appendChild(printDiv);
+          printDiv.innerHTML = printContents;
+          document.body.style.display = 'none';
+          window.print();
+          document.body.style.display = 'block';
+          printDiv.style.display = 'none';
+        }
+      </script>
       <!-- buttons -->
       <div class="cont button_wrap">
         <button type="button" class="button button_negative">주문 취소</button>
-        <button type="button" class="button button_negative only-pc">주문 정보 프린트</button>
+        <button type="button" class="button button_negative only-pc" onclick="onPrint()">주문 정보 프린트</button>
         <a href="#" class="button button_positive">목록</a>
       </div>
       <!-- // buttons -->

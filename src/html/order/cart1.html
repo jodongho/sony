@@ -63,7 +63,7 @@
             </div>
             <div class="col_table_body">
               <div class="col_table_row">
-                <div class="col_table_cell tal">
+                <div class="col_table_cell prd_wrap tal">
                   <div class="prd">
                     <div class="check check_only">
                       <input type="checkbox" class="inp_check" name="check_cart_item">
@@ -95,7 +95,7 @@
                 </div>
               </div>
               <div class="col_table_row">
-                <div class="col_table_cell tal">
+                <div class="col_table_cell prd_wrap tal">
                   <div class="prd">
                     <div class="check check_only">
                       <input type="checkbox" class="inp_check" name="check_cart_item">
@@ -142,7 +142,7 @@
           <button type="submit" class="button button_positive popup_comm_btn" data-popup-name="login_chk_order">구매하기</button>
         </div>
 
-        <div class="acc acc_ui_zone acc_faq acc_cart"> 
+        <div class="acc acc_ui_zone acc_faq acc_cart">
           <div class="acc_item on">
             <div class="acc_head">
               <a href="#" class="acc_btn" title="상세 내용 토글">
@@ -349,7 +349,7 @@
 
       $(wrap).find('.closed').trigger("click");
       return false;
-    }); 
+    });
   }
 
   $('.popup_button').on("click",function(){
@@ -358,8 +358,8 @@
     return false;
   });
 
-  const alertBtn = (e) =>{ 
-    $('.alertLayerBtn').on("click",function(){ // alert 팝업 data-alert-text 값 노출 
+  const alertBtn = (e) =>{
+    $('.alertLayerBtn').on("click",function(){ // alert 팝업 data-alert-text 값 노출
       let _alertTxt = $(this).data("alert-text"),
           _alertOpen = $(this).data("open-layer");
       alertLayer(_alertTxt, _alertOpen);

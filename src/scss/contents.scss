@@ -3346,8 +3346,10 @@
       }
     }
     @include only-pc {
+      &_wrap {
+        width: 600px;
+      }
       &_info {
-        max-width: 320px;
         &_name {
           font-weight: 700;
           letter-spacing: 0;
@@ -3583,7 +3585,7 @@
 //주문배송조회 table, 주문결제 table mobile type
 .order_box__cont,
 .order_detail_cont {
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     .prd {
       margin-top: 0;
     }
