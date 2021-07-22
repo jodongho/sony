@@ -660,7 +660,7 @@
       background:url('/dist/images/mypage/ico_mypage_link_2.svg') no-repeat 0 0;
     }
     &.ico_type3:before {
-      background: url("/dist/images/mypage/ico_mypage_link_3.svg") no-repeat 0 0;
+      background: url("/dist/images/mypage/ico_mypage_link_3.svg") no-repeat 50%/cover;
     }
     &:after{
       display:block;
@@ -2333,6 +2333,19 @@
       border-radius: 50%;
       box-sizing: border-box;
       background-color: #bbb;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    &_title {
+      font-size: 14px;
+      &::before {
+        width: 14px;
+        height: 14px;
+        font-size: 10px;
+      }
+    }
+    .list_dot li {
+      font-size: 12px;
     }
   }
 }
