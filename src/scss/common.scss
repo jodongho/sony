@@ -2898,16 +2898,26 @@ body {
       }
     }
     .prd_tit{
-      font-size:16px;
+      font-size: 14px;
       font-weight:700;
       line-height:24px;
       color:#222;
+      .price {
+        font-size:16px;
+      }
     }
     .prd_desc{
       margin-top:2px;
       font-size:14px;
       line-height:22px;
       color:#666;
+      .count {
+        font-size: 16px;
+      }
+      @include only-mo {
+        font-size: 12px;
+        line-height: 18px;
+      }
     }
     .prd_price{
       text-align:center;
@@ -2918,6 +2928,21 @@ body {
     img{
       width:100%;
     }
+  }
+}
+.coupon_info {
+  margin-top: 56px;
+  .selected_btn:before,
+  .selected_btn:after {
+    width: 7px;
+  }
+  .selected_btn:before {
+    right: 0;
+    transform: translateY(-50%) rotate(-135deg);
+  }
+  .selected_btn:after {
+    right: 5px;
+    transform: translateY(-50%) rotate(135deg);
   }
 }
 .chk_select_info{
@@ -2935,12 +2960,21 @@ body {
       margin-top:0;
     }
   }
+  @include only-mo {
+    .txt {
+      font-size: 14px;
+    }
+    .number {
+      margin-left: 8px;
+    }
+  }
 }
 
 .related_laws{
   margin-top:56px;
   padding:28px 32px 32px;
-  background:#f8f8f8;
+  background:#fbfbfb;
+  border-top: 1px solid #ddd;
   .tit{
     font-size:14px;
     font-weight:700;
@@ -3160,8 +3194,8 @@ body {
   }
   .ico_x{
     position: absolute;
-    top: 43px;
-    right: 40px;
+    top: 49px;
+    right: 37px;
     &>span{
       position: relative;
       display: block;
