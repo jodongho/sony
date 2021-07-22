@@ -35,7 +35,7 @@
                   <input type="password" id="popPw" class="inp center" placeholder="&nbsp;">
                   <span class="label">비밀번호</span>
                   <span class="focus_bg"></span>
-                 <div class="eyes"><a href="#" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
+                 <div class="eyes"><button type="button" title="비밀번호 숨김"><i class="ico ico_eyes"></i></button></div>
                 </label>
               </div>
               <div class="error_txt"><span class="ico"></span>현재 비밀번호가 올바르지 않습니다.</div>
@@ -150,6 +150,7 @@
           $(this).find('.ico_eyes_open').attr('class',"ico_eyes").parents('.password_box').find('.inp').attr('type','password');
           $(this).find('>button').attr('title',"비밀번호 숨김");
         }
+        e.preventDefault();
       });
     });
   </script>
