@@ -1,0 +1,11 @@
+@import "./import/variables";
+
+.reco {
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &_itme {
+
+  }
+}

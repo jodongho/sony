@@ -5,17 +5,8 @@
   },
   "recommend": {
     "title": "스토어 추천 제품",
-    "url": "#",
-    "submenu": {
-      "list": {
-        "title": "추천 제품",
-        "url": "#"
-      },
-      "Propose": {
-        "title": "선물 제안",
-        "url": "#"
-      }
-    }
+    "url": "/dist/html/recommend/recommend.html",
+    "desc": "스토어 추천 제품"
   },
   "product": {
     "title": "제품",

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
+<title>{{ia.recommend.title}}</title>
+<link rel="stylesheet" href="/dist/css/contents.css">
+<link rel="stylesheet" href="/dist/css/recommend.css">
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  {{>header}}
+
+  <div class="container">
+    <div class="content">
+
+      <h1 class="title">{{ia.recommend.title}}</h1>
+
+      <div class="reco">
+        <ul class="reco_list">
+          {{#each reco.items}}
+          <li class="reco_item">
+            <div class="reco_item_inner">
+              <img src="/dist/images/_tmp/recommend/{{this.img}}">
+              <h3 class="reco_title">{{this.title}}</h3>
+              <p class="reco_desc">{{this.desc}}</p>
+              <div class="reco_hashes">
+                {{#each this.hash}}
+                <a href="#" class="reco_hash">#{{this}}</a>
+                {{/each}}
+              </div>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  {{>footer}}
+</div>
+</body>
+</html>

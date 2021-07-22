@@ -1,0 +1,64 @@
+{
+  "init": {
+    "path": "/dist/images/_tmp/recommend/"
+  },
+  "items": {
+    "item1": {
+      "img": "img1.jpg",
+      "title": "PS-LX310BT",
+      "desc": "간편하게 즐기는 바이닐 사운드",
+      "hash": [
+        "이벤트",
+        "뉴트로"
+      ]
+    },
+    "item2": {
+      "img": "img2.jpg",
+      "title": "WH-1000XM4/L",
+      "desc": "몰입을 넘어 소통까지 ",
+      "hash": [
+        "벗지 않는 헤드폰"
+      ]
+    },
+    "item3": {
+      "img": "img3.jpg",
+      "title": "WH-1000XM4/W",
+      "desc": "몰입을 넘어 소통까지 ",
+      "hash": [
+        "벗지 않는 헤드폰"
+      ]
+    },
+    "item4": {
+      "img": "img4.jpg",
+      "title": "SRS-RA3000H",
+      "desc": "어떤 공간이든 스며든다, 디퓨저 사운드 스피커",
+      "hash": [
+        "인테리어"
+      ]
+    },
+    "item5": {
+      "img": "img5.jpg",
+      "title": "WF-1000XM4/S",
+      "desc": "새로운 차원의 몰입을 경험하다",
+      "hash": [
+        "노이즈캔슬링"
+      ]
+    },
+    "item6": {
+      "img": "img6.jpg",
+      "title": "WF-1000XM4/B",
+      "desc": "새로운 차원의 몰입을 경험하다",
+      "hash": [
+        "노이즈캔슬링"
+      ]
+    },
+    "item7": {
+      "img": "img7.jpg",
+      "title": "WH-1000XM4/W",
+      "desc": "몰입을 넘어 소통까지",
+      "hash": [
+        "벗지 않는 헤드폰"
+      ]
+    }
+  }
+}
