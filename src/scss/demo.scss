@@ -165,7 +165,7 @@
 .coupon_inquiry{
   .pop_tit{
     margin-bottom: 36px;
-    line-height: 42px;
+    line-height: 1;
     letter-spacing: -0.6px;
   }
   .col_table_cell:first-child{
@@ -202,7 +202,7 @@
 .tax_invoice1, .tax_invoice2{
   .pop_tit{
     margin-bottom: 30px;
-    line-height: 42px;
+    line-height: 100%;
     letter-spacing: -0.6px;
   }
   .pop_txt{
@@ -272,9 +272,11 @@
   }
   .btn_article{
     margin:80px 0 64px;
+    .button {
+      min-width: 140px;
+    }
   }
   .closed{
-    min-width:auto;
     padding: 0 1.8555em;
   }
 }
@@ -291,6 +293,7 @@
     font-size:14px;
     color:#666;
     line-height:18px;
+    font-weight: 300;
   }
   .tit{
     margin-top:7px;
@@ -410,6 +413,10 @@
     font-size:12px;
     text-align:right;
     color:#888;
+  }
+  .order_list .prd {
+    display: block;
+    text-align: center;
   }
   .prd_total_price{
     font-size:16px;
