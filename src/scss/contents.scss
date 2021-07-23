@@ -428,7 +428,7 @@
     margin: 2px 4px 0 0;
     width: 14px;
     height: 14px;
-    background: url(/dist/images/common/ic_warning.png) no-repeat 0 0;
+    background: url(/dist/images/common/ic_warning.svg) no-repeat 0 0;
     vertical-align: top;
   }
 }
@@ -3462,6 +3462,10 @@
         top: -38px;
         left: -7px;
         transform: none;
+        &.check_only .inp_check {
+          width: 22px;
+          height: 22px;
+        }
       }
       &_info {
         padding-right: 136px;
