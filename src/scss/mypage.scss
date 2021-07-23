@@ -2200,55 +2200,6 @@
     }
   }
 }
-
-// from mypage2.scss
-// * 공통 헤더
-.common_head {
-  margin-bottom: 80px;
-  text-align: center;
-  &_back,
-  &_name {
-    font-weight: 700;
-    letter-spacing: -.025em;
-    color: #222;
-  }
-  &_back {
-    font-size: 20px;
-    &::before {
-      content: "";
-      display: inline-block;
-      width: .5em;
-      height: .5em;
-      margin-right: .25em;
-      vertical-align: .05em;
-      -webkit-transform: rotate(225deg);
-      transform: rotate(225deg);
-      border-top: 3px solid #222;
-      border-right: 3px solid #222
-    }
-  }
-  &_name {
-    font-size: 48px;
-  }
-  &.first_tit{
-    padding:80px 0 0 0;
-    margin:0;
-  }
-  @media screen and (max-width: 640px) {
-    margin-bottom: 14px;
-    &_back {
-      font-size: 12px;
-      &::before {
-        border-top: 1px solid #222;
-        border-right: 1px solid #222
-      }
-    }
-    &_name {
-      font-size: 24px;
-    }
-  }
-}
-
 // * 주문/배송내역
 .recent_order {
   margin-top: 80px;

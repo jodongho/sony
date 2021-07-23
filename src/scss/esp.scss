@@ -25,6 +25,9 @@
     }
   }  
 }
+.container .content.esp_page {
+  padding: 0 0 180px 0;
+}
 .espinfo {
   margin: 0 auto;
   max-width: 1200px;
@@ -504,16 +507,18 @@
   .tit {
     display: block;
     margin-bottom: 10px;
-    padding-left: 24px;
-    background: url(/dist/images/common/ic_exmark.svg) no-repeat 0 3px;
-    font-size: 18px;
+    padding-left: 20px;
+    background: url(/dist/images/common/ic_info_tit.svg) no-repeat 0 50%;
+    font-size: 16px;
     color: #444;
+  }
+  .list_dot li {
+    color: #666;
   }
   @include only-mo {
     margin-top: 40px;
     .tit {
-      font-size: 16px;
-      background-position: 0 1px;
+      font-size: 14px;
     }
   }
 }
@@ -632,8 +637,17 @@
             font-size: 14px;
           }
         }
-        .info_price {
+        .buy_box {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           margin-top: 10px;
+          .button {
+              min-width: 110px;
+              font-size: 14px;
+          }      
+        }
+        .info_price {
           font-size: 16px;
           color: #222;
           font-weight: 700;
@@ -680,7 +694,7 @@
           line-height: 22px;
           @include ellipsis;
           transition: all 0.2s ease-in-out;
-          z-index: 101;
+          z-index: 99;
           &.toggleon {
             overflow: inherit;
             height: auto;
@@ -724,7 +738,7 @@
         clear: both;
       }
       + .btn_area {
-        margin-top: 50px;
+        margin-top: 24px;
       } 
     }
     @include only-pc {
@@ -814,5 +828,154 @@
   } 
   @include under-pc {
     margin-top: 80px;
+  }
+}
+.empty_buy_box {
+  margin-top: 80px;
+  padding: 144px 0 264px;
+  border-top: 2px solid #222;
+  text-align: center;  
+  .empty_buy_ico {
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    background: url(/dist/images/product/ic_empty_buy.svg) no-repeat 0 0;
+  }
+  .empty_tit {
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #222;
+  }
+  .empty_desc {
+    margin-top: 4px;
+    font-size: 16px;
+    color: #444;
+  }    
+  @include under-pc {
+    padding: 144px 0 224px;
+    .button_wrap {
+      .button {
+        min-width: 200px;
+        height: 64px;
+        font-size: 18px;
+      }
+    }    
+  }
+  @include only-mo {
+    margin-top: 40px;
+    padding: 80px 0 120px;
+    .empty_tit {
+      margin-top: 15px;
+      font-size: 16px;
+    }
+    .empty_desc {
+      font-size: 14px;
+    }    
+    .button_wrap {
+      .button {
+        min-width: 150px;
+        height: 48px;
+        font-size: 14px;
+      }
+    }    
+  }
+}
+.esp_tbl_wrap {
+  margin-top: 80px;
+  .col_table_cell {
+    padding: 16px;
+    width: 25%; 
+    .prd_name {
+      color: #222;
+      font-weight: 700;
+    }
+    .prd_date {
+      color: #222;
+      font-weight: 400;
+    }
+    .prd_num {
+      color: #888;
+      font-weight: 400;
+    }
+    .button-s {
+      padding: .571em 1.143em;
+      min-width: 86px;
+      height: 32px;
+      font-size: 14px;
+    }
+  }
+  .btn_area {
+    border-top: 0;
+    .btn_more {
+      padding:15px;
+    }
+  }
+  @include only-mo {
+    margin-top: 40px;
+    .col_table {
+      display: block;
+    }
+    .col_table_head {
+      display: none;
+    }
+    .col_table_body {
+      display: block;
+      .col_table_row {
+        display: block;
+        padding: 24px 0;
+        border-bottom: 1px solid #ddd;
+        .col_table_cell {
+          display: block;
+          padding: 0;
+          width: 100%;
+          border-bottom: 0;
+          text-align: left;
+          .prd_name {
+            font-size: 14px;
+          }
+          .prd_date {
+            position: relative;
+            margin-top: 4px;
+            font-size: 12px;
+            color: #666;            
+            &:before {
+              font-size: 12px;
+              color: #666;
+              content: '정품등록일 : '
+            }
+          }
+          .prd_num {
+            position: relative;
+            margin-top: 4px;            
+            font-size: 12px;
+            color: #666;            
+            &:before {
+              font-size: 12px;
+              color: #666;
+              content: '보증기간 만료일 (제품번호) : '
+            }
+          }
+          .button {
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+.esp_info {
+  margin-top: 40px;
+  .esp_tit {
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+    font-size: 16px;
+    @include only-mo {
+      font-size: 14px;
+    }
+  }
+  .list_dot li {
+    color: #666;
   }
 }
