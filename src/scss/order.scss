@@ -510,11 +510,14 @@
         width: 330px;
         .delivery_btn_box {
           position: absolute;
-          bottom: 0;
+          top: 0;
           right: 0;
           .button {
             min-width: 98px;
             padding: inherit
+          }
+          &.type1 {
+            top: 4px;
           }
         }
       }
