@@ -47,7 +47,7 @@
                   <div class="prd_num">27.10.22 (9165530)</div>
                 </div>
                 <div class="col_table_cell">
-                  <button class="button button_secondary button-s" type="button">구매신청</button>
+                  <button class="button button_secondary button-s popup_comm_btn" data-popup-name="esp_pop" type="button">구매신청</button>
                 </div>                                                
               </div>
               <div class="col_table_row">
@@ -61,7 +61,7 @@
                   <div class="prd_num">27.10.22 (9165530)</div>
                 </div>
                 <div class="col_table_cell">
-                  <button class="button button_secondary button-s" type="button">구매신청</button>
+                  <button class="button button_secondary button-s popup_comm_btn" data-popup-name="esp_pop" type="button">구매신청</button>
                 </div>                                                
               </div>            
             </div>
@@ -83,6 +83,45 @@
 
   {{>footer}}
 </div>
-
+<!-- s: 연장서비스플랜 이용약관 -->
+<div class="popup_wrap size_m esp_pop">
+  <div class="pop_inner">
+    <div class="pop_cont">
+      <p class="pop_tit">연장서비스플랜 이용약관</p>
+      <div class="pop_cont_scroll">
+        <p class="pop_txt txt_l">본 이용약관은 고객님께서 Sony(이하 본문의 "Sony"는 Sony Korea Corporation을 의미)로부터 주문하신 연장서비스플랜(Extended Service Plan, 이하 "ESP")의 범위 및 조건이 명시되어 있습니다.</p>
+        <div class="related_laws">
+          <ul class="dot_line">
+            <li>
+              <p class="tit">부가가치세법 제 22조 - 제2호</p>
+              <p class="desc">② 사업자가 다음 각 호의 어느 하나에 해당하는 경우에는 그 공급가액에 대하여 100분의 1(제2호의 2에 해당하는 경우에 1천분의 5)에 해당하는 금액을 납부세액에 더하거나 환급세액에서 뺀다. 다만, 제2호의2는 법인사업자에 대해서는 2010년 12월 31일까지 적용하지 아니하고 2011년 1월 1일부터 2012년 12월 31일까지는 각각 1천분의3, 1천분의 1을 적용하며, 대통령령으로 정하는 개인사업자에 대해서는 2011년 12월 31일까지 적용하지 아니하고 2012년 1월 1일부터 2013년 12월 31일까지는 각각 1천분의3, 1천분의 1을 적용한다. (개정 2010.1, 2010.12.27)</p>
+            </li>
+            <li>
+              <ol class="dot_depth_list">
+                <li class="desc">1. 제16조에 따른 세금계산서의 발급시기를 경과하여 발급하거나 세금계산서의 필요적 기재사항의 전부 또는 일부가 착오 또는 과실로 적혀 있기 아니하거나 사실과 다른 경우</li>
+                <li class="desc">2. 제16조제2항에 따라 전자세금계산서를 발급한 사업자가 재화 또는 용역의 공급시기가 속하는 과세기간 말의 다음 달 15일까지 국세청장에게 세금계산서 발급명세를 전송하지 아니한 경우, 2의2, 제16조제3항에 따른 기한이 경과한 후 재화 또는 용역의 공급시기가 속하는 과세기간 말의 다음달 15일까지 국세청장에게 세금계산서 발급명세를 전송하는 경우</li>
+                <li class="desc">3. 제32조의2제3항에 따른 신용카드매출전표등을 발급받아 제18조제1항 및 제2항 단서 또는 제19조제1항에 따라 신고하는 때에 정부에 제출하여 매입세액을 공제받지 아니하고 대톨령령으로 정하는 사유로 매입세액을 공제받는 경우</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button href="#" class="ico_x closed" title="팝업창 닫기">
+      <span>팝업창 닫기</span>
+    </button>
+  </div>
+</div>
+<!-- e: 연장서비스플랜 이용약관 -->
+<script>
+    $(function() {
+      $('.popup_comm_btn').on("click",function(){
+        let _popName = $(this).data("popup-name");
+        if($('.popup_wrap:animated').length < 1){ // fadeInOut 시 중복 클릭 방지
+          popupCommon(_popName, $(this)); // 오픈할 팝업과 닫기 시 돌아갈 포커스 select
+        }
+      });
+    });
+</script>
 </body>
 </html>
