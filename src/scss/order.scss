@@ -14,6 +14,13 @@
 // 장바구니
 .content.order_page {
   padding: 0;
+  @include only-mo {
+    .check:not(.check_only) .inp_check+label:before {
+      width: 14px;
+      height: 14px;
+      top: 1px;
+    }
+  }
 }
 .order_box {
   padding: 120px 0;
@@ -317,7 +324,7 @@
       &:before{
         top: 15px;
         width: 8px;
-        right: 6px;
+        right: 5px;
       }
       &:after {
         top: 15px;
@@ -517,7 +524,12 @@
             padding: inherit
           }
           &.type1 {
-            top: 4px;
+            @include only-pc {
+              top: 8px;
+            }
+            @include under-pc {
+              top: 4px;
+            }
           }
         }
       }
@@ -900,7 +912,7 @@
       line-height: 22px;
       letter-spacing: -0.35px;
       &:before {
-        top: 5px;
+        top: 5px !important
       }
     }
   }
