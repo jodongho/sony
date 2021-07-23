@@ -233,7 +233,7 @@
                   <input type="password" id="popPw" class="inp center" placeholder="&nbsp;" autocomplete="off">
                   <span class="label">비밀번호 입력</span>
                   <span class="focus_bg"></span>              
-                 <div class="eyes"><a href="#" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
+                  <div class="eyes"><a href="#" class="eyes_btn" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
                 </label>
               </div>
               <div class="error_txt"><span class="ico"></span>현재 비밀번호가 올바르지 않습니다.</div>
@@ -244,7 +244,7 @@
                   <input type="password" id="popPw" class="inp center" placeholder="&nbsp;" autocomplete="off">
                   <span class="label"> 새 비밀번호 입력</span>
                   <span class="focus_bg"></span>              
-                 <div class="eyes"><a href="#" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
+                  <div class="eyes"><a href="#" class="eyes_btn" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
                 </label>
               </div>
               <div class="error_txt">
@@ -259,7 +259,7 @@
                   <input type="password" id="popPw" class="inp center" placeholder="&nbsp;" autocomplete="off">
                   <span class="label">새 비밀번호 확인</span>
                   <span class="focus_bg"></span>              
-                 <div class="eyes"><a href="#" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
+                  <div class="eyes"><a href="#" class="eyes_btn" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
                 </label>
               </div>
               <div class="error_txt"><span class="ico"></span>새 비밀번호가 일치하지 않습니다.</div>
@@ -307,7 +307,7 @@
                   <input type="password" id="popPw" class="inp center" placeholder="&nbsp;" autocomplete="off">
                   <span class="label">비밀번호 입력</span>
                   <span class="focus_bg"></span>              
-                 <div class="eyes"><a href="#" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
+                  <div class="eyes"><a href="#" class="eyes_btn" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
                 </label>
               </div>
               <div class="error_txt"><span class="ico"></span>현재 비밀번호가 올바르지 않습니다.</div>
@@ -409,7 +409,7 @@ $(function(){
       eyesFunc($eyes[_eyesNum]);
     }
     function eyesFunc(eyes){
-      $(eyes).off().on('click',function(){
+      $(eyes).find('eyes_btn').off().on('click',function(){
         let $inputBox = $(this).closest('.inp_box');
         $inputBox.toggleClass('active'); 
         if($inputBox.hasClass('active') == true ){
