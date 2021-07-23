@@ -2631,6 +2631,10 @@ body {
       left: 0;
       content: "·";
     }
+    @include only-mo {
+      font-size: 12px;
+      line-height: 22px;
+    }
   }
 }
 // selectBox
@@ -3664,7 +3668,6 @@ body {
     }
   }
 }
-
 /* 202107 재택 수정 - th
   임시로 아래 추가하였습니다.
   7월말~8월초 출근하는날 합쳐놓겠습니다
@@ -3966,5 +3969,53 @@ body {
 .only-pc {
   @media screen and (max-width: 1280px) {
     display: none;
+  }
+}
+//2021-07-23 mypage -> common 공통인것 같아 옮김 
+// from mypage2.scss
+// * 공통 헤더
+.common_head {
+  margin-bottom: 80px;
+  text-align: center;
+  &_back,
+  &_name {
+    font-weight: 700;
+    letter-spacing: -.025em;
+    color: #222;
+  }
+  &_back {
+    font-size: 20px;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: .5em;
+      height: .5em;
+      margin-right: .25em;
+      vertical-align: .05em;
+      -webkit-transform: rotate(225deg);
+      transform: rotate(225deg);
+      border-top: 3px solid #222;
+      border-right: 3px solid #222
+    }
+  }
+  &_name {
+    font-size: 48px;
+  }
+  &.first_tit{
+    padding:80px 0 0 0;
+    margin:0;
+  }
+  @media screen and (max-width: 640px) {
+    margin-bottom: 14px;
+    &_back {
+      font-size: 12px;
+      &::before {
+        border-top: 1px solid #222;
+        border-right: 1px solid #222
+      }
+    }
+    &_name {
+      font-size: 24px;
+    }
   }
 }
