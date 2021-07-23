@@ -6,21 +6,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
 <title>{{ia.mypage.submenu.myPageMember.title}}</title>
-<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
+<link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
 <link rel="stylesheet" href="/dist/css/contents.css">
 <link rel="stylesheet" href="/dist/css/mypage.css">
+<link rel="stylesheet" href="/dist/css/mypage2.css">
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
 <script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
-<script src="/dist/js/ux-common.js"></script>
-<script src="/dist/js/ux-sub.js"></script>
 <script src="/dist/lib/js/jquery-ui.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
 </head>
 <body>
 <div class="wrapper my">
   {{>header}}
   <div class="member_wrap">
-    <div class="head_title">
-      <a href="#" class="back_link">마이페이지</a>
-      <h2 class="title">회원정보</h2>
+    <div class="common_head first_tit">
+      <a href="{{ia.mypage.url}}" class="common_head_back">{{ia.mypage.title}}</a>
+      <h1 class="common_head_name">{{ia.mypage.submenu.myPageMember.title}}</h1>
     </div>
     <form action="">
     <div class="member_info">
@@ -134,7 +135,7 @@
           <div class="info_inner">
             <div class="info_box type_txt_btn">
               <div class="data_box">
-                <div class="inp_box">
+                <div class="inp_box password_box">
                   <input type="password" id="member_password" class="inp disabled" value="123456789" disabled="disabled" maxlength="50" autocomplete="off">
                   <span class="focus_bg"></span>
                 </div>
@@ -227,7 +228,7 @@
         <div class="form_zone">
           <div class="input_item">
             <div class="group">
-              <div class="inp_box">
+              <div class="inp_box password_box">
                 <label class="inp_desc" for="popPw">
                   <input type="password" id="popPw" class="inp center" placeholder="&nbsp;" autocomplete="off">
                   <span class="label">비밀번호 입력</span>
@@ -238,7 +239,7 @@
               <div class="error_txt"><span class="ico"></span>현재 비밀번호가 올바르지 않습니다.</div>
             </div>
             <div class="group">
-              <div class="inp_box">
+              <div class="inp_box password_box">
                 <label class="inp_desc" for="popPw">
                   <input type="password" id="popPw" class="inp center" placeholder="&nbsp;" autocomplete="off">
                   <span class="label"> 새 비밀번호 입력</span>
@@ -253,7 +254,7 @@
               </div>
             </div>
             <div class="group">
-              <div class="inp_box">
+              <div class="inp_box password_box">
                 <label class="inp_desc" for="popPw">
                   <input type="password" id="popPw" class="inp center" placeholder="&nbsp;" autocomplete="off">
                   <span class="label">새 비밀번호 확인</span>
@@ -301,7 +302,7 @@
         <div class="form_zone">
           <div class="input_item">
             <div class="group">
-              <div class="inp_box">
+              <div class="inp_box password_box">
                 <label class="inp_desc" for="popPw">
                   <input type="password" id="popPw" class="inp center" placeholder="&nbsp;" autocomplete="off">
                   <span class="label">비밀번호 입력</span>
