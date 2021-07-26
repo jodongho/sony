@@ -26,6 +26,12 @@
       padding: 90px 0 160px;
     }
   }
+  &.full {
+    max-width:1920px;
+    .content{
+      padding:0;
+    }
+  }
 }
 //좋아요 버튼
 .btn_like {
