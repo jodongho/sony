@@ -14,13 +14,15 @@
 <script src="/dist/js/ux-common.js"></script>
 </head>
 <body>
-<div class="wrapper event">
+<div class="wrapper event">        
   {{>header}}
-
-  <div class="container full"><!-- full : max-width 1920 -->
+    
+  <div class="container full">
     <div class="content">
-      eventList
-     
+      <div class="common_head first_tit">
+        <a href="{{ia.event.url}}" class="common_head_back">{{ia.event.title}}</a>
+        <h1 class="common_head_name">{{ia.event.submenu.endList.title}}</h1>
+      </div>
     </div>
   </div>
 

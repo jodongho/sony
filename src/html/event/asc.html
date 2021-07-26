@@ -9,9 +9,11 @@
 <link rel="stylesheet" href="/dist/css/contents.css">
 <link rel="stylesheet" href="/dist/css/event.css">
 <link rel="stylesheet" href="/dist/css/event2.css">
+<link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
 <link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
 <script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
 <script src="/dist/js/ux-common.js"></script>
+<script src="/dist/lib/js/swiper.min.js"></script>
 </head>
 <body>
 <div class="wrapper event">
@@ -19,8 +21,29 @@
 
   <div class="container full"><!-- full : max-width 1920 -->
     <div class="content">
-      asc
-     
+      <div>
+        상단 비주얼
+      </div>
+      <div class="">
+        <div class="tab_ui scroll" data-scroll-view="5"><!-- 스크롤탭 : class: scroll / data-scroll-view 보여지는 탭 수 -->
+          <ul>
+            <li class="tabs on"><a href="#" class="btn">전체</a></li>
+            <li class="tabs"><a href="#" class="btn">렌즈교환식 카메라</a></li>
+            <li class="tabs"><a href="#" class="btn">캠코더</a></li>
+            <li class="tabs"><a href="#" class="btn">헤드폰/이어폰</a></li>
+            <li class="tabs"><a href="#" class="btn">스피커</a></li>
+            <li class="tabs"><a href="#" class="btn">기타</a></li>
+          </ul>
+        </div>
+        <div class="tab_ui_info">
+          <div class="tab_ui_inner view">1 내용</div>
+          <div class="tab_ui_inner">2 내용</div>
+          <div class="tab_ui_inner">3 내용</div>
+          <div class="tab_ui_inner">4 내용</div>
+          <div class="tab_ui_inner">5 내용</div>
+          <div class="tab_ui_inner">6 내용</div>
+        </div>
+      </div>
     </div>
   </div>
 
