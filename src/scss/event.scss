@@ -2,5 +2,27 @@
 
 /* event 기획전 */
 .event{
-
+  .tab_ui{
+    .tabs{
+      .btn{
+        padding:18px 0 23px; 
+        font-size:22px;
+      }
+    }
+    @include under-pc{
+      .tabs{
+        .btn{
+          font-size:18px;
+        }
+      }
+    }
+    @include only-mo {
+      .tabs{
+        .btn{
+          padding:20px 0 23px;
+          font-size:16px;
+        }
+      }
+    }
+  }
 }
