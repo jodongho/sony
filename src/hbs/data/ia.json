@@ -398,5 +398,53 @@
         "desc": "회원탈퇴 신청 완료"
       }
     }
+  },
+  "event": {
+    "title": "기획전",
+    "url": "/dist/html/evnet/eventList.html",
+    "classname": "mypage",
+    "length": "9",
+    "submenu": {
+      "eventList": {
+        "title": "기획전",
+        "url": "/dist/html/evnet/eventList.html",
+        "desc": "기획전 리스트"
+      },
+      "endList": {
+        "title": "종료된 기획전",
+        "url": "/dist/html/evnet/endList.html",
+        "desc": "종료된 기획전 리스트"
+      },
+      "liveon": {
+        "title": "라이브온",
+        "url": "/dist/html/evnet/liveon.html",
+        "desc": "라이브온 제품 리스트"
+      },
+      "employee": {
+        "title": "임직원몰",
+        "url": "/dist/html/evnet/employee.html",
+        "desc": "임직원몰 제품 리스트"
+      },
+      "asc": {
+        "title": "ASC몰",
+        "url": "/dist/html/evnet/asc.html",
+        "desc": "ASC몰 제품 리스트"
+      },
+      "refurbish": {
+        "title": "리퍼비시몰",
+        "url": "/dist/html/evnet/refurbish.html",
+        "desc": "리퍼비시몰 제품 리스트"
+      },
+      "refined": {
+        "title": "정품등록 특가몰",
+        "url": "/dist/html/evnet/refined.html",
+        "desc": "정품등록 특가몰 제품 리스트"
+      },
+      "employeeLogin": {
+        "title": "임직원 로그인",
+        "url": "/dist/html/evnet/employeeLogin.html",
+        "desc": "임직원 로그인 페이지"
+      }
+    }
   }
 }
