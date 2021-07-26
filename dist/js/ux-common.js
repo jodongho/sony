@@ -334,26 +334,45 @@ $(() => {
       if($(tab).hasClass("scroll")){ // 스크롤 타입
         let $tabWrapper = $(tab).find('>ul'),
             _arrowAdd ='<div class="swiper-button-next"></div><div class="swiper-button-prev"></div>';
+            _totalW = 0;
         _scrollView = $(tab).data("scroll-view");
         $(tab).addClass("swiper-container");
         $(tab).append(_arrowAdd);
         $tabWrapper.addClass("swiper-wrapper");
         $tabWrapper.find('>li').addClass("swiper-slide");
-        let tabSwiper = new Swiper('.tab_ui.scroll',{
+        let tabSwiper = new Swiper($(tab)[0],{
           slidesPerView: _scrollView,
           navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           },
+          on: {
+            init : swiper => {
+              swiper.slides.forEach(e => {
+                let _slideW = parseInt($(e).attr("style").split("width: ").join(''));
+                _totalW += _slideW + 1;
+              })
+              $(tab).find('.swiper-wrapper').css("width", _totalW);
+            },
+            resize: swiper => { 
+              swiper.slides.forEach(e => {
+                swiper.slides.forEach(e => {
+                  let _slideW = parseInt($(e).attr("style").split("width: ").join(''));
+                  _totalW += _slideW + 1;
+                })
+                $(tab).find('.swiper-wrapper').css("width", _totalW);
+              });
+            }
+          }
         });
         tabSwiper.update();
       }
       $(tab).find('.tabs .btn').on("click", function(){
         let $thisTab = $(this).closest('li'),
             _tabIndex = $thisTab.index(),
-            $tabInfo = $(tab).next().find('.tab_ui_inner').eq(_tabIndex);
+            $tabInfo = $(tab).siblings('.tab_ui_info').find('.tab_ui_inner').eq(_tabIndex);
         if($thisTab.hasClass("on") == false){
-          $thisTab.addClass("on").siblings().removeClass("on");
+          $thisTab.addClass("on swiper-slide-active").siblings().removeClass("on swiper-slide-active");
           $tabInfo.addClass("view").siblings().removeClass("view");
         }
         return false;
