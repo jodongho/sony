@@ -9,18 +9,379 @@
         font-size:22px;
       }
     }
-    @include under-pc{
+  }
+  .more_btn{
+    display: inline-block;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+    &:after{
+      margin-left: 8px;
+      content: "+";
+   }
+  }
+  @include under-pc{
+    .tab_ui{
       .tabs{
         .btn{
           font-size:18px;
         }
       }
     }
-    @include only-mo {
+  }
+  @include only-mo {
+    .tab_ui{
       .tabs{
         .btn{
           padding:20px 0 23px;
           font-size:16px;
+        }
+      }
+    }
+  }
+  .more_btn{
+    padding: 14px;
+    font-size: 14px;
+  }
+}
+.exhibitions{
+  .container{
+    .content{
+      margin:0;
+    }
+  }
+}
+.event_slider{
+  .slider_box{
+    height:600px;
+    .bg_img{
+      display:none;
+    }
+  }
+  .desc_box{
+    position:absolute;
+    width:100%;
+    max-width:1200px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    color:#222;
+    .tit{
+      font-size:70px;
+      font-weight:700;
+      line-height:88px;
+      letter-spacing:-1.75px;
+    }
+    .txt{
+      margin-top:10px;
+      font-size:18px;
+      line-height:26px;
+      letter-spacing:-0.45px;
+    }
+  }
+  .event_duration{
+    margin-top:23px;
+    font-size:16px;
+    color:#666;
+  }
+  .btn_article{
+    margin-top:54px;
+    .event_link{
+      padding-right:10px;
+      font-size:20px;
+      font-weight:bold;
+      letter-spacing:-0.5px;
+      &:after{
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid #222;
+        border-right: 2px solid #222;
+        transform:rotate(45deg) translate(3px, -5px);
+        content: "";
+      }
+    }
+  }
+  .arrow {
+    width: auto;
+    height: auto;
+    text-indent: -9999px;
+    &:after{
+      display:none;
+    }
+    &.swiper-button-prev{
+      left: 38px;
+      transform: rotate(180deg);
+    }
+    &.swiper-button-next{
+      right: 38px;
+    }
+    .ico_btn{
+      display:block;
+      width:41px;
+      height:77px;
+      background:url('/dist/images/common/ico_slide_all_arrow.svg') no-repeat 0 0;
+    }
+  }
+  .swiper-pagination{
+    left:50%;
+    bottom: 32px;
+    width:100%;
+    max-width:1200px;
+    font-size: 16px;
+    line-height: 19px;
+    transform:translateX(-50%);
+    text-align:right;
+    color: #888;
+  }
+  .swiper-pagination-current {
+    font-weight: bold;
+    color: #000;
+  }
+}
+.event_zone{
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  padding-bottom:155px;
+  .tab_ui{
+    margin-top:80px;
+  }
+  .tab_ui_info{
+    margin-top:24px;
+  }
+  .category_head{
+    position:relative;
+    margin-top:78px;
+    .tit{
+      font-size:24px;
+      font-weight:700;
+      color:#222;
+    }
+    .itemsort{
+      top:2px;
+      right:142px;
+    }
+    .link_btn{
+      position:absolute;
+      top:0;
+      right:0;
+      min-width:auto;
+    }
+  }
+  .item_row{
+    margin-bottom:40px;
+    &:after{
+      display:block;
+      clear:both;
+      content:"";
+    }
+  }
+  .event_item{
+    float:left;
+    position:relative;
+    width:calc((100% - 24px)/2);
+    margin-left:24px;
+    &:first-child{
+      margin-left:0;
+    }
+    .event_desc{
+      padding:20px 0 21px;
+    }
+    .tit{
+      font-size:22px;
+      font-weight:700;
+      letter-spacing:-0.55px;
+      color:#222;
+    }
+    .event_duration{
+      margin-top:7px;
+      font-size:14px;
+      letter-spacing:-0.35px;
+      color:#666;
+    }
+    .event_share{
+      position:absolute;
+      top:16px;
+      right:16px;
+      width:36px;
+      height:36px;
+      border-radius:50%;
+      background:rgba(0,0,0,0.4);
+      text-indent:-9999px;
+      &:after{
+        display:block;
+        position:absolute;
+        top:50%;
+        left:50%;
+        width:20px;
+        height:20px;
+        background:url('/dist/images/common/ico_item_share.svg') no-repeat 0 0 ;
+        transform:translate(-50%, -50%);
+        content:"";
+      }
+    }
+  }
+  .btn_article{
+    border-top:1px solid #ddd;
+    text-align:center;
+  }
+}
+
+
+@include under-pc{ // ~ 1280
+  .event_slider {
+    .slider_box{
+      background-size:cover;
+    }
+    .desc_box {
+      top:10%;
+      left:0;
+      transform:none;
+      padding:0 24px;
+      .txt{
+        
+      }
+    }
+    .event_duration{
+      
+    }
+    .btn_article{
+     
+      .event_link{
+        
+        &:after{
+         
+        }
+      }
+    }
+    .arrow{
+      display:none;
+    }
+    .swiper-pagination{
+      bottom:27px;
+      padding:0 24px;
+      font-size:16px;
+    }
+  }
+  .event_zone{
+    padding:0 24px 115px;
+    .tab_ui{
+      margin-top:40px;
+    }
+    .category_head {
+      .itemsort{
+        right:134px;
+      }
+      .link_btn{
+        height:32px;
+        padding:0 1em;
+        line-height:32px;
+      }
+    }  
+    .event_item{
+      width:calc((100% - 16px)/2);
+      margin-left:16px;
+      .tit{
+        font-size:20px;
+      }
+      .event_duration{
+        font-size:16px;
+        color:#888;
+      }
+    }
+  }
+}
+
+
+@include only-mo { // 640
+  .event_slider {
+    .slider_box{
+      height:360px;
+      background-size:cover;
+    }
+    .desc_box {
+      top:11%;
+      left:0;
+      transform:none;
+      padding:0 24px;
+      .tit{
+        font-size:32px;
+        line-height:44px;
+        letter-spacing:-0.8px;
+      }
+      .txt{
+        margin-top:6px;
+        font-size:14px;
+        line-height:22px;
+        letter-spacing:-0.35px;
+      }
+    }
+    .event_duration{
+      margin-top:16px;
+      font-size:12px;
+    }
+    .btn_article{
+      margin-top:24px;
+      .event_link{
+        font-size:12px;
+        &:after{
+          width:6px;
+          height:6px;
+          border-top: 1px solid #222;
+          border-right: 1px solid #222;
+        }
+      }
+    }
+    .arrow{
+      display:none;
+    }
+    .swiper-pagination{
+      bottom:24px;
+      padding:0 24px;
+      font-size:12px;
+    }
+  }
+  .event_zone{
+    padding:0 24px 75px;
+    .tab_ui {
+      margin-top:24px;
+    }
+    .category_head {
+      margin-top:0;
+      padding-top:78px;
+      .itemsort{
+        top:78px;
+        right:0;
+      }
+      .link_btn{
+        top:24px;
+        font-size:14px;
+        font-weight:400;
+      }
+    }
+    .item_row{
+      margin:0;
+    }
+    .event_item{
+      width:100%;
+      margin:0 0 24px 0;
+      .event_desc{
+        padding:12px 0 13px;
+      }
+      .tit{
+        font-size:16px;
+      }
+      .event_share{
+        top:8px;
+        right:8px;
+        width:24px;
+        height:24px;
+        &:after{
+          width:13px;
+          height:13px;
+          background-size:13px 13px;
         }
       }
     }
