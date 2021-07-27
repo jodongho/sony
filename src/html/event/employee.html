@@ -20,11 +20,15 @@
   {{>header}}
 
   <div class="container full"><!-- full : max-width 1920 -->
-    <div class="content">
-      <div>
-        상단 비주얼
+    <div class="content employee">
+      <div class="event_header">
+        <div class="event_header_inner">
+          <h1 class="event_header_title">임직원몰</h1>
+          <p class="event_header_desc">소니코리아 및 관계사 임직원을 위한 소니 임직원몰에서<br>다양한 제품을 더욱 특별한 가격으로 만나보세요</p>
+          <div class="event_header_link"><a href="#">임직원몰 이용규정</a></div>
+        </div>
       </div>
-      <div class="">
+      <div class="event_tablist">
         <div class="tab_ui scroll" data-scroll-view="5"><!-- 스크롤탭 : class: scroll / data-scroll-view 보여지는 탭 수 -->
           <ul>
             <li class="tabs on"><a href="#" class="btn">전체</a></li>
@@ -34,19 +38,114 @@
             <li class="tabs"><a href="#" class="btn">스피커</a></li>
             <li class="tabs"><a href="#" class="btn">기타</a></li>
           </ul>
-        </div>
-        <div class="tab_ui_info">
-          <div class="tab_ui_inner view">1 내용</div>
-          <div class="tab_ui_inner">2 내용</div>
-          <div class="tab_ui_inner">3 내용</div>
-          <div class="tab_ui_inner">4 내용</div>
-          <div class="tab_ui_inner">5 내용</div>
-          <div class="tab_ui_inner">6 내용</div>
+        </div>        
+        <div class="employee_prd">          
+          <div class="section_top">
+            <h2 class="title">전체</h2>
+            {{>employeesort}}
+          </div>          
+          <!-- event list-->
+          <div class="event_prd_list">
+            <div class="product">
+              <span class="badge_state state_a">A<span class="txt">급</span></span>
+              <div class="product_pic">
+                <a href="#" class="product_link">
+                  <img src="/dist/images/_tmp/item640x640_01.png" alt="">
+                </a>
+                <div class="sold_out"><span>SOLD OUT</span></div>
+              </div>
+              <div class="product_name">
+                <a href="#" class="product_name_title">SRS-XP500 (1+1)</a>
+                <p class="product_name_desc">4K HDR(HLG), Fast Hybrid AF가 탑재된 전문가급 
+                  1인치 핸디캠4K HDR(HLG), Fast Hybrid AF가 탑재된 전문가급 
+                  1인치 핸디캠4K HDR(HLG), Fast Hybrid AF가 탑재된 전문가급 
+                  1인치 핸디캠</p>
+                <div class="product_name_price">
+                  <div class="original">179,000 <span class="unit">원</span></div>
+                  <div class="sale">159,000 <span class="unit">원</span></div>
+                </div>
+                <div class="product_btn_wrap">
+                  <button type="button" class="button button_secondary button-s"><i class="ico gift"></i>선물</button>
+                  <button type="button" class="button button_positive button-s">바로 구매</button>
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <span class="badge_state state_b">B<span class="txt">급</span></span>
+              <div class="product_pic">
+                <a href="#" class="product_link">
+                  <img src="/dist/images/_tmp/item640x640_01.png" alt="">
+                </a>
+              </div>
+              <div class="product_name">
+                <a href="#" class="product_name_title">WH-1000XM4/SME</a>
+                <p class="product_name_desc">4K HDR(HLG), Fast Hybrid AF가 탑재된 전문가급 
+                  1인</p>
+                <div class="product_name_price">
+                  <div class="original">179,000 <span class="unit">원</span></div>
+                  <div class="sale">159,000 <span class="unit">원</span></div>
+                </div>
+                <div class="product_btn_wrap">
+                  <button type="button" class="button button_secondary button-s view"><i class="ico search"></i>제품 보기</button>
+                  <button type="button" class="button button_secondary button-s"><i class="ico gift"></i>선물</button>
+                  <button type="button" class="button button_primary button-s">예약 구매</button>
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <span class="badge_state state_c">C<span class="txt">급</span></span>
+              <div class="product_pic">
+                <a href="#" class="product_link">
+                  <img src="/dist/images/_tmp/item640x640_01.png" alt="">
+                </a>
+              </div>
+              <div class="product_name">
+                <a href="#" class="product_name_title">WH-1000XM4/SME</a>
+                <p class="product_name_desc">4K HDR(HLG), Fast Hybrid AF가 탑재된 전문가급 
+                  1인치 핸디캠</p>
+                <div class="product_name_price">
+                  <div class="original"></div>
+                  <div class="sale">159,000 <span class="unit">원</span></div>
+                </div>
+                <div class="product_btn_wrap">
+                  <button type="button" class="button button_secondary button-s view"><i class="ico search"></i>제품 보기</button>
+                  <button type="button" class="button button_secondary button-s"><i class="ico gift"></i>선물</button>
+                  <button type="button" class="button button_positive button-s">바로 구매</button>
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <!-- <span class="badge_txt">20,000 <span class="unit">원</span> OFF</span> -->
+              <div class="product_pic">
+                <a href="#" class="product_link">
+                  <img src="/dist/images/_tmp/item640x640_01.png" alt="">
+                </a>
+              </div>
+              <div class="product_name">
+                <a href="#" class="product_name_title">WH-1000XM4/SME</a>
+                <p class="product_name_desc">4K HDR(HLG), Fast Hybrid AF가 탑재된 전문가급 
+                  1인치 핸디캠4K HDR(HLG), Fast Hybrid AF가 탑재된 전문가급 
+                  1인치 핸디캠4K HDR(HLG), Fast Hybrid AF가 탑재된 전문가급 
+                  1인치 핸디캠</p>
+                <div class="product_name_price">
+                  <div class="original">179,000 <span class="unit">원</span></div>
+                  <div class="sale">159,000 <span class="unit">원</span></div>
+                </div>
+                <div class="product_btn_wrap">
+                  <button type="button" class="button button_secondary button-s"><i class="ico gift"></i>선물</button>
+                  <button type="button" class="button button_positive button-s">바로 구매</button>
+                </div>
+              </div>
+            </div>                              
+          </div>
+          <div class="btn_area">
+            <button type="button" class="btn_more" title="제품 더보기">더보기<span class="ico_plus"></span></button>
+          </div>                
+          <!--// event list-->                
         </div>
       </div>
     </div>
   </div>
-
   {{>footer}}
 </div>
 
