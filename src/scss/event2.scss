@@ -40,6 +40,9 @@
     font-size: 16px;
     color: #fff;
     line-height: 24px;
+    .block {
+      display: block;
+    }    
   }
   &_link {
     font-size: 16px;
@@ -70,12 +73,7 @@
         width: auto;
         background-position: 50% 100%;
       }  
-    }
-    &_desc {
-      .block {
-        display: block;
-      }
-    }    
+    } 
   }
   @include only-mo {
     min-height: 290px;
