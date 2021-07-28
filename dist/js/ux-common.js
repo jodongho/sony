@@ -346,6 +346,21 @@ $(() => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           },
+          breakpoints: {
+            320: {
+              slidesPerView: 3,
+            },
+            641: {
+              slidesPerView: _scrollView,
+            },
+            /*
+            1281: {
+              slidesPerView: 1.5,
+              spaceBetween: 110,
+              allowTouchMove: false,
+            },
+            */
+          },
           on: {
             init : swiper => {
               swiper.slides.forEach(e => {

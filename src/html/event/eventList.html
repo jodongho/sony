@@ -16,16 +16,61 @@
 <script src="/dist/lib/js/swiper.min.js"></script>
 </head>
 <body>
-<div class="wrapper event">
+<div class="wrapper event exhibitions">
   {{>header}}
 
   <div class="container full"><!-- full : max-width 1920 -->
     <div class="content">
-      <div class="event_visual">
-
-      </div>  
+      <div class="event_slider swiper-container">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <div class="slider_box">
+              <img class="bg_img" src="/dist/images/_tmp/pc_eventMain_img01.png" alt=""><!-- 슬라이드 배경 -->
+              <div class="desc_box">
+                <p class="tit">SRS-XP500<br> 런칭 기념 이벤트</p>
+                <p class="txt">한 층 더 업그레이드 된 사운드와 조명으로<br> 공간을 밝히는 스피커</p>
+                <p class="event_duration">2021.05.27 ~ 2021.06.13</p>
+                <div class="btn_article">
+                  <a href="#" class="event_link">자세히 보기</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="slider_box">
+              <img class="bg_img" src="/dist/images/_tmp/pc_eventMain_img01.png" alt=""><!-- 슬라이드 배경 -->
+              <div class="desc_box">
+                <p class="tit">SRS-XP500<br> 런칭 기념 이벤트</p>
+                <p class="txt">한 층 더 업그레이드 된 사운드와 조명으로<br> 공간을 밝히는 스피커</p>
+                <p class="event_duration">2021.05.27 ~ 2021.06.13</p>
+                <div class="btn_article">
+                  <a href="#" class="event_link">자세히 보기</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="slider_box">
+              <img class="bg_img" src="/dist/images/_tmp/pc_eventMain_img01.png" alt=""><!-- 슬라이드 배경 -->
+              <div class="desc_box">
+                <p class="tit">SRS-XP500<br> 런칭 기념 이벤트</p>
+                <p class="txt">한 층 더 업그레이드 된 사운드와 조명으로<br> 공간을 밝히는 스피커</p>
+                <p class="event_duration">2021.05.27 ~ 2021.06.13</p>
+                <div class="btn_article">
+                  <a href="#" class="event_link">자세히 보기</a>
+                </div>
+              </div>
+            </div>
+          </li> 
+        </ul>
+        <div class="arrow_btn">
+          <a class="arrow swiper-button-prev"><span class="ico_btn">이전</span></a>
+          <a class="arrow swiper-button-next"><span class=ico_btn>다음</span></a>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
       <div class="event_zone">
-        <div class="tab_ui scroll" data-scroll-view="6"><!-- 스크롤탭 : class: scroll / data-scroll-view 보여지는 탭 수 -->
+        <div class="tab_ui scroll category_evnet" data-scroll-view="6"><!-- 스크롤탭 : class: scroll / data-scroll-view 보여지는 탭 수 -->
           <ul>
             <li class="tabs on"><a href="#" class="btn">전체</a></li>
             <li class="tabs"><a href="#" class="btn">소니스토어 단독</a></li>
@@ -35,8 +80,82 @@
             <li class="tabs"><a href="#" class="btn">LIVE ON</a></li>
           </ul>
         </div>
+        <div class="category_head">
+          <p class="tit">전체</p>
+          <div class="itemsort" aria-label="상품 정렬">
+            <button class="itemsort__button">
+              <span class="itemsort__button__label sr-only">정렬기준:</span>
+              <span class="itemsort__button__selected">최신순</span>
+            </button>
+            <div class="itemsort__drawer">
+              <ul class="itemsort__items">
+                <li class="itemsort__item itemsort__item--active"><a href="#" class="itemsort__item__link">최신순</a></li>
+                <li class="itemsort__item"><a href="#" class="itemsort__item__link">오래된 순</a></li>
+              </ul>
+            </div>
+          </div>
+          <a href="{{ia.event.submenu.endList.url}}" class="button button_positive button-s link_btn">종료된 기획전</a>
+        </div>
         <div class="tab_ui_info">
-          <div class="tab_ui_inner view">1 내용</div>
+          <div class="tab_ui_inner view">
+            <div class="item_row">
+              <div class="event_item">
+                <div class="img"><img src="/dist/images/_tmp/tmp_event_list_01.png" alt=""></div>
+                <div class="event_desc">
+                  <p class="tit">공간을 밝히는 스피커 SRS-XP500<br>런칭 이벤트</p>
+                  <p class="event_duration">2021.06.01 ~ 2021.06.20</p>
+                </div>
+                <a href="#" class="event_share">공유하기</a>
+              </div>
+              <div class="event_item">
+                <div class="img"><img src="/dist/images/_tmp/tmp_event_list_02.png" alt=""></div>
+                <div class="event_desc">
+                  <p class="tit">공간을 밝히는 스피커 SRS-XP500<br>런칭 이벤트</p>
+                  <p class="event_duration">2021.06.01 ~ 2021.06.20</p>
+                </div>
+                <a href="#" class="event_share">공유하기</a>
+              </div>
+            </div>
+            <div class="item_row">
+              <div class="event_item">
+                <div class="img"><img src="/dist/images/_tmp/tmp_event_list_01.png" alt=""></div>
+                <div class="event_desc">
+                  <p class="tit">공간을 밝히는 스피커 SRS-XP500<br>런칭 이벤트</p>
+                  <p class="event_duration">2021.06.01 ~ 2021.06.20</p>
+                </div>
+                <a href="#" class="event_share">공유하기</a>
+              </div>
+              <div class="event_item">
+                <div class="img"><img src="/dist/images/_tmp/tmp_event_list_02.png" alt=""></div>
+                <div class="event_desc">
+                  <p class="tit">공간을 밝히는 스피커 SRS-XP500<br>런칭 이벤트</p>
+                  <p class="event_duration">2021.06.01 ~ 2021.06.20</p>
+                </div>
+                <a href="#" class="event_share">공유하기</a>
+              </div>
+            </div>
+            <div class="item_row">
+              <div class="event_item">
+                <div class="img"><img src="/dist/images/_tmp/tmp_event_list_02.png" alt=""></div>
+                <div class="event_desc">
+                  <p class="tit">공간을 밝히는 스피커 SRS-XP500<br>런칭 이벤트</p>
+                  <p class="event_duration">2021.06.01 ~ 2021.06.20</p>
+                </div>
+                <a href="#" class="event_share">공유하기</a>
+              </div>
+              <div class="event_item">
+                <div class="img"><img src="/dist/images/_tmp/tmp_event_list_01.png" alt=""></div>
+                <div class="event_desc">
+                  <p class="tit">공간을 밝히는 스피커 SRS-XP500<br>런칭 이벤트</p>
+                  <p class="event_duration">2021.06.01 ~ 2021.06.20</p>
+                </div>
+                <a href="#" class="event_share">공유하기</a>
+              </div>
+            </div>
+            <div class="btn_article">
+              <a href="#" class="more_btn">더보기</a>
+            </div>
+          </div>
           <div class="tab_ui_inner">2 내용</div>
           <div class="tab_ui_inner">3 내용</div>
           <div class="tab_ui_inner">4 내용</div>
@@ -54,7 +173,63 @@
 </html>
 
 <script type="text/javascript">
-  $(function(){
+$(function(){
 
+  // 상단 슬라이드
+  const visualSlider = (e) =>{
+    let $mainSlider = $('.event_slider');
+    let visualSwiper = new Swiper($mainSlider[0], {
+      slidesPerView: 1,
+      loop: true,
+      navigation : {
+        nextEl : '.swiper-button-next',
+        prevEl : '.swiper-button-prev',
+      },
+      pagination: {
+        el: $mainSlider.find('.swiper-pagination')[0],
+        type: "custom",
+        renderCustom: (swiper, current, total) => {
+          let _current = current;
+          let _total = total;
+          if (current < 10) _current = "0" + current;
+          if (total < 10) _total = "0" + total;
+          return "<span class='swiper-pagination-current'>"+_current+"</span> / " +
+          "<span class='swiper-pagination-total'>"+_total+"</span>";
+          console.log("asdasd")
+        },
+      },
+      on: {
+        init: swiper => {
+          swiper.slides.forEach(e => {
+            let _bgSrc= e.querySelector('.bg_img').getAttribute("src"),
+                $bgBox = e.querySelector('.slider_box');
+            $bgBox.setAttribute("style", "background:url('"+_bgSrc+"') no-repeat center top;");
+          });
+        },
+      }
+    });
+  }
+  const sliderImgChange = (e) => { // 제품 개요 이미지 
+    let $sliderImgWrap = $('.event_slider'),
+        $imgBox = $sliderImgWrap.find('.bg_img');
+        $changeBox = $sliderImgWrap.find('.slider_box');
+
+    $imgBox.each(function(_index, _el){
+      let _src =  $(_el).attr("src"),
+          _winW = $(window).width();
+      console.log("asdasd");
+      if(_winW > 769){ // PC
+        _src = _src.split("/mo_").join('/pc_');
+      }else{ //TB, MO
+        _src = _src.split("/pc_").join('/mo_');
+      }
+      $changeBox.css({"background":"url('"+_src+"') no-repeat center 80%","background-size":"cover"});
+    });
+  }
+  $(window).resize(function(){
+    sliderImgChange();
   });
+  visualSlider();
+  sliderImgChange();
+});
   </script>
