@@ -341,6 +341,9 @@
       &.prd_inner {
         margin-top: -147px;
       }
+      &:first-of-type {
+        padding-top: 40px;
+      }
     }
     &_badge {
       padding: 3px 0;
@@ -358,13 +361,17 @@
       margin-top: 17px;
       font-size: 28px;
       line-height: 40px;
+      .block {
+        display: block;
+      }
     }
     &_desc {
       font-size: 12px;
       line-height: 18px;
     }
     &_share {
-      top: 24px;
+      top: 16px;
+      right: 16px;
       width: 24px;
       height: 24px;
       a:before {
