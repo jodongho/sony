@@ -442,7 +442,7 @@
       },
       "employeeLogin": {
         "title": "임직원 로그인",
-        "url": "/dist/html/evnet/employeeLogin.html",
+        "url": "/dist/html/evnet/employeeGate.html",
         "desc": "임직원 로그인 페이지"
       }
     }

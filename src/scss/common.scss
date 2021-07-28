@@ -3208,14 +3208,52 @@ body {
       color:#444;
     }
   }
+  .pop_inp {
+    .inp{
+      padding:20px 0 12px;
+      font-size:14px;
+      &:placeholder-shown {
+        + .label {
+          top: 20px;
+          transform: translate3d(0,0,0) scale(1);
+          @include only-mo {
+            top: 20px;
+          }
+        }
+      }
+      &:not(:placeholder-shown) {
+        + .label {
+          transform: translate3d(0,-12px,0) scale(.75);
+          top: 10px;
+        }
+      }
+      &:focus {
+        outline: 0;
+        + .label {
+          transform: translate3d(0,-12px,0) scale(.75);
+          top: 10px;
+          color: #bbb;
+        }
+      }
+      @include only-mo {
+        font-size:16px;
+        .label{
+          font-size:16px;
+        }
+      }
+    }
+    .label{
+      font-size:14px;
+    }
+  }
   .strong{
     font-weight:700;
     color:#222;
   }
   .ico_x{
     position: absolute;
-    top: 45px;
-    right: 37px;
+    top: 40px;
+    right: 40px;
     &>span{
       position: relative;
       display: block;
