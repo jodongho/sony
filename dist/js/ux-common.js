@@ -342,9 +342,7 @@ $(() => {
         
         if($(tab).data("scroll-view") > 0) _scrollView.pc = $(tab).data("scroll-view");
         $(tab).data("tab-scroll-view") > 0 ? _scrollView.tb = $(tab).data("tab-scroll-view") : _scrollView.tb = _scrollView.pc ;
-        if($(tab).data("mo-scroll-view") > 0) _scrollView.mo = $(tab).data("mo-scroll-view"); 
-        console.log(_scrollView);
-
+        if($(tab).data("mo-scroll-view") > 0) _scrollView.mo = $(tab).data("mo-scroll-view");
         $(tab).addClass("swiper-container");
         $(tab).append(_arrowAdd);
         $tabWrapper.addClass("swiper-wrapper");
