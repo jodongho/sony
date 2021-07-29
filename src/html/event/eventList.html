@@ -70,7 +70,7 @@
         <div class="swiper-pagination"></div>
       </div>
       <div class="event_zone">
-        <div class="tab_ui scroll category_evnet" data-scroll-view="6"><!-- 스크롤탭 : class: scroll / data-scroll-view 보여지는 탭 수 -->
+        <div class="tab_ui scroll category_evnet" data-scroll-view="6" data-tab-scroll-view="5" ><!-- 스크롤탭 : class: scroll / data-scroll-view 보여지는 탭 수 -->
           <ul>
             <li class="tabs on"><a href="#" class="btn">전체</a></li>
             <li class="tabs"><a href="#" class="btn">소니스토어 단독</a></li>
@@ -290,7 +290,6 @@ $(function(){
           if (total < 10) _total = "0" + total;
           return "<span class='swiper-pagination-current'>"+_current+"</span> / " +
           "<span class='swiper-pagination-total'>"+_total+"</span>";
-          console.log("asdasd")
         },
       },
       on: {
@@ -312,7 +311,6 @@ $(function(){
     $imgBox.each(function(_index, _el){
       let _src =  $(_el).attr("src"),
           _winW = $(window).width();
-      console.log("asdasd");
       if(_winW > 769){ // PC
         _src = _src.split("/mo_").join('/pc_');
       }else{ //TB, MO

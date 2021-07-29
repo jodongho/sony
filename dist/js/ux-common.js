@@ -330,36 +330,42 @@ $(() => {
       tabFunc($tabBox[tabNum]);
     }
     function tabFunc(tab){
-      let _scrollView = 1;
+      let _scrollView = {
+        pc : 1,
+        tb : 5,
+        mo : 3
+      }
       if($(tab).hasClass("scroll")){ // 스크롤 타입
         let $tabWrapper = $(tab).find('>ul'),
             _arrowAdd ='<div class="swiper-button-next"></div><div class="swiper-button-prev"></div>';
             _totalW = 0;
-        _scrollView = $(tab).data("scroll-view");
+        
+        if($(tab).data("scroll-view") > 0) _scrollView.pc = $(tab).data("scroll-view");
+        $(tab).data("tab-scroll-view") > 0 ? _scrollView.tb = $(tab).data("tab-scroll-view") : _scrollView.tb = _scrollView.pc ;
+        if($(tab).data("mo-scroll-view") > 0) _scrollView.mo = $(tab).data("mo-scroll-view"); 
+        console.log(_scrollView);
+
         $(tab).addClass("swiper-container");
         $(tab).append(_arrowAdd);
         $tabWrapper.addClass("swiper-wrapper");
         $tabWrapper.find('>li').addClass("swiper-slide");
         let tabSwiper = new Swiper($(tab)[0],{
-          slidesPerView: _scrollView,
+          slidesPerView: _scrollView.pc,
           navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           },
           breakpoints: {
             320: {
-              slidesPerView: 3,
+              slidesPerView: _scrollView.mo,
             },
             641: {
-              slidesPerView: _scrollView,
+              slidesPerView: _scrollView.tb,
             },
-            /*
+            
             1281: {
-              slidesPerView: 1.5,
-              spaceBetween: 110,
-              allowTouchMove: false,
+              slidesPerView: _scrollView.pc,
             },
-            */
           },
           on: {
             init : swiper => {
@@ -386,6 +392,7 @@ $(() => {
         let $thisTab = $(this).closest('li'),
             _tabIndex = $thisTab.index(),
             $tabInfo = $(tab).siblings('.tab_ui_info').find('.tab_ui_inner').eq(_tabIndex);
+        
         if($thisTab.hasClass("on") == false){
           $thisTab.addClass("on swiper-slide-active").siblings().removeClass("on swiper-slide-active");
           $tabInfo.addClass("view").siblings().removeClass("view");
