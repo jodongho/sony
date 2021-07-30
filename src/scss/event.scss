@@ -148,12 +148,9 @@
   .tab_ui{
     margin-top:80px;
   }
-  .tab_ui_info{
-    margin-top:24px;
-  }
   .category_head{
     position:relative;
-    margin-top:78px;
+    margin-top:80px;
     .tit{
       font-size:24px;
       font-weight:700;
@@ -169,6 +166,9 @@
       right:0;
       min-width:auto;
     }
+  }
+  .item_list{
+    margin-top:24px;
   }
   .item_row{
     margin-bottom:40px;
@@ -219,6 +219,30 @@
         height:20px;
         background:url('/dist/images/common/ico_item_share.svg') no-repeat 0 0 ;
         transform:translate(-50%, -50%);
+        content:"";
+      }
+    }
+  }
+  .no_data{
+    padding:180px 0;
+    text-align:center;
+    .ico_no_data{
+      display:inline-block;
+      position:relative;
+      padding-top:74px;
+      font-size:20px;
+      font-weight:700;
+      letter-spacing:-0.5px;
+      color:#222;
+      &:after{
+        display:block;
+        position:absolute;
+        top:0;
+        left:50%;
+        width:56px;
+        height:56px;
+        background:url('/dist/images/common/ico_no_data.svg') no-repeat 0 0;
+        transform:translateX(-50%);
         content:"";
       }
     }
@@ -497,6 +521,7 @@
       margin-top:40px;
     }
     .category_head {
+      margin-top:64px;
       .itemsort{
         right:134px;
       }
@@ -659,8 +684,8 @@
       margin-top:24px;
     }
     .category_head {
-      margin-top:0;
-      padding-top:78px;
+      margin-top:0px;
+      padding-top:80px;
       .itemsort{
         top:78px;
         right:0;
