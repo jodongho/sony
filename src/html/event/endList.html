@@ -14,13 +14,261 @@
 <script src="/dist/js/ux-common.js"></script>
 </head>
 <body>
-<div class="wrapper event">
+<div class="wrapper event">        
   {{>header}}
-
-  <div class="container full"><!-- full : max-width 1920 -->
+    
+  <div class="container full">
     <div class="content">
-      eventList
-     
+      <div class="common_head first_tit">
+        <a href="{{ia.event.url}}" class="common_head_back">{{ia.event.title}}</a>
+        <h1 class="common_head_name">{{ia.event.submenu.endList.title}}</h1>
+      </div>
+      <div class="end_event">
+        <form action="">
+        <div class="search_zone">
+          <div class="select_ui_zone btm_line search_category">
+            <a href="#" class="selected_btn" data-default-text="제목"><!-- disabled : 선택불가 품절 -->
+              제목
+            </a>
+            <div class="select_inner">
+              <p class="prd_tag">제목</p>
+              <ul class="select_opt">
+                <li>
+                  <a href="#" class="opt_list">
+                    <div class="item">제목</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="opt_list">
+                    <div class="item">내용</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="group search_box">
+            <div class="inp_box">
+              <input type="text" id="dd" class="search_inp" placeholder="검색어를 입력하세요." autocomplete="off" maxlength="50">
+            </div>
+          </div>
+        </div>
+        </form>
+        <div class="end_event_inner">
+          <div class="itemsort" aria-label="종료된 기획전 정렬">
+            <button class="itemsort__button">
+              <span class="itemsort__button__label sr-only">정렬기준:</span>
+              <span class="itemsort__button__selected">최신순</span>
+            </button>
+            <div class="itemsort__drawer">
+              <ul class="itemsort__items">
+                <li class="itemsort__item itemsort__item--active"><a href="#" class="itemsort__item__link">최신순</a></li>
+                <li class="itemsort__item"><a href="#" class="itemsort__item__link">오래된 순</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col_table_wrap end_event_list">
+            <div class="col_table">
+              <div class="col_table_head">
+                <div class="col_table_row">
+                  <div class="col_table_cell">번호</div>
+                  <div class="col_table_cell divide">
+                    <div class="divide_table">
+                      <div class="table_cell">제목</div>
+                      <div class="table_cell">이벤트 기간</div>
+                    </div>
+                  </div>
+                  <div class="col_table_cell">당첨자 발표</div>
+                </div>
+              </div>
+              <div class="col_table_body">
+                <div class="col_table_row">
+                  <div class="col_table_cell event_num">
+                    <p class="txt">10</p>
+                  </div>
+                  <div class="col_table_cell divide">
+                    <div class="divide_table">
+                      <div class="table_cell tal event_name">
+                        <p class="txt">공간을 밝히는 스피커 SRS-XP500  런칭 이벤트</p>
+                      </div>
+                      <div class="table_cell event_duration">
+                        <p class="txt">21.04.08 ~ 21.05.31</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_cell event_result">
+                    <a href="#" class="button button_secondary button-s" type="button">당첨자 발표 확인</a>
+                  </div>
+                </div>
+                <div class="col_table_row">
+                  <div class="col_table_cell event_num">
+                    <p class="txt">9</p>
+                  </div>
+                  <div class="col_table_cell divide">
+                    <div class="divide_table">
+                      <div class="table_cell tal event_name">
+                        <p class="txt">산뜻한 일상의 시작 올인원</p>
+                      </div>
+                      <div class="table_cell event_duration">
+                        <p class="txt">21.04.08 ~ 21.05.31</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_cell event_result">
+                    <p class="txt"><a href="#" class="button button_secondary button-s" type="button">당첨자 발표 확인</a></p>
+                  </div>
+                </div>
+                <div class="col_table_row">
+                  <div class="col_table_cell event_num">
+                    <p class="txt">8</p>
+                  </div>
+                  <div class="col_table_cell divide">
+                    <div class="divide_table">
+                      <div class="table_cell tal event_name">
+                        <p class="txt">산뜻한 일상의 시작 올인원</p>
+                      </div>
+                      <div class="table_cell event_duration">
+                        <p class="txt">21.04.08 ~ 21.05.31</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_cell event_result">
+                    <p class="txt"></p>
+                  </div>
+                </div>
+                <div class="col_table_row">
+                  <div class="col_table_cell event_num">
+                    <p class="txt">7</p>
+                  </div>
+                  <div class="col_table_cell divide">
+                    <div class="divide_table">
+                      <div class="table_cell tal event_name">
+                        <p class="txt">산뜻한 일상의 시작 올인원 스피커 CMT-X3CD</p>
+                      </div>
+                      <div class="table_cell event_duration">
+                        <p class="txt">21.04.08 ~ 21.05.31</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_cell event_result">
+                    <p class="txt"></p>
+                  </div>
+                </div>
+                <div class="col_table_row">
+                  <div class="col_table_cell event_num">
+                    <p class="txt">6</p>
+                  </div>
+                  <div class="col_table_cell divide">
+                    <div class="divide_table">
+                      <div class="table_cell tal event_name">
+                        <p class="txt">산뜻한 일상의 시작 올인원 스피커 CMT-X3CD</p>
+                      </div>
+                      <div class="table_cell event_duration">
+                        <p class="txt">21.04.08 ~ 21.05.31</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_cell event_result">
+                    <p class="txt"></p>
+                  </div>
+                </div>
+                <div class="col_table_row">
+                  <div class="col_table_cell event_num">
+                    <p class="txt">5</p>
+                  </div>
+                  <div class="col_table_cell divide">
+                    <div class="divide_table">
+                      <div class="table_cell tal event_name">
+                        <p class="txt">산뜻한 일상의 시작 올인원</p>
+                      </div>
+                      <div class="table_cell event_duration">
+                        <p class="txt">21.04.08 ~ 21.05.31</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_cell event_result">
+                    <p class="txt"><a href="#" class="button button_secondary button-s" type="button">당첨자 발표 확인</a></p>
+                  </div>
+                </div>
+                <div class="col_table_row">
+                  <div class="col_table_cell event_num">
+                    <p class="txt">4</p>
+                  </div>
+                  <div class="col_table_cell divide">
+                    <div class="divide_table">
+                      <div class="table_cell tal event_name">
+                        <p class="txt">산뜻한 일상의 시작 올인원 스피커 CMT-X3CD</p>
+                      </div>
+                      <div class="table_cell event_duration">
+                        <p class="txt">21.04.08 ~ 21.05.31</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_cell event_result">
+                    <p class="txt"></p>
+                  </div>
+                </div>
+                <div class="col_table_row">
+                  <div class="col_table_cell event_num">
+                    <p class="txt">3</p>
+                  </div>
+                  <div class="col_table_cell divide">
+                    <div class="divide_table">
+                      <div class="table_cell tal event_name">
+                        <p class="txt">산뜻한 일상의 시작 올인원 스피커 CMT-X3CD</p>
+                      </div>
+                      <div class="table_cell event_duration">
+                        <p class="txt">21.04.08 ~ 21.05.31</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_cell event_result">
+                    <p class="txt"><a href="#" class="button button_secondary button-s" type="button">당첨자 발표 확인</a></p>
+                  </div>
+                </div>
+                <div class="col_table_row">
+                  <div class="col_table_cell event_num">
+                    <p class="txt">2</p>
+                  </div>
+                  <div class="col_table_cell divide">
+                    <div class="divide_table">
+                      <div class="table_cell tal event_name">
+                        <p class="txt">산뜻한 일상의 시작 올인원 스피커 CMT-X3CD</p>
+                      </div>
+                      <div class="table_cell event_duration">
+                        <p class="txt">21.04.08 ~ 21.05.31</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_cell event_result">
+                    <p class="txt"><a href="#" class="button button_secondary button-s" type="button">당첨자 발표 확인</a></p>
+                  </div>
+                </div>
+                <div class="col_table_row">
+                  <div class="col_table_cell event_num">
+                    <p class="txt">1</p>
+                  </div>
+                  <div class="col_table_cell divide">
+                    <div class="divide_table">
+                      <div class="table_cell tal event_name">
+                        <p class="txt">산뜻한 일상의 시작 올인원</p>
+                      </div>
+                      <div class="table_cell event_duration">
+                        <p class="txt">21.04.08 ~ 21.05.31</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_cell event_result">
+                    <p class="txt"><a href="#" class="button button_secondary button-s" type="button">당첨자 발표 확인</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn_article">
+              <a href="#" class="more_btn">더보기</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

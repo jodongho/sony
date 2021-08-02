@@ -26,7 +26,7 @@
   }  
 }
 .container .content.esp_page {
-  padding: 0 0 180px 0;
+  padding: 0;
 }
 .espinfo {
   margin: 0 auto;
@@ -832,7 +832,7 @@
 }
 .empty_buy_box {
   margin-top: 80px;
-  padding-top: 144px;
+  padding: 144px 0 264px 0;
   border-top: 2px solid #222;
   text-align: center;  
   .empty_buy_ico {
@@ -853,7 +853,7 @@
     color: #444;
   }    
   @include under-pc {
-    padding: 144px 0 84px;
+    padding: 144px 0 224px 0;
     .button_wrap {
       .button {
         min-width: 200px;
@@ -864,7 +864,7 @@
   }
   @include only-mo {
     margin-top: 40px;
-    padding: 80px 0 120px;
+    padding: 80px 0 120px 0;
     .empty_tit {
       margin-top: 15px;
       font-size: 16px;
@@ -882,7 +882,6 @@
   }
 }
 .esp_tbl_wrap {
-  margin-top: 80px;
   .col_table_cell {
     padding: 16px;
     width: 25%; 
@@ -912,7 +911,6 @@
     }
   }
   @include only-mo {
-    margin-top: 40px;
     .col_table {
       display: block;
     }
@@ -937,8 +935,7 @@
           .prd_date {
             position: relative;
             margin-top: 4px;
-            font-size: 12px;
-            color: #666;            
+            font-size: 12px;           
             &:before {
               font-size: 12px;
               color: #666;
@@ -948,8 +945,7 @@
           .prd_num {
             position: relative;
             margin-top: 4px;            
-            font-size: 12px;
-            color: #666;            
+            font-size: 12px;        
             &:before {
               font-size: 12px;
               color: #666;
@@ -977,5 +973,66 @@
   }
   .list_dot li {
     color: #666;
+  }
+}
+.esp_list_box {
+  margin: 80px 0 160px 0;
+  @include under-pc {
+    margin: 80px 0 120px 0;
+  }
+  @include only-mo {
+    margin: 40px 0 80px 0;
+  }
+}
+.esp_pop {
+  .pop_cont_scroll {
+    overflow-y: hidden;
+    .inner_scroll {
+      overflow-y: scroll;
+      margin-top: 56px;
+      height: 450px;
+      .related_laws {
+        margin-top: 0;
+        .dot_line>li {
+          margin-top: 28px;
+          padding: 0;
+          border: 0;          
+          &:first-child {
+            margin: 0;
+          }
+        }
+        .desc {
+          line-height: 22px;
+        }
+        .tit + ol {
+          margin-top: 4px;
+        }
+      }
+      @include only-mo {
+        height: 300px;
+      }      
+    }
+  }
+  .agree_check_box {
+    margin-top: 32px;
+    text-align: center;
+    label {
+      color: #222;
+      font-size: 14px;
+    }
+    p {
+      margin-top: 16px;
+      color: #666;
+      font-size: 14px;
+    }
+  }
+  @include only-mo {
+    .pop_inner .pop_txt.txt_l {
+    font-size: 14px;
+    line-height: 26px;
+    }
+    .mo {
+        display: block;
+      }
   }
 }
