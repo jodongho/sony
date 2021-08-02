@@ -19,15 +19,78 @@
   <div class="container">
     <div class="content">
 
-      <h1 class="title">{{ia.recommend.title}}</h1>
-
       <div class="reco">
-        <ul class="reco_list">
+        <!-- <style>
+          .example {
+            position: sticky;
+            top: 50vh;
+            width: 100%;
+            height: 100vh;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            transform: translate3d(0, -50%, 0);
+          }
+        </style>
+        <div id="transform" data-500="transform:scale(0) rotate(0deg);" data-1000="transform:scale(1) rotate(1440deg);opacity:1;" data-1600="" data-1700="transform:scale(5) rotate(3240deg);opacity:0;">
+          <h2>transform</h2>
+          <p>scale, skew and rotate the sh** out of any element</p>
+        </div> -->
+        <div class="reco_kv">
+
+          <div class="sticky scrollblock">
+            <h1 class="reco_kv_title">Sony Store<br>Products</h1>
+            <div class="reco_kv_img reco_kv_img-1">
+              <img src="/dist/images/recommend/kv1.jpg" alt="분위기 잡는 사진 1">
+            </div>
+            <div class="reco_kv_img reco_kv_img-2">
+              <img src="/dist/images/recommend/kv2.jpg" alt="분위기 잡는 사진 2">
+            </div>
+            <div class="reco_kv_img reco_kv_img-3">
+              <img src="/dist/images/recommend/kv3.jpg" alt="분위기 잡는 사진 3">
+            </div>
+          </div>
+
+        </div>
+        <!-- <script type="text/javascript">
+          var skrollr = skrollr.init({
+            edgeStrategy: 'set',
+            easing: {
+              WTF: Math.random,
+              inverted: function(p) {
+                return 1-p;
+              }
+            }
+          });
+          </script> -->
+        <script>
+          class Rectangle {
+            constructor(height, width) {
+              this.height = height;
+              this.width = width;
+            }
+            // Getter
+            get area() {
+              return this.calcArea();
+            }
+            // 메서드
+            calcArea() {
+              return this.height * this.width;
+            }
+          }
+
+          const square = new Rectangle(10, 10);
+
+          console.log(square.area); // 100
+        </script>
+        <div class="reco_items">
           {{#each reco.items}}
-          <li class="reco_item">
+          <div class="reco_item">
             <div class="reco_item_inner">
-              <img src="/dist/images/recommend/{{this.img}}" alt="{{this.title}}" class="reco_img">
-              <h3 class="reco_title">{{this.title}}</h3>
+              <a href="#" class="reco_prod">
+                <img src="/dist/images/recommend/{{this.img}}" alt="{{this.title}}" class="reco_prod_img">
+              </a>
+              <h2 class="reco_title">{{this.title}}</h2>
               <p class="reco_desc">{{this.desc}}</p>
               <div class="reco_hashes">
                 {{#each this.hash}}
@@ -35,9 +98,9 @@
                 {{/each}}
               </div>
             </div>
-          </li>
+          </div>
           {{/each}}
-        </ul>
+        </div>
       </div>
 
     </div>

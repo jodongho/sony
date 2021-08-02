@@ -3,19 +3,38 @@
   max-width: 1604px;
 }
 .reco {
-  &_list {
-    display: flex;
-    flex-wrap: wrap;
+  &_kv {
+    &_title {
+      text-align: center;
+      font: 900 104px/1.08 "SSTPro";
+      letter-spacing: normal;
+      color: #222;
+    }
   }
   &_item {
+    &s {
+      display: flex;
+      flex-wrap: wrap;
+    }
     margin-bottom: 96px;
     padding: 12px;
-    &:nth-of-type(1) .reco_item_inner {
+    &:nth-of-type(1) &_inner {
       padding-top: 35px;
     }
-    &:nth-of-type(4) .reco_item_inner,
-    &:nth-of-type(5) .reco_item_inner {
+    &:nth-of-type(4) &_inner,
+    &:nth-of-type(5) &_inner {
       padding-top: 120px;
+    }
+  }
+  &_prod {
+    display: block;
+    overflow: hidden;
+    &_img {
+      object-fit: cover;
+      transition: transform .2s $easeOutCubic;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
   &_title {
