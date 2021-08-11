@@ -2,6 +2,9 @@
 
 /* mypage */
 .my{
+  .container .content { 
+    padding-top: 80px;
+  }
   .cont{
     .cont_head{
       position:relative;
@@ -1735,6 +1738,9 @@
 
 @include only-mo {
   .my{
+    .container .content { 
+      padding: 40px 0 80px;
+    }    
     .cont{
       .cont_tit{
         margin-top:36px;

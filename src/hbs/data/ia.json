@@ -365,37 +365,65 @@
       "myPageMain": {
         "title": "마이페이지",
         "url": "/dist/html/mypage/myPageMain.html",
-        "desc": "마이페이지 초기 화면"
+        "desc": "마이페이지 초기 화면",
+        "date": {
+          "done": "07-22",
+          "modify": ""
+        }        
       },
       "myPageMember": {
         "title": "회원정보",
         "url": "/dist/html/mypage/myPageMember.html",
-        "desc": "회원정보"
+        "desc": "회원정보",
+        "date": {
+          "done": "07-22",
+          "modify": ""
+        }           
       },
       "orderList": {
         "title": "주문/배송내역",
         "url": "/dist/html/mypage/orderList.html",
-        "desc": "주문/배송내역 목록"
+        "desc": "주문/배송내역 목록",
+        "date": {
+          "done": "07-22",
+          "modify": ""
+        }           
       },
       "orderDetail": {
         "title": "주문 상세 조회",
         "url": "/dist/html/mypage/orderDetail.html",
-        "desc": "주문 상세 조회"
+        "desc": "주문 상세 조회",
+        "date": {
+          "done": "07-22",
+          "modify": ""
+        }           
       },
       "rename": {
         "title": "개명 회원 본인 확인",
         "url": "/dist/html/mypage/rename.html",
-        "desc": "개명 회원 본인 확인"
+        "desc": "개명 회원 본인 확인",
+        "date": {
+          "done": "07-22",
+          "modify": ""
+        }           
       },
       "withdraw": {
         "title": "회원 탈퇴",
         "url": "/dist/html/mypage/withdraw.html",
-        "desc": "회원탈퇴 폼"
+        "desc": "회원탈퇴 폼",
+        "date": {
+          "done": "07-22",
+          "modify": ""
+        }           
       },
       "withdrawComplete": {
         "title": "회원 탈퇴 신청 완료",
         "url": "/dist/html/mypage/withdrawComplete.html",
-        "desc": "회원탈퇴 신청 완료"
+        "desc": "회원탈퇴 신청 완료",
+        "date": {
+          "done": "07-22",
+          "modify": ""
+        }           
       }
     }
   },
@@ -446,5 +474,48 @@
         "desc": "임직원 로그인 페이지"
       }
     }
-  }
+  },
+  "support": {
+    "title": "고객 서비스",
+    "url": "/dist/html/support/faq.html",
+    "classname": "support",
+    "length": "8",
+    "submenu": {
+      "faq": {
+        "title": "자주하는 질문",
+        "url": "/dist/html/support/faq.html",
+        "desc": "자주하는 질문 리스트"
+      },
+      "noticeList": {
+        "title": "공지사항",
+        "url": "/dist/html/support/noticeList.html",
+        "desc": "공지사항 리스트"
+      },
+      "notice": {
+        "title": "공지사항",
+        "url": "/dist/html/support/notice.html",
+        "desc": "공지사항 상세"
+      },
+      "agreement": {
+        "title": "구매상담 이용약관 동의",
+        "url": "/dist/html/support/agreement.html",
+        "desc": "이용약관 동의"
+      }, 
+      "individual": {
+        "title": "구매상담 안내",
+        "url": "/dist/html/support/purchaseConsulting.html",
+        "desc": "구매상담 안내 (개인/기업)"
+      },          
+      "storeInfo": {
+        "title": "직영점 안내",
+        "url": "/dist/html/support/storeInfo.html",
+        "desc": "직영점 안내"
+      },
+      "videoCourse": {
+        "title": "동영상 강좌",
+        "url": "/dist/html/support/videoCourse.html",
+        "desc": "동영상 강좌"
+      }
+    }
+  }  
 }

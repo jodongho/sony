@@ -66,7 +66,7 @@
     background-image: url("/dist/images/category/bg_cat_ps.jpg");
   }
   &__name {
-    margin-bottom: 46px;
+    margin-bottom: 40px;
     padding: 0 24px;
     font-weight: 700;
     font-size: 80px;
@@ -331,7 +331,8 @@
     min-height: 400px;
     padding: 145px 0 157px;
     &__name {
-      font-size: 86px;
+      margin-bottom: 32px;
+      font-size: 70px;
     }
     &__back {
       font-size: 24px;

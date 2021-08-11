@@ -26,9 +26,9 @@
             <li class="swiper-slide"><img src="/dist/images/product/productView_colorType_fc5227_thumb_01.png" alt=""></li>
             <li class="swiper-slide"><img src="/dist/images/product/productView_colorType_fc5227_thumb_02.png" alt=""></li>
             <li class="swiper-slide"><img src="/dist/images/product/productView_colorType_fc5227_thumb_03.png" alt=""></li>
-            <!-- 
+            <!--
               여러 색상일 경우.
-              productView_colorType_fc5227_thumb_01 이미지 명 : colorType_ 와 _thumb 사이 값으로 교체. = fc5227  
+              productView_colorType_fc5227_thumb_01 이미지 명 : colorType_ 와 _thumb 사이 값으로 교체. = fc5227
               .circle_color_box > .c_bg의 data-slide-img-type 값과 동일하게 적용.
             -->
           </ul>
@@ -42,7 +42,7 @@
       <form action="">
       <div class="product_view_about"><!-- class :  soldout-품절, restock-재입고 텍스트 색상 변경을 위함 -->
           <div class="cont">
-            <span class="flag new">NEW</span><!-- class : new / event / best / hot --> 
+            <span class="flag new">NEW</span><!-- class : new / event / best / hot -->
             <p class="product_tit">WF-SP800N</p>
             <p class="product_txt">모든 순간에 몰입하다</p>
             <p class="product_desc">이 제품은 예약 주문 상품으로 구매 후 1주일 뒤에 발송됩니다</p>
@@ -176,7 +176,7 @@
                 </div>
               </div>
               <div class="selected_opt"> <!-- 선택한 제품 -->
-                <!-- s : 상품 등록 예시 태그 구조  
+                <!-- s : 상품 등록 예시 태그 구조
                 <div class="opt_info">
                   <p class="opt_tag">제품</p>
                   <div class="opt_item">
@@ -217,9 +217,9 @@
                     <p class="opt_price"><strong class="price">219,000</strong>원</p>
                   </div>
                   <a href="#" class="prd_delete">구매 목록에서 삭제</a>
-                </div 
-                // e : 상품 등록 예시 태그 구조 -->        
-              </div> 
+                </div
+                // e : 상품 등록 예시 태그 구조 -->
+              </div>
             </div>
             <div class="result_list">
               <div class="result_chk_box">
@@ -237,10 +237,10 @@
                     <a href="#" class="btn_style direct" style="background-color:#000;">바로 구매하기</a>
                     <a href="#" class="btn_style disabled" style="display:none; background-color:#ddd;">품절</a>
                     <a href="#" class="btn_style reservation" style="display:none; background-color:#5865F5;">예약구매</a>
-                    <!--  
+                    <!--
                       * 버튼 참고
                       btn_style : 기본 버튼 스타일
-                      class 추가 
+                      class 추가
                       direct : 바로 구매하기
                       disabled : 일시 품절, 품절 (선택불가)
                       reservation : 예약구매, 재입고 알림 신청
@@ -436,7 +436,7 @@
               </div>
               <!--// 상품 이름-->
             </div>
-          </li>                                                                        
+          </li>
         </ul>
         <div class="swiper-button-next">다음</div>
         <div class="swiper-button-prev">이전</div>
@@ -444,61 +444,27 @@
     </div>
     <!-- 기획전 배너 슬라이드 + SNS 이동 배너 -->
     <div class="product_cont full">
-      <div class="exhibitions_slider swiper-container">
-        <ul class="swiper-wrapper">
-          <li class="swiper-slide">
-            <div class="exhibitions_box">
-              <img class="bg_img" src="/dist/images/product/banner_thumb_01.png" alt=""><!-- 슬라이드 배경 -->
-              <div class="txt_box">
-                <span class="tag" style="color:#5865f5;">기획전</span>
-                <p class="tit">원핸드 컴팩트 풀프레임<br>G 렌즈 예약판매</p>
-              </div>
-            </div>
-          </li>
-          <li class="swiper-slide">
-            <div class="exhibitions_box">
-              <img class="bg_img" src="/dist/images/product/banner_thumb_01.png" alt="">
-              <div class="txt_box">
-                <span class="tag" style="color:#5865f5;">기획전</span>
-                <p class="tit">원핸드 컴팩트 풀프레임<br>G 렌즈 예약판매</p>
-              </div>
-            </div>
-          </li>
-          <li class="swiper-slide">
-            <div class="exhibitions_box">
-              <img class="bg_img" src="/dist/images/product/banner_thumb_01.png" alt="">
-              <div class="txt_box">
-                <span class="tag" style="color:#5865f5;">기획전</span>
-                <p class="tit">원핸드 컴팩트 풀프레임<br>G 렌즈 예약판매</p>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <div class="arrow_btn">
-          <a class="arrow swiper-button-prev"><img src="/dist/images/common/arrow_19_34.png" alt="이전"></span></a>
-          <a class="arrow swiper-button-next"><img src="/dist/images/common/arrow_19_34.png" alt="다음"></span></a>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
+      <!-- 기획전 이벤트 배너 -->
+      {{>fullSliderBanner}}
     </div>
     <div class="product_cont full">
       <div class="relation_link">
         <ul class="link_inner">
           <li>
             <a href="https://www.sony.co.kr/alpha/handler/NAlpha-Main" class="link_btn" target="_blank" title="새 창 열림">
-              <i class="ico"><img src="/dist/images/product/ico__relation_alpha.png" alt=""></i> 
+              <i class="ico"><img src="/dist/images/product/ico__relation_alpha.png" alt=""></i>
               <span class="link_txt">소니 알파 사이트</span>
             </a>
           </li>
           <li>
             <a href="https://www.youtube.com/user/sonystyleblog" class="link_btn" target="_blank" title="새 창 열림">
-              <i class="ico"><img src="/dist/images/product/ico__relation_youtube.png" alt=""></i> 
+              <i class="ico"><img src="/dist/images/product/ico__relation_youtube.png" alt=""></i>
               <span class="link_txt">소니코리아 공식 유튜브</span>
             </a>
           </li>
           <li>
             <a href="https://www.sony.co.kr/electronics/support" class="link_btn" target="_blank" title="새 창 열림">
-              <i class="ico"><img src="/dist/images/product/ico__relation_download.png" alt=""></i> 
+              <i class="ico"><img src="/dist/images/product/ico__relation_download.png" alt=""></i>
               <span class="link_txt">매뉴얼 다운로드</span>
             </a>
           </li>
@@ -740,8 +706,8 @@
       </div>
       <button href="#" class="layer_close close" title="팝업창 닫기">
         <span>팝업창 닫기</span>
-      </button>        
-    </div>    
+      </button>
+    </div>
   </div>
 </div>
 <!-- // e: 공유하기 팝업 -->
@@ -755,7 +721,7 @@
         <a href="#" class="btn close white">쇼핑 계속하기</a>
         <a href="#" class="btn cart">장바구니 이동</a>
       </div>
-    </div>    
+    </div>
   </div>
 </div>
 <!-- // e: 장바구니 담기 팝업 -->
@@ -770,7 +736,7 @@
         <a href="#" class="btn close white">쇼핑 계속하기</a>
         <a href="#" class="btn cart">로그인</a>
       </div>
-    </div>    
+    </div>
   </div>
 </div>
 <!-- // e: 선물하기 팝업 -->
@@ -779,10 +745,10 @@
 </html>
 
 <script type="text/javascript">
-  
+
 $(function(){
 
-  
+
   const productView = () => {
     let $prdViewWrap = $('.product_view_wrap'),
         $productSlider = $prdViewWrap.find('.view_slider');
@@ -816,12 +782,12 @@ $(function(){
               _slideSrc = $slideImg.attr("src"),
               _colorStart = _slideSrc.indexOf("colorType_"),
               _colorEnd = _slideSrc.indexOf("_thumb");
-          
+
           $slideImg.attr("src", _slideSrc.split(_slideSrc.substr(_colorStart,_colorEnd - _colorStart)).join("colorType_"+_colorType));
           productSwiper.update();
         });
         /* 이미지 전체 경로 -> 파일명 -> colorType_fc5227 부분만 교체
-        ex) 
+        ex)
         /dist/images/product/productView_  colorType_fc5227  _thumb_01.png
         /dist/images/product/productView_  colorType_변경된컬러값  _thumb_01.png
         */
@@ -833,14 +799,14 @@ $(function(){
     }
     colorSelectChange();
   };
-  
+
   const slideHeightChk = (e) => {
     let _baseW = $(window).outerWidth(),
         _baseH = $(window).outerHeight(),
         _headerH = $('.header').height(),
         _setH = _baseH;
-      
-    if(_baseW > 1280){ 
+
+    if(_baseW > 1280){
       if(_baseH - _headerH  < 500 ){ // 최소 보정 값
         _baseH = 500;
       }
@@ -850,20 +816,20 @@ $(function(){
     }
   }
 
-  // selectbox  
+  // selectbox
   const selectBox = (e) => {
     for(let _selectNum = 0 ; _selectNum < $('.select_zone').length ; _selectNum++){
       let $currentS = $('.select_zone').eq(_selectNum);
       if($currentS.hasClass("disabled") == false) {
-        $currentS.addClass("selectOn"); 
+        $currentS.addClass("selectOn");
       }
     }
-    
+
     let $selectOn = $('.selectOn'),
         $prdSelect = $('.selected_btn');
 
-    iniPush(); 
-    function iniPush(){ 
+    iniPush();
+    function iniPush(){
       if($(window).width() > 1280){ // 초기 접속 시 PC에서 처음 상품 등록
         iniInput();
       }
@@ -872,7 +838,7 @@ $(function(){
             $optList = $firstSelect.find('.select_opt .opt_list'),
             $optTagName = $firstSelect.find('.prd_tag').text(),
             _iniArr = [[$optTagName]];
-        
+
         for( let _optChk =0; _optChk < $optList.length; _optChk++){
           let $forOtp = $optList.eq(_optChk);
           if($forOtp.hasClass("disabled") == false){
@@ -885,10 +851,10 @@ $(function(){
       }
     }
 
-    $prdSelect.on("click", function(_thisEvent){ // 제품 및 사은품 선택 
+    $prdSelect.on("click", function(_thisEvent){ // 제품 및 사은품 선택
       let $thisSelect = $(this).closest('.select_zone'),
           $selectList = $thisSelect.find('.select_inner');
-      
+
       if($thisSelect.hasClass("disabled")) { // 클릭 막기
         _thisEvent.preventDefault
         return false;
@@ -903,7 +869,7 @@ $(function(){
           $thisSelect.siblings().find('.select_inner').hide();
           $selectList.slideDown(200);
         }
-        optSelect($thisSelect);     
+        optSelect($thisSelect);
         selectClosed($thisSelect); // 다른 영역 클릭 시 닫기
       }
       return false;
@@ -924,7 +890,7 @@ $(function(){
           _thisEvent.preventDefault
           return false;
         }
-        
+
         $openBtn.html(_optClone);
         for(let _indexChk =0; _indexChk < _currentIndex;_indexChk++){ // select 수량 체크에서 disabled 제외
           let _disabledSize = 0;
@@ -934,12 +900,12 @@ $(function(){
           _currentIndex = _currentIndex - _disabledSize;
         }
 
-        if(_currentIndex >= $selectSize){ // select 마지막 선택 시 입력 
-          if($(window).width() <= 1280){ 
+        if(_currentIndex >= $selectSize){ // select 마지막 선택 시 입력
+          if($(window).width() <= 1280){
             $('.selected_opt').addClass("on");
             $('.result_list').addClass("on");
           }
-          dataPush(); 
+          dataPush();
         }
 
         function dataPush(){ // 선택된 selectbox 값 입력
@@ -971,11 +937,11 @@ $(function(){
       });
     }
   } // e: selectBox
-  
+
   const productAdd = (_data) => { // 선택 제품 리스트에 추가
     let $selectedList = $('.selected_opt'),
         $optInfoLast ="",
-        _prdPrice = $('.product_price .price').text(); // 상품 금액 가져오기 
+        _prdPrice = $('.product_price .price').text(); // 상품 금액 가져오기
     let _optBoxArr = [
       ['<div class="opt_info"></div>'],
       ['<p class="opt_tag"></p><div class="opt_item"></div>'],
@@ -987,7 +953,7 @@ $(function(){
     for(let _infoPush = 0 ; _infoPush < _data.length ;_infoPush++ ){
       $optInfoLast.append(_optBoxArr[1]);
       $optInfoLast.find('.opt_tag:last').html(_data[_infoPush][0]); // 선택 된 타입 : 제품, 사은품, 옵션
-      $optInfoLast.find('.opt_item:last').html(_data[_infoPush][1]); // 선택 된 제품 및 옵션 
+      $optInfoLast.find('.opt_item:last').html(_data[_infoPush][1]); // 선택 된 제품 및 옵션
     }
     $optInfoLast.append(_optBoxArr[2]); // 수량 버튼 박스 및 가격 영역 생성
     prdCount($optInfoLast); // 수량 클릭 이벤트
@@ -999,8 +965,8 @@ $(function(){
       return false;
     });
 
-    function moOptListChk(){ // TB, MO 선택된 상품 없을 시 목록 및 총 수량, 가격 정보 숨김 
-      if($(window).width() <= 1280){ 
+    function moOptListChk(){ // TB, MO 선택된 상품 없을 시 목록 및 총 수량, 가격 정보 숨김
+      if($(window).width() <= 1280){
         let _optSize = $selectedList.find('.opt_info').length;
         if(_optSize <= 0){
           $selectedList.removeClass("on");
@@ -1045,11 +1011,11 @@ $(function(){
     let $selectedBox = $('.selected_opt');
         _allCount = 0,
         _allPrice = 0;
-    
+
     $selectedBox.find('.opt_info').each(function(optIndex, optEl){ // 선택 된 목록에 있는 상품
       let _thisCount = parseInt($(optEl).find('.count').val()),
-          _thisPrice = parseInt($(optEl).find('.price').text().split(",").join('')); // 금액 콤마 제거 
-        
+          _thisPrice = parseInt($(optEl).find('.price').text().split(",").join('')); // 금액 콤마 제거
+
       _allCount += _thisCount;
       _allPrice += _thisPrice;
     });
@@ -1085,22 +1051,22 @@ $(function(){
     });
 
     // 바로 구매하기
-    $('.btn_style').on("click", function(){ 
+    $('.btn_style').on("click", function(){
 
       if($(this).hasClass("disabled")){ // 품절 제품 막기
         _thisEvent.preventDefault
         return false;
       }else if($(this).hasClass("direct")){ // 바로구매 가능할떄 버튼
-        if($(window).width() <= 1280){ 
+        if($(window).width() <= 1280){
           directMo();
         }else{
           directPC();
         }
       }else{ // 재입고 알림, 예약 구매 등
-        
+
       }
 
-      function directMo(){ // TB,MO 바로구매 버튼 기능 
+      function directMo(){ // TB,MO 바로구매 버튼 기능
         let $selWrap = $('.prd_select_wrap');
         if($selWrap.hasClass("view") == false){
           directOnOff(true);
@@ -1117,7 +1083,7 @@ $(function(){
     });
   }
 
-  function directOnOff(_OnOff){ // 바로 구매하기 TB, Mo 비/노출 
+  function directOnOff(_OnOff){ // 바로 구매하기 TB, Mo 비/노출
     if(_OnOff){
       $('.prd_select_wrap').addClass("view");
       $('body').addClass("no_scroll");
@@ -1133,7 +1099,7 @@ $(function(){
     // 함께 구매하시면 좋은 추천 제품
     let togetherSwiper = new Swiper(".together_prd_slider", {
       slidesPerView: 2,
-      spaceBetween: 10,      
+      spaceBetween: 10,
       navigation : {
         nextEl : '.swiper-button-next',
         prevEl : '.swiper-button-prev',
@@ -1143,43 +1109,11 @@ $(function(){
         768: {
           slidesPerView: 3,
           spaceBetween: 10
-        },        
+        },
         1200: {
           slidesPerView: 4,
           spaceBetween: 24,
-        }          
-      }
-    });
-
-    // 기획전
-    let $exhibitionsSlider = $('.exhibitions_slider');
-    let exhibitionsSwiper = new Swiper($exhibitionsSlider[0], {
-      slidesPerView: 1,
-      loop: true,
-      navigation : {
-        nextEl : '.swiper-button-next',
-        prevEl : '.swiper-button-prev',
-      },
-      pagination: {
-        el: $exhibitionsSlider.find('.swiper-pagination')[0],
-        type: "custom",
-        renderCustom: (swiper, current, total) => {
-          let _current = current;
-          let _total = total;
-          if (current < 10) _current = "0" + current;
-          if (total < 10) _total = "0" + total;
-          return "<span class='swiper-pagination-current'>"+_current+"</span> / " +
-          "<span class='swiper-pagination-total'>"+_total+"</span>";
-        },
-      },
-      on: {
-        init: swiper => {
-          swiper.slides.forEach(e => {
-            let _bgSrc= e.querySelector('.bg_img').getAttribute("src"),
-                $bgBox = e.querySelector('.exhibitions_box');
-            $bgBox.setAttribute("style", "background:url('"+_bgSrc+"') no-repeat center top;");
-          });
-        },
+        }
       }
     });
   }
@@ -1202,9 +1136,9 @@ $(function(){
       $linkList.css("width", "auto");
     }
   }
-  
-  
-/* 
+
+
+/*
   (테스트용) 임시 주석 추후 삭제 : 제품 개요 iframe 페이지 내 이전
   const prdDetail = (e) =>{
     $('.detail_main_view').siblings().hide(); // 상세 메인 외 보여지는 이미지 외 숨김.
@@ -1234,10 +1168,10 @@ $(function(){
     });
   }
 
-  const imgChange = (e) => { // 제품 개요 이미지 
+  const imgChange = (e) => { // 제품 개요 이미지
     let $detailWrap = $('.detail_box'),
         $imgBox = $detailWrap.find('.img');
-    
+
     $imgBox.each(function(_index, _el){
       let _thisImg = $(_el).find('img'),
           _src =  _thisImg.attr("src"),
@@ -1282,7 +1216,7 @@ $(function(){
 
     // TB,Mo 사이즈에서 바로 구매 - 선택 목록 열려 있는 상태에서 PC 사이즈로 왔을경우 초기화
     if(_windowW > 1280 && $('.prd_select_wrap').hasClass("view") == true){
-      directOnOff(); // 
+      directOnOff(); //
     }
 
     slideHeightChk();
@@ -1297,15 +1231,15 @@ $(function(){
   resultBtn();  // 찜하기, 장바구니, 구매 버튼
   prdEtcSlider(); // 슬라이드 관련
   relationLink(); // 배너 링크 영역
-  
+
   productEtc(); // 기타
 
   // 임시 주석 추후 삭제 - iframe 페이지 내에서 필요.
-  // prdDetail(); // 제품 개요 
+  // prdDetail(); // 제품 개요
   // imgChange(); // PC, MO 이미지 명 변경
 });
 
-$(window).on("load",function(){ 
+$(window).on("load",function(){
   iframeSetting();
 });
 

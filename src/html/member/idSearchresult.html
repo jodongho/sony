@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
 <title>{{ia.member.submenu.idSearch.title}}</title>
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
 <link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
 <link rel="stylesheet" href="/dist/css/contents.css">
 <script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
@@ -40,7 +42,7 @@
                 </a>
               </li>
             </ul>
-          </div>     
+          </div>
           <div class="result_cont tab2 on">
             <div class="id_result">
               <span class="ico_id_result"></span>
@@ -48,9 +50,9 @@
               <p class="mailaddress">SONYdfjhkahfkjheakjhfakje@**************</p>
               <div class="btn_box full">
                 <a href="#" class="btn btn_dark">로그인</a>
-              </div>               
-            </div>                      
-          </div>               
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -61,23 +63,23 @@
     /* 타이머 */
     var initMinute;  // 최초 설정할 시간(min)
     var remainSecond;  // 남은시간(sec)
-    
+
     $(document).ready(function(){
-      clearTime(3); // 세션 만료 적용 시간 
+      clearTime(3); // 세션 만료 적용 시간
       setTimer();    // 문서 로드시 타이머 시작
     });
-    
+
     function clearTime(min){ // 타이머 초기화 함수
-      initMinute = min; 
-      remainSecond = min*60; 
+      initMinute = min;
+      remainSecond = min*60;
     }
-    
-    function setTimer(){ // 1초 간격으로 호출할 타이머 함수 
-    
+
+    function setTimer(){ // 1초 간격으로 호출할 타이머 함수
+
       // hh : mm 으로 남은시간 표기하기 위한 변수
       remainMinute_ = parseInt(remainSecond/60);
       remainSecond_ = remainSecond%60;
-    
+
       if(remainSecond > 0){
           $("#timer").empty();
           $("#timer").append(Lpad(remainMinute_,2) + ":" + Lpad(remainSecond_,2));    // hh:mm 표기
@@ -85,7 +87,7 @@
           setTimeout("setTimer()",1000); //1초간격으로 재귀호출!
       }else{
           //alert('시간이 초과되었습니다.');
-          /*세션 종료시 작동할 이벤트*/ 
+          /*세션 종료시 작동할 이벤트*/
       }
     }
     function Lpad(str,len){  // hh mm형식으로 표기하기 위한 함수
@@ -94,8 +96,8 @@
           str = "0"+str;
       }
       return str;
-    } 
-  
+    }
+
 </script>
 </body>
 </html>

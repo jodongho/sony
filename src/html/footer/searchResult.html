@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
 <title>{{ia.footer.submenu.searchResult.title}}</title>
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
 <link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
 <link rel="stylesheet" href="/dist/css/contents.css">
 <!-- category.css 임시, 추후 contents.css에 merge 예정 -->
@@ -52,7 +54,7 @@
           </li>
           <li class="swiper-slide">
             <a href="#">공지사항 (2)</a>
-          </li>                                      
+          </li>
         </ul>
         <div class="swiper-button-prev">
           <a href="#" title="메뉴 더보기">메뉴 더보기</a>
@@ -62,7 +64,7 @@
         </div>
       </div>
       <!--//스와이퍼 탭영역 -->
-      <!-- 제품 리스트 영역 -->      
+      <!-- 제품 리스트 영역 -->
       <div class="product">
         <div class="section_top">
           <h2 class="title">제품<span>(60)</span></h2>
@@ -148,7 +150,7 @@
               <span class="product__price__num">2,890,900</span>
               <span class="product__price__unit">원</span>
             </div>
-          </div>          
+          </div>
           <div class="product">
             <span class="badge__text badge__text__hot">HOT</span>
             <div class="product__pic">
@@ -356,7 +358,7 @@
               <span class="product__price__num">2,890,900</span>
               <span class="product__price__unit">원</span>
             </div>
-          </div>          
+          </div>
           <div class="product">
             <span class="badge__text badge__text__hot">HOT</span>
             <div class="product__pic">
@@ -537,7 +539,7 @@
         <!-- 기획전 리스트 영역 -->
         <div class="section_top">
           <h2 class="title">기획전<span>(6)</span></h2>
-          {{>boardsort}}         
+          {{>boardsort}}
         </div>
         <ul class="product_List grid">
           <li>
@@ -565,7 +567,7 @@
                 <dd>2021. 05. 10 ~ 2021. 05. 23</dd>
               </dl>
             </div>
-          </li> 
+          </li>
           <li>
             <div class="grid_inner">
               <div class="grid_img">
@@ -617,7 +619,7 @@
                 <dd>2021. 05. 10 ~ 2021. 05. 23</dd>
               </dl>
             </div>
-          </li>                                                                      
+          </li>
         </ul>
         <!-- 더보기 버튼영역 -->
         <div class="btn_area">
@@ -645,7 +647,7 @@
               <a href="#none">
                 <span>제품</span><span>오디오</span><span>헤드폰&#47;이어폰</span><strong class="keword">헤드폰 엠프헤드폰</strong>
               </a>
-            </li>                        
+            </li>
           </ul>
         </div>
         <!-- 더보기 버튼영역 -->
@@ -657,24 +659,24 @@
         <!-- 공지사항 리스트 영역 -->
         <div class="section_top">
           <h2 class="title">공지사항<span>(5)</span></h2>
-          {{>boardsort}}      
+          {{>boardsort}}
         </div>
         <div class="result_list">
           <ul class="noti">
             <li>
               <a href="#none">
-                <span class="num">29240</span>              
+                <span class="num">29240</span>
                 <span class="tit">아이유와 함께하는 MDR HRA <strong class="keword">헤드폰</strong> 정품등록 이벤트 당첨자 발표</span>
                 <span class="date">2015. 08. 11</span>
               </a>
-            </li>       
+            </li>
             <li>
               <a href="#none">
-                <span class="num">29240</span>              
+                <span class="num">29240</span>
                 <span class="tit">소니 <strong class="keword">헤드폰</strong> 썸머 페스티발 당첨자 발표</span>
                 <span class="date">2015. 08. 11</span>
               </a>
-            </li>                               
+            </li>
           </ul>
         </div>
         <!-- 더보기 버튼영역 -->
@@ -682,7 +684,7 @@
           <button type="button" class="btn_more" title="공지사항 더보기">더보기<span class="ico_plus"></span></button>
         </div>
         <!--// 더보기 버튼영역 -->
-        <!-- 공지사항 리스트 영역 -->        
+        <!-- 공지사항 리스트 영역 -->
       </div>
       <script type="text/javascript">
         //카테고리 tab swiper
@@ -694,7 +696,7 @@
               navigation: {
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
-            },        
+            },
             slidesPerView: "auto",
             freeMode: true,
           };
@@ -707,7 +709,7 @@
               mySwiper = undefined;
             } else if (winWidth < 1281 && mySwiper === undefined) {
               mySwiper = new Swiper(".swipe_tab", swiperOption);
-              //recommendSwiper = new Swiper(".recommned_swiper", swiperOption2);        
+              //recommendSwiper = new Swiper(".recommned_swiper", swiperOption2);
             }
           }
           slideMake();

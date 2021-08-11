@@ -112,6 +112,18 @@ em.color{
     text-decoration: underline;
   }
 }
+.pc_none{
+  display:none;
+  @include only-mo { // 640
+    display:block;
+  }
+}
+.mo_none{
+  display:block;
+  @include only-mo { // 640
+    display:none;
+  }
+}
 .skipnav {
   overflow: hidden;
   position: fixed;
@@ -2625,11 +2637,11 @@ body {
 .list_dot {
   li {
     position: relative;
-    margin-top:4px;  /* 202107 재택 수정 */
+    margin-top:4px;
     padding-left: 8px;
     font-size: 14px;
     color: #444;
-    line-height: 22px; /* 202107 재택 수정 */
+    line-height: 22px;
     &:before{
       display: inline-block;
       position: absolute;
@@ -2640,6 +2652,24 @@ body {
     @include only-mo {
       font-size: 12px;
       line-height: 22px;
+    }
+    &.bar{
+      padding-left:9px;
+      &:before{
+        top:11px;
+        width:4px;
+        height:1px;
+        background:#666;
+        content:"";
+      }
+      &.strong{
+        &:before{
+          height:2px;
+        }
+      }
+    }
+    &.strong{
+      font-weight:700;
     }
   }
 }
@@ -2739,7 +2769,7 @@ body {
       color:#bbb;
       pointer-events: none;
     }
-    &.not_opt{ /* 202107 재택 수정 */
+    &.not_opt{
       color:#888;
     }
   }
@@ -2816,7 +2846,6 @@ body {
   &_arrow{
     display:inline-block;
     text-indent:-9999px;
-
     &:before{
       display:block;
       position:absolute;
@@ -2878,6 +2907,23 @@ body {
       }
     }
   }
+  @include only-mo {
+    &_arrow{
+      &:before{
+        right:21px;
+        width:9px;
+        height:2px;
+      }
+      &:after{
+        right:16px;
+        width:9px;
+        height:2px;
+      }
+    }
+  }
+}
+.pop_txt + .chk_select_zone {
+  margin-top: 56px;
 }
 .chk_select_zone{
   border-top:2px solid #222;
@@ -2964,6 +3010,9 @@ body {
     right: 5px;
     transform: translateY(-50%) rotate(135deg);
   }
+  .btn_article + .txt_l {
+    margin-top: 40px;
+  }
 }
 .chk_select_info{
   padding-left:46px;
@@ -3014,7 +3063,7 @@ body {
   }
   .dot_line{
     > li{
-      margin-top:30px;  /* 202107 재택 수정 */
+      margin-top:30px;
       padding-top:28px;
       border-top:2px dotted #ddd;
       &:first-child{
@@ -3104,6 +3153,63 @@ body {
     }
   }
 }
+// pop - 세금계산서
+.tax_invoice1, .tax_invoice2{
+  .pop_tit{
+    margin-bottom: 30px;
+    letter-spacing: -0.6px;
+  }
+  .pop_txt{
+    .under_line{
+      color:#000;
+    }
+  }
+  .input_item{
+    margin-top:24px;
+    &:first-child{
+      margin-top:0;
+    }
+  }
+  .input_tit{
+    width:140px;
+    padding-top:13px;
+    .tit{
+      font-size:14px;
+    }
+  }
+  .input_box{
+    width:calc(100% - 140px);
+  }
+  .input{
+    padding:13px 0 13px 0
+  }
+  .input_col_type{
+    width:calc(100% - 140px);
+    .input_tit{
+      width:40px;
+      .tit{
+        font-weight:normal;
+      }
+    }
+    .input_box{
+      width:calc(100% - 40px);
+    }
+  }
+  @include only-mo {
+    .input_tit,
+    .input_box,
+    .input_col_type {
+      float: none;
+      width: 100%;
+    }
+    .input_col_type {
+      .input_tit,
+      .input_box {
+        float: left;
+      }
+    }
+  }
+}
 
 // 팝업
 .popup_wrap{
@@ -3142,7 +3248,6 @@ body {
       }
     }
   }
-  /* e: 202107 재택 수정 */
   .btn_article{
     margin-top:40px;
     text-align:center;
@@ -3306,7 +3411,6 @@ body {
   opacity: 0.5;
   z-index: 990;
 }
-
 // tab
 .tab_ui {
   text-align:center;
@@ -3380,7 +3484,7 @@ body {
         content:"";
       }
     }
-    &.on .btn, &.swiper-slide-active .btn, .btn:hover, .btn:focus {
+    &.on .btn, .btn:hover, .btn:focus {
       font-weight:500;
       color:#5865f5;
       &:after{
@@ -3739,11 +3843,6 @@ body {
     }
   }
 }
-/* 202107 재택 수정 - th
-  임시로 아래 추가하였습니다.
-  7월말~8월초 출근하는날 합쳐놓겠습니다
-*/
-/* common.scss */
 // calendar + Datepicker Style
 .calendar_box {
   position: relative;
@@ -3874,6 +3973,9 @@ body {
   width:100%;
   max-width:1200px;
   margin:0 auto;
+}
+.txt_l + .guide_list {
+  margin-top: 40px;
 }
 .guide_list{
   .tit{
@@ -4090,3 +4192,230 @@ body {
     }
   }
 }
+/* 더보기 */
+.comm_more{
+  text-align:center;
+  &.line{
+    border-top:1px solid #ddd;
+  }
+  .more_btn{
+    display: inline-block;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+    &:after {
+      margin-left: 8px;
+      content: "+";
+    }
+  }
+  @include only-mo {
+    .more_btn{
+      padding:13px 16px;
+      font-size:14px;
+      &:after{
+        font-size:18px;
+      }
+    }
+  }  
+}
+/* 공유하기 팝업 */
+.pop_share{
+  .pop_inner {
+    .pop_tit{
+      margin-bottom:24px;
+      line-height:24px; 
+    }
+  }
+  .copy_box{
+    display:flex;
+  }
+  .copy_txt{
+    overflow:hidden;
+    display:inline-block;
+    width:329px;
+    height:40px;
+    padding:0 10px;
+    border:1px solid #ddd;
+    background:#fff;
+    font-size:14px;
+    line-height:40px;
+    letter-spacing:-0.5px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    color:#444;
+  }
+  .copy_url{
+    display:inline-block;
+    width:77px;
+    height:40px;
+    background:#03010f;
+    font-size:14px;
+    letter-spacing:-0.35px;
+    line-height:40px;
+    text-align:center;
+    color:#fff;
+  }
+  .share_list{
+    margin-top:28px;
+    &>ul:after {
+      display:block;
+      clear:both;
+      content:"";
+    }
+    .lists{
+      float:left;
+      width:calc(100%/4);
+      &:nth-child(4) ~ li{
+        margin-top:30px;
+      }
+    }
+    .share_btn{
+      display:block;
+      position:relative;
+      padding-top:64px; 
+      font-size:14px;
+      text-align:center;
+      color:#222;
+
+      &:after{
+        display:block;
+        position:absolute;
+        top:0;
+        left:50%;
+        width:56px;
+        height:56px;
+        transform:translateX(-50%);
+        content:"";
+      }
+      &.kakaotalk:after{
+        background:url('/dist/images/common/ico_sns_kakaotalk.svg') no-repeat 0 0;
+      }
+      &.kakaostory:after{
+        background:url('/dist/images/common/ico_sns_kakaostory.svg') no-repeat 0 0;
+      }
+      &.facebook:after{
+        background:url('/dist/images/common/ico_sns_facebook.svg') no-repeat 0 0;
+      }
+      &.line:after{
+        background:url('/dist/images/common/ico_sns_line.svg') no-repeat 0 0;
+      }
+      &.twitter:after{
+        background:url('/dist/images/common/ico_sns_twitter.svg') no-repeat 0 0;
+      }
+      &.band:after{
+        background:url('/dist/images/common/ico_sns_band.svg') no-repeat 0 0;
+      }
+    }
+  }
+  @include only-mo{
+    .pop_inner {
+      .pop_tit{
+        margin-bottom:16px;
+      }
+    }
+    .copy_txt{
+      width:calc(100% - 77px);
+    }
+    .share_list{
+      margin-top:24px;
+      .lists{
+        width:calc(100%/3);
+        &:nth-child(3) ~ li{
+          margin-top:30px;
+        }
+      }
+    }
+  }
+}
+
+/* 기획전 배너 */
+.exhibitions_slider{
+  width:100%;
+  height:320px;
+  .swiper-pagination{
+    bottom:48px;
+    font-size:16px;
+    line-height:19px;
+    color:#888;
+    &-current{
+      font-weight:bold;
+      color:#000;
+    }
+  }
+  .arrow{
+    width: auto;
+    height: auto;
+    text-indent: -9999px;
+    &.swiper-button-prev {
+      left:16px;
+      transform:rotate(180deg);
+    }
+    &.swiper-button-next {
+      right:16px;
+    }
+    &:after{
+      content:"";
+    }
+  }
+  .exhibitions_box {
+    position:relative;
+    width:100%; 
+    height:100%;
+  }
+  .bg_img {display:none;}
+  .txt_box {
+    position:absolute;
+    top:64px;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    .tag {
+      font-size:16px;
+      font-weight:600;
+      letter-spacing:-0.4px;
+      line-height:16px;
+    }
+    .tit {
+      margin-top:10px;
+      font-size:40px;
+      font-weight:bold;
+      line-height:56px;
+      letter-spacing:-1px;
+      color:#222;
+    }
+  }
+  @include under-pc{
+    height:257px;
+    .txt_box {
+      top:48px;
+      .tit{
+        font-size:32px;
+        line-height:40px;
+        letter-spacing:-0.8px;
+      }
+    }
+    .swiper-pagination{
+      bottom:40px;
+    }
+  }
+  @include only-mo {
+    margin-top:76px;
+    height:180px;
+    .txt_box {
+      top:32px;
+      min-width:300px;
+      .tit{
+        font-size:24px;
+        line-height:32px;
+        letter-spacing:-0.6px;
+      }
+    }
+    .swiper-pagination{
+      bottom:24px;
+    }
+  }
+}
+
+

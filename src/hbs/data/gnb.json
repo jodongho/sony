@@ -5,11 +5,7 @@
     "submenu": {
       "list": {
         "title": "추천 제품",
-        "url": "#"
-      },
-      "Propose": {
-        "title": "선물 제안",
-        "url": "#"
+        "url": "/dist/html/recommend/recommend.html"
       }
     }
   },
@@ -218,7 +214,7 @@
       "liveon": {
         "title": "LIVE ON",
         "url": "#"
-      }      
+      }
     }
   },
   "membership": {
@@ -241,11 +237,11 @@
       },
       "activate_info": {
         "title": "정품등록 안내",
-        "url": "#"
+        "url": "https://www.sony.co.kr/scs/handler/Index-Start?asa=Sa"
       },
       "support": {
         "title": "제품 지원",
-        "url": "#"
+        "url": "https://www.sony.co.kr/electronics/support"
       },
       "consultation": {
         "title": "구매 상담",

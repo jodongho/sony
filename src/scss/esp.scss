@@ -46,6 +46,9 @@
     color: #222;
     font-weight: 700;
   }
+  .list_dot li {
+    color: #666;
+  }
   @include under-pc {
     width: calc(100% - 48px);
   }
@@ -403,7 +406,7 @@
         display: table-cell;
       }
       .stat, strong {
-        display: inline-block;
+        display: inline;
         margin-top: 0;
       }
       strong {
@@ -1009,6 +1012,7 @@
         }
       }
       @include only-mo {
+        margin-top: 30px;
         height: 300px;
       }      
     }

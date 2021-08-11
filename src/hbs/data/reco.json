@@ -8,8 +8,7 @@
       "title": "PS-LX310BT",
       "desc": "간편하게 즐기는 바이닐 사운드",
       "hash": [
-        "이벤트",
-        "뉴트로"
+        "이벤트"
       ]
     },
     "item2": {
@@ -34,6 +33,16 @@
       "desc": "어떤 공간이든 스며든다, 디퓨저 사운드 스피커",
       "hash": [
         "인테리어"
+      ]
+    },
+    "itembanner": {
+      "banner": true,
+      "img": "banner_item.png",
+      "bg": "banner_bg.png",
+      "copy": [
+        "WF-1000XM4/S",
+        "Sony Earphones",
+        "Silver"
       ]
     },
     "item5": {

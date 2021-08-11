@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
+<title>{{ia.support.submenu.videoCourse.title}}</title>
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
+<link rel="stylesheet" href="/dist/css/contents.css">
+<link rel="stylesheet" href="/dist/css/support.css">
+<link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/lib/js/swiper.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+</head>
+<body>
+  <div class="wrapper course">
+    {{>header}}
+    <div class="container full">
+      <div class="content">
+        <div class="course_video">
+          <div class="common_head first_tit">
+            <h1 class="common_head_name">동영상 강좌</h1>
+            <p class="common_head_txt">제품의 기본 기능부터 숨겨진 기능까지 한번에 알 수 있는<br> 동영상 강좌를 통해 소니 제품을 100% 활용해 보세요!</p>
+          </div>
+          <div class="course_video_zone">
+            <div class="course_video_main">
+              <div class="video_wrap">
+                <!-- <a href="#" class="video_cover"><img src="/dist/images/_tmp/course_video_thumb_01.png" alt=""></a> -->
+                <iframe src="https://www.youtube.com/embed/V_VgQhpS5MA" frameborder="0" width="100%" height="100%"></iframe>
+              </div>
+              <p class="course_video_tit">WF-1000XM4 블루투스 연결법 (안드로이드)</p>
+            </div>
+            <div class="course_video_list">
+              <ul>
+                <li class="lists">
+                  <div class="video_thumb">
+                    <a href="#" class="video_thumb_btn" data-video-url="https://www.youtube.com/embed/V_VgQhpS5MA">
+                      <img src="/dist/images/_tmp/course_video_thumb_list_02.png" alt="">
+                    </a>
+                    <div class="video_thumb_info">
+                      <span class="pos_center">
+                        <p class="tit">WF-1000XM4 블루투스 연결법 (안드로이드)</p>
+                        <p class="txt">안드로이드 핸드폰 블루투스 연결하기</p>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="lists">
+                  <div class="video_thumb">
+                    <a href="#" class="video_thumb_btn" data-video-url="https://www.youtube.com/embed/64y3hTkGV5A">
+                      <img src="/dist/images/_tmp/course_video_thumb_list_01.png" alt="">
+                    </a>
+                    <div class="video_thumb_info">
+                      <span class="pos_center">
+                        <p class="tit">[강의] ILCE-7SM3 (a7S3) 스마트리모콘 이용하기</p>
+                        <p class="txt">QR코드 연결 방법</p>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="lists">
+                  <div class="video_thumb">
+                    <a href="#" class="video_thumb_btn" data-video-url="https://www.youtube.com/embed/GCHITgvg-8w">
+                      <img src="/dist/images/_tmp/course_video_thumb_list_03.png" alt="">
+                    </a>
+                    <div class="video_thumb_info">
+                      <span class="pos_center">
+                        <p class="tit">[강의] SRS-RA5000 Sony Music Center 앱 활용하기</p>
+                        <p class="txt">터치 패드로 터치 초점 이용하기</p>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="course_more_zone">
+          <p class="tit">더 많은 동영상 강좌를 지금 만나보세요!</p>
+          <div class="ico_box_link">
+            <a href="https://www.sony.co.kr/scs/handler/Common-PageView?pageName=/jsp/scs/lecture/playlist.jsp" class="box_link_inner ico_course1">
+              <div class="txt_box">
+                <p class="tit">동영상 강좌</p>
+                <p class="txt">더 많은 동영상 강좌로 제품 사용의 팁을 모두 얻어가세요!</p>
+              </div>
+            </a>
+            <a href="https://www.youtube.com/channel/UC_NlkiLtoPVHWuByWvF64Fw" target="_blank" title="새 창 열림" class="box_link_inner ico_course2">
+              <div class="txt_box">
+                <p class="tit">소니코리아 공식 유튜브</p>
+                <p class="txt">소니코리아 공식 유튜브에서 더 많은 영상을 확인하세요!</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{>footer}}
+  </div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+$(function(){
+  let _wW = $(window).width();
+ 
+  function videoUrl(){
+    let $videoWrap = $('.course_video_zone'),
+        $mainVideo = $videoWrap.find('.course_video_main'),
+        $videoList = $videoWrap.find('.course_video_list');
+
+    $videoList.find('.video_thumb_btn').on("click", function(){
+      let _thisUrl = $(this).data("video-url"),
+          _thisTit = $(this).closest('.video_thumb').find('.tit').text();
+      
+      $mainVideo.find('iframe').attr("src",_thisUrl);
+      $mainVideo.find('.course_video_tit').text(_thisTit);
+
+      let _videoTop = $mainVideo.offset().top,
+          _headerH = 0;
+      _wW = $(window).width();
+      if(_wW > 1280){
+        _headerH = $('.gnb').height();
+      }else{
+        _headerH = $('.header__wrapper').height();
+      }
+      $('html,body').animate({scrollTop: _videoTop - _headerH}, 200);
+        
+      return false;
+    });
+  }
+
+  videoUrl();
+});
+</script>

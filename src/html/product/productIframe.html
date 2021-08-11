@@ -108,9 +108,9 @@
 
 <script type="text/javascript">
 $(function(){
-  
+
   let $detailSlider = $('.detail_slider');
-  let detailSwiper = new Swiper($detailSlider[0], { 
+  let detailSwiper = new Swiper($detailSlider[0], {
     slidesPerView: 1,
     loop: true,
     pagination: {
@@ -142,11 +142,11 @@ $(function(){
     $('.iframe_prd', window.parent.document).css("height",_bodyH + 10);
     detailSwiper.update();
   }
-  
-  const imgChange = (e) => { // 제품 개요 이미지 
+
+  const imgChange = (e) => { // 제품 개요 이미지
     let $detailWrap = $('.detail_box'),
         $imgBox = $detailWrap.find('.img');
-    
+
     $imgBox.each(function(_index, _el){
       let _thisImg = $(_el).find('img'),
           _src =  _thisImg.attr("src"),

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
+<title>{{ia.support.submenu.individual.title}}</title>
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
+<link rel="stylesheet" href="/dist/css/contents.css">
+<link rel="stylesheet" href="/dist/css/support2.css">
+<link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/lib/js/swiper.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+</head>
+<body>
+  <div class="wrapper purchaseConsulting">
+    {{>header}}
+    <div class="container">
+      <div class="content">
+        <div class="support_head">
+          <h1 class="support_head_title">구매상담 안내</h1>
+          <p class="support_head_desc">소니스토어에서 필요하신 상품과 연락처를 알려주시면 담당자가 친절하고 신속하게 상담해 드리겠습니다.</p>
+        </div>
+        <div class="purchase_wrap">
+          <div class="purchase_wrap_radio">
+            <div class="purchase_wrap_radio_bg">
+              <div class="radio_box">
+                <input type="radio" class="inp_radio" id="tab1" name="tabradio" checked="checked">
+                <label for="tab1" class="contentType">일반구매 상담</label>
+              </div>
+              <div class="radio_box">
+                <input type="radio" class="inp_radio" id="tab2" name="tabradio">
+                <label for="tab2" class="contentType">기업구매 상담</label>
+              </div>
+            </div>
+            <a class="button button_secondary button-s" href="javascript:openModal('modal_pop');">기업구매 시 유의사항</a>
+          </div>
+          <div class="tabResult">
+            <div class="result_cont tab1 on">          
+              <div class="inp_wrap">
+                <h2 class="inp_wrap_tit">개인정보 입력</h2>
+                <div class="inp_wrap_cont">
+                  <p class="inp_wrap_amp">표시는 필수입력 정보</p>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="user_name">이름<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent error"><!-- error 클래스로 에러문구 제어-->
+                        <div class="acc_inp type1">
+                          <input type="text" class="inp" id="user_name" placeholder="띄어쓰기 없이 입력하세요." autocomplete="off">
+                          <span class="focus_bg"></span>
+                        </div>
+                        <p class="error_txt"><span class="ico"></span>이름을 입력해 주세요.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="user_email">이메일<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent error"><!-- error 클래스로 에러문구 제어-->
+                        <div class="acc_inp type1">
+                          <input type="text" class="inp" id="user_email" placeholder="예) sony@sony.co.kr" autocomplete="off">
+                          <span class="focus_bg"></span>
+                        </div>
+                        <p class="error_txt"><span class="ico"></span>이메일 아이디를 입력해 주세요.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="user_number">휴대폰 번호<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent error"><!-- error 클래스로 에러문구 제어-->
+                        <div class="acc_inp type1">
+                          <input type="text" class="inp" id="user_number" placeholder="- 없이 입력하세요." autocomplete="off">
+                          <span class="focus_bg"></span>
+                        </div>
+                        <p class="error_txt"><span class="ico"></span>휴대폰 번호를 입력해 주세요.</p>
+                      </div>
+                    </div>
+                  </div>  
+                </div>
+              </div>
+              <div class="inp_wrap">
+                <h2 class="inp_wrap_tit">상담정보 입력</h2>
+                <div class="inp_wrap_cont">
+                  <p class="inp_wrap_amp">표시는 필수입력 정보</p>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="prd_name">구입 희망 상품<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent error"><!-- error 클래스로 에러문구 제어-->
+                        <div class="acc_inp">
+                          <input type="text" class="inp" id="prd_name" placeholder="예) 디지털카메라" autocomplete="off">
+                          <span class="focus_bg"></span>
+                        </div>
+                        <p class="error_txt"><span class="ico"></span>이 정보는 필수 입력사항 입니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="prd_num">구입 예정 수량<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent error"><!-- error 클래스로 에러문구 제어-->
+                        <div class="acc_inp">
+                          <input type="text" class="inp" id="prd_num" placeholder="예) 220대" autocomplete="off">
+                          <span class="focus_bg"></span>
+                        </div>
+                        <p class="error_txt"><span class="ico"></span>이 정보는 필수 입력사항입니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="prd_purpose">구매 목적<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent error"><!-- error 클래스로 에러문구 제어-->
+                        <div class="acc_inp">
+                          <input type="text" class="inp" id="prd_purpose" placeholder="예) 직접 사용/납품" autocomplete="off">
+                          <span class="focus_bg"></span>
+                        </div>
+                        <p class="error_txt"><span class="ico"></span>이 정보는 필수 입력사항입니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="end_user">최종 사용자<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent error"><!-- error 클래스로 에러문구 제어-->
+                        <div class="acc_inp">
+                          <input type="text" class="inp" id="end_user" placeholder="예) 자사 임직원/납품 시 납품처" autocomplete="off">
+                          <span class="focus_bg"></span>
+                        </div>
+                        <p class="error_txt"><span class="ico"></span>이 정보는 필수 입력사항입니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="fixed_date">정해진 납기일<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent error"><!-- error 클래스로 에러문구 제어-->
+                        <div class="acc_inp">
+                          <input type="text" class="inp" id="fixed_date" placeholder="예) 년,월,일 까지/없음" autocomplete="off">
+                          <span class="focus_bg"></span>
+                        </div>
+                        <p class="error_txt"><span class="ico"></span>이 정보는 필수 입력사항입니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="requests">추가 문의 및 요청 사항<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent">
+                        <div class="acc_inp">
+                          <textarea id="requests" class="requests_cont" cols="50" rows="5" maxlength="1000"></textarea>
+                          <span class="focus_bg"></span>
+                        </div>
+                        <div class="byte_count"><strong class="current">298</strong> / 5,000자</div>
+                      </div>
+                    </div>
+                  </div>                           
+                </div>
+              </div>
+              <!-- 자동입력방지 영역 -->
+              <div class="captcha_area">             
+                <!-- 여기안에 적용해주시면 됩니다. 적용후 이미지 삭제-->
+                <img src="/dist/images/_tmp/racaptcha.png" alt=""><!-- 임시이미지 -->
+              </div>
+              <!--//자동입력방지 영역  -->
+              <ul class="list_dot">
+                <li>일반 소비자의 제품 구매 및 A/S 관련 문의는 소니코리아 고객지원센터로 문의해 주시기 바랍니다. (고객지원센터 : 1588-0911)</li>
+                <li>B2B 기업체 특판 구매는 1)모델 2) 수량 3)납기일 4) 납품처 5) 제품 용도 의 정보가 필요합니다. 
+                  위의 정보를 포함한 메일을 송부 부탁 드립니다.</li>
+                <li>방송용 장비, 프로젝터, 반도체, 기타 부품 소재 관련 문의는 대표전화로 문의해 주시기 바랍니다. (대표전화 : 02-6001-4000)</li>
+              </ul>
+            </div>
+            <div class="result_cont tab2">
+              <div class="inp_wrap">
+                <h2 class="inp_wrap_tit">개인정보 입력</h2>
+                <div class="inp_wrap_cont">
+                  <p class="inp_wrap_amp">표시는 필수입력 정보</p>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="enterprise_name">기업명(단체명)<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent error"><!-- error 클래스로 에러문구 제어-->
+                        <div class="acc_inp type1">
+                          <input type="text" class="inp" id="enterprise_name" placeholder="기업명(단체명)을 입력하세요." autocomplete="off">
+                          <span class="focus_bg"></span>
+                        </div>
+                        <p class="error_txt"><span class="ico"></span>기업명(단체명)을 입력해 주세요.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="manager_name">담당자명<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent error"><!-- error 클래스로 에러문구 제어-->
+                        <div class="acc_inp type1">
+                          <input type="text" class="inp" id="manager_name" placeholder="띄어쓰기 없이 입력하세요." autocomplete="off">
+                          <span class="focus_bg"></span>
+                        </div>
+                        <p class="error_txt"><span class="ico"></span>담당자명을 입력해 주세요.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="user_email2">이메일<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent error"><!-- error 클래스로 에러문구 제어-->
+                        <div class="acc_inp type1">
+                          <input type="text" class="inp" id="user_email2" placeholder="예) sony@sony.co.kr" autocomplete="off">
+                          <span class="focus_bg"></span>
+                        </div>
+                        <p class="error_txt"><span class="ico"></span>이메일 아이디를 입력해 주세요.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="user_number2">휴대폰 번호<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent error"><!-- error 클래스로 에러문구 제어-->
+                        <div class="acc_inp type1">
+                          <input type="text" class="inp" id="user_number2" placeholder="-없이 입력하세요." autocomplete="off">
+                          <span class="focus_bg"></span>
+                        </div>
+                        <p class="error_txt"><span class="ico"></span>휴대폰 번호를 입력해 주세요.</p>
+                      </div>
+                    </div>
+                  </div>                    
+                </div>
+              </div>
+              <div class="inp_wrap">
+                <h2 class="inp_wrap_tit">상담정보 입력</h2>
+                <div class="inp_wrap_cont">
+                  <p class="inp_wrap_amp">표시는 필수입력 정보</p>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="prd_name2">구입 희망 상품<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent error"><!-- error 클래스로 에러문구 제어-->
+                        <div class="acc_inp">
+                          <input type="text" class="inp" id="prd_name2" placeholder="예) 디지털카메라" autocomplete="off">
+                          <span class="focus_bg"></span>
+                        </div>
+                        <p class="error_txt"><span class="ico"></span>이 정보는 필수 입력사항 입니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="prd_num2">구입 예정 수량<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent error"><!-- error 클래스로 에러문구 제어-->
+                        <div class="acc_inp">
+                          <input type="text" class="inp" id="prd_num2" placeholder="예) 220대" autocomplete="off">
+                          <span class="focus_bg"></span>
+                        </div>
+                        <p class="error_txt"><span class="ico"></span>이 정보는 필수 입력사항입니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="prd_purpose2">구매 목적<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent error"><!-- error 클래스로 에러문구 제어-->
+                        <div class="acc_inp">
+                          <input type="text" class="inp" id="prd_purpose2" placeholder="예) 직접 사용/납품" autocomplete="off">
+                          <span class="focus_bg"></span>
+                        </div>
+                        <p class="error_txt"><span class="ico"></span>이 정보는 필수 입력사항입니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="end_user2">최종 사용자<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent error"><!-- error 클래스로 에러문구 제어-->
+                        <div class="acc_inp">
+                          <input type="text" class="inp" id="end_user2" placeholder="예) 자사 임직원/납품 시 납품처" autocomplete="off">
+                          <span class="focus_bg"></span>
+                        </div>
+                        <p class="error_txt"><span class="ico"></span>이 정보는 필수 입력사항입니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="fixed_date2">정해진 납기일<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent error"><!-- error 클래스로 에러문구 제어-->
+                        <div class="acc_inp">
+                          <input type="text" class="inp" id="fixed_date2" placeholder="예) 년,월,일 까지/없음" autocomplete="off">
+                          <span class="focus_bg"></span>
+                        </div>
+                        <p class="error_txt"><span class="ico"></span>이 정보는 필수 입력사항입니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inp_wrap_form">
+                    <div class="acc_cell vat">
+                      <label for="requests2">추가 문의 및 요청 사항<i class="necessary"></i></label>
+                    </div>
+                    <div class="acc_cell">
+                      <div class="acc_group parent">
+                        <div class="acc_inp">
+                          <textarea id="requests2" class="requests_cont" cols="50" rows="5" maxlength="1000"></textarea>
+                          <span class="focus_bg"></span>
+                        </div>
+                        <div class="byte_count"><strong class="current">298</strong> / 5,000자</div>
+                      </div>
+                    </div>
+                  </div>                           
+                </div>
+              </div>
+              <!-- 자동입력방지 영역 -->
+              <div class="captcha_area">             
+                <!-- 여기안에 적용해주시면 됩니다. 적용후 이미지 삭제-->
+                <img src="/dist/images/_tmp/racaptcha.png" alt=""><!-- 임시이미지 -->
+              </div>
+              <!--//자동입력방지 영역  -->    
+              <ul class="list_dot">
+                <li>일반 소비자의 제품 구매 및 A/S 관련 문의는 소니코리아 고객지원센터로 문의해 주시기 바랍니다. (고객지원센터 : 1588-0911)</li>
+                <li>B2B 기업체 특판 구매는 1)모델 2) 수량 3)납기일 4) 납품처 5) 제품 용도 의 정보가 필요합니다. 
+                  위의 정보를 포함한 메일을 송부 부탁 드립니다.</li>
+                <li>방송용 장비, 프로젝터, 반도체, 기타 부품 소재 관련 문의는 대표전화로 문의해 주시기 바랍니다. (대표전화 : 02-6001-4000)</li>
+              </ul>
+            </div>
+            <div class="btn_box">
+              <button class="button button_negative" type="button">취소</button>
+              <button class="button button_positive" type="button">확인</button>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+    {{>footer}}
+  </div>
+  <!-- 기업 구매 시 유의사항 팝업 -->
+  <div class="layer agree_layer modal_pop">
+    <div class="layer_wrap">
+      <div class="layer_container">
+        <div class="layer_title">
+          <h1>기업 구매 시 유의사항</h1>
+        </div>
+        <div class="layer_content">
+          <div class="scroll_inner">
+            <div class="foot_cont">
+              <ul>
+                <li>
+                  <h5 class="Fh5_tit first">사용용도</h5>
+                  <p>소니코리아 본사와 대량구매 진행 시 사용 용도에 대한 명확한 확인 및 증빙자료의 제출이 필요할 수 있으며 용도 외 사용은 엄격히 제한됩니다.</p>
+                </li>
+                <li>
+                  <h5 class="Fh5_tit first">할인율 및 최소 수량</h5>
+                  <p>주문 수량에 따른 할인율은 담당자에게 문의 바랍니다.</p>
+                </li>
+                <li>
+                  <h5 class="Fh5_tit first">결제</h5>
+                  <p>지불은 현금 또는 카드 결제가 가능합니다. 후불 결제는 불가하며 선 결제 확인 후 출고가 진행됩니다. 세금계산서는 현금결제 후 고객 요청 발행 가능합니다.</p>
+                </li>
+                <li>
+                  <h5 class="Fh5_tit first">배송 및 소요시간</h5>
+                  <p>협의된 지정 배송일에 지정 배송지로 택배 발송됩니다. 배송까지의 소요시간은 주문 수량과 물류 센터 상황에 따라 달라질 수 있습니다.<br>대량 주문의 경우 최소 1주일 전 주문을 권해 드리며 견적 요청 시 희망 납품일을 알려주시면 가능 여부를 답변 드리겠습니다.</p>
+                </li>
+                <li>
+                  <h5 class="Fh5_tit first">교환</h5>
+                  <p>제품의 하자나 배송 중 파손 제품에 대해 배송 받은 박스 송장과 제품 사진 자료 확인 후 교환 처리가 가능합니다.<br>고객 변심 등의 기타 이유로는 반품 및 교환이 불가합니다.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <button href="#" class="layer_close close" title="팝업창 닫기">
+            <span>팝업창 닫기</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--//기업 구매 시 유의사항 팝업 -->
+</body>
+</html>
+
+<script type="text/javascript">
+    //라디오 탭
+    $('.purchase_wrap_radio .radio_box').on('click', function(){
+       $(":radio[name='tabradio']").change(function(){
+           var result_cont = $('.result_cont');
+           var tabradio = $(this).prop("checked",true).attr("id");
+           result_cont.removeClass('on');
+           $('.'+tabradio).addClass('on');
+       });
+    });  
+</script>

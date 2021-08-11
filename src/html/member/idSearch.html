@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
 <title>{{ia.member.submenu.idSearch.title}}</title>
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
 <link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
 <link rel="stylesheet" href="/dist/css/contents.css">
 <script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
@@ -32,7 +34,7 @@
           <div class="radio_box">
             <input type="radio" class="inp_radio" id="tab2" name="tabradio">
             <label for="tab2" class="contentType">간편회원가입 정보로 찾기</label>
-          </div>        
+          </div>
         </div>
         <div class="tabResult">
           <div class="result_cont tab1 on">
@@ -49,7 +51,7 @@
                   <p>아이핀 인증하기<span>(간편 회원 가입정보로 찾기)</span></p>
                 </a>
               </li>
-            </ul>            
+            </ul>
           </div>
           <div class="result_cont tab2">
             <div class="group not-ready">
@@ -90,10 +92,10 @@
                 </div>
               </div>
               <div class="certify_txt">※ 입력하신 번호로 인증번호가 전송되었습니다.</div>
-            </div>            
+            </div>
             <div class="btn_box full">
               <button type="button" class="btn btn_dark">확인</button>
-            </div>                       
+            </div>
           </div>
         </div>
         <div class="caution_txt">
@@ -108,23 +110,23 @@
     /* 타이머 */
     var initMinute;  // 최초 설정할 시간(min)
     var remainSecond;  // 남은시간(sec)
-    
+
     $(document).ready(function(){
-      clearTime(3); // 세션 만료 적용 시간 
+      clearTime(3); // 세션 만료 적용 시간
       setTimer();    // 문서 로드시 타이머 시작
     });
-    
+
     function clearTime(min){ // 타이머 초기화 함수
-      initMinute = min; 
-      remainSecond = min*60; 
+      initMinute = min;
+      remainSecond = min*60;
     }
-    
-    function setTimer(){ // 1초 간격으로 호출할 타이머 함수 
-    
+
+    function setTimer(){ // 1초 간격으로 호출할 타이머 함수
+
       // hh : mm 으로 남은시간 표기하기 위한 변수
       remainMinute_ = parseInt(remainSecond/60);
       remainSecond_ = remainSecond%60;
-    
+
       if(remainSecond > 0){
           $("#timer").empty();
           $("#timer").append(Lpad(remainMinute_,2) + ":" + Lpad(remainSecond_,2));    // hh:mm 표기
@@ -132,7 +134,7 @@
           setTimeout("setTimer()",1000); //1초간격으로 재귀호출!
       }else{
           //alert('시간이 초과되었습니다.');
-          /*세션 종료시 작동할 이벤트*/ 
+          /*세션 종료시 작동할 이벤트*/
       }
     }
     function Lpad(str,len){  // hh mm형식으로 표기하기 위한 함수
@@ -141,7 +143,7 @@
           str = "0"+str;
       }
       return str;
-    } 
+    }
     //라디오 탭
     $('.idsearch_way .radio_box').on('click', function(){
        $(":radio[name='tabradio']").change(function(){
@@ -150,7 +152,7 @@
            result_cont.removeClass('on');
            $('.'+tabradio).addClass('on');
        });
-    }); 
+    });
     // input autofill style matching
     const g = document.querySelectorAll(".group");
 
@@ -162,7 +164,7 @@
       g.forEach((elem) => {
         elem.classList.remove("not-ready");
       })
-    }, 10);      
+    }, 10);
 </script>
 </body>
 </html>

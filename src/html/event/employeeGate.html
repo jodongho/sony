@@ -6,10 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
 <title>{{ia.event.submenu.employeeLogin.title}}</title>
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
 <link rel="stylesheet" href="/dist/css/contents.css">
 <link rel="stylesheet" href="/dist/css/event.css">
-<link rel="stylesheet" href="/dist/css/event2.css">
-<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
 <script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
 <script src="/dist/js/ux-common.js"></script>
 </head>
@@ -28,7 +27,7 @@
             <button type="button" class="certify popup_comm_btn" data-popup-name="employee_gate_chk">
               <span class="ico_phone_certify"></span>
               <p class="tit">소니 임직원몰 방문이 처음이세요?<span class="tit_desc">(임직원 인증 하기)</span></p>
-            </button>        
+            </button>
           </li>
           <li class="certify_list">
             <a href="{{ia.member.submenu.login.url}}" class="certify">
@@ -37,7 +36,7 @@
             </a>
           </li>
         </ul>
-      </div>                          
+      </div>
     </div>
   </div>
 
@@ -59,7 +58,7 @@
             <a href="#" class="button button_positive button-m" type="button">임직원몰 바로가기</a>
           </div>
         </div>
-        <form action=""> 
+        <form action="">
         <div class="form_zone">
           <p class="s_tit">아직 임직원 인증을 안하셨나요?<br> 사번으로 아래 소니 임직원임을 인증해 주세요.</p>
           <div class="input_item">
@@ -78,7 +77,7 @@
                 <label class="inp_desc" for="popPw">
                   <input type="password" id="popPw" class="inp center" placeholder="&nbsp;" autocomplete="off">
                   <span class="label">비밀번호</span>
-                  <span class="focus_bg"></span>              
+                  <span class="focus_bg"></span>
                   <div class="eyes"><a href="#" class="eyes_btn" title="비밀번호 숨김"><i class="ico ico_eyes"></i></a></div>
                 </label>
               </div>
@@ -130,7 +129,7 @@ $(function(){
     passwordView();
   });
   const passwordView = (e) =>{
-    // 눈표시 클릭 시 패스워드 보이기 
+    // 눈표시 클릭 시 패스워드 보이기
     let $eyes = $('.eyes');
     for(let _eyesNum = 0; _eyesNum < $eyes.length ; _eyesNum++){ // countbox 개별 제어
       eyesFunc($eyes[_eyesNum]);
@@ -138,17 +137,17 @@ $(function(){
     function eyesFunc(eyes){
       $(eyes).find('.eyes_btn').off().on('click',function(){
         let $inputBox = $(this).closest('.inp_box');
-        $inputBox.toggleClass('active'); 
+        $inputBox.toggleClass('active');
         if($inputBox.hasClass('active') == true ){
           $inputBox.find('.ico_eyes').attr('class',"ico_eyes_open")
           $inputBox.find('.inp').attr('type',"text");
           $(this).attr('title',"비밀번호 표시");
-          // i 클래스 // 텍스트 보이기 i 클래스 
-        } 
-        else{ 
+          // i 클래스 // 텍스트 보이기 i 클래스
+        }
+        else{
           $inputBox.find('.ico_eyes_open').attr('class',"ico_eyes")
           $inputBox.find('.inp').attr('type','password');
-          $(this).attr('title',"비밀번호 숨김");      
+          $(this).attr('title',"비밀번호 숨김");
         }
         return false;
       });

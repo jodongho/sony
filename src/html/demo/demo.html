@@ -4,16 +4,18 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
 <title>💻공통 가이드💻</title>
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
 <link rel="stylesheet" href="/dist/lib/css/swiper.min.css">
 <link rel="stylesheet" href="/dist/css/contents.css">
 <link rel="stylesheet" href="/dist/css/order.css">
 <link rel="stylesheet" href="/dist/css/demo.css">
 <script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/lib/js/jquery-ui.min.js"></script>
 <script src="/dist/lib/js/swiper.min.js"></script>
 <script src="/dist/js/ux-common.js"></script>
 <script src="/dist/js/ux-sub.js"></script>
-<script src="/dist/lib/js/jquery-ui.min.js"></script>
 <style>
   @media print {
     * {
@@ -28,6 +30,7 @@
   {{>header}}
   <div class="container">
     <div class="content" style="padding-top:50px;">
+      
       <h1 class="guide_title01">guide</h1>
       <div class="guide_wrap">
         <div class="guide_box">
@@ -420,9 +423,8 @@
         <div class="guide_box">
           <h2 class="guide_title02">* Alert</h2>
           <div class="float_left">
-            <button type="button" class="alertLayerBtn" data-open-layer="alert_pop" data-alert-text="로그인 할 수 없습니다. &lt;br&gt; 아이디와 비밀번호를 다시 확인해 주세요.">버튼1</button>
-            <button type="button" class="alertLayerBtn" data-open-layer="alert_pop" data-alert-text="소니스토어 이용약관에 동의해 주세요!">확인1</button>
-            <button type="button" class="alertLayerBtn btnSize2" data-open-layer="alert_pop2" data-alert-text="주문 취소 신청 후에는 변경하실 수 없습니다. &lt;br&gt;취소 접수를 하시겠습니까?">버튼2</button>
+            <button class="button button_positive button-m" type="button" onclick="common.makeAlert('complete', '로그인 할 수 없습니다. &lt;br&gt; 아이디와 비밀번호를 다시 확인해 주세요.')">Type 1</button>
+            <button class="button button_positive button-m" type="button" onclick="common.makeConfirm('complete', '확인 취소 버튼 Alert')">Type 2</button>
           </div>
         </div>
         <div class="guide_box">
@@ -938,6 +940,11 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="guide_wrap full">
+        <h2 class="guide_title02">* 기획전 풀 배너 슬라이드</h2>
+        <!-- 기획전 이벤트 배너 -->
+        {{>fullSliderBanner}}
       </div>
       <div class="guide_wrap full">
         <div class="guide_box">

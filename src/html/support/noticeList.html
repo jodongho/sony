@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
+<title>{{ia.support.submenu.noticeList.title}}</title>
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
+<link rel="stylesheet" href="/dist/css/contents.css">
+<link rel="stylesheet" href="/dist/css/support.css">
+<script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/js/ux-common.js"></script>
+</head>
+<body>
+  <div class="wrapper faq_notice">
+    {{>header}}
+    <div class="container full">
+      <div class="content">
+        <div class="faq_notice_head">
+          <div class="common_head first_tit">
+            <h1 class="common_head_name">FAQ & 공지사항</h1>
+            <p class="common_head_txt">소니스토어에 많이 물어보시는 질문과<br class="pc_none">새로운 소식을 만나보세요.</p>
+          </div>
+          <div class="tab_link_zone">
+            <ul class="tab_link_inner">
+              <li class="tabs">
+                <a href="{{ia.support.submenu.faq.url}}" class="tab_btn" title="FAQ 보기"><span class="tit">FAQ</span></a>
+              </li>
+              <li class="tabs on">
+                <a href="{{ia.support.submenu.noticeList.url}}" class="tab_btn" title="공지사항 보기"><span class="tit">공지사항</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="faq_notice_inner">
+          <div class="faq_notice_cont notice_list">
+            <div class="itemsort" aria-label="종료된 기획전 정렬">
+              <button class="itemsort__button">
+                <span class="itemsort__button__label sr-only">정렬기준:</span>
+                <span class="itemsort__button__selected">최신순</span>
+              </button>
+              <div class="itemsort__drawer">
+                <ul class="itemsort__items">
+                  <li class="itemsort__item itemsort__item--active"><a href="#" class="itemsort__item__link">최신순</a></li>
+                  <li class="itemsort__item"><a href="#" class="itemsort__item__link">오래된 순</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col_table_wrap">
+              <div class="col_table">
+                <div class="col_table_head">
+                  <div class="col_table_row">
+                    <div class="col_table_cell">번호</div>
+                    <div class="col_table_cell divide">
+                      <div class="divide_table">
+                        <div class="table_cell">제목</div>
+                        <div class="table_cell">등록일</div>
+                        <div class="table_cell">조회수</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col_table_body">
+                  <div class="col_table_row">
+                    <div class="col_table_cell notice_num">
+                      <p class="txt">10</p>
+                    </div>
+                    <div class="col_table_cell divide">
+                      <div class="divide_table">
+                        <div class="table_cell notice_tit tal">
+                          <a href="{{ia.support.submenu.notice.url}}" class="txt link_btn">고객센터 정상 업무 안내</a>
+                        </div>
+                        <div class="table_cell notice_date">
+                          <p class="txt">21.08.06</p>
+                        </div>
+                        <div class="table_cell notice_pv">
+                          <p class="txt">10,874</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_row">
+                    <div class="col_table_cell notice_num">
+                      <p class="txt">9</p>
+                    </div>
+                    <div class="col_table_cell divide">
+                      <div class="divide_table">
+                        <div class="table_cell notice_tit tal">
+                          <a href="{{ia.support.submenu.notice.url}}" class="txt link_btn">[당첨자 발표]6월 소니스토어 온라인 설문조사 이벤트 당첨자 발표</a>
+                        </div>
+                        <div class="table_cell notice_date">
+                          <p class="txt">21.07.31</p>
+                        </div>
+                        <div class="table_cell notice_pv">
+                          <p class="txt">10,874</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_row">
+                    <div class="col_table_cell notice_num">
+                      <p class="txt">8</p>
+                    </div>
+                    <div class="col_table_cell divide">
+                      <div class="divide_table">
+                        <div class="table_cell notice_tit tal">
+                          <a href="{{ia.support.submenu.notice.url}}" class="txt link_btn">[당첨자 발표]6월 소니스토어 온라인 설문조사 이벤트 당첨자 발표</a>
+                        </div>
+                        <div class="table_cell notice_date">
+                          <p class="txt">21.06.31</p>
+                        </div>
+                        <div class="table_cell notice_pv">
+                          <p class="txt">10,874</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_row">
+                    <div class="col_table_cell notice_num">
+                      <p class="txt">7</p>
+                    </div>
+                    <div class="col_table_cell divide">
+                      <div class="divide_table">
+                        <div class="table_cell notice_tit tal">
+                          <a href="{{ia.support.submenu.notice.url}}" class="txt link_btn">[당첨자 발표]6월 소니스토어 온라인 설문조사 이벤트 당첨자 발표</a>
+                        </div>
+                        <div class="table_cell notice_date">
+                          <p class="txt">21.05.31</p>
+                        </div>
+                        <div class="table_cell notice_pv">
+                          <p class="txt">10,874</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_row">
+                    <div class="col_table_cell notice_num">
+                      <p class="txt">6</p>
+                    </div>
+                    <div class="col_table_cell divide">
+                      <div class="divide_table">
+                        <div class="table_cell notice_tit tal">
+                          <a href="{{ia.support.submenu.notice.url}}" class="txt link_btn">[당첨자 발표]6월 소니스토어 온라인 설문조사 이벤트 당첨자 발표</a>
+                        </div>
+                        <div class="table_cell notice_date">
+                          <p class="txt">21.05.31</p>
+                        </div>
+                        <div class="table_cell notice_pv">
+                          <p class="txt">10,874</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_row">
+                    <div class="col_table_cell notice_num">
+                      <p class="txt">5</p>
+                    </div>
+                    <div class="col_table_cell divide">
+                      <div class="divide_table">
+                        <div class="table_cell notice_tit tal">
+                          <a href="{{ia.support.submenu.notice.url}}" class="txt link_btn">[당첨자 발표]6월 소니스토어 온라인 설문조사 이벤트 당첨자 발표</a>
+                        </div>
+                        <div class="table_cell notice_date">
+                          <p class="txt">21.05.31</p>
+                        </div>
+                        <div class="table_cell notice_pv">
+                          <p class="txt">10,874</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_row">
+                    <div class="col_table_cell notice_num">
+                      <p class="txt">4</p>
+                    </div>
+                    <div class="col_table_cell divide">
+                      <div class="divide_table">
+                        <div class="table_cell notice_tit tal">
+                          <a href="{{ia.support.submenu.notice.url}}" class="txt link_btn">[당첨자 발표]6월 소니스토어 온라인 설문조사 이벤트 당첨자 발표</a>
+                        </div>
+                        <div class="table_cell notice_date">
+                          <p class="txt">21.05.31</p>
+                        </div>
+                        <div class="table_cell notice_pv">
+                          <p class="txt">9,553</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_row">
+                    <div class="col_table_cell notice_num">
+                      <p class="txt">3</p>
+                    </div>
+                    <div class="col_table_cell divide">
+                      <div class="divide_table">
+                        <div class="table_cell notice_tit tal">
+                          <a href="{{ia.support.submenu.notice.url}}" class="txt link_btn">[당첨자 발표]6월 소니스토어 온라인 설문조사 이벤트 당첨자 발표</a>
+                        </div>
+                        <div class="table_cell notice_date">
+                          <p class="txt">21.05.31</p>
+                        </div>
+                        <div class="table_cell notice_pv">
+                          <p class="txt">10,874</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_row">
+                    <div class="col_table_cell notice_num">
+                      <p class="txt">2</p>
+                    </div>
+                    <div class="col_table_cell divide">
+                      <div class="divide_table">
+                        <div class="table_cell notice_tit tal">
+                          <a href="{{ia.support.submenu.notice.url}}" class="txt link_btn">[당첨자 발표]6월 소니스토어 온라인 설문조사 이벤트 당첨자 발표</a>
+                        </div>
+                        <div class="table_cell notice_date">
+                          <p class="txt">21.05.31</p>
+                        </div>
+                        <div class="table_cell notice_pv">
+                          <p class="txt">10,874</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_table_row">
+                    <div class="col_table_cell notice_num">
+                      <p class="txt">1</p>
+                    </div>
+                    <div class="col_table_cell divide">
+                      <div class="divide_table">
+                        <div class="table_cell notice_tit tal">
+                          <a href="{{ia.support.submenu.notice.url}}" class="txt link_btn">[당첨자 발표]6월 소니스토어 온라인 설문조사 이벤트 당첨자 발표</a>
+                        </div>
+                        <div class="table_cell notice_date">
+                          <p class="txt">21.05.31</p>
+                        </div>
+                        <div class="table_cell notice_pv">
+                          <p class="txt">10,874</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- // col_table_body -->
+              </div>
+              <div class="btn_article comm_more"><!-- 목록이 없을 경우 숨김 처리 -->
+                <a href="#" class="more_btn" title="더보기">더보기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{>footer}}
+  </div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+  $(function(){
+
+  });
+  </script>

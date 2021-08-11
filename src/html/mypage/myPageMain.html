@@ -10,9 +10,9 @@
 <link rel="stylesheet" href="/dist/css/contents.css">
 <link rel="stylesheet" href="/dist/css/mypage.css">
 <script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
+<script src="/dist/lib/js/jquery-ui.min.js"></script>
 <script src="/dist/js/ux-common.js"></script>
 <script src="/dist/js/ux-sub.js"></script>
-<script src="/dist/lib/js/jquery-ui.min.js"></script>
 </head>
 <body>
 <div class="wrapper my">
@@ -105,25 +105,25 @@
                 </div>
               </li>
               <li class="step_2">
-                <div class="ship_box">   
+                <div class="ship_box">
                   <span class="ico_txt">결제완료</span>
                   <a href="#" class="val_txt"><span class="val">0</span><span>건</span></a>
-                </div>     
-              </li> 
+                </div>
+              </li>
               <li class="step_3">
                 <div class="ship_box">
                   <span class="ico_txt">배송준비</span>
                   <a href="#" class="val_txt"><span class="val">0</span><span>건</span></a>
-                </div>   
+                </div>
               </li>
-              <li class="step_4 on">      
+              <li class="step_4 on">
                 <div class="ship_box">
                   <span class="ico_txt">배송중</span>
                   <a href="#" class="val_txt"><span class="val">1</span><span>건</span></a>
-                </div>    
-              </li>                                                            
+                </div>
+              </li>
               <li class="step_5 on">
-                <div class="ship_box">             
+                <div class="ship_box">
                   <span class="ico_txt">배송완료</span>
                   <a href="#" class="val_txt"><span class="val">1</span><span>건</span></a>
                 </div>
@@ -140,7 +140,7 @@
         <h3 class="cont_tit">마일리지</h3>
         <div class="history_inner">
           <div class="my_mileage">
-            <p class="txt">사용 가능 
+            <p class="txt">사용 가능
               <span class="mileage_val">153,248</span>
               <span class="extinction">
                   (<strong class="val_txt"><span class="val">300</span>M</strong>당월 소멸 예정)
@@ -461,7 +461,7 @@
                 <p class="tit">정품등록 관리</p>
                 <p class="txt">소니 제품 구매 후 정품등록하고 쿠폰을 받으세요!</p>
               </div>
-            </a>        
+            </a>
           </div>
         </div>
       </div>
@@ -472,7 +472,7 @@
           <div class="like_select_btn">
             <button class="button button_secondary button-s" type="button">선택 삭제</button>
             <button class="button button_positive button-s popup_comm_btn" type="button" data-popup-name="cart_pop"><span>선택 제품</span> 장바구니 담기</button>
-          </div> 
+          </div>
           <!-- e : 찜 목록이 없을 경우 display:none -->
         </div>
         <div class="history_inner">
@@ -600,7 +600,7 @@
           </div>
         </div>
       </div>
-    </div>  
+    </div>
   </div>
   {{>footer}}
 </div>
@@ -634,7 +634,6 @@ $(function(){
   });
   $('.date3_btn').on("click",function(){
     let $tabs = $(this).parents();
-    console.log($tabs)
     $tabs.addClass("on").siblings().removeClass("on");
     return false;
   });

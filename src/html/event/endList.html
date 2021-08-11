@@ -6,17 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="msapplication-TileImage" content="/dist/images/favicon_144x144.png">
 <title>{{ia.event.submenu.endList.title}}</title>
+<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
 <link rel="stylesheet" href="/dist/css/contents.css">
 <link rel="stylesheet" href="/dist/css/event.css">
-<link rel="stylesheet" href="/dist/css/event2.css">
-<link rel="shortcut icon" href="/dist/images/favicon_144x144.png">
 <script src="/dist/lib/js/jquery-3.6.0.min.js"></script>
 <script src="/dist/js/ux-common.js"></script>
 </head>
 <body>
-<div class="wrapper event">        
+<div class="wrapper event">
   {{>header}}
-    
+
   <div class="container full">
     <div class="content">
       <div class="common_head first_tit">
@@ -263,8 +262,8 @@
                 </div>
               </div>
             </div>
-            <div class="btn_article">
-              <a href="#" class="more_btn">더보기</a>
+            <div class="btn_article comm_more"><!-- 목록이 없을 경우 숨김 처리 -->
+              <a href="#" class="more_btn" title="더보기">더보기</a>
             </div>
           </div>
         </div>
