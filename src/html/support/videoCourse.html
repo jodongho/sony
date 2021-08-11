@@ -36,7 +36,7 @@
               <ul>
                 <li class="lists">
                   <div class="video_thumb">
-                    <a href="#" class="video_thumb_btn" data-video-url="https://www.youtube.com/embed/V_VgQhpS5MA">
+                    <a href="https://www.youtube.com/embed/V_VgQhpS5MA" class="video_thumb_btn" data-video-url="https://www.youtube.com/embed/V_VgQhpS5MA" target="_blank" title="새창열림">
                       <img src="/dist/images/_tmp/course_video_thumb_list_02.png" alt="">
                     </a>
                     <div class="video_thumb_info">
@@ -49,7 +49,7 @@
                 </li>
                 <li class="lists">
                   <div class="video_thumb">
-                    <a href="#" class="video_thumb_btn" data-video-url="https://www.youtube.com/embed/64y3hTkGV5A">
+                    <a href="https://www.youtube.com/embed/64y3hTkGV5A" class="video_thumb_btn" data-video-url="https://www.youtube.com/embed/64y3hTkGV5A" target="_blank" title="새창열림">
                       <img src="/dist/images/_tmp/course_video_thumb_list_01.png" alt="">
                     </a>
                     <div class="video_thumb_info">
@@ -62,7 +62,7 @@
                 </li>
                 <li class="lists">
                   <div class="video_thumb">
-                    <a href="#" class="video_thumb_btn" data-video-url="https://www.youtube.com/embed/GCHITgvg-8w">
+                    <a href="https://www.youtube.com/embed/GCHITgvg-8w" class="video_thumb_btn" data-video-url="https://www.youtube.com/embed/GCHITgvg-8w" target="_blank" title="새창열림">
                       <img src="/dist/images/_tmp/course_video_thumb_list_03.png" alt="">
                     </a>
                     <div class="video_thumb_info">
@@ -103,35 +103,35 @@
 </html>
 
 <script type="text/javascript">
-$(function(){
-  let _wW = $(window).width();
+// $(function(){
+//   let _wW = $(window).width();
  
-  function videoUrl(){
-    let $videoWrap = $('.course_video_zone'),
-        $mainVideo = $videoWrap.find('.course_video_main'),
-        $videoList = $videoWrap.find('.course_video_list');
+//   function videoUrl(){
+//     let $videoWrap = $('.course_video_zone'),
+//         $mainVideo = $videoWrap.find('.course_video_main'),
+//         $videoList = $videoWrap.find('.course_video_list');
 
-    $videoList.find('.video_thumb_btn').on("click", function(){
-      let _thisUrl = $(this).data("video-url"),
-          _thisTit = $(this).closest('.video_thumb').find('.tit').text();
+//     $videoList.find('.video_thumb_btn').on("click", function(){
+//       let _thisUrl = $(this).data("video-url"),
+//           _thisTit = $(this).closest('.video_thumb').find('.tit').text();
       
-      $mainVideo.find('iframe').attr("src",_thisUrl);
-      $mainVideo.find('.course_video_tit').text(_thisTit);
+//       $mainVideo.find('iframe').attr("src",_thisUrl);
+//       $mainVideo.find('.course_video_tit').text(_thisTit);
 
-      let _videoTop = $mainVideo.offset().top,
-          _headerH = 0;
-      _wW = $(window).width();
-      if(_wW > 1280){
-        _headerH = $('.gnb').height();
-      }else{
-        _headerH = $('.header__wrapper').height();
-      }
-      $('html,body').animate({scrollTop: _videoTop - _headerH}, 200);
+//       let _videoTop = $mainVideo.offset().top,
+//           _headerH = 0;
+//       _wW = $(window).width();
+//       if(_wW > 1280){
+//         _headerH = $('.gnb').height();
+//       }else{
+//         _headerH = $('.header__wrapper').height();
+//       }
+//       $('html,body').animate({scrollTop: _videoTop - _headerH}, 200);
         
-      return false;
-    });
-  }
+//       return false;
+//     });
+//   }
 
-  videoUrl();
-});
+//   videoUrl();
+// });
 </script>
