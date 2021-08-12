@@ -5,7 +5,7 @@
   overflow:hidden;
 }
 .faq_notice_head{
-  padding:27px 0 74px;
+  padding:27px 0 70px;
   background:#f4f7fa;
   .common_head_txt{
     margin-top:12px;
@@ -134,7 +134,7 @@
   }
 }
 .category_list{
-  margin-top:55px;
+  margin-top:59px;
   border-top: 2px solid #222;
   .acc_item{
     border-bottom:1px solid #ddd;
@@ -234,7 +234,7 @@
 /* 공지사항 테이블 */
 .notice_list{
   position:relative;
-  padding-top:122px;
+  padding-top:120px;
   .itemsort{
     top:74px;
     right:0;
@@ -594,10 +594,10 @@
     }
   }
   .category_center{
-    margin-top:40px;
+    margin-top:80px;
   }
   .category_list{
-    margin-top:24px;
+    margin-top:56px;
     .category_tit{
       display:none;
     }
@@ -655,10 +655,10 @@
               padding-left:16px;
               &:before{
                 position:absolute;
-                top:50%;
+                top:59%;
                 left:0;
                 width:1px;
-                height:60%;
+                height:50%;
                 background:#ccc;
                 transform:translateY(-50%);
                 content:"";
@@ -806,16 +806,19 @@
   .category_slide_tab {
     .swiper-slide{
       .btn{
-        padding:7px 16pxpx;
+        padding:7px 16px;
         font-size:14px;
         font-weight:600;
       }
     }
-    
+  }
+  .category_center{
+    margin-top:40px;
   }
   .category_list {
+    margin-top:24px;
     .acc_btn{
-      padding: 18px 16px 19px 16px;
+      padding: 18px 30px 19px 16px;
     }
     .acc_tit{
       padding:0 15px 0 24px;
@@ -847,6 +850,10 @@
     }
   }
   .notice_list{
+    padding-top:72px;
+    .itemsort{
+      top:34px;
+    }
     .col_table {
       &_row{
         display:block;
@@ -982,7 +989,7 @@
         }
         &_info{
           .pos_center{
-            padding-left:5.1282%;
+            padding-left:16px;
           }
           .tit{
             font-size:12px;
