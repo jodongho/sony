@@ -146,4 +146,4 @@ div.error {}
 ## JAVASCRIPT 작성 가이드
 * 들여쓰기는 공백 두 칸으로 사용하며, 들여쓰기에 탭이나 탭/공백 혼용은 사용하지 않는다.
 
-[1] :  https : //en.bem.info/methodology/key-concepts/
+[[1]](https://en.bem.info/methodology/key-concepts/) :  https://en.bem.info/methodology/key-concepts/
